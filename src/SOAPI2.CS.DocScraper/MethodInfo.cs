@@ -25,6 +25,7 @@ namespace SOAPI2.DocScraper
         public string Url { get; set; }
         public string Description { get; set; }
         public string Name { get; set; }
+        public string Target { get; set; }
         private string _source;
         public Docs Docs { get; set; }
         public MethodInfo(Docs docs)
@@ -309,7 +310,7 @@ namespace SOAPI2.DocScraper
                                 break;
                             case "read_inbox":
                                 // this is part of access token scope
-                                RequiredScopes.Add(parameter.Type);
+                                RequiredScopes.Add(propType);
                                 addParam = false;
                                 break;
                             case "depends":

@@ -304,7 +304,7 @@ namespace SOAPI2.DocScraper
             sb.AppendLine(string.Format("{0}public partial class SoapiClient", tabs));
             sb.AppendLine(string.Format("{0}{{", tabs));
             var groupedMethods = GetGroupedMethods();
-
+            
             var groupNames = groupedMethods.Keys.ToArray();
             tabs = "\t\t";
             sb.AppendLine("        public SoapiClient(string apiKey, string appId) // #TODO: uri from SMD target");
@@ -329,7 +329,7 @@ namespace SOAPI2.DocScraper
             {
                 sb.AppendLine(string.Format("{0}    this.{1} = new _{1}(this);", tabs, groupName));
             }
- 
+
             sb.AppendLine("");
             sb.AppendLine("        }");
             sb.AppendLine("        public SoapiClient(string apiKey, string appId,Uri uri, IRequestController requestController)");
@@ -354,17 +354,17 @@ namespace SOAPI2.DocScraper
             {
                 sb.AppendLine(string.Format("{0}    this.{1} = new _{1}(this);", tabs, groupName));
             }
- 
+
             sb.AppendLine("        }");
 
- 
+
 
             foreach (string groupName in groupNames)
             {
                 // create sub types for clean architecture
 
                 string subGroupTypeName = "_" + groupName;
-                
+
                 sb.AppendLine(string.Format("{0}public class {1}", tabs, subGroupTypeName));
                 sb.AppendLine(string.Format("{0}{{", tabs));
                 sb.AppendLine(string.Format("{0}\tprivate SoapiClient _client;", tabs));
@@ -380,6 +380,7 @@ namespace SOAPI2.DocScraper
                 {
                     var methodName = kvp.Key;
                     var methodObj = kvp.Value;
+                    string target = methodObj["target"].Value<string>();
                     var contentType = (string)methodObj["contentType"];
                     var responseContentType = (string)methodObj["responseContentType"];
                     var transport = (string)methodObj["transport"];
@@ -387,19 +388,137 @@ namespace SOAPI2.DocScraper
                     var cacheDuration = (string)methodObj["cacheDuration"];
                     var throttleScope = (string)methodObj["throttleScope"];
                     var uriTemplate = (string)methodObj["uriTemplate"];
-                    var returns = (JObject) methodObj["returns"];
-                    
+                    var returns = (JObject)methodObj["returns"];
+
                     var description = (string)methodObj["description"];
 
                     string returnType = "void";
                     if (returns != null)
                     {
-                        returnType = GetReferenceType(returns);    
+                        returnType = GetReferenceType(returns);
                     }
-                    
-                    sb.AppendLine(string.Format("{0}\tpublic {2} Get{1}()", tabs, methodName.PascalCased(), returnType));
+
+                    var parameters = (JArray)methodObj["parameters"];
+
+                    Dictionary<string, string> parameterList = new Dictionary<string, string>();
+                    string methodParameterList = "";
+                    for (int i = 0; i < parameters.Count; i++)
+                    {
+                        var parameter = parameters[i];
+                        var parameterType = "";
+                        var parameterName = "";
+                        parameterName = parameter["name"].Value<string>();
+                        if (parameter["type"].Type == JTokenType.Object)
+                        {
+                            parameterType = parameter["type"]["$ref"].Value<string>().Substring(2).PascalCased();
+                        }
+                        else
+                        {
+                            parameterType = parameter["type"].Value<string>();
+                            switch (parameterType)
+                            {
+                                case "number":
+                                    parameterType = "int";
+                                    if (parameter["format"] != null)
+                                    {
+                                        switch (parameter["format"].Value<string>())
+                                        {
+                                            case "utc-millisec":
+                                                parameterType = "DateTimeOffset";
+                                                break;
+                                            default:
+                                                throw new Exception("unknown format: " + parameter["format"].Value<string>());
+                                        }
+                                    }
+                                    break;
+                                case "string":
+                                    parameterType = "string";
+                                    if (parameter["format"] != null)
+                                    {
+                                        switch (parameter["format"].Value<string>())
+                                        {
+                                            case "sort-dependant":
+                                                parameterType = "object";
+                                                break;
+                                            case "number-list":
+                                                // TODO: implement numberlist type. meanwhile use string
+                                                break;
+                                            case "string-list":
+                                                // TODO: implement string-list type. meanwhile use string
+                                                break;
+                                            case "guid-list":
+                                                // TODO: implement guid-list type. meanwhile use string
+                                                break;
+                                            default:
+                                                throw new Exception("unknown format: " + parameter["format"].Value<string>());
+                                        }
+                                    }
+                                    break;
+                                case "boolean":
+                                    parameterType = "bool";
+                                    break;
+                                default:
+                                    throw new Exception("unknown parameter type: " + parameterType);
+                            }
+                        }
+
+                        switch (parameterName)
+                        {
+                            case "unsafe":
+                            case "base":
+                                parameterName = "@" + parameterName;
+                                break;
+                        }
+
+                        if ((parameterType != "object") && (parameterType != "string") && ((parameter["required"] == null) || (parameter["required"] != null && !parameter["required"].Value<bool>())))
+                        {
+                            parameterType = parameterType + "?";
+                        }
+
+                        parameterList.Add(parameterName, parameterType);
+                        methodParameterList = methodParameterList + parameterType + " " + parameterName;
+                        if (i < parameters.Count - 1)
+                        {
+                            methodParameterList = methodParameterList + ", ";
+                        }
+
+                    }
+
+
+
+                    sb.AppendLine(string.Format("{0}\tpublic {2} {1}({3})", tabs, methodName.PascalCased(), returnType, methodParameterList));
                     sb.AppendLine(string.Format("{0}\t{{", tabs));
-                    sb.AppendLine(string.Format("{0}\t\tthrow new NotImplementedException();", tabs));
+
+                    if (methodObj["authentication_scopes"] != null)
+                    {
+                        // requires authentication
+                        sb.AppendLine(string.Format("{0}\t\tthrow new NotImplementedException(\"Requires Authentication\");", tabs));
+                    }
+                    else
+                    {
+
+                        sb.AppendLine(string.Format("{0}\t\tstring uriTemplate = _client.AppendApiKey(\"{1}\");", tabs, uriTemplate));
+                        //            string uriTemplate = _client.AppendApiKey("/clientapplication/versioninformation?AppKey={appKey}&AccountOperatorId={accountOperatorId}");
+                        sb.AppendLine(string.Format("{0}\t\t{2} _client.Request<{1}>(\"{3}\", uriTemplate , \"GET\",", tabs, returnType == "void" ? "object" : returnType, returnType == "void" ? "" : "return",target));
+                        //            return _client.Request<GetVersionInformationResponseDTO>("clientapplication/versioninformation", uriTemplate , "GET",
+                        sb.AppendLine(string.Format("{0}\t\tnew Dictionary<string, object>", tabs));
+
+                        sb.AppendLine(string.Format("{0}\t\t{{", tabs));
+                        foreach (var kvp2 in parameterList)
+                        {
+                            sb.AppendLine(string.Format("{0}\t\t\t{{\"{1}\",{2}}},", tabs, kvp2.Key.TrimStart('@'), kvp2.Key));
+                        }
+                        //                { "appKey", appKey}, 
+                        //                { "accountOperatorId", accountOperatorId}
+                        sb.AppendLine(string.Format("{0}\t\t}}", tabs));
+                        sb.AppendLine(string.Format("{0}\t\t, TimeSpan.FromMilliseconds(360000), \"default\");", tabs));
+                        //
+                        
+
+
+                   
+                    }
+
                     sb.AppendLine(string.Format("{0}\t}}", tabs));
                 }
                 sb.AppendLine(string.Format("{0}}}", tabs));

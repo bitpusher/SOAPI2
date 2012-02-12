@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using NUnit.Framework;
+using SOAPI2.Model;
 
 namespace SOAPI2.Tests
 {
@@ -15,8 +16,8 @@ namespace SOAPI2.Tests
         [Test, Ignore("kevin doesn't like this method being called more than very infrequently.... because his backend sucks?")]
         public void CanGetSites()
         {
-            var client = new SoapiClient(Apikey,AppId);
-            var response = client.GetSites(1, 10);
+            var client = new SoapiClient(Apikey, AppId);
+            var response = client.Sites.Sites(1, 10);
             Assert.AreEqual(10, response.Items.Count);
         }
 
@@ -24,7 +25,7 @@ namespace SOAPI2.Tests
         public void CanGetStackOverflowErrors()
         {
             var client = new SoapiClient(Apikey, AppId);
-            var response = client.GetErrors( 1, 100);
+            var response = client.Errors.Errors(1, 100);
             Assert.Greater(response.Items.Count, 0);
 
         }
@@ -32,8 +33,16 @@ namespace SOAPI2.Tests
         public void CanGetInfo()
         {
             var client = new SoapiClient(Apikey, AppId);
-            var response = client.GetInfo("stackoverflow");
- 
+            var response = client.Info.Info("stackoverflow");
+
+            Assert.Greater(response.Items.Count, 0);
+        }
+        [Test]
+        public void CanGetAnswers()
+        {
+            var client = new SoapiClient(Apikey, AppId);
+            var response = client.Answers.Answers("stackoverflow", null, null, null, null, null, null, null, null);
+
             Assert.Greater(response.Items.Count, 0);
         }
     }

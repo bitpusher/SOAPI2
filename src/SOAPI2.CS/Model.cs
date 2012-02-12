@@ -1545,20 +1545,7 @@ namespace SOAPI2.Model
 		@name,
 		@modified	
 	}
-	public enum SortMe
-	{
-		@reputation,
-		@creation,
-		@name,
-		@modified	
-	}
 	public enum SortUsersByIdsAnswers
-	{
-		@activity,
-		@creation,
-		@votes	
-	}
-	public enum SortMeAnswers
 	{
 		@activity,
 		@creation,
@@ -1571,29 +1558,12 @@ namespace SOAPI2.Model
 		@type,
 		@awarded	
 	}
-	public enum SortMeBadges
-	{
-		@rank,
-		@name,
-		@type,
-		@awarded	
-	}
 	public enum SortUsersByIdsComments
 	{
 		@creation,
 		@votes	
 	}
-	public enum SortMeComments
-	{
-		@creation,
-		@votes	
-	}
 	public enum SortUsersByIdsCommentsToId
-	{
-		@creation,
-		@votes	
-	}
-	public enum SortMeCommentsToId
 	{
 		@creation,
 		@votes	
@@ -1605,30 +1575,12 @@ namespace SOAPI2.Model
 		@creation,
 		@added	
 	}
-	public enum SortMeFavorites
-	{
-		@activity,
-		@votes,
-		@creation,
-		@added	
-	}
 	public enum SortUsersByIdsMentioned
 	{
 		@creation,
 		@votes	
 	}
-	public enum SortMeMentioned
-	{
-		@creation,
-		@votes	
-	}
 	public enum SortUsersByIdsQuestions
-	{
-		@activity,
-		@votes,
-		@creation	
-	}
-	public enum SortMeQuestions
 	{
 		@activity,
 		@votes,
@@ -1640,19 +1592,7 @@ namespace SOAPI2.Model
 		@votes,
 		@creation	
 	}
-	public enum SortMeQuestionsFeatured
-	{
-		@activity,
-		@votes,
-		@creation	
-	}
 	public enum SortUsersByIdsQuestionsNoAnswers
-	{
-		@activity,
-		@votes,
-		@creation	
-	}
-	public enum SortMeQuestionsNoAnswers
 	{
 		@activity,
 		@votes,
@@ -1664,19 +1604,7 @@ namespace SOAPI2.Model
 		@votes,
 		@creation	
 	}
-	public enum SortMeQuestionsUnaccepted
-	{
-		@activity,
-		@votes,
-		@creation	
-	}
 	public enum SortUsersByIdsQuestionsUnanswered
-	{
-		@activity,
-		@votes,
-		@creation	
-	}
-	public enum SortMeQuestionsUnanswered
 	{
 		@activity,
 		@votes,
@@ -1688,19 +1616,7 @@ namespace SOAPI2.Model
 		@approval,
 		@rejection	
 	}
-	public enum SortMeSuggestedEdits
-	{
-		@creation,
-		@approval,
-		@rejection	
-	}
 	public enum SortUsersByIdsTags
-	{
-		@popular,
-		@activity,
-		@name	
-	}
-	public enum SortMeTags
 	{
 		@popular,
 		@activity,
@@ -1712,19 +1628,7 @@ namespace SOAPI2.Model
 		@creation,
 		@votes	
 	}
-	public enum SortMeTagsByTagsTopAnswers
-	{
-		@activity,
-		@creation,
-		@votes	
-	}
 	public enum SortUsersByIdTagsByTagsTopQuestions
-	{
-		@activity,
-		@votes,
-		@creation	
-	}
-	public enum SortMeTagsByTagsTopQuestions
 	{
 		@activity,
 		@votes,

@@ -92,17 +92,61 @@ namespace SOAPI2
 			{
 				_client=client;
 			}
-			public ResponseWrapperClass<AnswerClass> GetAnswers()
+			public ResponseWrapperClass<AnswerClass> Answers(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortAnswers? sort)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("?site={site}");
+				return _client.Request<ResponseWrapperClass<AnswerClass>>("answers", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"fromdate",fromdate},
+					{"todate",todate},
+					{"order",order},
+					{"min",min},
+					{"max",max},
+					{"sort",sort},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public ResponseWrapperClass<AnswerClass> GetAnswersByIds()
+			public ResponseWrapperClass<AnswerClass> AnswersByIds(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortAnswersByIds? sort, string ids)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("{ids}?site={site}");
+				return _client.Request<ResponseWrapperClass<AnswerClass>>("answers", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"fromdate",fromdate},
+					{"todate",todate},
+					{"order",order},
+					{"min",min},
+					{"max",max},
+					{"sort",sort},
+					{"ids",ids},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public ResponseWrapperClass<CommentClass> GetAnswersByIdsComments()
+			public ResponseWrapperClass<CommentClass> AnswersByIdsComments(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortAnswersByIdsComments? sort, string ids)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("{ids}/comments?site={site}");
+				return _client.Request<ResponseWrapperClass<CommentClass>>("answers", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"fromdate",fromdate},
+					{"todate",todate},
+					{"order",order},
+					{"min",min},
+					{"max",max},
+					{"sort",sort},
+					{"ids",ids},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
 		}
 		public _Answers Answers{get; private set;}
@@ -113,29 +157,110 @@ namespace SOAPI2
 			{
 				_client=client;
 			}
-			public ResponseWrapperClass<BadgeClass> GetBadges()
+			public ResponseWrapperClass<BadgeClass> Badges(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortBadges? sort, string inname)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("?site={site}");
+				return _client.Request<ResponseWrapperClass<BadgeClass>>("badges", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"fromdate",fromdate},
+					{"todate",todate},
+					{"order",order},
+					{"min",min},
+					{"max",max},
+					{"sort",sort},
+					{"inname",inname},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public ResponseWrapperClass<BadgeClass> GetBadgesByIds()
+			public ResponseWrapperClass<BadgeClass> BadgesByIds(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortBadgesByIds? sort, string ids)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("{ids}?site={site}");
+				return _client.Request<ResponseWrapperClass<BadgeClass>>("badges", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"fromdate",fromdate},
+					{"todate",todate},
+					{"order",order},
+					{"min",min},
+					{"max",max},
+					{"sort",sort},
+					{"ids",ids},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public ResponseWrapperClass<BadgeClass> GetBadgesName()
+			public ResponseWrapperClass<BadgeClass> BadgesName(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortBadgesName? sort, string inname)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("name?site={site}");
+				return _client.Request<ResponseWrapperClass<BadgeClass>>("badges", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"fromdate",fromdate},
+					{"todate",todate},
+					{"order",order},
+					{"min",min},
+					{"max",max},
+					{"sort",sort},
+					{"inname",inname},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public ResponseWrapperClass<BadgeClass> GetBadgesRecipients()
+			public ResponseWrapperClass<BadgeClass> BadgesRecipients(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("recipients?site={site}");
+				return _client.Request<ResponseWrapperClass<BadgeClass>>("badges", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"fromdate",fromdate},
+					{"todate",todate},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public ResponseWrapperClass<BadgeClass> GetBadgesByIdsRecipients()
+			public ResponseWrapperClass<BadgeClass> BadgesByIdsRecipients(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, string ids)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("{ids}/recipients?site={site}");
+				return _client.Request<ResponseWrapperClass<BadgeClass>>("badges", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"fromdate",fromdate},
+					{"todate",todate},
+					{"ids",ids},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public ResponseWrapperClass<BadgeClass> GetBadgesTags()
+			public ResponseWrapperClass<BadgeClass> BadgesTags(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortBadgesTags? sort, string inname)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("tags?site={site}");
+				return _client.Request<ResponseWrapperClass<BadgeClass>>("badges", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"fromdate",fromdate},
+					{"todate",todate},
+					{"order",order},
+					{"min",min},
+					{"max",max},
+					{"sort",sort},
+					{"inname",inname},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
 		}
 		public _Badges Badges{get; private set;}
@@ -146,13 +271,42 @@ namespace SOAPI2
 			{
 				_client=client;
 			}
-			public ResponseWrapperClass<CommentClass> GetComments()
+			public ResponseWrapperClass<CommentClass> Comments(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortComments? sort)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("?site={site}");
+				return _client.Request<ResponseWrapperClass<CommentClass>>("comments", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"fromdate",fromdate},
+					{"todate",todate},
+					{"order",order},
+					{"min",min},
+					{"max",max},
+					{"sort",sort},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public ResponseWrapperClass<CommentClass> GetCommentsByIds()
+			public ResponseWrapperClass<CommentClass> CommentsByIds(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortCommentsByIds? sort, string ids)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("{ids}?site={site}");
+				return _client.Request<ResponseWrapperClass<CommentClass>>("comments", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"fromdate",fromdate},
+					{"todate",todate},
+					{"order",order},
+					{"min",min},
+					{"max",max},
+					{"sort",sort},
+					{"ids",ids},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
 		}
 		public _Comments Comments{get; private set;}
@@ -163,9 +317,9 @@ namespace SOAPI2
 			{
 				_client=client;
 			}
-			public ResponseWrapperClass<EventClass> GetEvents()
+			public ResponseWrapperClass<EventClass> Events(string site, int? page, int? pagesize, DateTimeOffset? since)
 			{
-				throw new NotImplementedException();
+				throw new NotImplementedException("Requires Authentication");
 			}
 		}
 		public _Events Events{get; private set;}
@@ -176,25 +330,95 @@ namespace SOAPI2
 			{
 				_client=client;
 			}
-			public ResponseWrapperClass<PostClass> GetPosts()
+			public ResponseWrapperClass<PostClass> Posts(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortPosts? sort)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("?site={site}");
+				return _client.Request<ResponseWrapperClass<PostClass>>("posts", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"fromdate",fromdate},
+					{"todate",todate},
+					{"order",order},
+					{"min",min},
+					{"max",max},
+					{"sort",sort},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public ResponseWrapperClass<PostClass> GetPostsByIds()
+			public ResponseWrapperClass<PostClass> PostsByIds(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortPostsByIds? sort, string ids)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("{ids}?site={site}");
+				return _client.Request<ResponseWrapperClass<PostClass>>("posts", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"fromdate",fromdate},
+					{"todate",todate},
+					{"order",order},
+					{"min",min},
+					{"max",max},
+					{"sort",sort},
+					{"ids",ids},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public ResponseWrapperClass<CommentClass> GetPostsByIdsComments()
+			public ResponseWrapperClass<CommentClass> PostsByIdsComments(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortPostsByIdsComments? sort, string ids)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("{ids}/comments?site={site}");
+				return _client.Request<ResponseWrapperClass<CommentClass>>("posts", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"fromdate",fromdate},
+					{"todate",todate},
+					{"order",order},
+					{"min",min},
+					{"max",max},
+					{"sort",sort},
+					{"ids",ids},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public ResponseWrapperClass<RevisionClass> GetPostsByIdsRevisions()
+			public ResponseWrapperClass<RevisionClass> PostsByIdsRevisions(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, string ids)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("{ids}/revisions?site={site}");
+				return _client.Request<ResponseWrapperClass<RevisionClass>>("posts", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"fromdate",fromdate},
+					{"todate",todate},
+					{"ids",ids},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public ResponseWrapperClass<SuggestedEditClass> GetPostsByIdsSuggestedEdits()
+			public ResponseWrapperClass<SuggestedEditClass> PostsByIdsSuggestedEdits(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortPostsByIdsSuggestedEdits? sort, string ids)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("{ids}/suggested-edits?site={site}");
+				return _client.Request<ResponseWrapperClass<SuggestedEditClass>>("posts", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"fromdate",fromdate},
+					{"todate",todate},
+					{"order",order},
+					{"min",min},
+					{"max",max},
+					{"sort",sort},
+					{"ids",ids},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
 		}
 		public _Posts Posts{get; private set;}
@@ -205,9 +429,17 @@ namespace SOAPI2
 			{
 				_client=client;
 			}
-			public ResponseWrapperClass<PrivilegeClass> GetPrivileges()
+			public ResponseWrapperClass<PrivilegeClass> Privileges(string site, int? page, int? pagesize)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("?site={site}");
+				return _client.Request<ResponseWrapperClass<PrivilegeClass>>("privileges", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
 		}
 		public _Privileges Privileges{get; private set;}
@@ -218,45 +450,191 @@ namespace SOAPI2
 			{
 				_client=client;
 			}
-			public ResponseWrapperClass<QuestionClass> GetQuestions()
+			public ResponseWrapperClass<QuestionClass> Questions(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortQuestions? sort, string tagged)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("?site={site}");
+				return _client.Request<ResponseWrapperClass<QuestionClass>>("questions", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"fromdate",fromdate},
+					{"todate",todate},
+					{"order",order},
+					{"min",min},
+					{"max",max},
+					{"sort",sort},
+					{"tagged",tagged},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public ResponseWrapperClass<QuestionClass> GetQuestionsByIds()
+			public ResponseWrapperClass<QuestionClass> QuestionsByIds(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortQuestionsByIds? sort, string ids)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("{ids}?site={site}");
+				return _client.Request<ResponseWrapperClass<QuestionClass>>("questions", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"fromdate",fromdate},
+					{"todate",todate},
+					{"order",order},
+					{"min",min},
+					{"max",max},
+					{"sort",sort},
+					{"ids",ids},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public ResponseWrapperClass<AnswerClass> GetQuestionsByIdsAnswers()
+			public ResponseWrapperClass<AnswerClass> QuestionsByIdsAnswers(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortQuestionsByIdsAnswers? sort, string ids)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("{ids}/answers?site={site}");
+				return _client.Request<ResponseWrapperClass<AnswerClass>>("questions", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"fromdate",fromdate},
+					{"todate",todate},
+					{"order",order},
+					{"min",min},
+					{"max",max},
+					{"sort",sort},
+					{"ids",ids},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public ResponseWrapperClass<CommentClass> GetQuestionsByIdsComments()
+			public ResponseWrapperClass<CommentClass> QuestionsByIdsComments(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortQuestionsByIdsComments? sort, string ids)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("{ids}/comments?site={site}");
+				return _client.Request<ResponseWrapperClass<CommentClass>>("questions", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"fromdate",fromdate},
+					{"todate",todate},
+					{"order",order},
+					{"min",min},
+					{"max",max},
+					{"sort",sort},
+					{"ids",ids},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public ResponseWrapperClass<QuestionClass> GetQuestionsByIdsLinked()
+			public ResponseWrapperClass<QuestionClass> QuestionsByIdsLinked(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortQuestionsByIdsLinked? sort, string ids)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("{ids}/linked?site={site}");
+				return _client.Request<ResponseWrapperClass<QuestionClass>>("questions", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"fromdate",fromdate},
+					{"todate",todate},
+					{"order",order},
+					{"min",min},
+					{"max",max},
+					{"sort",sort},
+					{"ids",ids},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public ResponseWrapperClass<QuestionClass> GetQuestionsByIdsRelated()
+			public ResponseWrapperClass<QuestionClass> QuestionsByIdsRelated(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortQuestionsByIdsRelated? sort, string ids)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("{ids}/related?site={site}");
+				return _client.Request<ResponseWrapperClass<QuestionClass>>("questions", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"fromdate",fromdate},
+					{"todate",todate},
+					{"order",order},
+					{"min",min},
+					{"max",max},
+					{"sort",sort},
+					{"ids",ids},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public ResponseWrapperClass<QuestionTimelineClass> GetQuestionsByIdsTimeline()
+			public ResponseWrapperClass<QuestionTimelineClass> QuestionsByIdsTimeline(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, string ids)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("{ids}/timeline?site={site}");
+				return _client.Request<ResponseWrapperClass<QuestionTimelineClass>>("questions", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"fromdate",fromdate},
+					{"todate",todate},
+					{"ids",ids},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public ResponseWrapperClass<QuestionClass> GetQuestionsFeatured()
+			public ResponseWrapperClass<QuestionClass> QuestionsFeatured(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortQuestionsFeatured? sort, string tagged)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("featured?site={site}");
+				return _client.Request<ResponseWrapperClass<QuestionClass>>("questions", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"fromdate",fromdate},
+					{"todate",todate},
+					{"order",order},
+					{"min",min},
+					{"max",max},
+					{"sort",sort},
+					{"tagged",tagged},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public ResponseWrapperClass<QuestionClass> GetQuestionsUnanswered()
+			public ResponseWrapperClass<QuestionClass> QuestionsUnanswered(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortQuestionsUnanswered? sort, string tagged)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("unanswered?site={site}");
+				return _client.Request<ResponseWrapperClass<QuestionClass>>("questions", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"fromdate",fromdate},
+					{"todate",todate},
+					{"order",order},
+					{"min",min},
+					{"max",max},
+					{"sort",sort},
+					{"tagged",tagged},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public ResponseWrapperClass<QuestionClass> GetQuestionsNoAnswers()
+			public ResponseWrapperClass<QuestionClass> QuestionsNoAnswers(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortQuestionsNoAnswers? sort, string tagged)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("no-answers?site={site}");
+				return _client.Request<ResponseWrapperClass<QuestionClass>>("questions", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"fromdate",fromdate},
+					{"todate",todate},
+					{"order",order},
+					{"min",min},
+					{"max",max},
+					{"sort",sort},
+					{"tagged",tagged},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
 		}
 		public _Questions Questions{get; private set;}
@@ -267,9 +645,20 @@ namespace SOAPI2
 			{
 				_client=client;
 			}
-			public ResponseWrapperClass<RevisionClass> GetRevisionsByIds()
+			public ResponseWrapperClass<RevisionClass> RevisionsByIds(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, string ids)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("{ids}?site={site}");
+				return _client.Request<ResponseWrapperClass<RevisionClass>>("revisions", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"fromdate",fromdate},
+					{"todate",todate},
+					{"ids",ids},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
 		}
 		public _Revisions Revisions{get; private set;}
@@ -280,13 +669,47 @@ namespace SOAPI2
 			{
 				_client=client;
 			}
-			public ResponseWrapperClass<QuestionClass> GetSearch()
+			public ResponseWrapperClass<QuestionClass> Search(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortSearch? sort, string tagged, string nottagged, string intitle)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("?site={site}");
+				return _client.Request<ResponseWrapperClass<QuestionClass>>("search", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"fromdate",fromdate},
+					{"todate",todate},
+					{"order",order},
+					{"min",min},
+					{"max",max},
+					{"sort",sort},
+					{"tagged",tagged},
+					{"nottagged",nottagged},
+					{"intitle",intitle},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public ResponseWrapperClass<QuestionClass> GetSimilar()
+			public ResponseWrapperClass<QuestionClass> Similar(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortSimilar? sort, string tagged, string nottagged, string title)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("?site={site}");
+				return _client.Request<ResponseWrapperClass<QuestionClass>>("similar", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"fromdate",fromdate},
+					{"todate",todate},
+					{"order",order},
+					{"min",min},
+					{"max",max},
+					{"sort",sort},
+					{"tagged",tagged},
+					{"nottagged",nottagged},
+					{"title",title},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
 		}
 		public _Search Search{get; private set;}
@@ -297,13 +720,42 @@ namespace SOAPI2
 			{
 				_client=client;
 			}
-			public ResponseWrapperClass<SuggestedEditClass> GetSuggestedEdits()
+			public ResponseWrapperClass<SuggestedEditClass> SuggestedEdits(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortSuggestedEdits? sort)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("?site={site}");
+				return _client.Request<ResponseWrapperClass<SuggestedEditClass>>("suggested-edits", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"fromdate",fromdate},
+					{"todate",todate},
+					{"order",order},
+					{"min",min},
+					{"max",max},
+					{"sort",sort},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public ResponseWrapperClass<SuggestedEditClass> GetSuggestedEditsByIds()
+			public ResponseWrapperClass<SuggestedEditClass> SuggestedEditsByIds(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortSuggestedEditsByIds? sort, string ids)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("{ids}?site={site}");
+				return _client.Request<ResponseWrapperClass<SuggestedEditClass>>("suggested-edits", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"fromdate",fromdate},
+					{"todate",todate},
+					{"order",order},
+					{"min",min},
+					{"max",max},
+					{"sort",sort},
+					{"ids",ids},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
 		}
 		public _Suggested_Edits Suggested_Edits{get; private set;}
@@ -314,9 +766,15 @@ namespace SOAPI2
 			{
 				_client=client;
 			}
-			public ResponseWrapperClass<InfoClass> GetInfo()
+			public ResponseWrapperClass<InfoClass> Info(string site)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("?site={site}");
+				return _client.Request<ResponseWrapperClass<InfoClass>>("info", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
 		}
 		public _Info Info{get; private set;}
@@ -327,49 +785,185 @@ namespace SOAPI2
 			{
 				_client=client;
 			}
-			public ResponseWrapperClass<TagClass> GetTags()
+			public ResponseWrapperClass<TagClass> Tags(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortTags? sort, string inname)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("?site={site}");
+				return _client.Request<ResponseWrapperClass<TagClass>>("tags", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"fromdate",fromdate},
+					{"todate",todate},
+					{"order",order},
+					{"min",min},
+					{"max",max},
+					{"sort",sort},
+					{"inname",inname},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public ResponseWrapperClass<TagClass> GetTagsByTagsInfo()
+			public ResponseWrapperClass<TagClass> TagsByTagsInfo(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortTagsByTagsInfo? sort, string tags)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("{tags}/info?site={site}");
+				return _client.Request<ResponseWrapperClass<TagClass>>("tags", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"fromdate",fromdate},
+					{"todate",todate},
+					{"order",order},
+					{"min",min},
+					{"max",max},
+					{"sort",sort},
+					{"tags",tags},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public ResponseWrapperClass<TagClass> GetTagsModeratorOnly()
+			public ResponseWrapperClass<TagClass> TagsModeratorOnly(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortTagsModeratorOnly? sort, string inname)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("moderator-only?site={site}");
+				return _client.Request<ResponseWrapperClass<TagClass>>("tags", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"fromdate",fromdate},
+					{"todate",todate},
+					{"order",order},
+					{"min",min},
+					{"max",max},
+					{"sort",sort},
+					{"inname",inname},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public ResponseWrapperClass<TagClass> GetTagsRequired()
+			public ResponseWrapperClass<TagClass> TagsRequired(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortTagsRequired? sort, string inname)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("required?site={site}");
+				return _client.Request<ResponseWrapperClass<TagClass>>("tags", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"fromdate",fromdate},
+					{"todate",todate},
+					{"order",order},
+					{"min",min},
+					{"max",max},
+					{"sort",sort},
+					{"inname",inname},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public ResponseWrapperClass<TagSynonymClass> GetTagsSynonyms()
+			public ResponseWrapperClass<TagSynonymClass> TagsSynonyms(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortTagsSynonyms? sort)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("synonyms?site={site}");
+				return _client.Request<ResponseWrapperClass<TagSynonymClass>>("tags", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"fromdate",fromdate},
+					{"todate",todate},
+					{"order",order},
+					{"min",min},
+					{"max",max},
+					{"sort",sort},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public ResponseWrapperClass<QuestionClass> GetTagsByTagsFaq()
+			public ResponseWrapperClass<QuestionClass> TagsByTagsFaq(string site, int? page, int? pagesize, string tags)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("{tags}/faq?site={site}");
+				return _client.Request<ResponseWrapperClass<QuestionClass>>("tags", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"tags",tags},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public ResponseWrapperClass<TagClass> GetTagsByTagsRelated()
+			public ResponseWrapperClass<TagClass> TagsByTagsRelated(string site, int? page, int? pagesize, string tags)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("{tags}/related?site={site}");
+				return _client.Request<ResponseWrapperClass<TagClass>>("tags", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"tags",tags},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public ResponseWrapperClass<TagSynonymClass> GetTagsByTagsSynonyms()
+			public ResponseWrapperClass<TagSynonymClass> TagsByTagsSynonyms(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortTagsByTagsSynonyms? sort, string tags)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("{tags}/synonyms?site={site}");
+				return _client.Request<ResponseWrapperClass<TagSynonymClass>>("tags", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"fromdate",fromdate},
+					{"todate",todate},
+					{"order",order},
+					{"min",min},
+					{"max",max},
+					{"sort",sort},
+					{"tags",tags},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public ResponseWrapperClass<TagScoreClass> GetTagsByTagTopAnswerersByPeriod()
+			public ResponseWrapperClass<TagScoreClass> TagsByTagTopAnswerersByPeriod(string site, int? page, int? pagesize, string tag, Period period)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("{tag}/top-answerers/{period}?site={site}");
+				return _client.Request<ResponseWrapperClass<TagScoreClass>>("tags", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"tag",tag},
+					{"period",period},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public ResponseWrapperClass<TagScoreClass> GetTagsByTagTopAskersByPeriod()
+			public ResponseWrapperClass<TagScoreClass> TagsByTagTopAskersByPeriod(string site, int? page, int? pagesize, string tag, Period period)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("{tag}/top-askers/{period}?site={site}");
+				return _client.Request<ResponseWrapperClass<TagScoreClass>>("tags", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"tag",tag},
+					{"period",period},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public ResponseWrapperClass<TagWikiClass> GetTagsByTagsWikis()
+			public ResponseWrapperClass<TagWikiClass> TagsByTagsWikis(string site, int? page, int? pagesize, string tags)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("{tags}/wikis?site={site}");
+				return _client.Request<ResponseWrapperClass<TagWikiClass>>("tags", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"tags",tags},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
 		}
 		public _Tags Tags{get; private set;}
@@ -380,209 +974,456 @@ namespace SOAPI2
 			{
 				_client=client;
 			}
-			public ResponseWrapperClass<UserClass> GetUsers()
+			public ResponseWrapperClass<UserClass> Users(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortUsers? sort, string inname)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("?site={site}");
+				return _client.Request<ResponseWrapperClass<UserClass>>("users", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"fromdate",fromdate},
+					{"todate",todate},
+					{"order",order},
+					{"min",min},
+					{"max",max},
+					{"sort",sort},
+					{"inname",inname},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public ResponseWrapperClass<UserClass> GetUsersByIds()
+			public ResponseWrapperClass<UserClass> UsersByIds(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortUsersByIds? sort, string ids)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("{ids}?site={site}");
+				return _client.Request<ResponseWrapperClass<UserClass>>("users", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"fromdate",fromdate},
+					{"todate",todate},
+					{"order",order},
+					{"min",min},
+					{"max",max},
+					{"sort",sort},
+					{"ids",ids},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public ResponseWrapperClass<UserClass> GetMe()
+			public ResponseWrapperClass<AnswerClass> UsersByIdsAnswers(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortUsersByIdsAnswers? sort, string ids)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("{ids}/answers?site={site}");
+				return _client.Request<ResponseWrapperClass<AnswerClass>>("users", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"fromdate",fromdate},
+					{"todate",todate},
+					{"order",order},
+					{"min",min},
+					{"max",max},
+					{"sort",sort},
+					{"ids",ids},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public ResponseWrapperClass<AnswerClass> GetUsersByIdsAnswers()
+			public ResponseWrapperClass<BadgeClass> UsersByIdsBadges(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortUsersByIdsBadges? sort, string ids)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("{ids}/badges?site={site}");
+				return _client.Request<ResponseWrapperClass<BadgeClass>>("users", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"fromdate",fromdate},
+					{"todate",todate},
+					{"order",order},
+					{"min",min},
+					{"max",max},
+					{"sort",sort},
+					{"ids",ids},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public ResponseWrapperClass<AnswerClass> GetMeAnswers()
+			public ResponseWrapperClass<CommentClass> UsersByIdsComments(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortUsersByIdsComments? sort, string ids)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("{ids}/comments?site={site}");
+				return _client.Request<ResponseWrapperClass<CommentClass>>("users", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"fromdate",fromdate},
+					{"todate",todate},
+					{"order",order},
+					{"min",min},
+					{"max",max},
+					{"sort",sort},
+					{"ids",ids},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public ResponseWrapperClass<BadgeClass> GetUsersByIdsBadges()
+			public ResponseWrapperClass<CommentClass> UsersByIdsCommentsToId(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortUsersByIdsCommentsToId? sort, string ids, int toid)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("{ids}/comments/{toid}?site={site}");
+				return _client.Request<ResponseWrapperClass<CommentClass>>("users", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"fromdate",fromdate},
+					{"todate",todate},
+					{"order",order},
+					{"min",min},
+					{"max",max},
+					{"sort",sort},
+					{"ids",ids},
+					{"toid",toid},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public ResponseWrapperClass<BadgeClass> GetMeBadges()
+			public ResponseWrapperClass<QuestionClass> UsersByIdsFavorites(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortUsersByIdsFavorites? sort, string ids)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("{ids}/favorites?site={site}");
+				return _client.Request<ResponseWrapperClass<QuestionClass>>("users", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"fromdate",fromdate},
+					{"todate",todate},
+					{"order",order},
+					{"min",min},
+					{"max",max},
+					{"sort",sort},
+					{"ids",ids},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public ResponseWrapperClass<CommentClass> GetUsersByIdsComments()
+			public ResponseWrapperClass<CommentClass> UsersByIdsMentioned(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortUsersByIdsMentioned? sort, string ids)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("{ids}/mentioned?site={site}");
+				return _client.Request<ResponseWrapperClass<CommentClass>>("users", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"fromdate",fromdate},
+					{"todate",todate},
+					{"order",order},
+					{"min",min},
+					{"max",max},
+					{"sort",sort},
+					{"ids",ids},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public ResponseWrapperClass<CommentClass> GetMeComments()
+			public ResponseWrapperClass<PrivilegeClass> UsersByIdPrivileges(string site, int? page, int? pagesize, int id)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("{id}/privileges?site={site}");
+				return _client.Request<ResponseWrapperClass<PrivilegeClass>>("users", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"id",id},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public ResponseWrapperClass<CommentClass> GetUsersByIdsCommentsToId()
+			public ResponseWrapperClass<QuestionClass> UsersByIdsQuestions(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortUsersByIdsQuestions? sort, string ids)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("{ids}/questions?site={site}");
+				return _client.Request<ResponseWrapperClass<QuestionClass>>("users", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"fromdate",fromdate},
+					{"todate",todate},
+					{"order",order},
+					{"min",min},
+					{"max",max},
+					{"sort",sort},
+					{"ids",ids},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public ResponseWrapperClass<CommentClass> GetMeCommentsToId()
+			public ResponseWrapperClass<QuestionClass> UsersByIdsQuestionsFeatured(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortUsersByIdsQuestionsFeatured? sort, string ids)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("{ids}/questions/featured?site={site}");
+				return _client.Request<ResponseWrapperClass<QuestionClass>>("users", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"fromdate",fromdate},
+					{"todate",todate},
+					{"order",order},
+					{"min",min},
+					{"max",max},
+					{"sort",sort},
+					{"ids",ids},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public ResponseWrapperClass<QuestionClass> GetUsersByIdsFavorites()
+			public ResponseWrapperClass<QuestionClass> UsersByIdsQuestionsNoAnswers(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortUsersByIdsQuestionsNoAnswers? sort, string ids)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("{ids}/questions/no-answers?site={site}");
+				return _client.Request<ResponseWrapperClass<QuestionClass>>("users", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"fromdate",fromdate},
+					{"todate",todate},
+					{"order",order},
+					{"min",min},
+					{"max",max},
+					{"sort",sort},
+					{"ids",ids},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public ResponseWrapperClass<QuestionClass> GetMeFavorites()
+			public ResponseWrapperClass<QuestionClass> UsersByIdsQuestionsUnaccepted(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortUsersByIdsQuestionsUnaccepted? sort, string ids)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("{ids}/questions/unaccepted?site={site}");
+				return _client.Request<ResponseWrapperClass<QuestionClass>>("users", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"fromdate",fromdate},
+					{"todate",todate},
+					{"order",order},
+					{"min",min},
+					{"max",max},
+					{"sort",sort},
+					{"ids",ids},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public ResponseWrapperClass<CommentClass> GetUsersByIdsMentioned()
+			public ResponseWrapperClass<QuestionClass> UsersByIdsQuestionsUnanswered(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortUsersByIdsQuestionsUnanswered? sort, string ids)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("{ids}/questions/unanswered?site={site}");
+				return _client.Request<ResponseWrapperClass<QuestionClass>>("users", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"fromdate",fromdate},
+					{"todate",todate},
+					{"order",order},
+					{"min",min},
+					{"max",max},
+					{"sort",sort},
+					{"ids",ids},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public ResponseWrapperClass<CommentClass> GetMeMentioned()
+			public ResponseWrapperClass<ReputationClass> UsersByIdsReputation(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, string ids)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("{ids}/reputation?site={site}");
+				return _client.Request<ResponseWrapperClass<ReputationClass>>("users", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"fromdate",fromdate},
+					{"todate",todate},
+					{"ids",ids},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public ResponseWrapperClass<PrivilegeClass> GetUsersByIdPrivileges()
+			public ResponseWrapperClass<SuggestedEditClass> UsersByIdsSuggestedEdits(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortUsersByIdsSuggestedEdits? sort, string ids)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("{ids}/suggested-edits?site={site}");
+				return _client.Request<ResponseWrapperClass<SuggestedEditClass>>("users", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"fromdate",fromdate},
+					{"todate",todate},
+					{"order",order},
+					{"min",min},
+					{"max",max},
+					{"sort",sort},
+					{"ids",ids},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public ResponseWrapperClass<PrivilegeClass> GetMePrivileges()
+			public ResponseWrapperClass<TagClass> UsersByIdsTags(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortUsersByIdsTags? sort, string ids)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("{ids}/tags?site={site}");
+				return _client.Request<ResponseWrapperClass<TagClass>>("users", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"fromdate",fromdate},
+					{"todate",todate},
+					{"order",order},
+					{"min",min},
+					{"max",max},
+					{"sort",sort},
+					{"ids",ids},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public ResponseWrapperClass<QuestionClass> GetUsersByIdsQuestions()
+			public ResponseWrapperClass<AnswerClass> UsersByIdTagsByTagsTopAnswers(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortUsersByIdTagsByTagsTopAnswers? sort, int id, string tags)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("{id}/tags/{tags}/top-answers?site={site}");
+				return _client.Request<ResponseWrapperClass<AnswerClass>>("users", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"fromdate",fromdate},
+					{"todate",todate},
+					{"order",order},
+					{"min",min},
+					{"max",max},
+					{"sort",sort},
+					{"id",id},
+					{"tags",tags},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public ResponseWrapperClass<QuestionClass> GetMeQuestions()
+			public ResponseWrapperClass<QuestionClass> UsersByIdTagsByTagsTopQuestions(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortUsersByIdTagsByTagsTopQuestions? sort, int id, string tags)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("{id}/tags/{tags}/top-questions?site={site}");
+				return _client.Request<ResponseWrapperClass<QuestionClass>>("users", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"fromdate",fromdate},
+					{"todate",todate},
+					{"order",order},
+					{"min",min},
+					{"max",max},
+					{"sort",sort},
+					{"id",id},
+					{"tags",tags},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public ResponseWrapperClass<QuestionClass> GetUsersByIdsQuestionsFeatured()
+			public ResponseWrapperClass<UserTimelineClass> UsersByIdsTimeline(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, string ids)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("{ids}/timeline?site={site}");
+				return _client.Request<ResponseWrapperClass<UserTimelineClass>>("users", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"fromdate",fromdate},
+					{"todate",todate},
+					{"ids",ids},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public ResponseWrapperClass<QuestionClass> GetMeQuestionsFeatured()
+			public ResponseWrapperClass<TopTagClass> UsersByIdTopAnswerTags(string site, int? page, int? pagesize, int id)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("{id}/top-answer-tags?site={site}");
+				return _client.Request<ResponseWrapperClass<TopTagClass>>("users", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"id",id},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public ResponseWrapperClass<QuestionClass> GetUsersByIdsQuestionsNoAnswers()
+			public ResponseWrapperClass<TopTagClass> UsersByIdTopQuestionTags(string site, int? page, int? pagesize, int id)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("{id}/top-question-tags?site={site}");
+				return _client.Request<ResponseWrapperClass<TopTagClass>>("users", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"id",id},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public ResponseWrapperClass<QuestionClass> GetMeQuestionsNoAnswers()
+			public ResponseWrapperClass<AnswerClass> UsersModerators(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortUsersModerators? sort)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("moderators?site={site}");
+				return _client.Request<ResponseWrapperClass<AnswerClass>>("users", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"fromdate",fromdate},
+					{"todate",todate},
+					{"order",order},
+					{"min",min},
+					{"max",max},
+					{"sort",sort},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public ResponseWrapperClass<QuestionClass> GetUsersByIdsQuestionsUnaccepted()
+			public ResponseWrapperClass<UserClass> UsersModeratorsElected(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortUsersModeratorsElected? sort)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("moderators/elected?site={site}");
+				return _client.Request<ResponseWrapperClass<UserClass>>("users", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"site",site},
+					{"page",page},
+					{"pagesize",pagesize},
+					{"fromdate",fromdate},
+					{"todate",todate},
+					{"order",order},
+					{"min",min},
+					{"max",max},
+					{"sort",sort},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public ResponseWrapperClass<QuestionClass> GetMeQuestionsUnaccepted()
+			public ResponseWrapperClass<InboxItemClass> UsersByIdInbox(string site, int? page, int? pagesize, int id)
 			{
-				throw new NotImplementedException();
+				throw new NotImplementedException("Requires Authentication");
 			}
-			public ResponseWrapperClass<QuestionClass> GetUsersByIdsQuestionsUnanswered()
+			public ResponseWrapperClass<InboxItemClass> UsersByIdInboxUnread(string site, int? page, int? pagesize, int id, DateTimeOffset? since)
 			{
-				throw new NotImplementedException();
+				throw new NotImplementedException("Requires Authentication");
 			}
-			public ResponseWrapperClass<QuestionClass> GetMeQuestionsUnanswered()
+			public ResponseWrapperClass<NetworkUserClass> UsersByIdAssociated(int? page, int? pagesize, string ids)
 			{
-				throw new NotImplementedException();
-			}
-			public ResponseWrapperClass<ReputationClass> GetUsersByIdsReputation()
-			{
-				throw new NotImplementedException();
-			}
-			public ResponseWrapperClass<ReputationClass> GetMeReputation()
-			{
-				throw new NotImplementedException();
-			}
-			public ResponseWrapperClass<SuggestedEditClass> GetUsersByIdsSuggestedEdits()
-			{
-				throw new NotImplementedException();
-			}
-			public ResponseWrapperClass<SuggestedEditClass> GetMeSuggestedEdits()
-			{
-				throw new NotImplementedException();
-			}
-			public ResponseWrapperClass<TagClass> GetUsersByIdsTags()
-			{
-				throw new NotImplementedException();
-			}
-			public ResponseWrapperClass<TagClass> GetMeTags()
-			{
-				throw new NotImplementedException();
-			}
-			public ResponseWrapperClass<AnswerClass> GetUsersByIdTagsByTagsTopAnswers()
-			{
-				throw new NotImplementedException();
-			}
-			public ResponseWrapperClass<AnswerClass> GetMeTagsByTagsTopAnswers()
-			{
-				throw new NotImplementedException();
-			}
-			public ResponseWrapperClass<QuestionClass> GetUsersByIdTagsByTagsTopQuestions()
-			{
-				throw new NotImplementedException();
-			}
-			public ResponseWrapperClass<QuestionClass> GetMeTagsByTagsTopQuestions()
-			{
-				throw new NotImplementedException();
-			}
-			public ResponseWrapperClass<UserTimelineClass> GetUsersByIdsTimeline()
-			{
-				throw new NotImplementedException();
-			}
-			public ResponseWrapperClass<UserTimelineClass> GetMeTimeline()
-			{
-				throw new NotImplementedException();
-			}
-			public ResponseWrapperClass<TopTagClass> GetUsersByIdTopAnswerTags()
-			{
-				throw new NotImplementedException();
-			}
-			public ResponseWrapperClass<TopTagClass> GetMeTopAnswerTags()
-			{
-				throw new NotImplementedException();
-			}
-			public ResponseWrapperClass<TopTagClass> GetUsersByIdTopQuestionTags()
-			{
-				throw new NotImplementedException();
-			}
-			public ResponseWrapperClass<TopTagClass> GetMeTopQuestionTags()
-			{
-				throw new NotImplementedException();
-			}
-			public ResponseWrapperClass<AnswerClass> GetUsersModerators()
-			{
-				throw new NotImplementedException();
-			}
-			public ResponseWrapperClass<UserClass> GetUsersModeratorsElected()
-			{
-				throw new NotImplementedException();
-			}
-			public ResponseWrapperClass<InboxItemClass> GetUsersByIdInbox()
-			{
-				throw new NotImplementedException();
-			}
-			public ResponseWrapperClass<InboxItemClass> GetMeInbox()
-			{
-				throw new NotImplementedException();
-			}
-			public ResponseWrapperClass<InboxItemClass> GetUsersByIdInboxUnread()
-			{
-				throw new NotImplementedException();
-			}
-			public ResponseWrapperClass<InboxItemClass> GetMeInboxUnread()
-			{
-				throw new NotImplementedException();
-			}
-			public ResponseWrapperClass<NetworkUserClass> GetUsersByIdAssociated()
-			{
-				throw new NotImplementedException();
-			}
-			public ResponseWrapperClass<NetworkUserClass> GetMeAssociated()
-			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("{id}/associated");
+				return _client.Request<ResponseWrapperClass<NetworkUserClass>>("users", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"page",page},
+					{"pagesize",pagesize},
+					{"ids",ids},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
 		}
 		public _Users Users{get; private set;}
@@ -593,13 +1434,29 @@ namespace SOAPI2
 			{
 				_client=client;
 			}
-			public ResponseWrapperClass<AccessTokenClass> GetAccessTokensInvalidate()
+			public ResponseWrapperClass<AccessTokenClass> AccessTokensInvalidate(int? page, int? pagesize, string accessTokens)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("{accessTokens}/invalidate");
+				return _client.Request<ResponseWrapperClass<AccessTokenClass>>("access-tokens", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"page",page},
+					{"pagesize",pagesize},
+					{"accessTokens",accessTokens},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public ResponseWrapperClass<AccessTokenClass> GetAccessTokens()
+			public ResponseWrapperClass<AccessTokenClass> AccessTokens(int? page, int? pagesize, string accessTokens)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("{accessTokens}");
+				return _client.Request<ResponseWrapperClass<AccessTokenClass>>("access-tokens", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"page",page},
+					{"pagesize",pagesize},
+					{"accessTokens",accessTokens},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
 		}
 		public _Access_Tokens Access_Tokens{get; private set;}
@@ -610,9 +1467,17 @@ namespace SOAPI2
 			{
 				_client=client;
 			}
-			public ResponseWrapperClass<AccessTokenClass> GetAppsDeAuthenticate()
+			public ResponseWrapperClass<AccessTokenClass> AppsDeAuthenticate(int? page, int? pagesize, string accessTokens)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("{accessTokens}/de-authenticate");
+				return _client.Request<ResponseWrapperClass<AccessTokenClass>>("apps", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"page",page},
+					{"pagesize",pagesize},
+					{"accessTokens",accessTokens},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
 		}
 		public _Applications Applications{get; private set;}
@@ -623,13 +1488,26 @@ namespace SOAPI2
 			{
 				_client=client;
 			}
-			public ResponseWrapperClass<ErrorClass> GetErrors()
+			public ResponseWrapperClass<ErrorClass> Errors(int? page, int? pagesize)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("");
+				return _client.Request<ResponseWrapperClass<ErrorClass>>("errors", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"page",page},
+					{"pagesize",pagesize},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public void GetErrorsById()
+			public void ErrorsById(int id)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("{id}");
+				 _client.Request<object>("errors", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"id",id},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
 		}
 		public _Errors Errors{get; private set;}
@@ -640,13 +1518,28 @@ namespace SOAPI2
 			{
 				_client=client;
 			}
-			public ResponseWrapperClass<FilterClass> GetFiltersCreate()
+			public ResponseWrapperClass<FilterClass> FiltersCreate(string include, string exclude, string @base, bool? @unsafe)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("create");
+				return _client.Request<ResponseWrapperClass<FilterClass>>("filters", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"include",include},
+					{"exclude",exclude},
+					{"base",@base},
+					{"unsafe",@unsafe},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
-			public ResponseWrapperClass<FilterClass> GetFilters()
+			public ResponseWrapperClass<FilterClass> Filters(string filters)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("{filters}");
+				return _client.Request<ResponseWrapperClass<FilterClass>>("filters", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"filters",filters},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
 		}
 		public _Filters Filters{get; private set;}
@@ -657,13 +1550,13 @@ namespace SOAPI2
 			{
 				_client=client;
 			}
-			public ResponseWrapperClass<InboxItemClass> GetInbox()
+			public ResponseWrapperClass<InboxItemClass> Inbox(int? page, int? pagesize)
 			{
-				throw new NotImplementedException();
+				throw new NotImplementedException("Requires Authentication");
 			}
-			public ResponseWrapperClass<InboxItemClass> GetInboxUnread()
+			public ResponseWrapperClass<InboxItemClass> InboxUnread(int? page, int? pagesize, DateTimeOffset? since)
 			{
-				throw new NotImplementedException();
+				throw new NotImplementedException("Requires Authentication");
 			}
 		}
 		public _Inbox Inbox{get; private set;}
@@ -674,9 +1567,16 @@ namespace SOAPI2
 			{
 				_client=client;
 			}
-			public ResponseWrapperClass<SiteClass> GetSites()
+			public ResponseWrapperClass<SiteClass> Sites(int? page, int? pagesize)
 			{
-				throw new NotImplementedException();
+				string uriTemplate = _client.AppendApiKey("");
+				return _client.Request<ResponseWrapperClass<SiteClass>>("sites", uriTemplate , "GET",
+				new Dictionary<string, object>
+				{
+					{"page",page},
+					{"pagesize",pagesize},
+				}
+				, TimeSpan.FromMilliseconds(360000), "default");
 			}
 		}
 		public _Sites Sites{get; private set;}

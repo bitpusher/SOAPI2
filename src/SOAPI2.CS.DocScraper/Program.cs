@@ -139,19 +139,6 @@ namespace SOAPI2.DocScraper
             
         }
 
-        private static Docs Deserialize()
-        {
-            var s = new Serializer<Docs>();
-            Docs docs = s.DeSerializeObject("..\\..\\serialized\\docs.bin");
-            return docs;
-        }
-
-        private static void Serialize(Docs docs)
-        {
-            var s = new Serializer<Docs>();
-            s.SerializeObject("..\\..\\serialized\\docs.bin", docs);
-        }
-
         private static Docs PullFromFile()
         {
             string methodsIndex = File.ReadAllText("..\\..\\html\\methods.htm");

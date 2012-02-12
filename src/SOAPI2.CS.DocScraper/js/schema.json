@@ -1957,29 +1957,8 @@
       ],
       "description": null
     },
-    "sort_me": {
-      "id": "sort_me",
-      "type": "string",
-      "enum": [
-        "reputation",
-        "creation",
-        "name",
-        "modified"
-      ],
-      "description": null
-    },
     "sort_users_by_ids_answers": {
       "id": "sort_users_by_ids_answers",
-      "type": "string",
-      "enum": [
-        "activity",
-        "creation",
-        "votes"
-      ],
-      "description": null
-    },
-    "sort_me_answers": {
-      "id": "sort_me_answers",
       "type": "string",
       "enum": [
         "activity",
@@ -1999,17 +1978,6 @@
       ],
       "description": null
     },
-    "sort_me_badges": {
-      "id": "sort_me_badges",
-      "type": "string",
-      "enum": [
-        "rank",
-        "name",
-        "type",
-        "awarded"
-      ],
-      "description": null
-    },
     "sort_users_by_ids_comments": {
       "id": "sort_users_by_ids_comments",
       "type": "string",
@@ -2019,26 +1987,8 @@
       ],
       "description": null
     },
-    "sort_me_comments": {
-      "id": "sort_me_comments",
-      "type": "string",
-      "enum": [
-        "creation",
-        "votes"
-      ],
-      "description": null
-    },
     "sort_users_by_ids_comments_to_id": {
       "id": "sort_users_by_ids_comments_to_id",
-      "type": "string",
-      "enum": [
-        "creation",
-        "votes"
-      ],
-      "description": null
-    },
-    "sort_me_comments_to_id": {
-      "id": "sort_me_comments_to_id",
       "type": "string",
       "enum": [
         "creation",
@@ -2057,17 +2007,6 @@
       ],
       "description": null
     },
-    "sort_me_favorites": {
-      "id": "sort_me_favorites",
-      "type": "string",
-      "enum": [
-        "activity",
-        "votes",
-        "creation",
-        "added"
-      ],
-      "description": null
-    },
     "sort_users_by_ids_mentioned": {
       "id": "sort_users_by_ids_mentioned",
       "type": "string",
@@ -2077,27 +2016,8 @@
       ],
       "description": null
     },
-    "sort_me_mentioned": {
-      "id": "sort_me_mentioned",
-      "type": "string",
-      "enum": [
-        "creation",
-        "votes"
-      ],
-      "description": null
-    },
     "sort_users_by_ids_questions": {
       "id": "sort_users_by_ids_questions",
-      "type": "string",
-      "enum": [
-        "activity",
-        "votes",
-        "creation"
-      ],
-      "description": null
-    },
-    "sort_me_questions": {
-      "id": "sort_me_questions",
       "type": "string",
       "enum": [
         "activity",
@@ -2116,28 +2036,8 @@
       ],
       "description": null
     },
-    "sort_me_questions_featured": {
-      "id": "sort_me_questions_featured",
-      "type": "string",
-      "enum": [
-        "activity",
-        "votes",
-        "creation"
-      ],
-      "description": null
-    },
     "sort_users_by_ids_questions_no_answers": {
       "id": "sort_users_by_ids_questions_no_answers",
-      "type": "string",
-      "enum": [
-        "activity",
-        "votes",
-        "creation"
-      ],
-      "description": null
-    },
-    "sort_me_questions_no_answers": {
-      "id": "sort_me_questions_no_answers",
       "type": "string",
       "enum": [
         "activity",
@@ -2156,28 +2056,8 @@
       ],
       "description": null
     },
-    "sort_me_questions_unaccepted": {
-      "id": "sort_me_questions_unaccepted",
-      "type": "string",
-      "enum": [
-        "activity",
-        "votes",
-        "creation"
-      ],
-      "description": null
-    },
     "sort_users_by_ids_questions_unanswered": {
       "id": "sort_users_by_ids_questions_unanswered",
-      "type": "string",
-      "enum": [
-        "activity",
-        "votes",
-        "creation"
-      ],
-      "description": null
-    },
-    "sort_me_questions_unanswered": {
-      "id": "sort_me_questions_unanswered",
       "type": "string",
       "enum": [
         "activity",
@@ -2196,28 +2076,8 @@
       ],
       "description": null
     },
-    "sort_me_suggested_edits": {
-      "id": "sort_me_suggested_edits",
-      "type": "string",
-      "enum": [
-        "creation",
-        "approval",
-        "rejection"
-      ],
-      "description": null
-    },
     "sort_users_by_ids_tags": {
       "id": "sort_users_by_ids_tags",
-      "type": "string",
-      "enum": [
-        "popular",
-        "activity",
-        "name"
-      ],
-      "description": null
-    },
-    "sort_me_tags": {
-      "id": "sort_me_tags",
       "type": "string",
       "enum": [
         "popular",
@@ -2236,28 +2096,8 @@
       ],
       "description": null
     },
-    "sort_me_tags_by_tags_top_answers": {
-      "id": "sort_me_tags_by_tags_top_answers",
-      "type": "string",
-      "enum": [
-        "activity",
-        "creation",
-        "votes"
-      ],
-      "description": null
-    },
     "sort_users_by_id_tags_by_tags_top_questions": {
       "id": "sort_users_by_id_tags_by_tags_top_questions",
-      "type": "string",
-      "enum": [
-        "activity",
-        "votes",
-        "creation"
-      ],
-      "description": null
-    },
-    "sort_me_tags_by_tags_top_questions": {
-      "id": "sort_me_tags_by_tags_top_questions",
       "type": "string",
       "enum": [
         "activity",

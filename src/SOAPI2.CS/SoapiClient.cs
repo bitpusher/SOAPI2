@@ -64,48 +64,48 @@ namespace SOAPI2
             return AppendParameter(uriTemplate, "key", _apiKey);
         }
 
-        #region network wide methods
+        //#region network wide methods
 
-        public ResponseWrapperClass<SiteClass> GetSites(int page, int pagesize)
-        {
-            string uriTemplate = AppendApiKey("?pagesize={pagesize}&page={page}");
-            var response = Request<ResponseWrapperClass<SiteClass>>("sites", uriTemplate, "GET",
-                                                      new Dictionary<string, object>
-                                                          {
-                                                              {"page", page},
-                                                              {"pagesize", pagesize}
-                                                          }, TimeSpan.FromMilliseconds(60000*60), "default");
+        //public ResponseWrapperClass<SiteClass> GetSites(int page, int pagesize)
+        //{
+        //    string uriTemplate = AppendApiKey("?pagesize={pagesize}&page={page}");
+        //    var response = Request<ResponseWrapperClass<SiteClass>>("sites", uriTemplate, "GET",
+        //                                              new Dictionary<string, object>
+        //                                                  {
+        //                                                      {"page", page},
+        //                                                      {"pagesize", pagesize}
+        //                                                  }, TimeSpan.FromMilliseconds(60000*60), "default");
             
-            return response;
-        }
+        //    return response;
+        //}
 
-        #endregion
+        //#endregion
 
-        #region site specific methods
+        //#region site specific methods
 
 
-        public ResponseWrapperClass<ErrorClass> GetErrors( int page, int pagesize)
-        {
-            string uriTemplate = AppendApiKey("?pagesize={pagesize}&page={page}");
-            return Request<ResponseWrapperClass<ErrorClass>>("errors", uriTemplate, "GET",
-                                           new Dictionary<string, object>
-                                               {
+        //public ResponseWrapperClass<ErrorClass> GetErrors( int page, int pagesize)
+        //{
+        //    string uriTemplate = AppendApiKey("?pagesize={pagesize}&page={page}");
+        //    return Request<ResponseWrapperClass<ErrorClass>>("errors", uriTemplate, "GET",
+        //                                   new Dictionary<string, object>
+        //                                       {
                                                 
-                                                   {"page", page},
-                                                   {"pagesize", pagesize}
-                                               }, TimeSpan.FromMilliseconds(60000), "default");
-        }
+        //                                           {"page", page},
+        //                                           {"pagesize", pagesize}
+        //                                       }, TimeSpan.FromMilliseconds(60000), "default");
+        //}
 
-        public ResponseWrapperClass<InfoClass> GetInfo(string site)
-        {
-            string uriTemplate = AppendApiKey("?site={site}");
-            return Request<ResponseWrapperClass<InfoClass>>("info", uriTemplate, "GET",
-                                         new Dictionary<string, object>
-                                             {
-                                                 {"site", site}
-                                             }, TimeSpan.FromMilliseconds(60000), "default");
-        }
-        #endregion
+        //public ResponseWrapperClass<InfoClass> GetInfo(string site)
+        //{
+        //    string uriTemplate = AppendApiKey("?site={site}");
+        //    return Request<ResponseWrapperClass<InfoClass>>("info", uriTemplate, "GET",
+        //                                 new Dictionary<string, object>
+        //                                     {
+        //                                         {"site", site}
+        //                                     }, TimeSpan.FromMilliseconds(60000), "default");
+        //}
+        //#endregion
 
  
         // #TODO: implement logic in JSONCLient to for decompression, automatic or otherwise

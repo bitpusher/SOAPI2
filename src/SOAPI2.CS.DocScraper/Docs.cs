@@ -62,7 +62,7 @@ namespace SOAPI2.DocScraper
         {
             var fieldTypeObj = new JObject();
 
-            fieldTypeObj["$ref"] = "#." + fieldType ;
+            fieldTypeObj["$ref"] = "#." + fieldType;
             return fieldTypeObj;
         }
         public JObject CreateSMD(JObject schema)
@@ -88,51 +88,70 @@ namespace SOAPI2.DocScraper
                     serviceObj["envelope"] = "JSON";
                     serviceObj["cacheDuration"] = "60000";
                     serviceObj["throttleScope"] = "default";
+                    if (!string.IsNullOrEmpty(method.Target))
+                    {
+                        serviceObj["target"] = method.Target;
+                    }
                     if (!string.IsNullOrEmpty(group.GroupName))
                     {
-                        serviceObj["group"] = group.GroupName;    
+                        serviceObj["group"] = group.GroupName;
                     }
-                    
+
                     if (method.RequiresAuthentication)
                     {
                         serviceObj["authentication_scopes"] = new JArray(method.RequiredScopes.ToArray());
 
                     }
 
-                    serviceObj["uriTemplate"] = method.UriTemplate;
+                    string methodUriTemplate = method.UriTemplate;
+                    JArray paramsObj = new JArray();
+                    serviceObj["parameters"] = paramsObj;
+                    if (!group.IsNetworkWide)
+                    {
+                        paramsObj.Add(new JObject(new JProperty("name", "site"), new JProperty("type", "string"), new JProperty("required", true)));
+
+                        methodUriTemplate = AddParamToUriTemplate("site", "site", methodUriTemplate);
+                    }
+
+
+                    methodUriTemplate = methodUriTemplate.Trim('/');
+
+                    serviceObj["uriTemplate"] = methodUriTemplate;
 
                     if (!string.IsNullOrEmpty(method.ReturnType))
                     {
-                        serviceObj["returns"] = CreateGenericJRef(method.ReturnType);    
+                        serviceObj["returns"] = CreateGenericJRef(method.ReturnType);
                     }
-                    
 
-                    JArray paramsObj = new JArray();
-                    serviceObj["parameters"] = paramsObj;
+
+
                     foreach (var parameter in method.Parameters)
                     {
                         var paramObj = new JObject();
 
                         paramObj["name"] = parameter.Name;
                         //paramObj["description"] = null;
-
-                        
-
-                        if(parameter.IsPrimitive)
+                        if (methodUriTemplate.Contains("{" + parameter.Name + "}"))
                         {
-                            paramObj["type"] = parameter.Type;    
+                            paramObj["required"] = true;
+                        }
+
+
+                        if (parameter.IsPrimitive)
+                        {
+                            paramObj["type"] = parameter.Type;
                         }
                         else
                         {
-                            paramObj["type"] = CreateSingleJRef(parameter.Type);    
+                            paramObj["type"] = CreateSingleJRef(parameter.Type);
                         }
-                        
+
 
                         if (!string.IsNullOrEmpty(parameter.Format))
                         {
-                            paramObj["format"] = parameter.Format;    
+                            paramObj["format"] = parameter.Format;
                         }
-                        
+
 
 
                         paramsObj.Add(paramObj);
@@ -141,9 +160,9 @@ namespace SOAPI2.DocScraper
 
                     if (!string.IsNullOrEmpty(method.Description))
                     {
-                        serviceObj["description"] = method.Description;    
+                        serviceObj["description"] = method.Description;
                     }
-                    
+
 
                     servicesObj[method.Name] = serviceObj;
                 }
@@ -163,7 +182,7 @@ namespace SOAPI2.DocScraper
                 typesObj[type.Name] = typeObj;
                 typeObj["id"] = type.Name;
 
-                
+
                 if (type.IsEnum)
                 {
                     typeObj["type"] = "string";
@@ -228,15 +247,15 @@ namespace SOAPI2.DocScraper
 
                             //if (fieldType == type.GenericType)
                             //{
-                                
+
                             //    fieldTypeObj = CreateGenericJRef(fieldType);
                             //}
                             //else
                             //{
                             //    fieldTypeObj = CreateSingleJRef(fieldType);
-                                
+
                             //}
-                            
+
 
                         }
 
@@ -261,19 +280,19 @@ namespace SOAPI2.DocScraper
 
                         if (!string.IsNullOrEmpty(field.Description))
                         {
-                            fieldObj["description"] = field.Description;    
+                            fieldObj["description"] = field.Description;
                         }
-                        
+
                         if (field.IncludedInDefaultFilter)
                         {
-                            fieldObj["included_by_default"] = field.IncludedInDefaultFilter;    
+                            fieldObj["included_by_default"] = field.IncludedInDefaultFilter;
                         }
-                        
+
                         if (field.UnchangedInUnsafeFilters)
                         {
-                            fieldObj["unsafe"] = field.UnchangedInUnsafeFilters;    
+                            fieldObj["unsafe"] = field.UnchangedInUnsafeFilters;
                         }
-                        
+
                     }
 
                 }
@@ -386,6 +405,23 @@ namespace SOAPI2.DocScraper
                     string methodUriTemplate = methodMatch.Groups["template"].Value.Trim();
                     string methodName = MungeMethodName(methodUriTemplate);
 
+                    string methodTarget = "";
+                    if (methodUriTemplate.IndexOf("/", 1) == -1)
+                    {
+                        methodTarget = methodUriTemplate.Trim('/');
+                        methodUriTemplate = "/";
+                    }
+                    else
+                    {
+                        methodTarget = methodUriTemplate.Substring(1, methodUriTemplate.IndexOf("/", 1)).Trim('/');
+                        methodUriTemplate = methodUriTemplate.Substring(methodUriTemplate.IndexOf("/", 1)).Trim('/');
+                    }
+
+                    if (!group.IsNetworkWide)
+                    {
+                        AddParamToUriTemplate("site", "site", methodUriTemplate);
+                    }
+
 
                     var requiresAuthentication = Regex.IsMatch(methodLink, "class=\"need-auth\"", RegexOptions.Singleline | RegexOptions.IgnoreCase);
 
@@ -397,6 +433,7 @@ namespace SOAPI2.DocScraper
                                           {
                                               RequiresAuthentication = requiresAuthentication,
                                               Name = methodName,
+                                              Target = methodTarget,
                                               // Description = methodDescription, need to use HtmlAgilityPack to parse methods so we can get innnertext
                                               Url = methodUrl,
                                               UriTemplate = methodUriTemplate
@@ -408,11 +445,26 @@ namespace SOAPI2.DocScraper
                         string meTemplate = "/me" +
                             methodUriTemplateReplace.Substring(methodUriTemplateReplace.IndexOf("/users/{ids}") + 12);
                         string meName = MungeMethodName(meTemplate);
+
+                        string memethodTarget = "";
+                        if (meTemplate.IndexOf("/", 1) == -1)
+                        {
+                            memethodTarget = meTemplate.Trim('/');
+                            meTemplate = "/";
+                        }
+                        else
+                        {
+                            memethodTarget = meTemplate.Substring(1, meTemplate.IndexOf("/", 1)).Trim('/');
+                            meTemplate = meTemplate.Substring(meTemplate.IndexOf("/", 1)).Trim('/');
+                        }
+
+                        AddParamToUriTemplate("site", "site", meTemplate);
                         group.Methods.Add(new MethodInfo(this)
                                               {
                                                   RequiresAuthentication = true,
                                                   Description = methodDescription,
                                                   Url = methodUrl,
+                                                  Target = memethodTarget,
                                                   UriTemplate = meTemplate,
                                                   Name = meName
                                               });
@@ -423,6 +475,20 @@ namespace SOAPI2.DocScraper
 
         }
 
+        private string AddParamToUriTemplate(string key, string value, string uriTemplate)
+        {
+            if (uriTemplate.Contains("?"))
+            {
+                uriTemplate = uriTemplate + "&";
+                
+            }
+            else
+            {
+                uriTemplate = uriTemplate + "?";
+            }
+            uriTemplate = uriTemplate + key + "={" + value + "}";
+            return uriTemplate;
+        }
         public override string ToString()
         {
             var sb = new StringBuilder();
@@ -524,7 +590,7 @@ namespace SOAPI2.DocScraper
                         string pType = field.Type;
                         switch (pType)
                         {
-                            
+
                             case "boolean":
                             case "date":
                             case "guid_list":
@@ -550,7 +616,7 @@ namespace SOAPI2.DocScraper
                                         throw new Exception(string.Format("field type not found {0}.{1} {2}", type.Name, field.Name, pType));
                                     }
                                 }
-                                
+
                                 break;
                         }
 
