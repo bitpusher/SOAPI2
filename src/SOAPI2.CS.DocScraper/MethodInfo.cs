@@ -94,6 +94,7 @@ namespace SOAPI2.DocScraper
 
             ScriptMethodUri = methodNameMatch.Groups["uri"].Value;
 
+            UriTemplate = ScriptMethodUri.Substring(  ("/2.0/" + Target).Length);
             ScriptMethodName = methodNameMatch.Groups["name"].Value;
 
 

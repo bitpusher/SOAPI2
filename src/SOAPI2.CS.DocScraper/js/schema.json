@@ -71,9 +71,12 @@
           "format": "integer"
         },
         "comments": {
-          "type": {
-            "$ref": "#.comment"
-          }
+          "type": "array",
+          "items": [
+            {
+              "$ref": "#.comment"
+            }
+          ]
         },
         "link": {
           "type": "string"
@@ -205,14 +208,20 @@
           "included_by_default": true
         },
         "comments": {
-          "type": {
-            "$ref": "#.comment"
-          }
+          "type": "array",
+          "items": [
+            {
+              "$ref": "#.comment"
+            }
+          ]
         },
         "answers": {
-          "type": {
-            "$ref": "#.answer"
-          }
+          "type": "array",
+          "items": [
+            {
+              "$ref": "#.answer"
+            }
+          ]
         },
         "link": {
           "type": "string",
@@ -817,9 +826,12 @@
           "format": "integer"
         },
         "comments": {
-          "type": {
-            "$ref": "#.comment"
-          }
+          "type": "array",
+          "items": [
+            {
+              "$ref": "#.comment"
+            }
+          ]
         }
       },
       "description": "Discussion\r\n        \r\n    This type represents the intersection of the Question and Answer types.\r\n\r\n    It's used in cases where it would be beneficial to mix questions and answers in a response."
@@ -1109,9 +1121,12 @@
           "included_by_default": true
         },
         "related_sites": {
-          "type": {
-            "$ref": "#.related_site"
-          },
+          "type": "array",
+          "items": [
+            {
+              "$ref": "#.related_site"
+            }
+          ],
           "included_by_default": true
         },
         "twitter_account": {

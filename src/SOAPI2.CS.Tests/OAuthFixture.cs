@@ -3,7 +3,7 @@
 namespace SOAPI2.Tests
 {
     [TestFixture, RequiresSTA,Ignore]
-    public class OAuthFixture
+    public class OAuthFixture : FixtureBase
     {
         [Test]
         public void Test()

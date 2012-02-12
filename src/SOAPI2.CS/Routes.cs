@@ -94,7 +94,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<AnswerClass> Answers(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortAnswers? sort)
 			{
-				string uriTemplate = _client.AppendApiKey("?site={site}");
+				string uriTemplate = _client.AppendApiKey("?site={site}&page={page}&pagesize={pagesize}&fromdate={fromdate}&todate={todate}&order={order}&min={min}&max={max}&sort={sort}");
 				return _client.Request<ResponseWrapperClass<AnswerClass>>("answers", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -112,7 +112,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<AnswerClass> AnswersByIds(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortAnswersByIds? sort, string ids)
 			{
-				string uriTemplate = _client.AppendApiKey("{ids}?site={site}");
+				string uriTemplate = _client.AppendApiKey("/{ids}?site={site}&page={page}&pagesize={pagesize}&fromdate={fromdate}&todate={todate}&order={order}&min={min}&max={max}&sort={sort}");
 				return _client.Request<ResponseWrapperClass<AnswerClass>>("answers", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -131,7 +131,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<CommentClass> AnswersByIdsComments(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortAnswersByIdsComments? sort, string ids)
 			{
-				string uriTemplate = _client.AppendApiKey("{ids}/comments?site={site}");
+				string uriTemplate = _client.AppendApiKey("/{ids}/comments?site={site}&page={page}&pagesize={pagesize}&fromdate={fromdate}&todate={todate}&order={order}&min={min}&max={max}&sort={sort}");
 				return _client.Request<ResponseWrapperClass<CommentClass>>("answers", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -159,7 +159,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<BadgeClass> Badges(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortBadges? sort, string inname)
 			{
-				string uriTemplate = _client.AppendApiKey("?site={site}");
+				string uriTemplate = _client.AppendApiKey("?site={site}&page={page}&pagesize={pagesize}&fromdate={fromdate}&todate={todate}&order={order}&min={min}&max={max}&sort={sort}&inname={inname}");
 				return _client.Request<ResponseWrapperClass<BadgeClass>>("badges", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -178,7 +178,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<BadgeClass> BadgesByIds(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortBadgesByIds? sort, string ids)
 			{
-				string uriTemplate = _client.AppendApiKey("{ids}?site={site}");
+				string uriTemplate = _client.AppendApiKey("/{ids}?site={site}&page={page}&pagesize={pagesize}&fromdate={fromdate}&todate={todate}&order={order}&min={min}&max={max}&sort={sort}");
 				return _client.Request<ResponseWrapperClass<BadgeClass>>("badges", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -197,7 +197,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<BadgeClass> BadgesName(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortBadgesName? sort, string inname)
 			{
-				string uriTemplate = _client.AppendApiKey("name?site={site}");
+				string uriTemplate = _client.AppendApiKey("/name?site={site}&page={page}&pagesize={pagesize}&fromdate={fromdate}&todate={todate}&order={order}&min={min}&max={max}&sort={sort}&inname={inname}");
 				return _client.Request<ResponseWrapperClass<BadgeClass>>("badges", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -216,7 +216,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<BadgeClass> BadgesRecipients(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate)
 			{
-				string uriTemplate = _client.AppendApiKey("recipients?site={site}");
+				string uriTemplate = _client.AppendApiKey("/recipients?site={site}&page={page}&pagesize={pagesize}&fromdate={fromdate}&todate={todate}");
 				return _client.Request<ResponseWrapperClass<BadgeClass>>("badges", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -230,7 +230,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<BadgeClass> BadgesByIdsRecipients(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, string ids)
 			{
-				string uriTemplate = _client.AppendApiKey("{ids}/recipients?site={site}");
+				string uriTemplate = _client.AppendApiKey("/{ids}/recipients?site={site}&page={page}&pagesize={pagesize}&fromdate={fromdate}&todate={todate}");
 				return _client.Request<ResponseWrapperClass<BadgeClass>>("badges", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -245,7 +245,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<BadgeClass> BadgesTags(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortBadgesTags? sort, string inname)
 			{
-				string uriTemplate = _client.AppendApiKey("tags?site={site}");
+				string uriTemplate = _client.AppendApiKey("/tags?site={site}&page={page}&pagesize={pagesize}&fromdate={fromdate}&todate={todate}&order={order}&min={min}&max={max}&sort={sort}&inname={inname}");
 				return _client.Request<ResponseWrapperClass<BadgeClass>>("badges", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -273,7 +273,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<CommentClass> Comments(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortComments? sort)
 			{
-				string uriTemplate = _client.AppendApiKey("?site={site}");
+				string uriTemplate = _client.AppendApiKey("?site={site}&page={page}&pagesize={pagesize}&fromdate={fromdate}&todate={todate}&order={order}&min={min}&max={max}&sort={sort}");
 				return _client.Request<ResponseWrapperClass<CommentClass>>("comments", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -291,7 +291,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<CommentClass> CommentsByIds(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortCommentsByIds? sort, string ids)
 			{
-				string uriTemplate = _client.AppendApiKey("{ids}?site={site}");
+				string uriTemplate = _client.AppendApiKey("/{ids}?site={site}&page={page}&pagesize={pagesize}&fromdate={fromdate}&todate={todate}&order={order}&min={min}&max={max}&sort={sort}");
 				return _client.Request<ResponseWrapperClass<CommentClass>>("comments", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -332,7 +332,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<PostClass> Posts(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortPosts? sort)
 			{
-				string uriTemplate = _client.AppendApiKey("?site={site}");
+				string uriTemplate = _client.AppendApiKey("?site={site}&page={page}&pagesize={pagesize}&fromdate={fromdate}&todate={todate}&order={order}&min={min}&max={max}&sort={sort}");
 				return _client.Request<ResponseWrapperClass<PostClass>>("posts", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -350,7 +350,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<PostClass> PostsByIds(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortPostsByIds? sort, string ids)
 			{
-				string uriTemplate = _client.AppendApiKey("{ids}?site={site}");
+				string uriTemplate = _client.AppendApiKey("/{ids}?site={site}&page={page}&pagesize={pagesize}&fromdate={fromdate}&todate={todate}&order={order}&min={min}&max={max}&sort={sort}");
 				return _client.Request<ResponseWrapperClass<PostClass>>("posts", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -369,7 +369,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<CommentClass> PostsByIdsComments(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortPostsByIdsComments? sort, string ids)
 			{
-				string uriTemplate = _client.AppendApiKey("{ids}/comments?site={site}");
+				string uriTemplate = _client.AppendApiKey("/{ids}/comments?site={site}&page={page}&pagesize={pagesize}&fromdate={fromdate}&todate={todate}&order={order}&min={min}&max={max}&sort={sort}");
 				return _client.Request<ResponseWrapperClass<CommentClass>>("posts", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -388,7 +388,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<RevisionClass> PostsByIdsRevisions(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, string ids)
 			{
-				string uriTemplate = _client.AppendApiKey("{ids}/revisions?site={site}");
+				string uriTemplate = _client.AppendApiKey("/{ids}/revisions?site={site}&page={page}&pagesize={pagesize}&fromdate={fromdate}&todate={todate}");
 				return _client.Request<ResponseWrapperClass<RevisionClass>>("posts", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -403,7 +403,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<SuggestedEditClass> PostsByIdsSuggestedEdits(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortPostsByIdsSuggestedEdits? sort, string ids)
 			{
-				string uriTemplate = _client.AppendApiKey("{ids}/suggested-edits?site={site}");
+				string uriTemplate = _client.AppendApiKey("/{ids}/suggested-edits?site={site}&page={page}&pagesize={pagesize}&fromdate={fromdate}&todate={todate}&order={order}&min={min}&max={max}&sort={sort}");
 				return _client.Request<ResponseWrapperClass<SuggestedEditClass>>("posts", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -431,7 +431,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<PrivilegeClass> Privileges(string site, int? page, int? pagesize)
 			{
-				string uriTemplate = _client.AppendApiKey("?site={site}");
+				string uriTemplate = _client.AppendApiKey("?site={site}&page={page}&pagesize={pagesize}");
 				return _client.Request<ResponseWrapperClass<PrivilegeClass>>("privileges", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -452,7 +452,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<QuestionClass> Questions(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortQuestions? sort, string tagged)
 			{
-				string uriTemplate = _client.AppendApiKey("?site={site}");
+				string uriTemplate = _client.AppendApiKey("?site={site}&page={page}&pagesize={pagesize}&fromdate={fromdate}&todate={todate}&order={order}&min={min}&max={max}&sort={sort}&tagged={tagged}");
 				return _client.Request<ResponseWrapperClass<QuestionClass>>("questions", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -471,7 +471,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<QuestionClass> QuestionsByIds(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortQuestionsByIds? sort, string ids)
 			{
-				string uriTemplate = _client.AppendApiKey("{ids}?site={site}");
+				string uriTemplate = _client.AppendApiKey("/{ids}?site={site}&page={page}&pagesize={pagesize}&fromdate={fromdate}&todate={todate}&order={order}&min={min}&max={max}&sort={sort}");
 				return _client.Request<ResponseWrapperClass<QuestionClass>>("questions", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -490,7 +490,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<AnswerClass> QuestionsByIdsAnswers(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortQuestionsByIdsAnswers? sort, string ids)
 			{
-				string uriTemplate = _client.AppendApiKey("{ids}/answers?site={site}");
+				string uriTemplate = _client.AppendApiKey("/{ids}/answers?site={site}&page={page}&pagesize={pagesize}&fromdate={fromdate}&todate={todate}&order={order}&min={min}&max={max}&sort={sort}");
 				return _client.Request<ResponseWrapperClass<AnswerClass>>("questions", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -509,7 +509,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<CommentClass> QuestionsByIdsComments(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortQuestionsByIdsComments? sort, string ids)
 			{
-				string uriTemplate = _client.AppendApiKey("{ids}/comments?site={site}");
+				string uriTemplate = _client.AppendApiKey("/{ids}/comments?site={site}&page={page}&pagesize={pagesize}&fromdate={fromdate}&todate={todate}&order={order}&min={min}&max={max}&sort={sort}");
 				return _client.Request<ResponseWrapperClass<CommentClass>>("questions", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -528,7 +528,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<QuestionClass> QuestionsByIdsLinked(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortQuestionsByIdsLinked? sort, string ids)
 			{
-				string uriTemplate = _client.AppendApiKey("{ids}/linked?site={site}");
+				string uriTemplate = _client.AppendApiKey("/{ids}/linked?site={site}&page={page}&pagesize={pagesize}&fromdate={fromdate}&todate={todate}&order={order}&min={min}&max={max}&sort={sort}");
 				return _client.Request<ResponseWrapperClass<QuestionClass>>("questions", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -547,7 +547,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<QuestionClass> QuestionsByIdsRelated(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortQuestionsByIdsRelated? sort, string ids)
 			{
-				string uriTemplate = _client.AppendApiKey("{ids}/related?site={site}");
+				string uriTemplate = _client.AppendApiKey("/{ids}/related?site={site}&page={page}&pagesize={pagesize}&fromdate={fromdate}&todate={todate}&order={order}&min={min}&max={max}&sort={sort}");
 				return _client.Request<ResponseWrapperClass<QuestionClass>>("questions", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -566,7 +566,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<QuestionTimelineClass> QuestionsByIdsTimeline(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, string ids)
 			{
-				string uriTemplate = _client.AppendApiKey("{ids}/timeline?site={site}");
+				string uriTemplate = _client.AppendApiKey("/{ids}/timeline?site={site}&page={page}&pagesize={pagesize}&fromdate={fromdate}&todate={todate}");
 				return _client.Request<ResponseWrapperClass<QuestionTimelineClass>>("questions", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -581,7 +581,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<QuestionClass> QuestionsFeatured(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortQuestionsFeatured? sort, string tagged)
 			{
-				string uriTemplate = _client.AppendApiKey("featured?site={site}");
+				string uriTemplate = _client.AppendApiKey("/featured?site={site}&page={page}&pagesize={pagesize}&fromdate={fromdate}&todate={todate}&order={order}&min={min}&max={max}&sort={sort}&tagged={tagged}");
 				return _client.Request<ResponseWrapperClass<QuestionClass>>("questions", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -600,7 +600,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<QuestionClass> QuestionsUnanswered(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortQuestionsUnanswered? sort, string tagged)
 			{
-				string uriTemplate = _client.AppendApiKey("unanswered?site={site}");
+				string uriTemplate = _client.AppendApiKey("/unanswered?site={site}&page={page}&pagesize={pagesize}&fromdate={fromdate}&todate={todate}&order={order}&min={min}&max={max}&sort={sort}&tagged={tagged}");
 				return _client.Request<ResponseWrapperClass<QuestionClass>>("questions", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -619,7 +619,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<QuestionClass> QuestionsNoAnswers(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortQuestionsNoAnswers? sort, string tagged)
 			{
-				string uriTemplate = _client.AppendApiKey("no-answers?site={site}");
+				string uriTemplate = _client.AppendApiKey("/no-answers?site={site}&page={page}&pagesize={pagesize}&fromdate={fromdate}&todate={todate}&order={order}&min={min}&max={max}&sort={sort}&tagged={tagged}");
 				return _client.Request<ResponseWrapperClass<QuestionClass>>("questions", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -647,7 +647,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<RevisionClass> RevisionsByIds(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, string ids)
 			{
-				string uriTemplate = _client.AppendApiKey("{ids}?site={site}");
+				string uriTemplate = _client.AppendApiKey("/{ids}?site={site}&page={page}&pagesize={pagesize}&fromdate={fromdate}&todate={todate}");
 				return _client.Request<ResponseWrapperClass<RevisionClass>>("revisions", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -671,7 +671,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<QuestionClass> Search(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortSearch? sort, string tagged, string nottagged, string intitle)
 			{
-				string uriTemplate = _client.AppendApiKey("?site={site}");
+				string uriTemplate = _client.AppendApiKey("?site={site}&page={page}&pagesize={pagesize}&fromdate={fromdate}&todate={todate}&order={order}&min={min}&max={max}&sort={sort}&tagged={tagged}&nottagged={nottagged}&intitle={intitle}");
 				return _client.Request<ResponseWrapperClass<QuestionClass>>("search", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -692,7 +692,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<QuestionClass> Similar(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortSimilar? sort, string tagged, string nottagged, string title)
 			{
-				string uriTemplate = _client.AppendApiKey("?site={site}");
+				string uriTemplate = _client.AppendApiKey("?site={site}&page={page}&pagesize={pagesize}&fromdate={fromdate}&todate={todate}&order={order}&min={min}&max={max}&sort={sort}&tagged={tagged}&nottagged={nottagged}&title={title}");
 				return _client.Request<ResponseWrapperClass<QuestionClass>>("similar", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -722,7 +722,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<SuggestedEditClass> SuggestedEdits(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortSuggestedEdits? sort)
 			{
-				string uriTemplate = _client.AppendApiKey("?site={site}");
+				string uriTemplate = _client.AppendApiKey("?site={site}&page={page}&pagesize={pagesize}&fromdate={fromdate}&todate={todate}&order={order}&min={min}&max={max}&sort={sort}");
 				return _client.Request<ResponseWrapperClass<SuggestedEditClass>>("suggested-edits", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -740,7 +740,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<SuggestedEditClass> SuggestedEditsByIds(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortSuggestedEditsByIds? sort, string ids)
 			{
-				string uriTemplate = _client.AppendApiKey("{ids}?site={site}");
+				string uriTemplate = _client.AppendApiKey("/{ids}?site={site}&page={page}&pagesize={pagesize}&fromdate={fromdate}&todate={todate}&order={order}&min={min}&max={max}&sort={sort}");
 				return _client.Request<ResponseWrapperClass<SuggestedEditClass>>("suggested-edits", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -787,7 +787,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<TagClass> Tags(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortTags? sort, string inname)
 			{
-				string uriTemplate = _client.AppendApiKey("?site={site}");
+				string uriTemplate = _client.AppendApiKey("?site={site}&page={page}&pagesize={pagesize}&fromdate={fromdate}&todate={todate}&order={order}&min={min}&max={max}&sort={sort}&inname={inname}");
 				return _client.Request<ResponseWrapperClass<TagClass>>("tags", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -806,7 +806,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<TagClass> TagsByTagsInfo(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortTagsByTagsInfo? sort, string tags)
 			{
-				string uriTemplate = _client.AppendApiKey("{tags}/info?site={site}");
+				string uriTemplate = _client.AppendApiKey("/{tags}/info?site={site}&page={page}&pagesize={pagesize}&fromdate={fromdate}&todate={todate}&order={order}&min={min}&max={max}&sort={sort}");
 				return _client.Request<ResponseWrapperClass<TagClass>>("tags", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -825,7 +825,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<TagClass> TagsModeratorOnly(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortTagsModeratorOnly? sort, string inname)
 			{
-				string uriTemplate = _client.AppendApiKey("moderator-only?site={site}");
+				string uriTemplate = _client.AppendApiKey("/moderator-only?site={site}&page={page}&pagesize={pagesize}&fromdate={fromdate}&todate={todate}&order={order}&min={min}&max={max}&sort={sort}&inname={inname}");
 				return _client.Request<ResponseWrapperClass<TagClass>>("tags", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -844,7 +844,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<TagClass> TagsRequired(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortTagsRequired? sort, string inname)
 			{
-				string uriTemplate = _client.AppendApiKey("required?site={site}");
+				string uriTemplate = _client.AppendApiKey("/required?site={site}&page={page}&pagesize={pagesize}&fromdate={fromdate}&todate={todate}&order={order}&min={min}&max={max}&sort={sort}&inname={inname}");
 				return _client.Request<ResponseWrapperClass<TagClass>>("tags", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -863,7 +863,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<TagSynonymClass> TagsSynonyms(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortTagsSynonyms? sort)
 			{
-				string uriTemplate = _client.AppendApiKey("synonyms?site={site}");
+				string uriTemplate = _client.AppendApiKey("/synonyms?site={site}&page={page}&pagesize={pagesize}&fromdate={fromdate}&todate={todate}&order={order}&min={min}&max={max}&sort={sort}");
 				return _client.Request<ResponseWrapperClass<TagSynonymClass>>("tags", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -881,7 +881,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<QuestionClass> TagsByTagsFaq(string site, int? page, int? pagesize, string tags)
 			{
-				string uriTemplate = _client.AppendApiKey("{tags}/faq?site={site}");
+				string uriTemplate = _client.AppendApiKey("/{tags}/faq?site={site}&page={page}&pagesize={pagesize}");
 				return _client.Request<ResponseWrapperClass<QuestionClass>>("tags", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -894,7 +894,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<TagClass> TagsByTagsRelated(string site, int? page, int? pagesize, string tags)
 			{
-				string uriTemplate = _client.AppendApiKey("{tags}/related?site={site}");
+				string uriTemplate = _client.AppendApiKey("/{tags}/related?site={site}&page={page}&pagesize={pagesize}");
 				return _client.Request<ResponseWrapperClass<TagClass>>("tags", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -907,7 +907,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<TagSynonymClass> TagsByTagsSynonyms(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortTagsByTagsSynonyms? sort, string tags)
 			{
-				string uriTemplate = _client.AppendApiKey("{tags}/synonyms?site={site}");
+				string uriTemplate = _client.AppendApiKey("/{tags}/synonyms?site={site}&page={page}&pagesize={pagesize}&fromdate={fromdate}&todate={todate}&order={order}&min={min}&max={max}&sort={sort}");
 				return _client.Request<ResponseWrapperClass<TagSynonymClass>>("tags", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -926,7 +926,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<TagScoreClass> TagsByTagTopAnswerersByPeriod(string site, int? page, int? pagesize, string tag, Period period)
 			{
-				string uriTemplate = _client.AppendApiKey("{tag}/top-answerers/{period}?site={site}");
+				string uriTemplate = _client.AppendApiKey("/{tag}/top-answerers/{period}?site={site}&page={page}&pagesize={pagesize}");
 				return _client.Request<ResponseWrapperClass<TagScoreClass>>("tags", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -940,7 +940,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<TagScoreClass> TagsByTagTopAskersByPeriod(string site, int? page, int? pagesize, string tag, Period period)
 			{
-				string uriTemplate = _client.AppendApiKey("{tag}/top-askers/{period}?site={site}");
+				string uriTemplate = _client.AppendApiKey("/{tag}/top-askers/{period}?site={site}&page={page}&pagesize={pagesize}");
 				return _client.Request<ResponseWrapperClass<TagScoreClass>>("tags", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -954,7 +954,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<TagWikiClass> TagsByTagsWikis(string site, int? page, int? pagesize, string tags)
 			{
-				string uriTemplate = _client.AppendApiKey("{tags}/wikis?site={site}");
+				string uriTemplate = _client.AppendApiKey("/{tags}/wikis?site={site}&page={page}&pagesize={pagesize}");
 				return _client.Request<ResponseWrapperClass<TagWikiClass>>("tags", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -976,7 +976,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<UserClass> Users(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortUsers? sort, string inname)
 			{
-				string uriTemplate = _client.AppendApiKey("?site={site}");
+				string uriTemplate = _client.AppendApiKey("?site={site}&page={page}&pagesize={pagesize}&fromdate={fromdate}&todate={todate}&order={order}&min={min}&max={max}&sort={sort}&inname={inname}");
 				return _client.Request<ResponseWrapperClass<UserClass>>("users", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -995,7 +995,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<UserClass> UsersByIds(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortUsersByIds? sort, string ids)
 			{
-				string uriTemplate = _client.AppendApiKey("{ids}?site={site}");
+				string uriTemplate = _client.AppendApiKey("/{ids}?site={site}&page={page}&pagesize={pagesize}&fromdate={fromdate}&todate={todate}&order={order}&min={min}&max={max}&sort={sort}");
 				return _client.Request<ResponseWrapperClass<UserClass>>("users", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -1014,7 +1014,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<AnswerClass> UsersByIdsAnswers(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortUsersByIdsAnswers? sort, string ids)
 			{
-				string uriTemplate = _client.AppendApiKey("{ids}/answers?site={site}");
+				string uriTemplate = _client.AppendApiKey("/{ids}/answers?site={site}&page={page}&pagesize={pagesize}&fromdate={fromdate}&todate={todate}&order={order}&min={min}&max={max}&sort={sort}");
 				return _client.Request<ResponseWrapperClass<AnswerClass>>("users", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -1033,7 +1033,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<BadgeClass> UsersByIdsBadges(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortUsersByIdsBadges? sort, string ids)
 			{
-				string uriTemplate = _client.AppendApiKey("{ids}/badges?site={site}");
+				string uriTemplate = _client.AppendApiKey("/{ids}/badges?site={site}&page={page}&pagesize={pagesize}&fromdate={fromdate}&todate={todate}&order={order}&min={min}&max={max}&sort={sort}");
 				return _client.Request<ResponseWrapperClass<BadgeClass>>("users", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -1052,7 +1052,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<CommentClass> UsersByIdsComments(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortUsersByIdsComments? sort, string ids)
 			{
-				string uriTemplate = _client.AppendApiKey("{ids}/comments?site={site}");
+				string uriTemplate = _client.AppendApiKey("/{ids}/comments?site={site}&page={page}&pagesize={pagesize}&fromdate={fromdate}&todate={todate}&order={order}&min={min}&max={max}&sort={sort}");
 				return _client.Request<ResponseWrapperClass<CommentClass>>("users", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -1071,7 +1071,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<CommentClass> UsersByIdsCommentsToId(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortUsersByIdsCommentsToId? sort, string ids, int toid)
 			{
-				string uriTemplate = _client.AppendApiKey("{ids}/comments/{toid}?site={site}");
+				string uriTemplate = _client.AppendApiKey("/{ids}/comments/{toid}?site={site}&page={page}&pagesize={pagesize}&fromdate={fromdate}&todate={todate}&order={order}&min={min}&max={max}&sort={sort}");
 				return _client.Request<ResponseWrapperClass<CommentClass>>("users", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -1091,7 +1091,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<QuestionClass> UsersByIdsFavorites(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortUsersByIdsFavorites? sort, string ids)
 			{
-				string uriTemplate = _client.AppendApiKey("{ids}/favorites?site={site}");
+				string uriTemplate = _client.AppendApiKey("/{ids}/favorites?site={site}&page={page}&pagesize={pagesize}&fromdate={fromdate}&todate={todate}&order={order}&min={min}&max={max}&sort={sort}");
 				return _client.Request<ResponseWrapperClass<QuestionClass>>("users", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -1110,7 +1110,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<CommentClass> UsersByIdsMentioned(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortUsersByIdsMentioned? sort, string ids)
 			{
-				string uriTemplate = _client.AppendApiKey("{ids}/mentioned?site={site}");
+				string uriTemplate = _client.AppendApiKey("/{ids}/mentioned?site={site}&page={page}&pagesize={pagesize}&fromdate={fromdate}&todate={todate}&order={order}&min={min}&max={max}&sort={sort}");
 				return _client.Request<ResponseWrapperClass<CommentClass>>("users", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -1129,7 +1129,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<PrivilegeClass> UsersByIdPrivileges(string site, int? page, int? pagesize, int id)
 			{
-				string uriTemplate = _client.AppendApiKey("{id}/privileges?site={site}");
+				string uriTemplate = _client.AppendApiKey("/{id}/privileges?site={site}&page={page}&pagesize={pagesize}");
 				return _client.Request<ResponseWrapperClass<PrivilegeClass>>("users", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -1142,7 +1142,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<QuestionClass> UsersByIdsQuestions(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortUsersByIdsQuestions? sort, string ids)
 			{
-				string uriTemplate = _client.AppendApiKey("{ids}/questions?site={site}");
+				string uriTemplate = _client.AppendApiKey("/{ids}/questions?site={site}&page={page}&pagesize={pagesize}&fromdate={fromdate}&todate={todate}&order={order}&min={min}&max={max}&sort={sort}");
 				return _client.Request<ResponseWrapperClass<QuestionClass>>("users", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -1161,7 +1161,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<QuestionClass> UsersByIdsQuestionsFeatured(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortUsersByIdsQuestionsFeatured? sort, string ids)
 			{
-				string uriTemplate = _client.AppendApiKey("{ids}/questions/featured?site={site}");
+				string uriTemplate = _client.AppendApiKey("/{ids}/questions/featured?site={site}&page={page}&pagesize={pagesize}&fromdate={fromdate}&todate={todate}&order={order}&min={min}&max={max}&sort={sort}");
 				return _client.Request<ResponseWrapperClass<QuestionClass>>("users", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -1180,7 +1180,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<QuestionClass> UsersByIdsQuestionsNoAnswers(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortUsersByIdsQuestionsNoAnswers? sort, string ids)
 			{
-				string uriTemplate = _client.AppendApiKey("{ids}/questions/no-answers?site={site}");
+				string uriTemplate = _client.AppendApiKey("/{ids}/questions/no-answers?site={site}&page={page}&pagesize={pagesize}&fromdate={fromdate}&todate={todate}&order={order}&min={min}&max={max}&sort={sort}");
 				return _client.Request<ResponseWrapperClass<QuestionClass>>("users", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -1199,7 +1199,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<QuestionClass> UsersByIdsQuestionsUnaccepted(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortUsersByIdsQuestionsUnaccepted? sort, string ids)
 			{
-				string uriTemplate = _client.AppendApiKey("{ids}/questions/unaccepted?site={site}");
+				string uriTemplate = _client.AppendApiKey("/{ids}/questions/unaccepted?site={site}&page={page}&pagesize={pagesize}&fromdate={fromdate}&todate={todate}&order={order}&min={min}&max={max}&sort={sort}");
 				return _client.Request<ResponseWrapperClass<QuestionClass>>("users", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -1218,7 +1218,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<QuestionClass> UsersByIdsQuestionsUnanswered(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortUsersByIdsQuestionsUnanswered? sort, string ids)
 			{
-				string uriTemplate = _client.AppendApiKey("{ids}/questions/unanswered?site={site}");
+				string uriTemplate = _client.AppendApiKey("/{ids}/questions/unanswered?site={site}&page={page}&pagesize={pagesize}&fromdate={fromdate}&todate={todate}&order={order}&min={min}&max={max}&sort={sort}");
 				return _client.Request<ResponseWrapperClass<QuestionClass>>("users", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -1237,7 +1237,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<ReputationClass> UsersByIdsReputation(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, string ids)
 			{
-				string uriTemplate = _client.AppendApiKey("{ids}/reputation?site={site}");
+				string uriTemplate = _client.AppendApiKey("/{ids}/reputation?site={site}&page={page}&pagesize={pagesize}&fromdate={fromdate}&todate={todate}");
 				return _client.Request<ResponseWrapperClass<ReputationClass>>("users", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -1252,7 +1252,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<SuggestedEditClass> UsersByIdsSuggestedEdits(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortUsersByIdsSuggestedEdits? sort, string ids)
 			{
-				string uriTemplate = _client.AppendApiKey("{ids}/suggested-edits?site={site}");
+				string uriTemplate = _client.AppendApiKey("/{ids}/suggested-edits?site={site}&page={page}&pagesize={pagesize}&fromdate={fromdate}&todate={todate}&order={order}&min={min}&max={max}&sort={sort}");
 				return _client.Request<ResponseWrapperClass<SuggestedEditClass>>("users", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -1271,7 +1271,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<TagClass> UsersByIdsTags(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortUsersByIdsTags? sort, string ids)
 			{
-				string uriTemplate = _client.AppendApiKey("{ids}/tags?site={site}");
+				string uriTemplate = _client.AppendApiKey("/{ids}/tags?site={site}&page={page}&pagesize={pagesize}&fromdate={fromdate}&todate={todate}&order={order}&min={min}&max={max}&sort={sort}");
 				return _client.Request<ResponseWrapperClass<TagClass>>("users", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -1290,7 +1290,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<AnswerClass> UsersByIdTagsByTagsTopAnswers(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortUsersByIdTagsByTagsTopAnswers? sort, int id, string tags)
 			{
-				string uriTemplate = _client.AppendApiKey("{id}/tags/{tags}/top-answers?site={site}");
+				string uriTemplate = _client.AppendApiKey("/{id}/tags/{tags}/top-answers?site={site}&page={page}&pagesize={pagesize}&fromdate={fromdate}&todate={todate}&order={order}&min={min}&max={max}&sort={sort}");
 				return _client.Request<ResponseWrapperClass<AnswerClass>>("users", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -1310,7 +1310,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<QuestionClass> UsersByIdTagsByTagsTopQuestions(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortUsersByIdTagsByTagsTopQuestions? sort, int id, string tags)
 			{
-				string uriTemplate = _client.AppendApiKey("{id}/tags/{tags}/top-questions?site={site}");
+				string uriTemplate = _client.AppendApiKey("/{id}/tags/{tags}/top-questions?site={site}&page={page}&pagesize={pagesize}&fromdate={fromdate}&todate={todate}&order={order}&min={min}&max={max}&sort={sort}");
 				return _client.Request<ResponseWrapperClass<QuestionClass>>("users", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -1330,7 +1330,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<UserTimelineClass> UsersByIdsTimeline(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, string ids)
 			{
-				string uriTemplate = _client.AppendApiKey("{ids}/timeline?site={site}");
+				string uriTemplate = _client.AppendApiKey("/{ids}/timeline?site={site}&page={page}&pagesize={pagesize}&fromdate={fromdate}&todate={todate}");
 				return _client.Request<ResponseWrapperClass<UserTimelineClass>>("users", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -1345,7 +1345,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<TopTagClass> UsersByIdTopAnswerTags(string site, int? page, int? pagesize, int id)
 			{
-				string uriTemplate = _client.AppendApiKey("{id}/top-answer-tags?site={site}");
+				string uriTemplate = _client.AppendApiKey("/{id}/top-answer-tags?site={site}&page={page}&pagesize={pagesize}");
 				return _client.Request<ResponseWrapperClass<TopTagClass>>("users", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -1358,7 +1358,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<TopTagClass> UsersByIdTopQuestionTags(string site, int? page, int? pagesize, int id)
 			{
-				string uriTemplate = _client.AppendApiKey("{id}/top-question-tags?site={site}");
+				string uriTemplate = _client.AppendApiKey("/{id}/top-question-tags?site={site}&page={page}&pagesize={pagesize}");
 				return _client.Request<ResponseWrapperClass<TopTagClass>>("users", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -1371,7 +1371,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<AnswerClass> UsersModerators(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortUsersModerators? sort)
 			{
-				string uriTemplate = _client.AppendApiKey("moderators?site={site}");
+				string uriTemplate = _client.AppendApiKey("/moderators?site={site}&page={page}&pagesize={pagesize}&fromdate={fromdate}&todate={todate}&order={order}&min={min}&max={max}&sort={sort}");
 				return _client.Request<ResponseWrapperClass<AnswerClass>>("users", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -1389,7 +1389,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<UserClass> UsersModeratorsElected(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortUsersModeratorsElected? sort)
 			{
-				string uriTemplate = _client.AppendApiKey("moderators/elected?site={site}");
+				string uriTemplate = _client.AppendApiKey("/moderators/elected?site={site}&page={page}&pagesize={pagesize}&fromdate={fromdate}&todate={todate}&order={order}&min={min}&max={max}&sort={sort}");
 				return _client.Request<ResponseWrapperClass<UserClass>>("users", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -1415,7 +1415,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<NetworkUserClass> UsersByIdAssociated(int? page, int? pagesize, string ids)
 			{
-				string uriTemplate = _client.AppendApiKey("{id}/associated");
+				string uriTemplate = _client.AppendApiKey("/{ids}/associated?page={page}&pagesize={pagesize}");
 				return _client.Request<ResponseWrapperClass<NetworkUserClass>>("users", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -1436,7 +1436,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<AccessTokenClass> AccessTokensInvalidate(int? page, int? pagesize, string accessTokens)
 			{
-				string uriTemplate = _client.AppendApiKey("{accessTokens}/invalidate");
+				string uriTemplate = _client.AppendApiKey("/{accessTokens}/invalidate?page={page}&pagesize={pagesize}");
 				return _client.Request<ResponseWrapperClass<AccessTokenClass>>("access-tokens", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -1448,7 +1448,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<AccessTokenClass> AccessTokens(int? page, int? pagesize, string accessTokens)
 			{
-				string uriTemplate = _client.AppendApiKey("{accessTokens}");
+				string uriTemplate = _client.AppendApiKey("/{accessTokens}?page={page}&pagesize={pagesize}");
 				return _client.Request<ResponseWrapperClass<AccessTokenClass>>("access-tokens", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -1469,7 +1469,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<AccessTokenClass> AppsDeAuthenticate(int? page, int? pagesize, string accessTokens)
 			{
-				string uriTemplate = _client.AppendApiKey("{accessTokens}/de-authenticate");
+				string uriTemplate = _client.AppendApiKey("/{accessTokens}/de-authenticate?page={page}&pagesize={pagesize}");
 				return _client.Request<ResponseWrapperClass<AccessTokenClass>>("apps", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -1490,7 +1490,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<ErrorClass> Errors(int? page, int? pagesize)
 			{
-				string uriTemplate = _client.AppendApiKey("");
+				string uriTemplate = _client.AppendApiKey("?page={page}&pagesize={pagesize}");
 				return _client.Request<ResponseWrapperClass<ErrorClass>>("errors", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -1501,7 +1501,7 @@ namespace SOAPI2
 			}
 			public void ErrorsById(int id)
 			{
-				string uriTemplate = _client.AppendApiKey("{id}");
+				string uriTemplate = _client.AppendApiKey("/{id}");
 				 _client.Request<object>("errors", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -1520,8 +1520,8 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<FilterClass> FiltersCreate(string include, string exclude, string @base, bool? @unsafe)
 			{
-				string uriTemplate = _client.AppendApiKey("create");
-				return _client.Request<ResponseWrapperClass<FilterClass>>("filters", uriTemplate , "GET",
+				string uriTemplate = _client.AppendApiKey("/create");
+				return _client.Request<ResponseWrapperClass<FilterClass>>("filters", uriTemplate , "POST",
 				new Dictionary<string, object>
 				{
 					{"include",include},
@@ -1533,7 +1533,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<FilterClass> Filters(string filters)
 			{
-				string uriTemplate = _client.AppendApiKey("{filters}");
+				string uriTemplate = _client.AppendApiKey("/{filters}");
 				return _client.Request<ResponseWrapperClass<FilterClass>>("filters", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{
@@ -1569,7 +1569,7 @@ namespace SOAPI2
 			}
 			public ResponseWrapperClass<SiteClass> Sites(int? page, int? pagesize)
 			{
-				string uriTemplate = _client.AppendApiKey("");
+				string uriTemplate = _client.AppendApiKey("?page={page}&pagesize={pagesize}");
 				return _client.Request<ResponseWrapperClass<SiteClass>>("sites", uriTemplate , "GET",
 				new Dictionary<string, object>
 				{

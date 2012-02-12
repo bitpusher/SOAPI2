@@ -85,6 +85,13 @@ namespace SOAPI2.DocScraper
                     serviceObj["contentType"] = "application/json";
                     serviceObj["responseContentType"] = "application/json";
                     serviceObj["transport"] = "GET";
+
+                    if (method.Name == "filters_create")
+                    {
+                        serviceObj["transport"] = "POST";
+                        serviceObj["contentType"] = "application/x-www-form-urlencoded";
+                    }
+
                     serviceObj["envelope"] = "JSON";
                     serviceObj["cacheDuration"] = "60000";
                     serviceObj["throttleScope"] = "default";
@@ -114,9 +121,13 @@ namespace SOAPI2.DocScraper
                     }
 
 
-                    methodUriTemplate = methodUriTemplate.Trim('/');
+                    if (methodUriTemplate.StartsWith("/?"))
+                    {
+                        methodUriTemplate = methodUriTemplate.Substring(1);
+                    }
+                    
 
-                    serviceObj["uriTemplate"] = methodUriTemplate;
+                    
 
                     if (!string.IsNullOrEmpty(method.ReturnType))
                     {
@@ -131,10 +142,18 @@ namespace SOAPI2.DocScraper
 
                         paramObj["name"] = parameter.Name;
                         //paramObj["description"] = null;
-                        if (methodUriTemplate.Contains("{" + parameter.Name + "}"))
+                        if( serviceObj["transport"].Value<string>() == "GET")   
                         {
-                            paramObj["required"] = true;
+                            if (methodUriTemplate.Contains("{" + parameter.Name + "}"))
+                            {
+                                paramObj["required"] = true;
+                            }
+                            else
+                            {
+                                methodUriTemplate = AddParamToUriTemplate(parameter.Name, parameter.Name, methodUriTemplate);
+                            }    
                         }
+                        
 
 
                         if (parameter.IsPrimitive)
@@ -157,6 +176,7 @@ namespace SOAPI2.DocScraper
                         paramsObj.Add(paramObj);
                     }
 
+                    serviceObj["uriTemplate"] = methodUriTemplate;
 
                     if (!string.IsNullOrEmpty(method.Description))
                     {
@@ -414,7 +434,8 @@ namespace SOAPI2.DocScraper
                     else
                     {
                         methodTarget = methodUriTemplate.Substring(1, methodUriTemplate.IndexOf("/", 1)).Trim('/');
-                        methodUriTemplate = methodUriTemplate.Substring(methodUriTemplate.IndexOf("/", 1)).Trim('/');
+                        methodUriTemplate = methodUriTemplate.Substring(methodUriTemplate.IndexOf("/",1));
+                        
                     }
 
                     if (!group.IsNetworkWide)
@@ -455,7 +476,7 @@ namespace SOAPI2.DocScraper
                         else
                         {
                             memethodTarget = meTemplate.Substring(1, meTemplate.IndexOf("/", 1)).Trim('/');
-                            meTemplate = meTemplate.Substring(meTemplate.IndexOf("/", 1)).Trim('/');
+                            meTemplate = meTemplate.Substring(meTemplate.IndexOf("/", 1));
                         }
 
                         AddParamToUriTemplate("site", "site", meTemplate);

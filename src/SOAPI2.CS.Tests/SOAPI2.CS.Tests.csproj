@@ -33,11 +33,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CityIndex.JsonClient">
-      <HintPath>..\packages\!CityIndex.JsonClient\lib\net35\CityIndex.JsonClient.dll</HintPath>
+    <Reference Include="CityIndex.JsonClient, Version=1.0.0.8, Culture=neutral, PublicKeyToken=3accec43ff318fbb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\CityIndex.JsonClient.1.0.0\lib\net35\CityIndex.JsonClient.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.4.0.7\lib\net35\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="CityIndex.ReflectiveLoggingAdapter, Version=1.0.0.22, Culture=neutral, PublicKeyToken=5ebd2761864c547e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\CityIndex.JsonClient.1.0.0\lib\net35\CityIndex.ReflectiveLoggingAdapter.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.0.7.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\CityIndex.JsonClient.1.0.0\lib\net35\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework, Version=2.5.10.11092, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -59,9 +64,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccessTokensFixture.cs" />
+    <Compile Include="AnswersFixture.cs" />
+    <Compile Include="ApplicationsFixture.cs" />
+    <Compile Include="BadgesFixture.cs" />
+    <Compile Include="CommentsFixture.cs" />
+    <Compile Include="ErrorsFixture.cs" />
+    <Compile Include="EventsFixture.cs" />
+    <Compile Include="FiltersFixture.cs" />
+    <Compile Include="FixtureBase.cs" />
+    <Compile Include="InboxFixture.cs" />
+    <Compile Include="InfoFixture.cs" />
+    <Compile Include="MeFixture.cs" />
     <Compile Include="OAuthFixture.cs" />
+    <Compile Include="PostsFixture.cs" />
+    <Compile Include="PrivilegesFixture.cs" />
+    <Compile Include="QuestionsFixture.cs" />
+    <Compile Include="RevisionsFixture.cs" />
+    <Compile Include="SearchFixture.cs" />
+    <Compile Include="SitesFixture.cs" />
     <Compile Include="SoapiClientTestFixture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SuggestedEditsFixture.cs" />
+    <Compile Include="TagsFixture.cs" />
+    <Compile Include="UsersFixture.cs" />
+    <Compile Include="VariousFixture.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SOAPI2.CS\SOAPI2.CS.csproj">

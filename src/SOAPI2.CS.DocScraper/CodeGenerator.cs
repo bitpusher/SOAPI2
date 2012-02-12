@@ -381,9 +381,14 @@ namespace SOAPI2.DocScraper
                     var methodName = kvp.Key;
                     var methodObj = kvp.Value;
                     string target = methodObj["target"].Value<string>();
+
                     var contentType = (string)methodObj["contentType"];
+                    // #TODO: implement per-method request content type
+                    //serviceObj["contentType"] = "application/x-www-form-urlencoded";
+
                     var responseContentType = (string)methodObj["responseContentType"];
                     var transport = (string)methodObj["transport"];
+                    
                     var envelope = (string)methodObj["envelope"];
                     var cacheDuration = (string)methodObj["cacheDuration"];
                     var throttleScope = (string)methodObj["throttleScope"];
@@ -499,7 +504,7 @@ namespace SOAPI2.DocScraper
 
                         sb.AppendLine(string.Format("{0}\t\tstring uriTemplate = _client.AppendApiKey(\"{1}\");", tabs, uriTemplate));
                         //            string uriTemplate = _client.AppendApiKey("/clientapplication/versioninformation?AppKey={appKey}&AccountOperatorId={accountOperatorId}");
-                        sb.AppendLine(string.Format("{0}\t\t{2} _client.Request<{1}>(\"{3}\", uriTemplate , \"GET\",", tabs, returnType == "void" ? "object" : returnType, returnType == "void" ? "" : "return",target));
+                        sb.AppendLine(string.Format("{0}\t\t{2} _client.Request<{1}>(\"{3}\", uriTemplate , \"{4}\",", tabs, returnType == "void" ? "object" : returnType, returnType == "void" ? "" : "return", target, transport));
                         //            return _client.Request<GetVersionInformationResponseDTO>("clientapplication/versioninformation", uriTemplate , "GET",
                         sb.AppendLine(string.Format("{0}\t\tnew Dictionary<string, object>", tabs));
 

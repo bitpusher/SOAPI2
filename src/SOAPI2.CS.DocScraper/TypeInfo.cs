@@ -307,7 +307,7 @@ namespace SOAPI2.DocScraper
                         }
 
 
-                        if (fieldType.Contains("an array of"))
+                        if (td.InnerHtml.Contains("an array of"))
                         {
                             fieldInfo.IsArray = true;
                             if (fieldInfo.IsPrimitive)
@@ -320,7 +320,11 @@ namespace SOAPI2.DocScraper
                                 }
                                 else
                                 {
-                                    throw new Exception("unexpected field array type: " + fieldType);
+                                    if (fieldInfo.IsPrimitive)
+                                    {
+                                        throw new Exception("unexpected field array type: " + fieldType);    
+                                    }
+                                    
                                 }
                             }
 

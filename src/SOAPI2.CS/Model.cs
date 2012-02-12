@@ -61,7 +61,7 @@ namespace SOAPI2.Model
 		public int DownVoteCount {get; set;}
 
 		[JsonProperty("comments")]
-		public CommentClass Comments {get; set;}
+		public List<CommentClass> Comments {get; set;}
 
 		[JsonProperty("link")]
 		public string Link {get; set;}
@@ -158,10 +158,10 @@ namespace SOAPI2.Model
 		public ShallowUserClass Owner {get; set;}
 
 		[JsonProperty("comments")]
-		public CommentClass Comments {get; set;}
+		public List<CommentClass> Comments {get; set;}
 
 		[JsonProperty("answers")]
-		public AnswerClass Answers {get; set;}
+		public List<AnswerClass> Answers {get; set;}
 
 		[JsonProperty("link")]
 		public string Link {get; set;}
@@ -627,7 +627,7 @@ namespace SOAPI2.Model
 		public int DownVoteCount {get; set;}
 
 		[JsonProperty("comments")]
-		public CommentClass Comments {get; set;}
+		public List<CommentClass> Comments {get; set;}
 
 	
 	}
@@ -841,7 +841,7 @@ namespace SOAPI2.Model
 		public string FaviconUrl {get; set;}
 
 		[JsonProperty("related_sites")]
-		public RelatedSiteClass RelatedSites {get; set;}
+		public List<RelatedSiteClass> RelatedSites {get; set;}
 
 		[JsonProperty("twitter_account")]
 		public string TwitterAccount {get; set;}
