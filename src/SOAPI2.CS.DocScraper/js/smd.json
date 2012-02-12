@@ -613,47 +613,6 @@
       ],
       "description": "\r\n        \r\nGets the comments identified in id.\r\n\r\nThis method is most useful if you have a cache of comment ids obtained through other means (such as /questions/{id}/comments) but suspect the data may be stale.\r\n\r\n{ids} can contain up to 100 separate ids, to find ids programatically look for comment_id on comment objects.\r\n\r\nThe sorts accepted by this method operate on the follow fields of the comment object:\r\n    \r\n        creation &ndash; creation_date\r\n        votes &ndash; score\r\n    \r\n    It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.\r\n\r\n\r\n        \r\n    This method returns a list of comments.\r\n\r\n    "
     },
-    "errors": {
-      "contentType": "application/json",
-      "responseContentType": "application/json",
-      "transport": "GET",
-      "envelope": "JSON",
-      "cacheDuration": "60000",
-      "throttleScope": "default",
-      "group": "Errors",
-      "uriTemplate": "/errors",
-      "returns": {
-        "$ref": "#.response_wrapper<error>"
-      },
-      "parameters": [
-        {
-          "name": "page",
-          "type": "number"
-        },
-        {
-          "name": "pagesize",
-          "type": "number"
-        }
-      ],
-      "description": "\r\n        \r\nReturns the various error codes that can be produced by the API.\r\n\r\nThis method is provided for discovery, documentation, and testing purposes, it is not expected many applications will consume it during normal operation.\r\n\r\nFor testing purposes, look into the /errors/{id} method which simulates errors given a code.\r\n\r\n        \r\n    This method returns a list of errors.\r\n\r\n    "
-    },
-    "errors_by_id": {
-      "contentType": "application/json",
-      "responseContentType": "application/json",
-      "transport": "GET",
-      "envelope": "JSON",
-      "cacheDuration": "60000",
-      "throttleScope": "default",
-      "group": "Errors",
-      "uriTemplate": "/errors/{id}",
-      "parameters": [
-        {
-          "name": "id",
-          "type": "number"
-        }
-      ],
-      "description": "\r\n        \r\nThis method allows you to generate an error.\r\n\r\nThis method is only intended for use when testing an application or library. Unlike other methods in the API, its contract is not frozen, and new error codes may be added at any time.\r\n\r\n        \r\n    This method results in an error, which will be expressed with a 400 HTTP status code and setting the error* properties\r\n    on the wrapper object.\r\n\r\n    "
-    },
     "events": {
       "contentType": "application/json",
       "responseContentType": "application/json",
@@ -1391,6 +1350,67 @@
       ],
       "description": "\r\n        \r\nReturns a subset of the events that have happened to the questions identified in id.\r\n\r\nThis provides data similar to that found on a question's timeline page.\r\n\r\nVoting data is scrubbed to deter inferencing of voter identity.\r\n\r\n{ids} can contain up to 100 separate ids, to find ids programatically look for question_id on question objects.\r\n\r\n        \r\n    This method returns a list of question timeline events.\r\n\r\n    "
     },
+    "questions_featured": {
+      "contentType": "application/json",
+      "responseContentType": "application/json",
+      "transport": "GET",
+      "envelope": "JSON",
+      "cacheDuration": "60000",
+      "throttleScope": "default",
+      "group": "Questions",
+      "uriTemplate": "/questions/featured",
+      "returns": {
+        "$ref": "#.response_wrapper<question>"
+      },
+      "parameters": [
+        {
+          "name": "page",
+          "type": "number"
+        },
+        {
+          "name": "pagesize",
+          "type": "number"
+        },
+        {
+          "name": "fromdate",
+          "type": "number",
+          "format": "utc-millisec"
+        },
+        {
+          "name": "todate",
+          "type": "number",
+          "format": "utc-millisec"
+        },
+        {
+          "name": "order",
+          "type": {
+            "$ref": "#.order"
+          }
+        },
+        {
+          "name": "min",
+          "type": "string",
+          "format": "sort-dependant"
+        },
+        {
+          "name": "max",
+          "type": "string",
+          "format": "sort-dependant"
+        },
+        {
+          "name": "sort",
+          "type": {
+            "$ref": "#.sort_questions_featured"
+          }
+        },
+        {
+          "name": "tagged",
+          "type": "string",
+          "format": "string-list"
+        }
+      ],
+      "description": "\r\n        \r\nReturns all the questions with active bounties in the system.\r\n\r\nThe sorts accepted by this method operate on the follow fields of the question object:\r\n    \r\n        activity &ndash; last_activity_date\r\n        creation &ndash; creation_date\r\n        votes &ndash; score\r\n    \r\n    It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.\r\n\r\n\r\n        \r\n    This method returns a list of questions.\r\n\r\n    "
+    },
     "questions_unanswered": {
       "contentType": "application/json",
       "responseContentType": "application/json",
@@ -1884,6 +1904,187 @@
       ],
       "description": "\r\n        \r\nReturns the tags found on a site.\r\n\r\nThe inname parameter lets a consumer filter down to tags that contain a certain substring.\r\nFor example, inname=own would return both \"download\" and \"owner\" amongst others.\r\n\r\n        \r\n    This method returns a list of tags.\r\n\r\nThe sorts accepted by this method operate on the follow fields of the tag object:\r\n    \r\n        popular &ndash; count\r\n        activity &ndash; the creation_date of the last question asked with the tag\r\n        name &ndash; name\r\n    \r\n    It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.\r\n\r\n\r\n    "
     },
+    "tags_by_tags_info": {
+      "contentType": "application/json",
+      "responseContentType": "application/json",
+      "transport": "GET",
+      "envelope": "JSON",
+      "cacheDuration": "60000",
+      "throttleScope": "default",
+      "group": "Tags",
+      "uriTemplate": "/tags/{tags}/info",
+      "returns": {
+        "$ref": "#.response_wrapper<tag>"
+      },
+      "parameters": [
+        {
+          "name": "page",
+          "type": "number"
+        },
+        {
+          "name": "pagesize",
+          "type": "number"
+        },
+        {
+          "name": "fromdate",
+          "type": "number",
+          "format": "utc-millisec"
+        },
+        {
+          "name": "todate",
+          "type": "number",
+          "format": "utc-millisec"
+        },
+        {
+          "name": "order",
+          "type": {
+            "$ref": "#.order"
+          }
+        },
+        {
+          "name": "min",
+          "type": "string",
+          "format": "sort-dependant"
+        },
+        {
+          "name": "max",
+          "type": "string",
+          "format": "sort-dependant"
+        },
+        {
+          "name": "sort",
+          "type": {
+            "$ref": "#.sort_tags_by_tags_info"
+          }
+        },
+        {
+          "name": "tags",
+          "type": "string",
+          "format": "string-list"
+        }
+      ],
+      "description": "\r\n        \r\nReturns tag objects representing the tags in {tags} found on the site.\r\n\r\nThis method diverges from the standard naming patterns to avoid to conflicting with existing methods, due to the free form nature of tag names.\r\n\r\n        \r\n    This method returns a list of tags.\r\n\r\nThe sorts accepted by this method operate on the follow fields of the tag object:\r\n    \r\n        popular &ndash; count\r\n        activity &ndash; the creation_date of the last question asked with the tag\r\n        name &ndash; name\r\n    \r\n    It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.\r\n\r\n\r\n    "
+    },
+    "tags_moderator_only": {
+      "contentType": "application/json",
+      "responseContentType": "application/json",
+      "transport": "GET",
+      "envelope": "JSON",
+      "cacheDuration": "60000",
+      "throttleScope": "default",
+      "group": "Tags",
+      "uriTemplate": "/tags/moderator-only",
+      "returns": {
+        "$ref": "#.response_wrapper<tag>"
+      },
+      "parameters": [
+        {
+          "name": "page",
+          "type": "number"
+        },
+        {
+          "name": "pagesize",
+          "type": "number"
+        },
+        {
+          "name": "fromdate",
+          "type": "number",
+          "format": "utc-millisec"
+        },
+        {
+          "name": "todate",
+          "type": "number",
+          "format": "utc-millisec"
+        },
+        {
+          "name": "order",
+          "type": {
+            "$ref": "#.order"
+          }
+        },
+        {
+          "name": "min",
+          "type": "string",
+          "format": "sort-dependant"
+        },
+        {
+          "name": "max",
+          "type": "string",
+          "format": "sort-dependant"
+        },
+        {
+          "name": "sort",
+          "type": {
+            "$ref": "#.sort_tags_moderator_only"
+          }
+        },
+        {
+          "name": "inname",
+          "type": "string"
+        }
+      ],
+      "description": "\r\n        \r\nReturns the tags found on a site that only moderators can use.\r\n\r\nThe inname parameter lets a consumer filter down to tags that contain a certain substring.\r\nFor example, inname=own would return both \"download\" and \"owner\" amongst others.\r\n\r\n        \r\n    This method returns a list of tags.\r\n\r\nThe sorts accepted by this method operate on the follow fields of the tag object:\r\n    \r\n        popular &ndash; count\r\n        activity &ndash; the creation_date of the last question asked with the tag\r\n        name &ndash; name\r\n    \r\n    It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.\r\n\r\n\r\n    "
+    },
+    "tags_required": {
+      "contentType": "application/json",
+      "responseContentType": "application/json",
+      "transport": "GET",
+      "envelope": "JSON",
+      "cacheDuration": "60000",
+      "throttleScope": "default",
+      "group": "Tags",
+      "uriTemplate": "/tags/required",
+      "returns": {
+        "$ref": "#.response_wrapper<tag>"
+      },
+      "parameters": [
+        {
+          "name": "page",
+          "type": "number"
+        },
+        {
+          "name": "pagesize",
+          "type": "number"
+        },
+        {
+          "name": "fromdate",
+          "type": "number",
+          "format": "utc-millisec"
+        },
+        {
+          "name": "todate",
+          "type": "number",
+          "format": "utc-millisec"
+        },
+        {
+          "name": "order",
+          "type": {
+            "$ref": "#.order"
+          }
+        },
+        {
+          "name": "min",
+          "type": "string",
+          "format": "sort-dependant"
+        },
+        {
+          "name": "max",
+          "type": "string",
+          "format": "sort-dependant"
+        },
+        {
+          "name": "sort",
+          "type": {
+            "$ref": "#.sort_tags_required"
+          }
+        },
+        {
+          "name": "inname",
+          "type": "string"
+        }
+      ],
+      "description": "\r\n        \r\nReturns the tags found on a site that fulfill required tag constraints on questions.\r\n\r\nThe inname parameter lets a consumer filter down to tags that contain a certain substring.\r\nFor example, inname=own would return both \"download\" and \"owner\" amongst others.\r\n\r\n        \r\n    This method returns a list of tags.\r\n\r\nThe sorts accepted by this method operate on the follow fields of the tag object:\r\n    \r\n        popular &ndash; count\r\n        activity &ndash; the creation_date of the last question asked with the tag\r\n        name &ndash; name\r\n    \r\n    It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.\r\n\r\n\r\n    "
+    },
     "tags_synonyms": {
       "contentType": "application/json",
       "responseContentType": "application/json",
@@ -2125,7 +2326,7 @@
           }
         }
       ],
-      "description": "\r\n        \r\nReturns the top 30 answerers active in a single tag, of either all-time or the last 30 days.\r\n\r\nThis is a view onto the data presented on the tag info page on the sites.\r\n\r\n        \r\n    This method returns a list of tag score objects.\r\n\r\n    "
+      "description": "\r\n        \r\nReturns the top 30 askers active in a single tag, of either all-time or the last 30 days.\r\n\r\nThis is a view onto the data presented on the tag info page on the sites.\r\n\r\n        \r\n    This method returns a list of tag score objects.\r\n\r\n    "
     },
     "tags_by_tags_wikis": {
       "contentType": "application/json",
@@ -3264,6 +3465,129 @@
         }
       ],
       "description": "\r\n        \r\nGets the questions asked by the users in {ids}.\r\n\r\n{ids} can contain up to 100 separate ids, to find ids programatically look for user_id on user or shallow_user objects.\r\n\r\nThe sorts accepted by this method operate on the follow fields of the question object:\r\n    \r\n        activity &ndash; last_activity_date\r\n        creation &ndash; creation_date\r\n        votes &ndash; score\r\n    \r\n    It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.\r\n\r\n\r\n        \r\n    This method returns a list of questions.\r\n\r\n    "
+    },
+    "users_by_ids_questions_featured": {
+      "contentType": "application/json",
+      "responseContentType": "application/json",
+      "transport": "GET",
+      "envelope": "JSON",
+      "cacheDuration": "60000",
+      "throttleScope": "default",
+      "group": "Users",
+      "uriTemplate": "/users/{ids}/questions/featured",
+      "returns": {
+        "$ref": "#.response_wrapper<question>"
+      },
+      "parameters": [
+        {
+          "name": "page",
+          "type": "number"
+        },
+        {
+          "name": "pagesize",
+          "type": "number"
+        },
+        {
+          "name": "fromdate",
+          "type": "number",
+          "format": "utc-millisec"
+        },
+        {
+          "name": "todate",
+          "type": "number",
+          "format": "utc-millisec"
+        },
+        {
+          "name": "order",
+          "type": {
+            "$ref": "#.order"
+          }
+        },
+        {
+          "name": "min",
+          "type": "string",
+          "format": "sort-dependant"
+        },
+        {
+          "name": "max",
+          "type": "string",
+          "format": "sort-dependant"
+        },
+        {
+          "name": "sort",
+          "type": {
+            "$ref": "#.sort_users_by_ids_questions_featured"
+          }
+        },
+        {
+          "name": "ids",
+          "type": "string",
+          "format": "number-list"
+        }
+      ],
+      "description": "\r\n        \r\nGets the questions on which the users in {ids} have active bounties.\r\n\r\n{ids} can contain up to 100 separate ids, to find ids programatically look for user_id on user or shallow_user objects.\r\n\r\nThe sorts accepted by this method operate on the follow fields of the question object:\r\n    \r\n        activity &ndash; last_activity_date\r\n        creation &ndash; creation_date\r\n        votes &ndash; score\r\n    \r\n    It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.\r\n\r\n\r\n        \r\n    This method returns a list of questions.\r\n\r\n    "
+    },
+    "me_questions_featured": {
+      "contentType": "application/json",
+      "responseContentType": "application/json",
+      "transport": "GET",
+      "envelope": "JSON",
+      "cacheDuration": "60000",
+      "throttleScope": "default",
+      "group": "Users",
+      "authentication_scopes": [],
+      "uriTemplate": "/me/questions/featured",
+      "returns": {
+        "$ref": "#.response_wrapper<question>"
+      },
+      "parameters": [
+        {
+          "name": "page",
+          "type": "number"
+        },
+        {
+          "name": "pagesize",
+          "type": "number"
+        },
+        {
+          "name": "fromdate",
+          "type": "number",
+          "format": "utc-millisec"
+        },
+        {
+          "name": "todate",
+          "type": "number",
+          "format": "utc-millisec"
+        },
+        {
+          "name": "order",
+          "type": {
+            "$ref": "#.order"
+          }
+        },
+        {
+          "name": "min",
+          "type": "string",
+          "format": "sort-dependant"
+        },
+        {
+          "name": "max",
+          "type": "string",
+          "format": "sort-dependant"
+        },
+        {
+          "name": "sort",
+          "type": {
+            "$ref": "#.sort_me_questions_featured"
+          }
+        },
+        {
+          "name": "ids",
+          "type": "string",
+          "format": "number-list"
+        }
+      ],
+      "description": "\r\n        \r\nGets the questions on which the users in {ids} have active bounties.\r\n\r\n{ids} can contain up to 100 separate ids, to find ids programatically look for user_id on user or shallow_user objects.\r\n\r\nThe sorts accepted by this method operate on the follow fields of the question object:\r\n    \r\n        activity &ndash; last_activity_date\r\n        creation &ndash; creation_date\r\n        votes &ndash; score\r\n    \r\n    It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.\r\n\r\n\r\n        \r\n    This method returns a list of questions.\r\n\r\n    "
     },
     "users_by_ids_questions_no_answers": {
       "contentType": "application/json",
@@ -4746,6 +5070,47 @@
         }
       ],
       "description": "\r\n        \r\nPassing valid access_tokens to this method causes the application that created them to be de-authorized by the user associated with each\r\naccess_token.  This will remove the application from their apps tab, and cause all other existing access_tokens to be destroyed.\r\n\r\nThis method is meant for uninstalling applications, recovering from access_token leaks, \r\nor simply as a stronger form of /access-tokens/{accessTokens}/invalidate.\r\n\r\nNothing prevents a user from re-authenticate to an application that has de-authenticated itself, the user will be prompted to approve the application\r\nagain however.\r\n\r\n{accessTokens} can contain up to 20 access tokens.  These are obtained by authenticating a user using OAuth 2.0.\r\n\r\n        \r\n    This method returns a list of access_tokens.\r\n\r\n    "
+    },
+    "errors": {
+      "contentType": "application/json",
+      "responseContentType": "application/json",
+      "transport": "GET",
+      "envelope": "JSON",
+      "cacheDuration": "60000",
+      "throttleScope": "default",
+      "group": "Errors",
+      "uriTemplate": "/errors",
+      "returns": {
+        "$ref": "#.response_wrapper<error>"
+      },
+      "parameters": [
+        {
+          "name": "page",
+          "type": "number"
+        },
+        {
+          "name": "pagesize",
+          "type": "number"
+        }
+      ],
+      "description": "\r\n        \r\nReturns the various error codes that can be produced by the API.\r\n\r\nThis method is provided for discovery, documentation, and testing purposes, it is not expected many applications will consume it during normal operation.\r\n\r\nFor testing purposes, look into the /errors/{id} method which simulates errors given a code.\r\n\r\n        \r\n    This method returns a list of errors.\r\n\r\n    "
+    },
+    "errors_by_id": {
+      "contentType": "application/json",
+      "responseContentType": "application/json",
+      "transport": "GET",
+      "envelope": "JSON",
+      "cacheDuration": "60000",
+      "throttleScope": "default",
+      "group": "Errors",
+      "uriTemplate": "/errors/{id}",
+      "parameters": [
+        {
+          "name": "id",
+          "type": "number"
+        }
+      ],
+      "description": "\r\n        \r\nThis method allows you to generate an error.\r\n\r\nThis method is only intended for use when testing an application or library. Unlike other methods in the API, its contract is not frozen, and new error codes may be added at any time.\r\n\r\n        \r\n    This method results in an error, which will be expressed with a 400 HTTP status code and setting the error* properties\r\n    on the wrapper object.\r\n\r\n    "
     },
     "filters_create": {
       "contentType": "application/json",

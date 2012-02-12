@@ -6,11 +6,12 @@
 <html lang="en">
 <head> 
 <title> info  - Stack Exchange API</title>
-<link rel="stylesheet" href="/Content/apiv2/all.css?v=43e8736b9fef">
+<link rel="stylesheet" href="/Content/apiv2/all.css?v=f4e1ff6867bf">
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 
-    <script type="text/javascript" src="/Content/apiv2/js/jquery-ui-1.8.16.custom.min.js"></script>
-    <script type="text/javascript" src="/Content/apiv2/js/console.js?v=2c1ccd33316c"></script>
+    <script type="text/javascript" src="/Content/apiv2/js/console.js?v=5d011b58ebc5"></script>
+    <script type="text/javascript" src="/Content/apiv2/js/prettify.js"></script>
+    <script type="text/javascript" src="/Content/apiv2/js/type.js"></script>
 
 </head>
 <body>
@@ -50,78 +51,50 @@
     <div id="fields" class="type-fields">
         <h2>Fields</h2>
         
-    <ul>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> total_questions
-<ul>
-<li>integer</li>
-</ul>
-</li>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> total_unanswered
-<ul>
-<li>integer</li>
-</ul>
-</li>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> total_accepted
-<ul>
-<li>integer</li>
-</ul>
-</li>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> total_answers
-<ul>
-<li>integer</li>
-</ul>
-</li>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> questions_per_minute
-<ul>
-<li>decimal</li>
-</ul>
-</li>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> answers_per_minute
-<ul>
-<li>decimal</li>
-</ul>
-</li>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> total_comments
-<ul>
-<li>integer</li>
-</ul>
-</li>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> total_votes
-<ul>
-<li>integer</li>
-</ul>
-</li>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> total_badges
-<ul>
-<li>integer</li>
-</ul>
-</li>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> badges_per_minute
-<ul>
-<li>decimal</li>
-</ul>
-</li>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> total_users
-<ul>
-<li>integer</li>
-</ul>
-</li>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> new_active_users
-<ul>
-<li>integer</li>
-</ul>
-</li>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> api_revision
-<ul>
-<li>string</li>
-</ul>
-</li>
-<li><span class='excluded' title='this field is excluded in the default filter'>âœ˜</span> site
-<ul>
-<li><a href="/docs/types/site">site</a></li>
-</ul>
-</li>
-</ul>
+    <table class="type-field-list">
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> total_questions</td>
+<td>integer</td>
+</tr>
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> total_unanswered</td>
+<td>integer</td>
+</tr>
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> total_accepted</td>
+<td>integer</td>
+</tr>
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> total_answers</td>
+<td>integer</td>
+</tr>
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> questions_per_minute</td>
+<td>decimal</td>
+</tr>
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> answers_per_minute</td>
+<td>decimal</td>
+</tr>
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> total_comments</td>
+<td>integer</td>
+</tr>
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> total_votes</td>
+<td>integer</td>
+</tr>
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> total_badges</td>
+<td>integer</td>
+</tr>
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> badges_per_minute</td>
+<td>decimal</td>
+</tr>
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> total_users</td>
+<td>integer</td>
+</tr>
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> new_active_users</td>
+<td>integer</td>
+</tr>
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> api_revision</td>
+<td>string</td>
+</tr>
+<tr><td><span class='excluded' title='this field is excluded in the default filter'>âœ˜</span> site</td>
+<td><a href="/docs/types/site">site</a></td>
+</tr>
+</table>
 
 
 
@@ -129,6 +102,26 @@
             Fields marked with <span class='included'>âœ”</span> are included in the default filter, those marked with 
             <span class='excluded'>âœ˜</span> are excluded in the default filter.
         </div>
+    </div>
+
+    <div id="examples" class="type-examples">
+        <h2>Examples</h2>
+
+        
+    
+
+
+
+<div class="example">
+    <h3><span class="left-arrow"></span><span class="example-header">Typical</span></h3>
+
+    <div class="result dno">
+        <pre class="prettyprint lang-js">
+<code>{"total_questions":1000000,"total_unanswered":1000,"total_accepted":1000000,"total_answers":2000000,"questions_per_minute":3.1,"answers_per_minute":1.5,"total_comments":4000000,"total_votes":10000000,"total_badges":5000000,"badges_per_minute":1.9,"total_users":500000,"new_active_users":10,"api_revision":"2012.9.21.8675","site":{"site_type":"main_site","name":"Example Site","logo_url":"http://sstatic.net/stackexchange/img/logo.png","api_site_parameter":"example","site_url":"http://example.stackexchange.com","audience":"example lovers","icon_url":"http://sstatic.net/stackexchange/img/apple-touch-icon.png","site_state":"normal","closed_beta_date":1328850264,"open_beta_date":1328936664,"launch_date":1329023064}}</code>
+        </pre>
+    </div>
+</div>
+
     </div>
 
     <div id="methods">
@@ -146,23 +139,33 @@
 <div class="sidebar">
     <div class="module help">
         <ul>
-            <li><a href="/docs">All Documentation</a></li>
             <li><a href="/docs/authentication">Authentication</a></li>
-            <li><a href="/docs/vectors">Batching Requests</a></li>
-            <li><a href="/docs/change-log">Change Log</a></li>
-            <li><a href="/docs/min-max">Complex Queries</a></li>
-            <li><a href="/docs/compression">Compression</a></li>
-            <li><a href="/docs/dates">Dates</a></li>
-            <li><a href="/docs/error-handling">Error Handling</a></li>
-            <li><a href="/docs/filters">Filters</a></li>
             <li><a href="/docs/js-lib">Javascript SDK</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/vectors">Batching Requests</a></li>
+            <li><a href="/docs/min-max">Complex Queries</a></li>
+            <li><a href="/docs/filters">Filters</a></li>
             <li><a href="/docs/paging">Paging</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/dates">Dates</a></li>
+            <li><a href="/docs/numbers">Numbers</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/compression">Compression</a></li>
+            <li><a href="/docs/error-handling">Error Handling</a></li>
             <li><a href="/docs/wrapper">Response Wrapper</a></li>
             <li><a href="/docs/throttle">Rate Limiting</a></li>
             <li><a href="/docs/user-types">Users</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/change-log">Change Log</a></li>
         </ul>
     </div>
 </div>        </div>
+        
+        <div class="bottom"">
+            <div class="bottom-wrapper">
+                
+            </div>
+        </div>
     </div>
 
 <div class="footer">

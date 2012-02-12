@@ -24,7 +24,7 @@ namespace SOAPI2.Tests
         public void CanGetStackOverflowErrors()
         {
             var client = new SoapiClient(Apikey, AppId);
-            var response = client.GetErrors("stackoverflow", 1, 100);
+            var response = client.GetErrors( 1, 100);
             Assert.Greater(response.Items.Count, 0);
 
         }

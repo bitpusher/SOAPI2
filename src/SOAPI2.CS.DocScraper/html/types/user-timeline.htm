@@ -6,11 +6,12 @@
 <html lang="en">
 <head> 
 <title> user_timeline  - Stack Exchange API</title>
-<link rel="stylesheet" href="/Content/apiv2/all.css?v=43e8736b9fef">
+<link rel="stylesheet" href="/Content/apiv2/all.css?v=f4e1ff6867bf">
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 
-    <script type="text/javascript" src="/Content/apiv2/js/jquery-ui-1.8.16.custom.min.js"></script>
-    <script type="text/javascript" src="/Content/apiv2/js/console.js?v=2c1ccd33316c"></script>
+    <script type="text/javascript" src="/Content/apiv2/js/console.js?v=5d011b58ebc5"></script>
+    <script type="text/javascript" src="/Content/apiv2/js/prettify.js"></script>
+    <script type="text/javascript" src="/Content/apiv2/js/type.js"></script>
 
 </head>
 <body>
@@ -50,65 +51,43 @@
     <div id="fields" class="type-fields">
         <h2>Fields</h2>
         
-    <ul>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> creation_date
-<ul>
-<li>date</li>
-</ul>
-</li>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> post_type
-<ul>
-<li>one of <code>question</code>, or <code>answer</code></li>
-</ul>
-</li>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> timeline_type
-<ul>
-<li>one of <code>commented</code>, <code>asked</code>, <code>answered</code>, <code>badge</code>, <code>revision</code>, <code>accepted</code>, <code>reviewed</code>, or <code>suggested</code></li>
-</ul>
-</li>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> user_id
-<ul>
-<li>integer</li>
-</ul>
-</li>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> post_id
-<ul>
-<li>integer</li>
-</ul>
-</li>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> comment_id
-<ul>
-<li>integer</li>
-</ul>
-</li>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> suggested_edit_id
-<ul>
-<li>integer</li>
-</ul>
-</li>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> badge_id
-<ul>
-<li>integer</li>
-</ul>
-</li>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> title
-<ul>
-<li>string</li>
-</ul>
-</li>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> detail
-<ul>
-<li>string</li>
-<li>unchanged in <a href="/docs/filters">unsafe filters</a></li>
-</ul>
-</li>
-<li><span class='excluded' title='this field is excluded in the default filter'>âœ˜</span> link
-<ul>
-<li>string</li>
-<li>unchanged in <a href="/docs/filters">unsafe filters</a></li>
-</ul>
-</li>
-</ul>
+    <table class="type-field-list">
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> creation_date</td>
+<td><a href="/docs/dates">date</a></td>
+</tr>
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> post_type</td>
+<td>one of <code>question</code>, or <code>answer</code></td>
+</tr>
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> timeline_type</td>
+<td>one of <code>commented</code>, <code>asked</code>, <code>answered</code>, <code>badge</code>, <code>revision</code>, <code>accepted</code>, <code>reviewed</code>, or <code>suggested</code></td>
+</tr>
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> user_id</td>
+<td>integer, refers to an <a href="/docs/types/user">user</a></td>
+</tr>
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> post_id</td>
+<td>integer, refers to a <a href="/docs/types/post">post</a></td>
+</tr>
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> comment_id</td>
+<td>integer, refers to a <a href="/docs/types/comment">comment</a></td>
+</tr>
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> suggested_edit_id</td>
+<td>integer, refers to a <a href="/docs/types/suggested-edit">suggested_edit</a></td>
+</tr>
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> badge_id</td>
+<td>integer, refers to a <a href="/docs/types/badge">badge</a></td>
+</tr>
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> title</td>
+<td>string</td>
+</tr>
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> detail</td>
+<td>string</td>
+<tr><td></td><td>unchanged in <a href="/docs/filters">unsafe filters</a></td></tr>
+</tr>
+<tr><td><span class='excluded' title='this field is excluded in the default filter'>âœ˜</span> link</td>
+<td>string</td>
+<tr><td></td><td>unchanged in <a href="/docs/filters">unsafe filters</a></td></tr>
+</tr>
+</table>
 
 
 
@@ -116,6 +95,124 @@
             Fields marked with <span class='included'>âœ”</span> are included in the default filter, those marked with 
             <span class='excluded'>âœ˜</span> are excluded in the default filter.
         </div>
+    </div>
+
+    <div id="examples" class="type-examples">
+        <h2>Examples</h2>
+
+        
+    
+
+
+
+<div class="example">
+    <h3><span class="left-arrow"></span><span class="example-header">Accepted An Answer</span></h3>
+
+    <div class="result dno">
+        <pre class="prettyprint lang-js">
+<code>{"creation_date":1329023082,"post_type":"answer","timeline_type":"accepted","user_id":1,"post_id":2,"title":"Question Title","link":"http://example.stackexchange.com/questions/1/question-title/2#2"}</code>
+        </pre>
+    </div>
+</div>
+
+     
+
+
+
+<div class="example">
+    <h3><span class="left-arrow"></span><span class="example-header">Posted An Answer</span></h3>
+
+    <div class="result dno">
+        <pre class="prettyprint lang-js">
+<code>{"creation_date":1329023082,"post_type":"answer","timeline_type":"answered","user_id":1,"post_id":2,"title":"Question Title","link":"http://example.stackexchange.com/questions/1/question-title/2#2"}</code>
+        </pre>
+    </div>
+</div>
+
+     
+
+
+
+<div class="example">
+    <h3><span class="left-arrow"></span><span class="example-header">Asked A Question</span></h3>
+
+    <div class="result dno">
+        <pre class="prettyprint lang-js">
+<code>{"creation_date":1329023082,"post_type":"question","timeline_type":"asked","user_id":1,"post_id":1,"title":"Question Title","link":"http://example.stackexchange.com/questions/1/question-title"}</code>
+        </pre>
+    </div>
+</div>
+
+     
+
+
+
+<div class="example">
+    <h3><span class="left-arrow"></span><span class="example-header">Earned A Badge</span></h3>
+
+    <div class="result dno">
+        <pre class="prettyprint lang-js">
+<code>{"creation_date":1329023082,"post_type":"question","timeline_type":"badge","user_id":1,"post_id":1,"badge_id":1,"title":"Question Title","detail":"Badge Name","link":"http://example.stackexchange.com/questions/1/question-title"}</code>
+        </pre>
+    </div>
+</div>
+
+     
+
+
+
+<div class="example">
+    <h3><span class="left-arrow"></span><span class="example-header">Posted A Comment</span></h3>
+
+    <div class="result dno">
+        <pre class="prettyprint lang-js">
+<code>{"creation_date":1329023082,"post_type":"question","timeline_type":"commented","user_id":1,"post_id":1,"comment_id":1,"title":"Question Title","detail":"Comment Body","link":"http://example.stackexchange.com/questions/1/question-title#comment1_1"}</code>
+        </pre>
+    </div>
+</div>
+
+     
+
+
+
+<div class="example">
+    <h3><span class="left-arrow"></span><span class="example-header">Reviewed A Suggested Edit</span></h3>
+
+    <div class="result dno">
+        <pre class="prettyprint lang-js">
+<code>{"creation_date":1329023082,"post_type":"question","timeline_type":"reviewed","user_id":1,"post_id":1,"suggested_edit_id":1,"title":"Question Title","detail":"Suggested Edit Comment","link":"http://example.stackexchange.com/suggested-edit/1"}</code>
+        </pre>
+    </div>
+</div>
+
+     
+
+
+
+<div class="example">
+    <h3><span class="left-arrow"></span><span class="example-header">Edited A Post</span></h3>
+
+    <div class="result dno">
+        <pre class="prettyprint lang-js">
+<code>{"creation_date":1329023082,"post_type":"question","timeline_type":"revision","user_id":1,"post_id":1,"title":"Question Title","detail":"Edit Comment","link":"http://example.stackexchange.com/questions/1/question-title"}</code>
+        </pre>
+    </div>
+</div>
+
+     
+
+
+
+<div class="example">
+    <h3><span class="left-arrow"></span><span class="example-header">Suggested An Edit</span></h3>
+
+    <div class="result dno">
+        <pre class="prettyprint lang-js">
+<code>{"creation_date":1329023082,"post_type":"question","timeline_type":"suggested","user_id":1,"post_id":1,"suggested_edit_id":1,"title":"Question Title","detail":"pending","link":"http://example.stackexchange.com/suggested-edit/1"}</code>
+        </pre>
+    </div>
+</div>
+
     </div>
 
     <div id="methods">
@@ -133,23 +230,33 @@
 <div class="sidebar">
     <div class="module help">
         <ul>
-            <li><a href="/docs">All Documentation</a></li>
             <li><a href="/docs/authentication">Authentication</a></li>
-            <li><a href="/docs/vectors">Batching Requests</a></li>
-            <li><a href="/docs/change-log">Change Log</a></li>
-            <li><a href="/docs/min-max">Complex Queries</a></li>
-            <li><a href="/docs/compression">Compression</a></li>
-            <li><a href="/docs/dates">Dates</a></li>
-            <li><a href="/docs/error-handling">Error Handling</a></li>
-            <li><a href="/docs/filters">Filters</a></li>
             <li><a href="/docs/js-lib">Javascript SDK</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/vectors">Batching Requests</a></li>
+            <li><a href="/docs/min-max">Complex Queries</a></li>
+            <li><a href="/docs/filters">Filters</a></li>
             <li><a href="/docs/paging">Paging</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/dates">Dates</a></li>
+            <li><a href="/docs/numbers">Numbers</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/compression">Compression</a></li>
+            <li><a href="/docs/error-handling">Error Handling</a></li>
             <li><a href="/docs/wrapper">Response Wrapper</a></li>
             <li><a href="/docs/throttle">Rate Limiting</a></li>
             <li><a href="/docs/user-types">Users</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/change-log">Change Log</a></li>
         </ul>
     </div>
 </div>        </div>
+        
+        <div class="bottom"">
+            <div class="bottom-wrapper">
+                
+            </div>
+        </div>
     </div>
 
 <div class="footer">

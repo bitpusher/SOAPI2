@@ -29,7 +29,6 @@ namespace SOAPI2
 		    this.Answers = new _Answers(this);
 		    this.Badges = new _Badges(this);
 		    this.Comments = new _Comments(this);
-		    this.Errors = new _Errors(this);
 		    this.Events = new _Events(this);
 		    this.Posts = new _Posts(this);
 		    this.Privileges = new _Privileges(this);
@@ -42,6 +41,7 @@ namespace SOAPI2
 		    this.Users = new _Users(this);
 		    this.Access_Tokens = new _Access_Tokens(this);
 		    this.Applications = new _Applications(this);
+		    this.Errors = new _Errors(this);
 		    this.Filters = new _Filters(this);
 		    this.Inbox = new _Inbox(this);
 		    this.Sites = new _Sites(this);
@@ -68,7 +68,6 @@ namespace SOAPI2
 		    this.Answers = new _Answers(this);
 		    this.Badges = new _Badges(this);
 		    this.Comments = new _Comments(this);
-		    this.Errors = new _Errors(this);
 		    this.Events = new _Events(this);
 		    this.Posts = new _Posts(this);
 		    this.Privileges = new _Privileges(this);
@@ -81,6 +80,7 @@ namespace SOAPI2
 		    this.Users = new _Users(this);
 		    this.Access_Tokens = new _Access_Tokens(this);
 		    this.Applications = new _Applications(this);
+		    this.Errors = new _Errors(this);
 		    this.Filters = new _Filters(this);
 		    this.Inbox = new _Inbox(this);
 		    this.Sites = new _Sites(this);
@@ -156,23 +156,6 @@ namespace SOAPI2
 			}
 		}
 		public _Comments Comments{get; private set;}
-		public class _Errors
-		{
-			private SoapiClient _client;
-			public _Errors(SoapiClient client)
-			{
-				_client=client;
-			}
-			public ResponseWrapperClass<ErrorClass> GetErrors()
-			{
-				throw new NotImplementedException();
-			}
-			public void GetErrorsById()
-			{
-				throw new NotImplementedException();
-			}
-		}
-		public _Errors Errors{get; private set;}
 		public class _Events
 		{
 			private SoapiClient _client;
@@ -263,6 +246,10 @@ namespace SOAPI2
 			{
 				throw new NotImplementedException();
 			}
+			public ResponseWrapperClass<QuestionClass> GetQuestionsFeatured()
+			{
+				throw new NotImplementedException();
+			}
 			public ResponseWrapperClass<QuestionClass> GetQuestionsUnanswered()
 			{
 				throw new NotImplementedException();
@@ -341,6 +328,18 @@ namespace SOAPI2
 				_client=client;
 			}
 			public ResponseWrapperClass<TagClass> GetTags()
+			{
+				throw new NotImplementedException();
+			}
+			public ResponseWrapperClass<TagClass> GetTagsByTagsInfo()
+			{
+				throw new NotImplementedException();
+			}
+			public ResponseWrapperClass<TagClass> GetTagsModeratorOnly()
+			{
+				throw new NotImplementedException();
+			}
+			public ResponseWrapperClass<TagClass> GetTagsRequired()
 			{
 				throw new NotImplementedException();
 			}
@@ -454,6 +453,14 @@ namespace SOAPI2
 				throw new NotImplementedException();
 			}
 			public ResponseWrapperClass<QuestionClass> GetMeQuestions()
+			{
+				throw new NotImplementedException();
+			}
+			public ResponseWrapperClass<QuestionClass> GetUsersByIdsQuestionsFeatured()
+			{
+				throw new NotImplementedException();
+			}
+			public ResponseWrapperClass<QuestionClass> GetMeQuestionsFeatured()
 			{
 				throw new NotImplementedException();
 			}
@@ -609,6 +616,23 @@ namespace SOAPI2
 			}
 		}
 		public _Applications Applications{get; private set;}
+		public class _Errors
+		{
+			private SoapiClient _client;
+			public _Errors(SoapiClient client)
+			{
+				_client=client;
+			}
+			public ResponseWrapperClass<ErrorClass> GetErrors()
+			{
+				throw new NotImplementedException();
+			}
+			public void GetErrorsById()
+			{
+				throw new NotImplementedException();
+			}
+		}
+		public _Errors Errors{get; private set;}
 		public class _Filters
 		{
 			private SoapiClient _client;

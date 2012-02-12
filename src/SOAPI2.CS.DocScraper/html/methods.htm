@@ -6,7 +6,7 @@
 <html lang="en">
 <head> 
 <title>Stack Exchange API</title>
-<link rel="stylesheet" href="/Content/apiv2/all.css?v=43e8736b9fef">
+<link rel="stylesheet" href="/Content/apiv2/all.css?v=f4e1ff6867bf">
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 
 </head>
@@ -111,13 +111,6 @@
     <li><a href="/docs/comments-by-ids">/comments/{ids}</a> &ndash; Get comments identified by a set of ids.</li>
 </ul>
 
-<h3>Errors</h3>
-
-<ul>
-    <li><a href="/docs/errors">/errors</a> &ndash; Get descriptions of all the errors that the API could return.</li>
-    <li><a href="/docs/simulate-error">/errors/{id}</a> &ndash; Simulate an API error for testing purposes.</li>
-</ul>
-
 <h3>Events</h3>
 
 <ul>
@@ -150,6 +143,7 @@
     <li><a href="/docs/linked-questions">/questions/{ids}/linked</a> &ndash; Get the questions that link to the questions identified by a set of ids.</li>
     <li><a href="/docs/related-questions">/questions/{ids}/related</a> &ndash; Get the questions that are related to the questions identified by a set of ids.</li>
     <li><a href="/docs/questions-timeline">/questions/{ids}/timeline</a> &ndash; Get the timelines of the questions identified by a set of ids.</li>
+    <li><a href="/docs/featured-questions">/questions/featured</a> &ndash; Get all questions on the site with active bounties.</li>
     <li><a href="/docs/unanswered-questions">/questions/unanswered</a> &ndash; Get all questions the site considers unanswered.</li>
     <li><a href="/docs/no-answer-questions">/questions/no-answers</a> &ndash; Get all questions on the site with <b>no</b> answers.</li>
 </ul>
@@ -183,6 +177,9 @@
 
 <ul>
     <li><a href="/docs/tags">/tags</a> &ndash; Get the tags on the site.</li>
+    <li><a href="/docs/tags-by-name">/tags/{tags}/info</a> &ndash; Get tags on the site by their names.</li>
+    <li><a href="/docs/moderator-only-tags">/tags/moderator-only</a> &ndash; Get the tags on the site that only moderators can use.</li>
+    <li><a href="/docs/required-tags">/tags/required</a> &ndash; Get the tags on the site that fulfill required tag constraints.</li>
     <li><a href="/docs/tag-synonyms">/tags/synonyms</a> &ndash; Get all the tag synonyms on the site.</li>
     <li><a href="/docs/faqs-by-tags">/tags/{tags}/faq</a> &ndash; Get frequently asked questions in a set of tags.</li>
     <li><a href="/docs/related-tags">/tags/{tags}/related</a> &ndash; Get related tags, based on common tag pairings.</li>
@@ -211,6 +208,7 @@
     <li><a href="/docs/mentions-on-users">/users/{ids}/mentioned</a> or <a href="/docs/me-mentioned">/me/mentioned</a> &ndash; Get the comments that mention one of the users identified by a set of ids.</li>
     <li><a href="/docs/privileges-on-users">/users/{id}/privileges</a> or <a href="/docs/me-privileges">/me/privileges</a> &ndash; Get the privileges the given user has on the site.</li>
     <li><a href="/docs/questions-on-users">/users/{ids}/questions</a> or <a href="/docs/me-questions">/me/questions</a> &ndash; Get the questions asked by the users identified by a set of ids.</li>
+    <li><a href="/docs/featured-questions-on-users">/users/{ids}/questions/featured</a> or <a href="/docs/me-featured-questions">/me/questions/featured</a> &ndash; Get the questions on which a set of users, have active bounties.</li>
     <li><a href="/docs/no-answer-questions-on-users">/users/{ids}/questions/no-answers</a> or <a href="/docs/me-no-answer-questions">/me/questions/no-answers</a> &ndash; Get the questions asked by a set of users, which have <b>no</b> answers.</li>
     <li><a href="/docs/unaccepted-questions-on-users">/users/{ids}/questions/unaccepted</a> or <a href="/docs/me-unaccepted-questions">/me/questions/unaccepted</a> &ndash; Get the questions asked by a set of users, which have at least one answer but no accepted answer.</li>
     <li><a href="/docs/unanswered-questions-on-users">/users/{ids}/questions/unanswered</a> or <a href="/docs/me-unanswered-questions">/me/questions/unanswered</a> &ndash; Get the questions asked by a set of users, which are not considered to be adequately answered.</li>
@@ -220,8 +218,8 @@
     <li><a href="/docs/top-user-answers-in-tags">/users/{id}/tags/{tags}/top-answers</a> or <a href="/docs/me-tags-top-answers">/me/tags/{tags}/top-answers</a> &ndash; get the top answers a user has posted on questions with a set of tags.</li>
     <li><a href="/docs/top-user-questions-in-tags">/users/{id}/tags/{tags}/top-questions</a> or <a href="/docs/me-tags-top-questions">/me/tags/{tags}/top-questions</a> &ndash; get the top questions a user has posted on questions with a set of tags.</li>
     <li><a href="/docs/timeline-on-users">/users/{ids}/timeline</a> or <a href="/docs/me-timeline">/me/timeline</a> &ndash; Get a subset of the actions of that have been taken by the users identified by a set of ids.</li>
-    <li><a href="/docs/top-answer-tags-on-users">/users/{id}/top-answer-tags</a> or <a href="/docs/me-top-answer-tags">/me/top-answer-tags</a> &ndash; Get the top 30 tags (by score) a single user has posted answers in.</li>
-    <li><a href="/docs/top-question-tags-on-users">/users/{id}/top-question-tags</a> or <a href="/docs/me-top-question-tags">/me/top-question-tags</a> &ndash; Get the top 30 tags (by score) a single user has asked questions in.</li>
+    <li><a href="/docs/top-answer-tags-on-users">/users/{id}/top-answer-tags</a> or <a href="/docs/me-top-answer-tags">/me/top-answer-tags</a> &ndash; Get the top tags (by score) a single user has posted answers in.</li>
+    <li><a href="/docs/top-question-tags-on-users">/users/{id}/top-question-tags</a> or <a href="/docs/me-top-question-tags">/me/top-question-tags</a> &ndash; Get the top tags (by score) a single user has asked questions in.</li>
     <li><a href="/docs/moderators">/users/moderators</a> &ndash; Get the users who have moderation powers on the site.</li>
     <li><a href="/docs/elected-moderators">/users/moderators/elected</a> &ndash; Get the users who have been elected moderators on the site.</li>
     <li><a href="/docs/user-inbox">/users/{id}/inbox</a> or <a href="/docs/me-inbox">/me/inbox</a> &ndash; Get a user's inbox. <span class="need-auth" title="this method requires an access_token, with the read_inbox scope">authentication required</span></li>
@@ -245,6 +243,13 @@
 
 <ul>
     <li><a href="/docs/application-de-authenticate">/apps/{accessTokens}/de-authenticate</a> &ndash; Allows an application to de-authorize itself for a set of users.</li>
+</ul>
+
+<h3>Errors</h3>
+
+<ul>
+    <li><a href="/docs/errors">/errors</a> &ndash; Get descriptions of all the errors that the API could return.</li>
+    <li><a href="/docs/simulate-error">/errors/{id}</a> &ndash; Simulate an API error for testing purposes.</li>
 </ul>
 
 <h3>Filters</h3>
@@ -280,23 +285,33 @@
 <div class="sidebar">
     <div class="module help">
         <ul>
-            <li><a href="/docs" class="youarehere">All Documentation</a></li>
             <li><a href="/docs/authentication">Authentication</a></li>
-            <li><a href="/docs/vectors">Batching Requests</a></li>
-            <li><a href="/docs/change-log">Change Log</a></li>
-            <li><a href="/docs/min-max">Complex Queries</a></li>
-            <li><a href="/docs/compression">Compression</a></li>
-            <li><a href="/docs/dates">Dates</a></li>
-            <li><a href="/docs/error-handling">Error Handling</a></li>
-            <li><a href="/docs/filters">Filters</a></li>
             <li><a href="/docs/js-lib">Javascript SDK</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/vectors">Batching Requests</a></li>
+            <li><a href="/docs/min-max">Complex Queries</a></li>
+            <li><a href="/docs/filters">Filters</a></li>
             <li><a href="/docs/paging">Paging</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/dates">Dates</a></li>
+            <li><a href="/docs/numbers">Numbers</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/compression">Compression</a></li>
+            <li><a href="/docs/error-handling">Error Handling</a></li>
             <li><a href="/docs/wrapper">Response Wrapper</a></li>
             <li><a href="/docs/throttle">Rate Limiting</a></li>
             <li><a href="/docs/user-types">Users</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/change-log">Change Log</a></li>
         </ul>
     </div>
 </div>        </div>
+        
+        <div class="bottom"">
+            <div class="bottom-wrapper">
+                
+            </div>
+        </div>
     </div>
 
 <div class="footer">

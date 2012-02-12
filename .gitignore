@@ -1,0 +1,8 @@
+
+*_ReSharper*
+src/SOAPI2.CS.DocScraper/bin/*
+src/SOAPI2.CS.DocScraper/obj/x86/*
+src/SOAPI2.CS.Tests/bin/*
+src/SOAPI2.CS.Tests/obj/*
+src/SOAPI2.CS/bin/*
+src/SOAPI2.CS/obj/*

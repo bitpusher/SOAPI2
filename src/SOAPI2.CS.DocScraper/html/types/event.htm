@@ -6,11 +6,12 @@
 <html lang="en">
 <head> 
 <title> event  - Stack Exchange API</title>
-<link rel="stylesheet" href="/Content/apiv2/all.css?v=43e8736b9fef">
+<link rel="stylesheet" href="/Content/apiv2/all.css?v=f4e1ff6867bf">
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 
-    <script type="text/javascript" src="/Content/apiv2/js/jquery-ui-1.8.16.custom.min.js"></script>
-    <script type="text/javascript" src="/Content/apiv2/js/console.js?v=2c1ccd33316c"></script>
+    <script type="text/javascript" src="/Content/apiv2/js/console.js?v=5d011b58ebc5"></script>
+    <script type="text/javascript" src="/Content/apiv2/js/prettify.js"></script>
+    <script type="text/javascript" src="/Content/apiv2/js/type.js"></script>
 
 </head>
 <body>
@@ -54,35 +55,25 @@
     <div id="fields" class="type-fields">
         <h2>Fields</h2>
         
-    <ul>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> event_type
-<ul>
-<li>one of <code>question_posted</code>, <code>answer_posted</code>, <code>comment_posted</code>, <code>post_edited</code>, or <code>user_created</code></li>
-</ul>
-</li>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> event_id
-<ul>
-<li>integer</li>
-</ul>
-</li>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> creation_date
-<ul>
-<li>date</li>
-</ul>
-</li>
-<li><span class='excluded' title='this field is excluded in the default filter'>âœ˜</span> link
-<ul>
-<li>string</li>
-<li>unchanged in <a href="/docs/filters">unsafe filters</a></li>
-</ul>
-</li>
-<li><span class='excluded' title='this field is excluded in the default filter'>âœ˜</span> excerpt
-<ul>
-<li>string</li>
-<li>unchanged in <a href="/docs/filters">unsafe filters</a></li>
-</ul>
-</li>
-</ul>
+    <table class="type-field-list">
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> event_type</td>
+<td>one of <code>question_posted</code>, <code>answer_posted</code>, <code>comment_posted</code>, <code>post_edited</code>, or <code>user_created</code></td>
+</tr>
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> event_id</td>
+<td>integer, refers to an <a href="/docs/types/event">event</a></td>
+</tr>
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> creation_date</td>
+<td><a href="/docs/dates">date</a></td>
+</tr>
+<tr><td><span class='excluded' title='this field is excluded in the default filter'>âœ˜</span> link</td>
+<td>string</td>
+<tr><td></td><td>unchanged in <a href="/docs/filters">unsafe filters</a></td></tr>
+</tr>
+<tr><td><span class='excluded' title='this field is excluded in the default filter'>âœ˜</span> excerpt</td>
+<td>string</td>
+<tr><td></td><td>unchanged in <a href="/docs/filters">unsafe filters</a></td></tr>
+</tr>
+</table>
 
 
 
@@ -90,6 +81,82 @@
             Fields marked with <span class='included'>âœ”</span> are included in the default filter, those marked with 
             <span class='excluded'>âœ˜</span> are excluded in the default filter.
         </div>
+    </div>
+
+    <div id="examples" class="type-examples">
+        <h2>Examples</h2>
+
+        
+    
+
+
+
+<div class="example">
+    <h3><span class="left-arrow"></span><span class="example-header">Comment Posted</span></h3>
+
+    <div class="result dno">
+        <pre class="prettyprint lang-js">
+<code>{"event_type":"comment_posted","event_id":1,"creation_date":1329023060,"link":"http://example.stackexchange.com/questions/1/example-title#comment1_1","excerpt":"part of the example comment"}</code>
+        </pre>
+    </div>
+</div>
+
+     
+
+
+
+<div class="example">
+    <h3><span class="left-arrow"></span><span class="example-header">Answer Post</span></h3>
+
+    <div class="result dno">
+        <pre class="prettyprint lang-js">
+<code>{"event_type":"answer_posted","event_id":1,"creation_date":1329023060,"link":"http://example.stackexchange.com/questions/1/example-title/1#1","excerpt":"part of the example answer"}</code>
+        </pre>
+    </div>
+</div>
+
+     
+
+
+
+<div class="example">
+    <h3><span class="left-arrow"></span><span class="example-header">Post Edited</span></h3>
+
+    <div class="result dno">
+        <pre class="prettyprint lang-js">
+<code>{"event_type":"post_edited","event_id":1,"creation_date":1329023060,"link":"http://example.stackexchange.com/questions/1/example-title","excerpt":"part of the example post"}</code>
+        </pre>
+    </div>
+</div>
+
+    
+
+
+
+<div class="example">
+    <h3><span class="left-arrow"></span><span class="example-header">Question Post</span></h3>
+
+    <div class="result dno">
+        <pre class="prettyprint lang-js">
+<code>{"event_type":"question_posted","event_id":1,"creation_date":1329023060,"link":"http://example.stackexchange.com/questions/1/example-title/1","excerpt":"part of the example question"}</code>
+        </pre>
+    </div>
+</div>
+
+    
+
+
+
+<div class="example">
+    <h3><span class="left-arrow"></span><span class="example-header">User Created</span></h3>
+
+    <div class="result dno">
+        <pre class="prettyprint lang-js">
+<code>{"event_type":"user_created","event_id":1,"creation_date":1329023060,"link":"http://example.stackexchange.com/users/1/example-user-name","excerpt":"Example User Name"}</code>
+        </pre>
+    </div>
+</div>
+
     </div>
 
     <div id="methods">
@@ -107,23 +174,33 @@
 <div class="sidebar">
     <div class="module help">
         <ul>
-            <li><a href="/docs">All Documentation</a></li>
             <li><a href="/docs/authentication">Authentication</a></li>
-            <li><a href="/docs/vectors">Batching Requests</a></li>
-            <li><a href="/docs/change-log">Change Log</a></li>
-            <li><a href="/docs/min-max">Complex Queries</a></li>
-            <li><a href="/docs/compression">Compression</a></li>
-            <li><a href="/docs/dates">Dates</a></li>
-            <li><a href="/docs/error-handling">Error Handling</a></li>
-            <li><a href="/docs/filters">Filters</a></li>
             <li><a href="/docs/js-lib">Javascript SDK</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/vectors">Batching Requests</a></li>
+            <li><a href="/docs/min-max">Complex Queries</a></li>
+            <li><a href="/docs/filters">Filters</a></li>
             <li><a href="/docs/paging">Paging</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/dates">Dates</a></li>
+            <li><a href="/docs/numbers">Numbers</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/compression">Compression</a></li>
+            <li><a href="/docs/error-handling">Error Handling</a></li>
             <li><a href="/docs/wrapper">Response Wrapper</a></li>
             <li><a href="/docs/throttle">Rate Limiting</a></li>
             <li><a href="/docs/user-types">Users</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/change-log">Change Log</a></li>
         </ul>
     </div>
 </div>        </div>
+        
+        <div class="bottom"">
+            <div class="bottom-wrapper">
+                
+            </div>
+        </div>
     </div>
 
 <div class="footer">

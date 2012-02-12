@@ -372,7 +372,7 @@ namespace SOAPI2.DocScraper
             Description = discussionNode.InnerText;
 
         }
-        private void ParseSource()
+        public void ParseSource()
         {
 
             //    
@@ -404,7 +404,7 @@ namespace SOAPI2.DocScraper
             {
                 _source = value;
 
-                ParseSource();
+                
 
             }
         }

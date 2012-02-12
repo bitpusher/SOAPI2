@@ -2,7 +2,7 @@
 
 namespace SOAPI2.Tests
 {
-    [TestFixture, RequiresSTA]
+    [TestFixture, RequiresSTA,Ignore]
     public class OAuthFixture
     {
         [Test]

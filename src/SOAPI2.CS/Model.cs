@@ -61,7 +61,7 @@ namespace SOAPI2.Model
 		public int DownVoteCount {get; set;}
 
 		[JsonProperty("comments")]
-		public List<CommentClass> Comments {get; set;}
+		public CommentClass Comments {get; set;}
 
 		[JsonProperty("link")]
 		public string Link {get; set;}
@@ -158,10 +158,10 @@ namespace SOAPI2.Model
 		public ShallowUserClass Owner {get; set;}
 
 		[JsonProperty("comments")]
-		public List<CommentClass> Comments {get; set;}
+		public CommentClass Comments {get; set;}
 
 		[JsonProperty("answers")]
-		public List<AnswerClass> Answers {get; set;}
+		public AnswerClass Answers {get; set;}
 
 		[JsonProperty("link")]
 		public string Link {get; set;}
@@ -579,6 +579,9 @@ namespace SOAPI2.Model
 		[JsonProperty("view_count")]
 		public int ViewCount {get; set;}
 
+		[JsonProperty("accept_rate")]
+		public int AcceptRate {get; set;}
+
 	
 	}
 	/// <summary>
@@ -624,7 +627,7 @@ namespace SOAPI2.Model
 		public int DownVoteCount {get; set;}
 
 		[JsonProperty("comments")]
-		public List<CommentClass> Comments {get; set;}
+		public CommentClass Comments {get; set;}
 
 	
 	}
@@ -838,7 +841,7 @@ namespace SOAPI2.Model
 		public string FaviconUrl {get; set;}
 
 		[JsonProperty("related_sites")]
-		public List<RelatedSiteClass> RelatedSites {get; set;}
+		public RelatedSiteClass RelatedSites {get; set;}
 
 		[JsonProperty("twitter_account")]
 		public string TwitterAccount {get; set;}
@@ -1118,6 +1121,31 @@ namespace SOAPI2.Model
 	/// <summary>
 	/// Discussion
 	///         
+	///     This type represents a site that is related in some way to another site.
+	/// 
+	///     Examples include chat and meta, and parent sites.
+	/// 
+	///     Applications should be able to gracefully handle the additon of new related site types.
+	/// </summary>
+	public class RelatedSiteClass
+	{
+		[JsonProperty("name")]
+		public string Name {get; set;}
+
+		[JsonProperty("site_url")]
+		public string SiteUrl {get; set;}
+
+		[JsonProperty("relation")]
+		public RelatedSiteRelation Relation {get; set;}
+
+		[JsonProperty("api_site_parameter")]
+		public string ApiSiteParameter {get; set;}
+
+	
+	}
+	/// <summary>
+	/// Discussion
+	///         
 	///     This type represents a user, but omits many of the fields found on the full User type.
 	/// 
 	///     This type is mostly analogous to the "user card" found on many pages (like the question page) on a Stack Exchange site.
@@ -1142,6 +1170,9 @@ namespace SOAPI2.Model
 		[JsonProperty("link")]
 		public string Link {get; set;}
 
+		[JsonProperty("accept_rate")]
+		public int AcceptRate {get; set;}
+
 	
 	}
 	/// <summary>
@@ -1165,407 +1196,6 @@ namespace SOAPI2.Model
 
 		[JsonProperty("tag_background_color")]
 		public string TagBackgroundColor {get; set;}
-
-	
-	}
-	public enum Order
-	{
-		@desc,
-		@asc	
-	}
-	public enum SortAnswers
-	{
-		@activity,
-		@creation,
-		@votes	
-	}
-	public enum SortAnswersByIds
-	{
-		@activity,
-		@creation,
-		@votes	
-	}
-	public enum SortAnswersByIdsComments
-	{
-		@creation,
-		@votes	
-	}
-	public enum SortBadges
-	{
-		@rank,
-		@name,
-		@type	
-	}
-	public enum SortBadgesByIds
-	{
-		@rank,
-		@name,
-		@type	
-	}
-	public enum SortBadgesName
-	{
-		@rank,
-		@name	
-	}
-	public enum SortBadgesTags
-	{
-		@rank,
-		@name	
-	}
-	public enum SortComments
-	{
-		@creation,
-		@votes	
-	}
-	public enum SortCommentsByIds
-	{
-		@creation,
-		@votes	
-	}
-	public enum SortPosts
-	{
-		@activity,
-		@creation,
-		@votes	
-	}
-	public enum SortPostsByIds
-	{
-		@activity,
-		@creation,
-		@votes	
-	}
-	public enum SortPostsByIdsComments
-	{
-		@creation,
-		@votes	
-	}
-	public enum SortPostsByIdsSuggestedEdits
-	{
-		@creation,
-		@approval,
-		@rejection	
-	}
-	public enum SortQuestions
-	{
-		@activity,
-		@votes,
-		@creation,
-		@hot,
-		@week,
-		@month	
-	}
-	public enum SortQuestionsByIds
-	{
-		@activity,
-		@votes,
-		@creation	
-	}
-	public enum SortQuestionsByIdsAnswers
-	{
-		@activity,
-		@creation,
-		@votes	
-	}
-	public enum SortQuestionsByIdsComments
-	{
-		@creation,
-		@votes	
-	}
-	public enum SortQuestionsByIdsLinked
-	{
-		@activity,
-		@votes,
-		@creation,
-		@rank	
-	}
-	public enum SortQuestionsByIdsRelated
-	{
-		@activity,
-		@votes,
-		@creation,
-		@rank	
-	}
-	public enum SortQuestionsUnanswered
-	{
-		@activity,
-		@votes,
-		@creation	
-	}
-	public enum SortQuestionsNoAnswers
-	{
-		@activity,
-		@votes,
-		@creation	
-	}
-	public enum SortSearch
-	{
-		@activity,
-		@votes,
-		@creation,
-		@relevance	
-	}
-	public enum SortSimilar
-	{
-		@activity,
-		@votes,
-		@creation,
-		@relevance	
-	}
-	public enum SortSuggestedEdits
-	{
-		@creation,
-		@approval,
-		@rejection	
-	}
-	public enum SortSuggestedEditsByIds
-	{
-		@creation,
-		@approval,
-		@rejection	
-	}
-	public enum SortTags
-	{
-		@popular,
-		@activity,
-		@name	
-	}
-	public enum SortTagsSynonyms
-	{
-		@creation,
-		@applied,
-		@activity	
-	}
-	public enum SortTagsByTagsSynonyms
-	{
-		@creation,
-		@applied,
-		@activity	
-	}
-	public enum Period
-	{
-		@all_time,
-		@month	
-	}
-	public enum SortUsers
-	{
-		@reputation,
-		@creation,
-		@name,
-		@modified	
-	}
-	public enum SortUsersByIds
-	{
-		@reputation,
-		@creation,
-		@name,
-		@modified	
-	}
-	public enum SortMe
-	{
-		@reputation,
-		@creation,
-		@name,
-		@modified	
-	}
-	public enum SortUsersByIdsAnswers
-	{
-		@activity,
-		@creation,
-		@votes	
-	}
-	public enum SortMeAnswers
-	{
-		@activity,
-		@creation,
-		@votes	
-	}
-	public enum SortUsersByIdsBadges
-	{
-		@rank,
-		@name,
-		@type,
-		@awarded	
-	}
-	public enum SortMeBadges
-	{
-		@rank,
-		@name,
-		@type,
-		@awarded	
-	}
-	public enum SortUsersByIdsComments
-	{
-		@creation,
-		@votes	
-	}
-	public enum SortMeComments
-	{
-		@creation,
-		@votes	
-	}
-	public enum SortUsersByIdsCommentsToId
-	{
-		@creation,
-		@votes	
-	}
-	public enum SortMeCommentsToId
-	{
-		@creation,
-		@votes	
-	}
-	public enum SortUsersByIdsFavorites
-	{
-		@activity,
-		@votes,
-		@creation,
-		@added	
-	}
-	public enum SortMeFavorites
-	{
-		@activity,
-		@votes,
-		@creation,
-		@added	
-	}
-	public enum SortUsersByIdsMentioned
-	{
-		@creation,
-		@votes	
-	}
-	public enum SortMeMentioned
-	{
-		@creation,
-		@votes	
-	}
-	public enum SortUsersByIdsQuestions
-	{
-		@activity,
-		@votes,
-		@creation	
-	}
-	public enum SortMeQuestions
-	{
-		@activity,
-		@votes,
-		@creation	
-	}
-	public enum SortUsersByIdsQuestionsNoAnswers
-	{
-		@activity,
-		@votes,
-		@creation	
-	}
-	public enum SortMeQuestionsNoAnswers
-	{
-		@activity,
-		@votes,
-		@creation	
-	}
-	public enum SortUsersByIdsQuestionsUnaccepted
-	{
-		@activity,
-		@votes,
-		@creation	
-	}
-	public enum SortMeQuestionsUnaccepted
-	{
-		@activity,
-		@votes,
-		@creation	
-	}
-	public enum SortUsersByIdsQuestionsUnanswered
-	{
-		@activity,
-		@votes,
-		@creation	
-	}
-	public enum SortMeQuestionsUnanswered
-	{
-		@activity,
-		@votes,
-		@creation	
-	}
-	public enum SortUsersByIdsSuggestedEdits
-	{
-		@creation,
-		@approval,
-		@rejection	
-	}
-	public enum SortMeSuggestedEdits
-	{
-		@creation,
-		@approval,
-		@rejection	
-	}
-	public enum SortUsersByIdsTags
-	{
-		@popular,
-		@activity,
-		@name	
-	}
-	public enum SortMeTags
-	{
-		@popular,
-		@activity,
-		@name	
-	}
-	public enum SortUsersByIdTagsByTagsTopAnswers
-	{
-		@activity,
-		@creation,
-		@votes	
-	}
-	public enum SortMeTagsByTagsTopAnswers
-	{
-		@activity,
-		@creation,
-		@votes	
-	}
-	public enum SortUsersByIdTagsByTagsTopQuestions
-	{
-		@activity,
-		@votes,
-		@creation	
-	}
-	public enum SortMeTagsByTagsTopQuestions
-	{
-		@activity,
-		@votes,
-		@creation	
-	}
-	public enum SortUsersModerators
-	{
-		@reputation,
-		@creation,
-		@name,
-		@modified	
-	}
-	public enum SortUsersModeratorsElected
-	{
-		@reputation,
-		@creation,
-		@name,
-		@modified	
-	}
-	/// <summary>
-	/// Discussion
-	///         
-	///     This type represents a site that is related in some way to another site.
-	/// 
-	///     Examples include chat and meta, and parent sites.
-	/// 
-	///     Applications should be able to gracefully handle the additon of new related site types.
-	/// </summary>
-	public class RelatedSiteClass
-	{
-		[JsonProperty("name")]
-		public string Name {get; set;}
-
-		[JsonProperty("site_url")]
-		public string SiteUrl {get; set;}
-
-		[JsonProperty("relation")]
-		public RelatedSiteRelation Relation {get; set;}
 
 	
 	}
@@ -1699,6 +1329,421 @@ namespace SOAPI2.Model
 
 	
 	}
+	public enum Order
+	{
+		@desc,
+		@asc	
+	}
+	public enum SortAnswers
+	{
+		@activity,
+		@creation,
+		@votes	
+	}
+	public enum SortAnswersByIds
+	{
+		@activity,
+		@creation,
+		@votes	
+	}
+	public enum SortAnswersByIdsComments
+	{
+		@creation,
+		@votes	
+	}
+	public enum SortBadges
+	{
+		@rank,
+		@name,
+		@type	
+	}
+	public enum SortBadgesByIds
+	{
+		@rank,
+		@name,
+		@type	
+	}
+	public enum SortBadgesName
+	{
+		@rank,
+		@name	
+	}
+	public enum SortBadgesTags
+	{
+		@rank,
+		@name	
+	}
+	public enum SortComments
+	{
+		@creation,
+		@votes	
+	}
+	public enum SortCommentsByIds
+	{
+		@creation,
+		@votes	
+	}
+	public enum SortPosts
+	{
+		@activity,
+		@creation,
+		@votes	
+	}
+	public enum SortPostsByIds
+	{
+		@activity,
+		@creation,
+		@votes	
+	}
+	public enum SortPostsByIdsComments
+	{
+		@creation,
+		@votes	
+	}
+	public enum SortPostsByIdsSuggestedEdits
+	{
+		@creation,
+		@approval,
+		@rejection	
+	}
+	public enum SortQuestions
+	{
+		@activity,
+		@votes,
+		@creation,
+		@hot,
+		@week,
+		@month	
+	}
+	public enum SortQuestionsByIds
+	{
+		@activity,
+		@votes,
+		@creation	
+	}
+	public enum SortQuestionsByIdsAnswers
+	{
+		@activity,
+		@creation,
+		@votes	
+	}
+	public enum SortQuestionsByIdsComments
+	{
+		@creation,
+		@votes	
+	}
+	public enum SortQuestionsByIdsLinked
+	{
+		@activity,
+		@votes,
+		@creation,
+		@rank	
+	}
+	public enum SortQuestionsByIdsRelated
+	{
+		@activity,
+		@votes,
+		@creation,
+		@rank	
+	}
+	public enum SortQuestionsFeatured
+	{
+		@activity,
+		@votes,
+		@creation	
+	}
+	public enum SortQuestionsUnanswered
+	{
+		@activity,
+		@votes,
+		@creation	
+	}
+	public enum SortQuestionsNoAnswers
+	{
+		@activity,
+		@votes,
+		@creation	
+	}
+	public enum SortSearch
+	{
+		@activity,
+		@votes,
+		@creation,
+		@relevance	
+	}
+	public enum SortSimilar
+	{
+		@activity,
+		@votes,
+		@creation,
+		@relevance	
+	}
+	public enum SortSuggestedEdits
+	{
+		@creation,
+		@approval,
+		@rejection	
+	}
+	public enum SortSuggestedEditsByIds
+	{
+		@creation,
+		@approval,
+		@rejection	
+	}
+	public enum SortTags
+	{
+		@popular,
+		@activity,
+		@name	
+	}
+	public enum SortTagsByTagsInfo
+	{
+		@popular,
+		@activity,
+		@name	
+	}
+	public enum SortTagsModeratorOnly
+	{
+		@popular,
+		@activity,
+		@name	
+	}
+	public enum SortTagsRequired
+	{
+		@popular,
+		@activity,
+		@name	
+	}
+	public enum SortTagsSynonyms
+	{
+		@creation,
+		@applied,
+		@activity	
+	}
+	public enum SortTagsByTagsSynonyms
+	{
+		@creation,
+		@applied,
+		@activity	
+	}
+	public enum Period
+	{
+		@all_time,
+		@month	
+	}
+	public enum SortUsers
+	{
+		@reputation,
+		@creation,
+		@name,
+		@modified	
+	}
+	public enum SortUsersByIds
+	{
+		@reputation,
+		@creation,
+		@name,
+		@modified	
+	}
+	public enum SortMe
+	{
+		@reputation,
+		@creation,
+		@name,
+		@modified	
+	}
+	public enum SortUsersByIdsAnswers
+	{
+		@activity,
+		@creation,
+		@votes	
+	}
+	public enum SortMeAnswers
+	{
+		@activity,
+		@creation,
+		@votes	
+	}
+	public enum SortUsersByIdsBadges
+	{
+		@rank,
+		@name,
+		@type,
+		@awarded	
+	}
+	public enum SortMeBadges
+	{
+		@rank,
+		@name,
+		@type,
+		@awarded	
+	}
+	public enum SortUsersByIdsComments
+	{
+		@creation,
+		@votes	
+	}
+	public enum SortMeComments
+	{
+		@creation,
+		@votes	
+	}
+	public enum SortUsersByIdsCommentsToId
+	{
+		@creation,
+		@votes	
+	}
+	public enum SortMeCommentsToId
+	{
+		@creation,
+		@votes	
+	}
+	public enum SortUsersByIdsFavorites
+	{
+		@activity,
+		@votes,
+		@creation,
+		@added	
+	}
+	public enum SortMeFavorites
+	{
+		@activity,
+		@votes,
+		@creation,
+		@added	
+	}
+	public enum SortUsersByIdsMentioned
+	{
+		@creation,
+		@votes	
+	}
+	public enum SortMeMentioned
+	{
+		@creation,
+		@votes	
+	}
+	public enum SortUsersByIdsQuestions
+	{
+		@activity,
+		@votes,
+		@creation	
+	}
+	public enum SortMeQuestions
+	{
+		@activity,
+		@votes,
+		@creation	
+	}
+	public enum SortUsersByIdsQuestionsFeatured
+	{
+		@activity,
+		@votes,
+		@creation	
+	}
+	public enum SortMeQuestionsFeatured
+	{
+		@activity,
+		@votes,
+		@creation	
+	}
+	public enum SortUsersByIdsQuestionsNoAnswers
+	{
+		@activity,
+		@votes,
+		@creation	
+	}
+	public enum SortMeQuestionsNoAnswers
+	{
+		@activity,
+		@votes,
+		@creation	
+	}
+	public enum SortUsersByIdsQuestionsUnaccepted
+	{
+		@activity,
+		@votes,
+		@creation	
+	}
+	public enum SortMeQuestionsUnaccepted
+	{
+		@activity,
+		@votes,
+		@creation	
+	}
+	public enum SortUsersByIdsQuestionsUnanswered
+	{
+		@activity,
+		@votes,
+		@creation	
+	}
+	public enum SortMeQuestionsUnanswered
+	{
+		@activity,
+		@votes,
+		@creation	
+	}
+	public enum SortUsersByIdsSuggestedEdits
+	{
+		@creation,
+		@approval,
+		@rejection	
+	}
+	public enum SortMeSuggestedEdits
+	{
+		@creation,
+		@approval,
+		@rejection	
+	}
+	public enum SortUsersByIdsTags
+	{
+		@popular,
+		@activity,
+		@name	
+	}
+	public enum SortMeTags
+	{
+		@popular,
+		@activity,
+		@name	
+	}
+	public enum SortUsersByIdTagsByTagsTopAnswers
+	{
+		@activity,
+		@creation,
+		@votes	
+	}
+	public enum SortMeTagsByTagsTopAnswers
+	{
+		@activity,
+		@creation,
+		@votes	
+	}
+	public enum SortUsersByIdTagsByTagsTopQuestions
+	{
+		@activity,
+		@votes,
+		@creation	
+	}
+	public enum SortMeTagsByTagsTopQuestions
+	{
+		@activity,
+		@votes,
+		@creation	
+	}
+	public enum SortUsersModerators
+	{
+		@reputation,
+		@creation,
+		@name,
+		@modified	
+	}
+	public enum SortUsersModeratorsElected
+	{
+		@reputation,
+		@creation,
+		@name,
+		@modified	
+	}
 	public enum BadgeRank
 	{
 		@gold,
@@ -1821,18 +1866,17 @@ namespace SOAPI2.Model
 		@reviewed,
 		@suggested	
 	}
+	public enum RelatedSiteRelation
+	{
+		@parent,
+		@meta,
+		@chat	
+	}
 	public enum ShallowUserType
 	{
 		@unregistered,
 		@registered,
 		@moderator,
 		@does_not_exist	
-	}
-	public enum RelatedSiteRelation
-	{
-		@parent,
-		@meta,
-		@chat,
-		@other	
 	}
 }

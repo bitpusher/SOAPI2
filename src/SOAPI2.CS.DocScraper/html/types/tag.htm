@@ -6,11 +6,12 @@
 <html lang="en">
 <head> 
 <title> tag  - Stack Exchange API</title>
-<link rel="stylesheet" href="/Content/apiv2/all.css?v=43e8736b9fef">
+<link rel="stylesheet" href="/Content/apiv2/all.css?v=f4e1ff6867bf">
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 
-    <script type="text/javascript" src="/Content/apiv2/js/jquery-ui-1.8.16.custom.min.js"></script>
-    <script type="text/javascript" src="/Content/apiv2/js/console.js?v=2c1ccd33316c"></script>
+    <script type="text/javascript" src="/Content/apiv2/js/console.js?v=5d011b58ebc5"></script>
+    <script type="text/javascript" src="/Content/apiv2/js/prettify.js"></script>
+    <script type="text/javascript" src="/Content/apiv2/js/type.js"></script>
 
 </head>
 <body>
@@ -52,43 +53,29 @@
     <div id="fields" class="type-fields">
         <h2>Fields</h2>
         
-    <ul>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> name
-<ul>
-<li>string</li>
-</ul>
-</li>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> count
-<ul>
-<li>integer</li>
-</ul>
-</li>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> is_required
-<ul>
-<li>boolean</li>
-</ul>
-</li>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> is_moderator_only
-<ul>
-<li>boolean</li>
-</ul>
-</li>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> user_id
-<ul>
-<li>integer</li>
-</ul>
-</li>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> has_synonyms
-<ul>
-<li>boolean</li>
-</ul>
-</li>
-<li><span class='excluded' title='this field is excluded in the default filter'>âœ˜</span> last_activity_date
-<ul>
-<li>date</li>
-</ul>
-</li>
-</ul>
+    <table class="type-field-list">
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> name</td>
+<td>string</td>
+</tr>
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> count</td>
+<td>integer</td>
+</tr>
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> is_required</td>
+<td>boolean</td>
+</tr>
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> is_moderator_only</td>
+<td>boolean</td>
+</tr>
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> user_id</td>
+<td>integer, refers to an <a href="/docs/types/user">user</a></td>
+</tr>
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> has_synonyms</td>
+<td>boolean</td>
+</tr>
+<tr><td><span class='excluded' title='this field is excluded in the default filter'>âœ˜</span> last_activity_date</td>
+<td><a href="/docs/dates">date</a></td>
+</tr>
+</table>
 
 
 
@@ -98,11 +85,73 @@
         </div>
     </div>
 
+    <div id="examples" class="type-examples">
+        <h2>Examples</h2>
+
+        
+    
+
+
+
+<div class="example">
+    <h3><span class="left-arrow"></span><span class="example-header">Typical</span></h3>
+
+    <div class="result dno">
+        <pre class="prettyprint lang-js">
+<code>{"name":"c#","count":100,"is_required":false,"is_moderator_only":false,"has_synonyms":false,"last_activity_date":1329023075}</code>
+        </pre>
+    </div>
+</div>
+
+    
+
+
+
+<div class="example">
+    <h3><span class="left-arrow"></span><span class="example-header">User Tag</span></h3>
+
+    <div class="result dno">
+        <pre class="prettyprint lang-js">
+<code>{"name":"c#","count":100,"is_required":false,"is_moderator_only":false,"user_id":1,"has_synonyms":false,"last_activity_date":1329023075}</code>
+        </pre>
+    </div>
+</div>
+
+    
+
+
+
+<div class="example">
+    <h3><span class="left-arrow"></span><span class="example-header">Required</span></h3>
+
+    <div class="result dno">
+        <pre class="prettyprint lang-js">
+<code>{"name":"discussion","count":100,"is_required":true,"is_moderator_only":false,"has_synonyms":false,"last_activity_date":1329023075}</code>
+        </pre>
+    </div>
+</div>
+
+    
+
+
+
+<div class="example">
+    <h3><span class="left-arrow"></span><span class="example-header">Moderator Only</span></h3>
+
+    <div class="result dno">
+        <pre class="prettyprint lang-js">
+<code>{"name":"status-completed","count":100,"is_required":true,"is_moderator_only":true,"has_synonyms":false,"last_activity_date":1329023075}</code>
+        </pre>
+    </div>
+</div>
+
+    </div>
+
     <div id="methods">
         <h2>Methods That Return This Type</h2>
 
         
-    <a href='/docs/tags'>tags</a><br><a href='/docs/related-tags'>tags/{tags}/related</a><br><a href='/docs/tags-on-users'>users/{ids}/tags</a><br><a href='/docs/me-tags'>me/tags</a>
+    <a href='/docs/tags'>tags</a><br><a href='/docs/tags-by-name'>tags/{tags}/info</a><br><a href='/docs/required-tags'>tags/required</a><br><a href='/docs/moderator-only-tags'>tags/moderator-only</a><br><a href='/docs/related-tags'>tags/{tags}/related</a><br><a href='/docs/tags-on-users'>users/{ids}/tags</a><br><a href='/docs/me-tags'>me/tags</a>
 
     </div>
 </div>
@@ -113,23 +162,33 @@
 <div class="sidebar">
     <div class="module help">
         <ul>
-            <li><a href="/docs">All Documentation</a></li>
             <li><a href="/docs/authentication">Authentication</a></li>
-            <li><a href="/docs/vectors">Batching Requests</a></li>
-            <li><a href="/docs/change-log">Change Log</a></li>
-            <li><a href="/docs/min-max">Complex Queries</a></li>
-            <li><a href="/docs/compression">Compression</a></li>
-            <li><a href="/docs/dates">Dates</a></li>
-            <li><a href="/docs/error-handling">Error Handling</a></li>
-            <li><a href="/docs/filters">Filters</a></li>
             <li><a href="/docs/js-lib">Javascript SDK</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/vectors">Batching Requests</a></li>
+            <li><a href="/docs/min-max">Complex Queries</a></li>
+            <li><a href="/docs/filters">Filters</a></li>
             <li><a href="/docs/paging">Paging</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/dates">Dates</a></li>
+            <li><a href="/docs/numbers">Numbers</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/compression">Compression</a></li>
+            <li><a href="/docs/error-handling">Error Handling</a></li>
             <li><a href="/docs/wrapper">Response Wrapper</a></li>
             <li><a href="/docs/throttle">Rate Limiting</a></li>
             <li><a href="/docs/user-types">Users</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/change-log">Change Log</a></li>
         </ul>
     </div>
 </div>        </div>
+        
+        <div class="bottom"">
+            <div class="bottom-wrapper">
+                
+            </div>
+        </div>
     </div>
 
 <div class="footer">

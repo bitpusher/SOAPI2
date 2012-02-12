@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Go" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  
+  <!-- Version defaults - override these as per SemVer standard - http://semver.org/ -->
+  <PropertyGroup>
+    <Major Condition="'$(Major)'==''">0</Major>
+    <Minor Condition="'$(Minor)'==''">0</Minor>
+    <Patch Condition="'$(Patch)'==''">0</Patch>
+    <Build>0</Build> 
+    <Build Condition="'$(BUILD_NUMBER)'!=''">$(BUILD_NUMBER)</Build>  <!-- Use the Jenkins build number if available -->
+    <PreRelease Condition="'$(PreRelease)'!=''">-$(PreRelease)-$(Build)</PreRelease><!--nuget requires a - prefix -->
+  </PropertyGroup>
+
+  <Target Name="UpdateVersion">
+    <Message Text="Version: $(Major).$(Minor).$(Patch)$(PreRelease)" />
+
+    <CreateItem Include="$(SrcDirectory)\**\AssemblyInfo.cs">
+      <Output TaskParameter="Include" ItemName="AssemblyInfos"/>
+    </CreateItem>
+
+    <Message Text="AssemblyInfos.FullPath='%(AssemblyInfos.FullPath)'" Importance="Low"/>
+
+    <FileUpdate Files="%(AssemblyInfos.FullPath)"
+                Regex="AssemblyVersion\s*\(\s*\&quot;(\d+\.\d+\.(\d+|\*)\.(\d+|\*))\&quot;\s*\)"
+                ReplacementText="AssemblyVersion(&quot;$(Major).$(Minor).$(Patch).$(Build)&quot;)" />
+    <FileUpdate Files="%(AssemblyInfos.FullPath)"
+                Regex="AssemblyFileVersion\s*\(\s*\&quot;(\d+\.\d+\.(\d+|\*)\.(\d+|\*))\&quot;\s*\)"
+                ReplacementText="AssemblyFileVersion(&quot;$(Major).$(Minor).$(Patch).$(Build)&quot;)"/>
+
+    <Message Text="Updating NuGet package version"/>
+    <FileUpdate Files="$(SrcDirectory)\CityIndex.ReflectiveLoggingAdapter.nuspec"
+                Regex="&lt;version&gt;(.*?)&lt;/version&gt;"
+                ReplacementText="&lt;version&gt;$(Major).$(Minor).$(Patch)$(PreRelease)&lt;/version&gt;" />
+  </Target>
+</Project>

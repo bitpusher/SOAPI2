@@ -6,11 +6,12 @@
 <html lang="en">
 <head> 
 <title> user  - Stack Exchange API</title>
-<link rel="stylesheet" href="/Content/apiv2/all.css?v=43e8736b9fef">
+<link rel="stylesheet" href="/Content/apiv2/all.css?v=f4e1ff6867bf">
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 
-    <script type="text/javascript" src="/Content/apiv2/js/jquery-ui-1.8.16.custom.min.js"></script>
-    <script type="text/javascript" src="/Content/apiv2/js/console.js?v=2c1ccd33316c"></script>
+    <script type="text/javascript" src="/Content/apiv2/js/console.js?v=5d011b58ebc5"></script>
+    <script type="text/javascript" src="/Content/apiv2/js/prettify.js"></script>
+    <script type="text/javascript" src="/Content/apiv2/js/type.js"></script>
 
 </head>
 <body>
@@ -52,147 +53,96 @@
     <div id="fields" class="type-fields">
         <h2>Fields</h2>
         
-    <ul>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> user_id
-<ul>
-<li>integer</li>
-</ul>
-</li>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> user_type
-<ul>
-<li>one of <code>unregistered</code>, <code>registered</code>, <code>moderator</code>, or <code>does_not_exist</code></li>
-</ul>
-</li>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> creation_date
-<ul>
-<li>date</li>
-</ul>
-</li>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> display_name
-<ul>
-<li>string</li>
-</ul>
-</li>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> profile_image
-<ul>
-<li>string</li>
-<li>unchanged in <a href="/docs/filters">unsafe filters</a></li>
-</ul>
-</li>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> reputation
-<ul>
-<li>integer</li>
-</ul>
-</li>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> reputation_change_day
-<ul>
-<li>integer</li>
-</ul>
-</li>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> reputation_change_week
-<ul>
-<li>integer</li>
-</ul>
-</li>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> reputation_change_month
-<ul>
-<li>integer</li>
-</ul>
-</li>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> reputation_change_quarter
-<ul>
-<li>integer</li>
-</ul>
-</li>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> reputation_change_year
-<ul>
-<li>integer</li>
-</ul>
-</li>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> age
-<ul>
-<li>integer</li>
-</ul>
-</li>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> last_access_date
-<ul>
-<li>date</li>
-</ul>
-</li>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> last_modified_date
-<ul>
-<li>date</li>
-</ul>
-</li>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> is_employee
-<ul>
-<li>boolean</li>
-</ul>
-</li>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> link
-<ul>
-<li>string</li>
-<li>unchanged in <a href="/docs/filters">unsafe filters</a></li>
-</ul>
-</li>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> website_url
-<ul>
-<li>string</li>
-<li>unchanged in <a href="/docs/filters">unsafe filters</a></li>
-</ul>
-</li>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> location
-<ul>
-<li>string</li>
-</ul>
-</li>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> account_id
-<ul>
-<li>integer</li>
-</ul>
-</li>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> timed_penalty_date
-<ul>
-<li>date</li>
-</ul>
-</li>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> badge_counts
-<ul>
-<li><a href="/docs/types/badge-count">badge_count</a></li>
-</ul>
-</li>
-<li><span class='excluded' title='this field is excluded in the default filter'>âœ˜</span> question_count
-<ul>
-<li>integer</li>
-</ul>
-</li>
-<li><span class='excluded' title='this field is excluded in the default filter'>âœ˜</span> answer_count
-<ul>
-<li>integer</li>
-</ul>
-</li>
-<li><span class='excluded' title='this field is excluded in the default filter'>âœ˜</span> up_vote_count
-<ul>
-<li>integer</li>
-</ul>
-</li>
-<li><span class='excluded' title='this field is excluded in the default filter'>âœ˜</span> down_vote_count
-<ul>
-<li>integer</li>
-</ul>
-</li>
-<li><span class='excluded' title='this field is excluded in the default filter'>âœ˜</span> about_me
-<ul>
-<li>string</li>
-<li>unchanged in <a href="/docs/filters">unsafe filters</a></li>
-</ul>
-</li>
-<li><span class='excluded' title='this field is excluded in the default filter'>âœ˜</span> view_count
-<ul>
-<li>integer</li>
-</ul>
-</li>
-</ul>
+    <table class="type-field-list">
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> user_id</td>
+<td>integer, refers to an <a href="/docs/types/user">user</a></td>
+</tr>
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> user_type</td>
+<td>one of <code>unregistered</code>, <code>registered</code>, <code>moderator</code>, or <code>does_not_exist</code></td>
+</tr>
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> creation_date</td>
+<td><a href="/docs/dates">date</a></td>
+</tr>
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> display_name</td>
+<td>string</td>
+</tr>
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> profile_image</td>
+<td>string</td>
+<tr><td></td><td>unchanged in <a href="/docs/filters">unsafe filters</a></td></tr>
+</tr>
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> reputation</td>
+<td>integer</td>
+</tr>
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> reputation_change_day</td>
+<td>integer</td>
+</tr>
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> reputation_change_week</td>
+<td>integer</td>
+</tr>
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> reputation_change_month</td>
+<td>integer</td>
+</tr>
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> reputation_change_quarter</td>
+<td>integer</td>
+</tr>
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> reputation_change_year</td>
+<td>integer</td>
+</tr>
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> age</td>
+<td>integer</td>
+</tr>
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> last_access_date</td>
+<td><a href="/docs/dates">date</a></td>
+</tr>
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> last_modified_date</td>
+<td><a href="/docs/dates">date</a></td>
+</tr>
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> is_employee</td>
+<td>boolean</td>
+</tr>
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> link</td>
+<td>string</td>
+<tr><td></td><td>unchanged in <a href="/docs/filters">unsafe filters</a></td></tr>
+</tr>
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> website_url</td>
+<td>string</td>
+<tr><td></td><td>unchanged in <a href="/docs/filters">unsafe filters</a></td></tr>
+</tr>
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> location</td>
+<td>string</td>
+</tr>
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> account_id</td>
+<td>integer</td>
+</tr>
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> timed_penalty_date</td>
+<td><a href="/docs/dates">date</a></td>
+</tr>
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> badge_counts</td>
+<td><a href="/docs/types/badge-count">badge_count</a></td>
+</tr>
+<tr><td><span class='excluded' title='this field is excluded in the default filter'>âœ˜</span> question_count</td>
+<td>integer</td>
+</tr>
+<tr><td><span class='excluded' title='this field is excluded in the default filter'>âœ˜</span> answer_count</td>
+<td>integer</td>
+</tr>
+<tr><td><span class='excluded' title='this field is excluded in the default filter'>âœ˜</span> up_vote_count</td>
+<td>integer</td>
+</tr>
+<tr><td><span class='excluded' title='this field is excluded in the default filter'>âœ˜</span> down_vote_count</td>
+<td>integer</td>
+</tr>
+<tr><td><span class='excluded' title='this field is excluded in the default filter'>âœ˜</span> about_me</td>
+<td>string</td>
+<tr><td></td><td>unchanged in <a href="/docs/filters">unsafe filters</a></td></tr>
+</tr>
+<tr><td><span class='excluded' title='this field is excluded in the default filter'>âœ˜</span> view_count</td>
+<td>integer</td>
+</tr>
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> accept_rate</td>
+<td>integer</td>
+</tr>
+</table>
 
 
 
@@ -200,6 +150,40 @@
             Fields marked with <span class='included'>âœ”</span> are included in the default filter, those marked with 
             <span class='excluded'>âœ˜</span> are excluded in the default filter.
         </div>
+    </div>
+
+    <div id="examples" class="type-examples">
+        <h2>Examples</h2>
+
+        
+    
+
+
+
+<div class="example">
+    <h3><span class="left-arrow"></span><span class="example-header">Typical</span></h3>
+
+    <div class="result dno">
+        <pre class="prettyprint lang-js">
+<code>{"user_id":1,"user_type":"registered","creation_date":1328936666,"display_name":"Example User","profile_image":"http://www.gravatar.com/avatar/a007be5a61f6aa8f3e85ae2fc18dd66e?d=identicon&r=PG","reputation":9001,"reputation_change_day":100,"reputation_change_week":800,"reputation_change_month":200,"reputation_change_quarter":400,"reputation_change_year":9001,"age":40,"last_access_date":1328979866,"last_modified_date":1328936666,"is_employee":false,"link":"http://example.stackexchange.com/users/1/example-user","website_url":"http://example.com/","location":"An Imaginary World","account_id":1,"badge_counts":{"gold":1,"silver":2,"bronze":3},"question_count":12,"answer_count":10,"up_vote_count":90,"down_vote_count":50,"about_me":"about me block","view_count":1000,"accept_rate":55}</code>
+        </pre>
+    </div>
+</div>
+
+     
+
+
+
+<div class="example">
+    <h3><span class="left-arrow"></span><span class="example-header">Suspended User</span></h3>
+
+    <div class="result dno">
+        <pre class="prettyprint lang-js">
+<code>{"user_id":1,"user_type":"registered","creation_date":1328936666,"display_name":"Example User","profile_image":"http://www.gravatar.com/avatar/a007be5a61f6aa8f3e85ae2fc18dd66e?d=identicon&r=PG","reputation":9001,"reputation_change_day":100,"reputation_change_week":800,"reputation_change_month":200,"reputation_change_quarter":400,"reputation_change_year":9001,"age":40,"last_access_date":1328979866,"last_modified_date":1328936666,"is_employee":false,"link":"http://example.stackexchange.com/users/1/example-user","website_url":"http://example.com/","location":"An Imaginary World","account_id":1,"timed_penalty_date":1329627866,"badge_counts":{"gold":1,"silver":2,"bronze":3},"question_count":12,"answer_count":10,"up_vote_count":90,"down_vote_count":50,"about_me":"about me block","view_count":1000,"accept_rate":55}</code>
+        </pre>
+    </div>
+</div>
+
     </div>
 
     <div id="methods">
@@ -217,23 +201,33 @@
 <div class="sidebar">
     <div class="module help">
         <ul>
-            <li><a href="/docs">All Documentation</a></li>
             <li><a href="/docs/authentication">Authentication</a></li>
-            <li><a href="/docs/vectors">Batching Requests</a></li>
-            <li><a href="/docs/change-log">Change Log</a></li>
-            <li><a href="/docs/min-max">Complex Queries</a></li>
-            <li><a href="/docs/compression">Compression</a></li>
-            <li><a href="/docs/dates">Dates</a></li>
-            <li><a href="/docs/error-handling">Error Handling</a></li>
-            <li><a href="/docs/filters">Filters</a></li>
             <li><a href="/docs/js-lib">Javascript SDK</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/vectors">Batching Requests</a></li>
+            <li><a href="/docs/min-max">Complex Queries</a></li>
+            <li><a href="/docs/filters">Filters</a></li>
             <li><a href="/docs/paging">Paging</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/dates">Dates</a></li>
+            <li><a href="/docs/numbers">Numbers</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/compression">Compression</a></li>
+            <li><a href="/docs/error-handling">Error Handling</a></li>
             <li><a href="/docs/wrapper">Response Wrapper</a></li>
             <li><a href="/docs/throttle">Rate Limiting</a></li>
             <li><a href="/docs/user-types">Users</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/change-log">Change Log</a></li>
         </ul>
     </div>
 </div>        </div>
+        
+        <div class="bottom"">
+            <div class="bottom-wrapper">
+                
+            </div>
+        </div>
     </div>
 
 <div class="footer">

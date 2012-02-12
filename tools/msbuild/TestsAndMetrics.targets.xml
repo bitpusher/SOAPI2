@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Go" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ReportsDirectory>$(RootDirectory)\reports</ReportsDirectory>
+    <SimianEXE>$(RootDirectory)\tools\simian-2.3.31\bin\simian-2.3.31.exe</SimianEXE>
+    <PartCover4Directory>$(ProgramFiles86)\PartCover\PartCover .NET 4.0</PartCover4Directory>
+  </PropertyGroup>
+  
+  <!-- Runs unit tests through PartCover to calculate unit test covereage-->
+  <!-- Use %2a instead of * and %3f instead of ? to prevent expansion -->
+  <!-- %40 = @  %25 = % %24 = $ -->
+  <Target Name="RunTests" DependsOnTargets="CreateReportDirectories; UpdatePartCover4Settings">
+
+    <Exec Command="&quot;$(PartCover4Directory)\PartCover.exe&quot; --settings $(SrcDirectory)\PartCover4.settings.xml --output $(ReportsDirectory)\PartCover-results.xml"
+      ContinueOnError="false"
+      WorkingDirectory="$(ReportsDirectory)">
+      <Output TaskParameter="ExitCode" ItemName="ExitCodes"/>
+    </Exec>
+
+    <XslTransformation XslInputPath="$(RootDirectory)\tools\partcover4\xslt\PartCoverFullReport.xslt"
+                      XmlInputPaths="$(ReportsDirectory)\PartCover-results.xml"
+                      OutputPaths="$(ReportsDirectory)\PartCover-results-PartCoverFullReport.html" />
+
+    <Error Text="Test error occurred" Condition="'%(ExitCodes.Identity)'>0"/>
+  </Target>
+
+  <Target Name="CreateReportDirectories">
+    <Message Text="Making the report directories at '$(ReportsDirectory)'." />
+    <RemoveDir Directories="$(ReportsDirectory)" Condition="Exists('$(ReportsDirectory)')" ContinueOnError="True" />
+    <MakeDir Directories="$(ReportsDirectory)"/>
+  </Target>
+
+  <Target Name="CalculateMetrics" DependsOnTargets="CalculateComplexityMetrics; CalculateCRAPMetrics; CalculateDuplicationMetrics"></Target>
+  
+  <Target Name="CalculateComplexityMetrics">
+    <Message Text="Calculating complexity metrics"/>
+    <Exec Command="&quot;$(RootDirectory)\tools\reflector\Reflector.exe&quot; /Run:Reflector.CodeMetrics /Assembly:&quot;%(Assemblies.Identity)&quot; /OutputPath:&quot;CodeMetrics-%(Assemblies.Filename).xml&quot;"
+      ContinueOnError="false"
+      WorkingDirectory="$(ReportsDirectory)" />
+
+    <Message Text="Merging metrics into single file"/>
+
+    <ReadLinesFromFile File="$(ReportsDirectory)\CodeMetrics-%(Assemblies.FileName).xml">
+      <Output TaskParameter="Lines" ItemName="lines"/>
+    </ReadLinesFromFile>
+    <WriteLinesToFile File="$(ReportsDirectory)\CodeMetrics-Concatted.xml" Lines="&lt;all&gt;;@(Lines);&lt;/all&gt;" Overwrite="true" />
+
+    <XslTransformation XslInputPath="$(RootDirectory)\tools\reflector\mergeCodeMetrics.xslt"
+                      XmlInputPaths="$(ReportsDirectory)\CodeMetrics-Concatted.xml"
+                      OutputPaths="$(ReportsDirectory)\CodeMetrics.xml" />
+
+    <Message Text="Deleting un-merged files"/>
+    <Delete Files="$(ReportsDirectory)\CodeMetrics-%(Assemblies.FileName).xml;$(ReportsDirectory)\CodeMetrics-Concatted.xml" />
+  </Target>
+  
+  <Target Name="CalculateCRAPMetrics">
+    <Exec Command="&quot;$(RootDirectory)\tools\crap4net\Crap4Net-Console.exe&quot;"
+      ContinueOnError="false"
+      WorkingDirectory="$(ReportsDirectory)" />
+	<MakeDir Directories="$(ReportsDirectory)\Crap"/>
+	
+	<XslTransformation XslInputPath="$(RootDirectory)\tools\crap4net\xslt\Crap4j\Crap4JSummaryReport.xslt"
+                      XmlInputPaths="$(ReportsDirectory)\CrapReport.xml"
+                      OutputPaths="$(ReportsDirectory)\Crap\index.html" />
+	<XslTransformation XslInputPath="$(RootDirectory)\tools\crap4net\xslt\Crap4j\Crap4jDetails.xslt"
+                      XmlInputPaths="$(ReportsDirectory)\CrapReport.xml"
+                      OutputPaths="$(ReportsDirectory)\Crap\detail_crap.html" />
+	<XslTransformation XslInputPath="$(RootDirectory)\tools\crap4net\xslt\Crap4j\detail_complexity.xslt"
+                      XmlInputPaths="$(ReportsDirectory)\CrapReport.xml"
+                      OutputPaths="$(ReportsDirectory)\Crap\detail_complexity.html" />
+	<XslTransformation XslInputPath="$(RootDirectory)\tools\crap4net\xslt\Crap4j\detail_coverage.xslt"
+                      XmlInputPaths="$(ReportsDirectory)\CrapReport.xml"
+                      OutputPaths="$(ReportsDirectory)\Crap\detail_coverage.html" />
+	<XslTransformation XslInputPath="$(RootDirectory)\tools\crap4net\xslt\Crap4j\detail_crap_load.xslt"
+                      XmlInputPaths="$(ReportsDirectory)\CrapReport.xml"
+                      OutputPaths="$(ReportsDirectory)\Crap\detail_crap_load.html" />
+  </Target>
+  
+   <Target Name="CalculateDuplicationMetrics">
+    <Exec Command="&quot;$(SimianEXE)&quot; -formatter=xml:&quot;$(ReportsDirectory)\Simian.Result.xml&quot; -excludes=**/*.Designer.cs -excludes=**/StreamingClient.Lightstreamer/** -excludes=**/StreamingClient.Silverlight.Lightstreamer/** -excludes=**/obj/ -threshold=10 -reportDuplicateText+ **/*.cs"
+      IgnoreExitCode="true"
+	    ContinueOnError="true"
+      WorkingDirectory="$(SrcDirectory)" />
+  </Target>
+  
+  <Target Name="UpdatePartCover4Settings">
+    <ItemGroup>
+      <pc4_settings Include="--target &quot;$(NUnitEXE)&quot;"/>
+      <pc4_settings Include="--target-work-dir &quot;$(ReportsDirectory)&quot;"/>
+<!--      target-args &quot;%(TestAssemblies.Identity) $(NUnitArgs) /xml:%(TestAssemblies.Identity).NUnitResults.xml&quot;-->
+      <pc4_settings Include="--include [%2a]%2a"/>
+      <pc4_settings Include="--exclude [nunit%2a]%2a"/>
+      <pc4_settings Include="--exclude [log4net%2a]%2a"/>
+      <pc4_settings Include="--exclude [MyProject.Core.Tests%2a]%2a"/>
+    </ItemGroup>
+  </Target>
+</Project>

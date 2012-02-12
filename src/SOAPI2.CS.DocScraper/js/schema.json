@@ -6,47 +6,58 @@
       "properties": {
         "question_id": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "description": "refers to a question",
+          "included_by_default": true
         },
         "answer_id": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "description": "refers to an answer",
+          "included_by_default": true
         },
         "locked_date": {
           "type": "number",
-          "format": "utc-millisec"
+          "format": "utc-millisec",
+          "included_by_default": true
         },
         "creation_date": {
           "type": "number",
-          "format": "utc-millisec"
+          "format": "utc-millisec",
+          "included_by_default": true
         },
         "last_edit_date": {
           "type": "number",
-          "format": "utc-millisec"
+          "format": "utc-millisec",
+          "included_by_default": true
         },
         "last_activity_date": {
           "type": "number",
-          "format": "utc-millisec"
+          "format": "utc-millisec",
+          "included_by_default": true
         },
         "score": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "included_by_default": true
         },
         "community_owned_date": {
           "type": "number",
-          "format": "utc-millisec"
+          "format": "utc-millisec",
+          "included_by_default": true
         },
         "is_accepted": {
-          "type": "boolean"
+          "type": "boolean",
+          "included_by_default": true
         },
         "body": {
-          "type": "string",
-          "unsafe": true
+          "type": "string"
         },
         "owner": {
           "type": {
             "$ref": "#.shallow_user"
-          }
+          },
+          "included_by_default": true
         },
         "title": {
           "type": "string"
@@ -60,16 +71,12 @@
           "format": "integer"
         },
         "comments": {
-          "type": "array",
-          "items": [
-            {
-              "$ref": "#.comment"
-            }
-          ]
+          "type": {
+            "$ref": "#.comment"
+          }
         },
         "link": {
-          "type": "string",
-          "unsafe": true
+          "type": "string"
         }
       },
       "description": "Discussion\r\n        \r\n    This type represents an answer to a question on one of the Stack Exchange sites, such as this famous answer of bobince's.\r\n\r\n    As on the question page, it is possible to fetch the comments on an answer as part of a call; though this is not done by default."
@@ -80,81 +87,99 @@
       "properties": {
         "question_id": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "description": "refers to a question",
+          "included_by_default": true
         },
         "last_edit_date": {
           "type": "number",
-          "format": "utc-millisec"
+          "format": "utc-millisec",
+          "included_by_default": true
         },
         "creation_date": {
           "type": "number",
-          "format": "utc-millisec"
+          "format": "utc-millisec",
+          "included_by_default": true
         },
         "last_activity_date": {
           "type": "number",
-          "format": "utc-millisec"
+          "format": "utc-millisec",
+          "included_by_default": true
         },
         "locked_date": {
           "type": "number",
-          "format": "utc-millisec"
+          "format": "utc-millisec",
+          "included_by_default": true
         },
         "score": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "included_by_default": true
         },
         "community_owned_date": {
           "type": "number",
-          "format": "utc-millisec"
+          "format": "utc-millisec",
+          "included_by_default": true
         },
         "answer_count": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "included_by_default": true
         },
         "accepted_answer_id": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "included_by_default": true
         },
         "migrated_to": {
           "type": {
             "$ref": "#.migration_info"
-          }
+          },
+          "included_by_default": true
         },
         "migrated_from": {
           "type": {
             "$ref": "#.migration_info"
-          }
+          },
+          "included_by_default": true
         },
         "bounty_closes_date": {
           "type": "number",
-          "format": "utc-millisec"
+          "format": "utc-millisec",
+          "included_by_default": true
         },
         "bounty_amount": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "included_by_default": true
         },
         "closed_date": {
           "type": "number",
-          "format": "utc-millisec"
+          "format": "utc-millisec",
+          "included_by_default": true
         },
         "protected_date": {
           "type": "number",
-          "format": "utc-millisec"
+          "format": "utc-millisec",
+          "included_by_default": true
         },
         "body": {
-          "type": "string",
-          "unsafe": true
+          "type": "string"
         },
         "title": {
-          "type": "string"
+          "type": "string",
+          "included_by_default": true
         },
         "tags": {
           "type": "array",
           "items": [
             "string"
-          ]
+          ],
+          "included_by_default": true
         },
         "closed_reason": {
-          "type": "string"
+          "type": "string",
+          "included_by_default": true
         },
         "up_vote_count": {
           "type": "number",
@@ -170,35 +195,32 @@
         },
         "view_count": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "included_by_default": true
         },
         "owner": {
           "type": {
             "$ref": "#.shallow_user"
-          }
+          },
+          "included_by_default": true
         },
         "comments": {
-          "type": "array",
-          "items": [
-            {
-              "$ref": "#.comment"
-            }
-          ]
+          "type": {
+            "$ref": "#.comment"
+          }
         },
         "answers": {
-          "type": "array",
-          "items": [
-            {
-              "$ref": "#.answer"
-            }
-          ]
+          "type": {
+            "$ref": "#.answer"
+          }
         },
         "link": {
           "type": "string",
-          "unsafe": true
+          "included_by_default": true
         },
         "is_answered": {
-          "type": "boolean"
+          "type": "boolean",
+          "included_by_default": true
         }
       },
       "description": "Discussion\r\n        \r\n    This type represents a question on one of the Stack Exchange sites, such as this famous RegEx question.\r\n\r\n    This type is heavily inspired by the question page itself, and can optionally return comments and answers accordingly."
@@ -208,21 +230,25 @@
       "type": "object",
       "properties": {
         "access_token": {
-          "type": "string"
+          "type": "string",
+          "included_by_default": true
         },
         "expires_on_date": {
           "type": "number",
-          "format": "utc-millisec"
+          "format": "utc-millisec",
+          "included_by_default": true
         },
         "account_id": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "included_by_default": true
         },
         "scope": {
           "type": "array",
           "items": [
             "string"
-          ]
+          ],
+          "included_by_default": true
         }
       },
       "description": "Discussion\r\n        \r\n    This type describes an access_token that was created as part of an OAuth flow."
@@ -233,37 +259,43 @@
       "properties": {
         "badge_id": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "description": "refers to a badge",
+          "included_by_default": true
         },
         "rank": {
           "type": {
             "$ref": "#.badge_rank"
-          }
+          },
+          "included_by_default": true
         },
         "name": {
-          "type": "string"
+          "type": "string",
+          "included_by_default": true
         },
         "description": {
-          "type": "string",
-          "unsafe": true
+          "type": "string"
         },
         "award_count": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "included_by_default": true
         },
         "badge_type": {
           "type": {
             "$ref": "#.badge_type"
-          }
+          },
+          "included_by_default": true
         },
         "user": {
           "type": {
             "$ref": "#.shallow_user"
-          }
+          },
+          "included_by_default": true
         },
         "link": {
           "type": "string",
-          "unsafe": true
+          "included_by_default": true
         }
       },
       "description": "Discussion\r\n        \r\n    This type represents a badge on a Stack Exchange site.\r\n\r\n    Some badge, like Autobiographer, are held in common across all Stack Exchange site.  Others, like most tag badges, very\r\n    on a site by site basis.\r\n\r\n    Remember that ids are never guaranteed to be the same between sites, even if a badge exists on both sites."
@@ -274,15 +306,20 @@
       "properties": {
         "comment_id": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "description": "refers to a comment",
+          "included_by_default": true
         },
         "post_id": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "description": "refers to a post",
+          "included_by_default": true
         },
         "creation_date": {
           "type": "number",
-          "format": "utc-millisec"
+          "format": "utc-millisec",
+          "included_by_default": true
         },
         "post_type": {
           "type": {
@@ -291,28 +328,30 @@
         },
         "score": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "included_by_default": true
         },
         "edited": {
-          "type": "boolean"
+          "type": "boolean",
+          "included_by_default": true
         },
         "body": {
-          "type": "string",
-          "unsafe": true
+          "type": "string"
         },
         "owner": {
           "type": {
             "$ref": "#.shallow_user"
-          }
+          },
+          "included_by_default": true
         },
         "reply_to_user": {
           "type": {
             "$ref": "#.shallow_user"
-          }
+          },
+          "included_by_default": true
         },
         "link": {
-          "type": "string",
-          "unsafe": true
+          "type": "string"
         }
       },
       "description": "Discussion\r\n        \r\n    All Questions and Answers on a Stack Exchange site can be commented on, and this type represents those comments.\r\n\r\n    Comments can also be optionally directed at users, when this is the case the reply_to_user property is set (if it is requested in the current filter)."
@@ -323,13 +362,17 @@
       "properties": {
         "error_id": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "description": "refers to an error",
+          "included_by_default": true
         },
         "error_name": {
-          "type": "string"
+          "type": "string",
+          "included_by_default": true
         },
         "description": {
-          "type": "string"
+          "type": "string",
+          "included_by_default": true
         }
       },
       "description": "Discussion\r\n        \r\n    This type is used to describe the errors that can be returned by the Stack Exchange API.\r\n\r\n    It is not expected that many applications will concern themselves with this type.  It is made available\r\n    for development and testing purposes."
@@ -341,23 +384,25 @@
         "event_type": {
           "type": {
             "$ref": "#.event_type"
-          }
+          },
+          "included_by_default": true
         },
         "event_id": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "description": "refers to an event",
+          "included_by_default": true
         },
         "creation_date": {
           "type": "number",
-          "format": "utc-millisec"
+          "format": "utc-millisec",
+          "included_by_default": true
         },
         "link": {
-          "type": "string",
-          "unsafe": true
+          "type": "string"
         },
         "excerpt": {
-          "type": "string",
-          "unsafe": true
+          "type": "string"
         }
       },
       "description": "Discussion\r\n        \r\n    This type describes an event that has recently occurred on a Stack Exchange site.\r\n\r\n    A minimal ammount of information is present in these events for scaling purposes.  It is expected\r\n    that most applications will make follow up calls to the API to \"flesh out\" the event objects for their\r\n    own purposes."
@@ -367,18 +412,21 @@
       "type": "object",
       "properties": {
         "filter": {
-          "type": "string"
+          "type": "string",
+          "included_by_default": true
         },
         "included_fields": {
           "type": "array",
           "items": [
             "string"
-          ]
+          ],
+          "included_by_default": true
         },
         "filter_type": {
           "type": {
             "$ref": "#.filter_type"
-          }
+          },
+          "included_by_default": true
         }
       },
       "description": "Discussion\r\n        \r\n    This type describes a filter on the Stack Exchange API.\r\n\r\n    When passing a filter to methods in the API, it should be referred to by name alone."
@@ -390,42 +438,52 @@
         "item_type": {
           "type": {
             "$ref": "#.inbox_item_type"
-          }
+          },
+          "included_by_default": true
         },
         "question_id": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "description": "refers to a question",
+          "included_by_default": true
         },
         "answer_id": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "description": "refers to an answer",
+          "included_by_default": true
         },
         "comment_id": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "description": "refers to a comment",
+          "included_by_default": true
         },
         "title": {
-          "type": "string"
+          "type": "string",
+          "included_by_default": true
         },
         "creation_date": {
           "type": "number",
-          "format": "utc-millisec"
+          "format": "utc-millisec",
+          "included_by_default": true
         },
         "is_unread": {
-          "type": "boolean"
+          "type": "boolean",
+          "included_by_default": true
         },
         "site": {
           "type": {
             "$ref": "#.site"
-          }
+          },
+          "included_by_default": true
         },
         "body": {
-          "type": "string",
-          "unsafe": true
+          "type": "string"
         },
         "link": {
           "type": "string",
-          "unsafe": true
+          "included_by_default": true
         }
       },
       "description": "Discussion\r\n        \r\n    This type represents an item in a user's Global Inbox.\r\n\r\n    Be aware that the types of items returned by this method are subject to change at any time.  In particular, new types may be introduced\r\n    without warning.  Applications should deal with these changes gracefully.\r\n\r\n    Applications should not publish a user's inbox without their explicit consent, as while most item types are public in nature there are a few\r\n    which are (and should remain) private."
@@ -436,54 +494,67 @@
       "properties": {
         "total_questions": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "included_by_default": true
         },
         "total_unanswered": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "included_by_default": true
         },
         "total_accepted": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "included_by_default": true
         },
         "total_answers": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "included_by_default": true
         },
         "questions_per_minute": {
           "type": "number",
-          "format": "decimal"
+          "format": "decimal",
+          "included_by_default": true
         },
         "answers_per_minute": {
           "type": "number",
-          "format": "decimal"
+          "format": "decimal",
+          "included_by_default": true
         },
         "total_comments": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "included_by_default": true
         },
         "total_votes": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "included_by_default": true
         },
         "total_badges": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "included_by_default": true
         },
         "badges_per_minute": {
           "type": "number",
-          "format": "decimal"
+          "format": "decimal",
+          "included_by_default": true
         },
         "total_users": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "included_by_default": true
         },
         "new_active_users": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "included_by_default": true
         },
         "api_revision": {
-          "type": "string"
+          "type": "string",
+          "included_by_default": true
         },
         "site": {
           "type": {
@@ -498,26 +569,33 @@
       "type": "object",
       "properties": {
         "site_name": {
-          "type": "string"
+          "type": "string",
+          "included_by_default": true
         },
         "site_url": {
-          "type": "string"
+          "type": "string",
+          "included_by_default": true
         },
         "user_id": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "description": "refers to an user",
+          "included_by_default": true
         },
         "reputation": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "included_by_default": true
         },
         "account_id": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "included_by_default": true
         },
         "creation_date": {
           "type": "number",
-          "format": "utc-millisec"
+          "format": "utc-millisec",
+          "included_by_default": true
         },
         "user_type": {
           "type": {
@@ -527,19 +605,23 @@
         "badge_counts": {
           "type": {
             "$ref": "#.badge_count"
-          }
+          },
+          "included_by_default": true
         },
         "last_access_date": {
           "type": "number",
-          "format": "utc-millisec"
+          "format": "utc-millisec",
+          "included_by_default": true
         },
         "answer_count": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "included_by_default": true
         },
         "question_count": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "included_by_default": true
         }
       },
       "description": "Discussion\r\n        \r\n    This type represents a user, however it is greatly reduced when compared to the full User type to \r\n    reduce the amount of work that needs to be done to fetch it from multiple sites in the network."
@@ -550,86 +632,105 @@
       "properties": {
         "user_id": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "description": "refers to an user",
+          "included_by_default": true
         },
         "user_type": {
           "type": {
             "$ref": "#.user_type"
-          }
+          },
+          "included_by_default": true
         },
         "creation_date": {
           "type": "number",
-          "format": "utc-millisec"
+          "format": "utc-millisec",
+          "included_by_default": true
         },
         "display_name": {
-          "type": "string"
+          "type": "string",
+          "included_by_default": true
         },
         "profile_image": {
           "type": "string",
-          "unsafe": true
+          "included_by_default": true
         },
         "reputation": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "included_by_default": true
         },
         "reputation_change_day": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "included_by_default": true
         },
         "reputation_change_week": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "included_by_default": true
         },
         "reputation_change_month": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "included_by_default": true
         },
         "reputation_change_quarter": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "included_by_default": true
         },
         "reputation_change_year": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "included_by_default": true
         },
         "age": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "included_by_default": true
         },
         "last_access_date": {
           "type": "number",
-          "format": "utc-millisec"
+          "format": "utc-millisec",
+          "included_by_default": true
         },
         "last_modified_date": {
           "type": "number",
-          "format": "utc-millisec"
+          "format": "utc-millisec",
+          "included_by_default": true
         },
         "is_employee": {
-          "type": "boolean"
+          "type": "boolean",
+          "included_by_default": true
         },
         "link": {
           "type": "string",
-          "unsafe": true
+          "included_by_default": true
         },
         "website_url": {
           "type": "string",
-          "unsafe": true
+          "included_by_default": true
         },
         "location": {
-          "type": "string"
+          "type": "string",
+          "included_by_default": true
         },
         "account_id": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "included_by_default": true
         },
         "timed_penalty_date": {
           "type": "number",
-          "format": "utc-millisec"
+          "format": "utc-millisec",
+          "included_by_default": true
         },
         "badge_counts": {
           "type": {
             "$ref": "#.badge_count"
-          }
+          },
+          "included_by_default": true
         },
         "question_count": {
           "type": "number",
@@ -648,12 +749,16 @@
           "format": "integer"
         },
         "about_me": {
-          "type": "string",
-          "unsafe": true
+          "type": "string"
         },
         "view_count": {
           "type": "number",
           "format": "integer"
+        },
+        "accept_rate": {
+          "type": "number",
+          "format": "integer",
+          "included_by_default": true
         }
       },
       "description": "Discussion\r\n        \r\n    This type describes a user on a Stack Exchange site.\r\n\r\n    There are a number of different user types returned by the Stack Exchange API, depending on the method.  Others include shallow_user and network_user."
@@ -664,37 +769,44 @@
       "properties": {
         "post_id": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "description": "refers to a post",
+          "included_by_default": true
         },
         "post_type": {
           "type": {
             "$ref": "#.post_type"
-          }
+          },
+          "included_by_default": true
         },
         "body": {
-          "type": "string",
-          "unsafe": true
+          "type": "string"
         },
         "owner": {
           "type": {
             "$ref": "#.shallow_user"
-          }
+          },
+          "included_by_default": true
         },
         "creation_date": {
           "type": "number",
-          "format": "utc-millisec"
+          "format": "utc-millisec",
+          "included_by_default": true
         },
         "last_activity_date": {
           "type": "number",
-          "format": "utc-millisec"
+          "format": "utc-millisec",
+          "included_by_default": true
         },
         "last_edit_date": {
           "type": "number",
-          "format": "utc-millisec"
+          "format": "utc-millisec",
+          "included_by_default": true
         },
         "score": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "included_by_default": true
         },
         "up_vote_count": {
           "type": "number",
@@ -705,12 +817,9 @@
           "format": "integer"
         },
         "comments": {
-          "type": "array",
-          "items": [
-            {
-              "$ref": "#.comment"
-            }
-          ]
+          "type": {
+            "$ref": "#.comment"
+          }
         }
       },
       "description": "Discussion\r\n        \r\n    This type represents the intersection of the Question and Answer types.\r\n\r\n    It's used in cases where it would be beneficial to mix questions and answers in a response."
@@ -721,15 +830,16 @@
       "properties": {
         "short_description": {
           "type": "string",
-          "unsafe": true
+          "included_by_default": true
         },
         "description": {
           "type": "string",
-          "unsafe": true
+          "included_by_default": true
         },
         "reputation": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "included_by_default": true
         }
       },
       "description": "Discussion\r\n        \r\n    Represents a privilege a user may have on a Stack Exchange site.\r\n\r\n    Applications should be aware of, and be able to deal with, the possibility of new privileges being introduced and old ones being removed."
@@ -741,44 +851,57 @@
         "timeline_type": {
           "type": {
             "$ref": "#.question_timeline_type"
-          }
+          },
+          "included_by_default": true
         },
         "question_id": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "description": "refers to a question",
+          "included_by_default": true
         },
         "post_id": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "description": "refers to a post",
+          "included_by_default": true
         },
         "comment_id": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "description": "refers to a comment",
+          "included_by_default": true
         },
         "revision_guid": {
-          "type": "string"
+          "type": "string",
+          "included_by_default": true
         },
         "up_vote_count": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "included_by_default": true
         },
         "down_vote_count": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "included_by_default": true
         },
         "creation_date": {
           "type": "number",
-          "format": "utc-millisec"
+          "format": "utc-millisec",
+          "included_by_default": true
         },
         "user": {
           "type": {
             "$ref": "#.shallow_user"
-          }
+          },
+          "included_by_default": true
         },
         "owner": {
           "type": {
             "$ref": "#.shallow_user"
-          }
+          },
+          "included_by_default": true
         }
       },
       "description": "Discussion\r\n        \r\n    This type represents events in the history of a Question."
@@ -789,36 +912,43 @@
       "properties": {
         "user_id": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "description": "refers to an user",
+          "included_by_default": true
         },
         "post_id": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "description": "refers to a post",
+          "included_by_default": true
         },
         "post_type": {
           "type": {
             "$ref": "#.reputation_post_type"
-          }
+          },
+          "included_by_default": true
         },
         "vote_type": {
           "type": {
             "$ref": "#.reputation_vote_type"
-          }
+          },
+          "included_by_default": true
         },
         "title": {
           "type": "string"
         },
         "link": {
-          "type": "string",
-          "unsafe": true
+          "type": "string"
         },
         "reputation_change": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "included_by_default": true
         },
         "on_date": {
           "type": "number",
-          "format": "utc-millisec"
+          "format": "utc-millisec",
+          "included_by_default": true
         }
       },
       "description": "Discussion\r\n        \r\n    This type represents a change in reputation for a User.\r\n\r\n    All methods that return this data will scrub it to a degree, to increase the difficulty of correlating reputation changes\r\n    with down voting."
@@ -828,69 +958,82 @@
       "type": "object",
       "properties": {
         "revision_guid": {
-          "type": "string"
+          "type": "string",
+          "included_by_default": true
         },
         "revision_number": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "included_by_default": true
         },
         "revision_type": {
           "type": {
             "$ref": "#.revision_type"
-          }
+          },
+          "included_by_default": true
         },
         "post_type": {
           "type": {
             "$ref": "#.revision_post_type"
-          }
+          },
+          "included_by_default": true
         },
         "post_id": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "description": "refers to a post",
+          "included_by_default": true
         },
         "comment": {
-          "type": "string"
+          "type": "string",
+          "included_by_default": true
         },
         "creation_date": {
           "type": "number",
-          "format": "utc-millisec"
+          "format": "utc-millisec",
+          "included_by_default": true
         },
         "is_rollback": {
-          "type": "boolean"
+          "type": "boolean",
+          "included_by_default": true
         },
         "last_body": {
-          "type": "string",
-          "unsafe": true
+          "type": "string"
         },
         "last_title": {
-          "type": "string"
+          "type": "string",
+          "included_by_default": true
         },
         "last_tags": {
           "type": "array",
           "items": [
             "string"
-          ]
+          ],
+          "included_by_default": true
         },
         "body": {
-          "type": "string",
-          "unsafe": true
+          "type": "string"
         },
         "title": {
-          "type": "string"
+          "type": "string",
+          "included_by_default": true
         },
         "tags": {
           "type": "array",
           "items": [
             "string"
-          ]
+          ],
+          "included_by_default": true
         },
         "set_community_wiki": {
-          "type": "boolean"
+          "type": "boolean",
+          "included_by_default": true
         },
         "user": {
           "type": {
             "$ref": "#.shallow_user"
-          }
+          },
+          "included_by_default": true
         }
       },
       "description": "Discussion\r\n        \r\n    This type represents that state of a Post at some point in its history.\r\n\r\n    Note that under some circumstances multiple edits can result in only a single revision."
@@ -900,73 +1043,87 @@
       "type": "object",
       "properties": {
         "site_type": {
-          "type": "string"
+          "type": "string",
+          "included_by_default": true
         },
         "name": {
-          "type": "string"
+          "type": "string",
+          "included_by_default": true
         },
         "logo_url": {
-          "type": "string"
+          "type": "string",
+          "included_by_default": true
         },
         "api_site_parameter": {
-          "type": "string"
+          "type": "string",
+          "included_by_default": true
         },
         "site_url": {
-          "type": "string"
+          "type": "string",
+          "included_by_default": true
         },
         "audience": {
-          "type": "string"
+          "type": "string",
+          "included_by_default": true
         },
         "icon_url": {
-          "type": "string"
+          "type": "string",
+          "included_by_default": true
         },
         "aliases": {
           "type": "array",
           "items": [
             "string"
-          ]
+          ],
+          "included_by_default": true
         },
         "site_state": {
           "type": {
             "$ref": "#.site_state"
-          }
+          },
+          "included_by_default": true
         },
         "styling": {
           "type": {
             "$ref": "#.styling"
-          }
+          },
+          "included_by_default": true
         },
         "closed_beta_date": {
           "type": "number",
-          "format": "utc-millisec"
+          "format": "utc-millisec",
+          "included_by_default": true
         },
         "open_beta_date": {
           "type": "number",
-          "format": "utc-millisec"
+          "format": "utc-millisec",
+          "included_by_default": true
         },
         "launch_date": {
           "type": "number",
-          "format": "utc-millisec"
+          "format": "utc-millisec",
+          "included_by_default": true
         },
         "favicon_url": {
-          "type": "string"
+          "type": "string",
+          "included_by_default": true
         },
         "related_sites": {
-          "type": "array",
-          "items": [
-            {
-              "$ref": "#.related_site"
-            }
-          ]
+          "type": {
+            "$ref": "#.related_site"
+          },
+          "included_by_default": true
         },
         "twitter_account": {
-          "type": "string"
+          "type": "string",
+          "included_by_default": true
         },
         "markdown_extensions": {
           "type": "array",
           "items": [
             "string"
-          ]
+          ],
+          "included_by_default": true
         }
       },
       "description": "Discussion\r\n        \r\n    This type represents a site in the Stack Exchange network."
@@ -977,49 +1134,60 @@
       "properties": {
         "suggested_edit_id": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "description": "refers to a suggested_edit",
+          "included_by_default": true
         },
         "post_id": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "description": "refers to a post",
+          "included_by_default": true
         },
         "post_type": {
           "type": {
             "$ref": "#.suggested_edit_post_type"
-          }
+          },
+          "included_by_default": true
         },
         "body": {
-          "type": "string",
-          "unsafe": true
+          "type": "string"
         },
         "title": {
-          "type": "string"
+          "type": "string",
+          "included_by_default": true
         },
         "tags": {
           "type": "array",
           "items": [
             "string"
-          ]
+          ],
+          "included_by_default": true
         },
         "comment": {
-          "type": "string"
+          "type": "string",
+          "included_by_default": true
         },
         "creation_date": {
           "type": "number",
-          "format": "utc-millisec"
+          "format": "utc-millisec",
+          "included_by_default": true
         },
         "approval_date": {
           "type": "number",
-          "format": "utc-millisec"
+          "format": "utc-millisec",
+          "included_by_default": true
         },
         "rejection_date": {
           "type": "number",
-          "format": "utc-millisec"
+          "format": "utc-millisec",
+          "included_by_default": true
         },
         "proposing_user": {
           "type": {
             "$ref": "#.shallow_user"
-          }
+          },
+          "included_by_default": true
         }
       },
       "description": "Discussion\r\n        \r\n    This type represents a suggested edit on a Stack Exchange site."
@@ -1029,24 +1197,31 @@
       "type": "object",
       "properties": {
         "name": {
-          "type": "string"
+          "type": "string",
+          "included_by_default": true
         },
         "count": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "included_by_default": true
         },
         "is_required": {
-          "type": "boolean"
+          "type": "boolean",
+          "included_by_default": true
         },
         "is_moderator_only": {
-          "type": "boolean"
+          "type": "boolean",
+          "included_by_default": true
         },
         "user_id": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "description": "refers to an user",
+          "included_by_default": true
         },
         "has_synonyms": {
-          "type": "boolean"
+          "type": "boolean",
+          "included_by_default": true
         },
         "last_activity_date": {
           "type": "number",
@@ -1060,22 +1235,27 @@
       "type": "object",
       "properties": {
         "from_tag": {
-          "type": "string"
+          "type": "string",
+          "included_by_default": true
         },
         "to_tag": {
-          "type": "string"
+          "type": "string",
+          "included_by_default": true
         },
         "applied_count": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "included_by_default": true
         },
         "last_applied_date": {
           "type": "number",
-          "format": "utc-millisec"
+          "format": "utc-millisec",
+          "included_by_default": true
         },
         "creation_date": {
           "type": "number",
-          "format": "utc-millisec"
+          "format": "utc-millisec",
+          "included_by_default": true
         }
       },
       "description": "Discussion\r\n        \r\n    This type represents a mapping from one tag to another, as part of a Stack Exchange sites tag synonym list.\r\n\r\n    Note that even if a tag has been designated a synonym of another tag, that tag may still appear on some older questions in the system.\r\n\r\n    Applications should be able to gracefully handle both the introduction of synonyms and their removal."
@@ -1087,15 +1267,18 @@
         "user": {
           "type": {
             "$ref": "#.shallow_user"
-          }
+          },
+          "included_by_default": true
         },
         "score": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "included_by_default": true
         },
         "post_count": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "included_by_default": true
         }
       },
       "description": "Discussion\r\n        \r\n    This type represents a user's statistics within a tag.\r\n\r\n    Note that this data is often heavily cached or normalized, and thus methods return it may lag significantly behind\r\n    other methods returning similar data."
@@ -1105,22 +1288,25 @@
       "type": "object",
       "properties": {
         "tag_name": {
-          "type": "string"
+          "type": "string",
+          "included_by_default": true
         },
         "body": {
-          "type": "string",
-          "unsafe": true
+          "type": "string"
         },
         "excerpt": {
-          "type": "string"
+          "type": "string",
+          "included_by_default": true
         },
         "body_last_edit_date": {
           "type": "number",
-          "format": "utc-millisec"
+          "format": "utc-millisec",
+          "included_by_default": true
         },
         "excerpt_last_edit_date": {
           "type": "number",
-          "format": "utc-millisec"
+          "format": "utc-millisec",
+          "included_by_default": true
         },
         "last_body_editor": {
           "type": {
@@ -1141,23 +1327,27 @@
       "properties": {
         "tag_name": {
           "type": "string",
-          "unsafe": true
+          "included_by_default": true
         },
         "question_score": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "included_by_default": true
         },
         "question_count": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "included_by_default": true
         },
         "answer_score": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "included_by_default": true
         },
         "answer_count": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "included_by_default": true
         }
       },
       "description": "Discussion\r\n        \r\n    This type describes a user's score and activity in a given Tag."
@@ -1168,48 +1358,61 @@
       "properties": {
         "creation_date": {
           "type": "number",
-          "format": "utc-millisec"
+          "format": "utc-millisec",
+          "included_by_default": true
         },
         "post_type": {
           "type": {
             "$ref": "#.user_timeline_post_type"
-          }
+          },
+          "included_by_default": true
         },
         "timeline_type": {
           "type": {
             "$ref": "#.user_timeline_type"
-          }
+          },
+          "included_by_default": true
         },
         "user_id": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "description": "refers to an user",
+          "included_by_default": true
         },
         "post_id": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "description": "refers to a post",
+          "included_by_default": true
         },
         "comment_id": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "description": "refers to a comment",
+          "included_by_default": true
         },
         "suggested_edit_id": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "description": "refers to a suggested_edit",
+          "included_by_default": true
         },
         "badge_id": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "description": "refers to a badge",
+          "included_by_default": true
         },
         "title": {
-          "type": "string"
+          "type": "string",
+          "included_by_default": true
         },
         "detail": {
           "type": "string",
-          "unsafe": true
+          "included_by_default": true
         },
         "link": {
-          "type": "string",
-          "unsafe": true
+          "type": "string"
         }
       },
       "description": "Discussion\r\n        \r\n    This type describes public actions a User has taken."
@@ -1220,15 +1423,18 @@
       "properties": {
         "gold": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "included_by_default": true
         },
         "silver": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "included_by_default": true
         },
         "bronze": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "included_by_default": true
         }
       },
       "description": "Discussion\r\n        \r\n    This type represents the total Badges, segregated by rank, a user has earned."
@@ -1239,19 +1445,48 @@
       "properties": {
         "question_id": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "description": "refers to a question",
+          "included_by_default": true
         },
         "other_site": {
           "type": {
             "$ref": "#.site"
-          }
+          },
+          "included_by_default": true
         },
         "on_date": {
           "type": "number",
-          "format": "utc-millisec"
+          "format": "utc-millisec",
+          "included_by_default": true
         }
       },
       "description": "Discussion\r\n        \r\n    This type represents a question's migration to or from a different site in the Stack Exchange network."
+    },
+    "related_site": {
+      "id": "related_site",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "included_by_default": true
+        },
+        "site_url": {
+          "type": "string",
+          "included_by_default": true
+        },
+        "relation": {
+          "type": {
+            "$ref": "#.related_site_relation"
+          },
+          "included_by_default": true
+        },
+        "api_site_parameter": {
+          "type": "string",
+          "included_by_default": true
+        }
+      },
+      "description": "Discussion\r\n        \r\n    This type represents a site that is related in some way to another site.\r\n\r\n    Examples include chat and meta, and parent sites.\r\n\r\n    Applications should be able to gracefully handle the additon of new related site types."
     },
     "shallow_user": {
       "id": "shallow_user",
@@ -1259,27 +1494,37 @@
       "properties": {
         "user_id": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "description": "refers to an user",
+          "included_by_default": true
         },
         "display_name": {
-          "type": "string"
+          "type": "string",
+          "included_by_default": true
         },
         "reputation": {
           "type": "number",
-          "format": "integer"
+          "format": "integer",
+          "included_by_default": true
         },
         "user_type": {
           "type": {
             "$ref": "#.shallow_user_type"
-          }
+          },
+          "included_by_default": true
         },
         "profile_image": {
           "type": "string",
-          "unsafe": true
+          "included_by_default": true
         },
         "link": {
           "type": "string",
-          "unsafe": true
+          "included_by_default": true
+        },
+        "accept_rate": {
+          "type": "number",
+          "format": "integer",
+          "included_by_default": true
         }
       },
       "description": "Discussion\r\n        \r\n    This type represents a user, but omits many of the fields found on the full User type.\r\n\r\n    This type is mostly analogous to the \"user card\" found on many pages (like the question page) on a Stack Exchange site."
@@ -1289,16 +1534,68 @@
       "type": "object",
       "properties": {
         "link_color": {
-          "type": "string"
+          "type": "string",
+          "included_by_default": true
         },
         "tag_foreground_color": {
-          "type": "string"
+          "type": "string",
+          "included_by_default": true
         },
         "tag_background_color": {
-          "type": "string"
+          "type": "string",
+          "included_by_default": true
         }
       },
       "description": "Discussion\r\n        \r\n    This type represents some stylings of a site in the Stack Exchange network.\r\n\r\n    These stylings are meant to allow developers to subtly vary the presentation of resources in their applications\r\n    so as to indicate to users the original source site.\r\n\r\n    Applications should be able to gracefully handle these styles changes, though they can safely assume that these\r\n    style changes are infrequent."
+    },
+    "response_wrapper": {
+      "id": "response_wrapper",
+      "type": "object",
+      "properties": {
+        "backoff": {
+          "type": "number"
+        },
+        "error_id": {
+          "type": "number"
+        },
+        "error_message": {
+          "type": "string"
+        },
+        "error_name": {
+          "type": "string"
+        },
+        "has_more": {
+          "type": "boolean"
+        },
+        "items": {
+          "type": "array",
+          "items": [
+            {
+              "$ref": "#.the_type_found_in_type"
+            }
+          ]
+        },
+        "page": {
+          "type": "number"
+        },
+        "page_size": {
+          "type": "number"
+        },
+        "quota_max": {
+          "type": "number"
+        },
+        "quota_remaining": {
+          "type": "number"
+        },
+        "total": {
+          "type": "number"
+        },
+        "type": {
+          "type": "string"
+        }
+      },
+      "generic_type": "the_type_found_in_type",
+      "description": "Discussion\r\n        \r\n        All responses in the Stack Exchange API share a common format, so as to make parsing these responses simpler.\r\n\r\n        The error_* fields, while technically elligible for filtering, will not actually be excluded in an\r\n        error case.  This is by design.\r\n\r\n        page and page_size are whatever was passed into the method.\r\n\r\n        If you're looking to just select total, exclude the items field in favor of excluding all\r\n        the properties on the returned type.\r\n\r\n        When building filters, this common wrapper object has no name.  Refer to it with a leading ., so the items\r\n        field would be refered to via .items.\r\n\r\n        The backoff field is only set when the API detects the request took an unusually long time to run.  When it is set\r\n        an application must wait that number of seconds before calling that method again.  Note that for the purposes of throttling and\r\n        backoff, the /me routes are considered the same as their /users/{ids} equivalent.\r\n\r\n        Fields\r\n\r\n        \r\n            âœ” backoff\r\n                \r\n                    number\r\n                \r\n            \r\n            âœ” error_id\r\n                \r\n                    number\r\n                \r\n            \r\n            âœ” error_message\r\n                \r\n                    string\r\n                \r\n            \r\n            âœ” error_name\r\n                \r\n                    string\r\n                \r\n            \r\n            \r\n            âœ” has_more\r\n                \r\n                    boolean\r\n                \r\n            \r\n            âœ” items\r\n                \r\n                    an array of the type found in type\r\n                \r\n            \r\n            âœ˜ page\r\n                \r\n                    number\r\n                \r\n            \r\n            âœ˜ page_size\r\n                \r\n                    number\r\n                \r\n            \r\n            âœ” quota_max\r\n                \r\n                    number\r\n                \r\n            \r\n            âœ” quota_remaining\r\n                \r\n                    number\r\n                \r\n            \r\n            âœ˜ total\r\n                \r\n                    number\r\n                \r\n            \r\n            âœ˜ type\r\n                \r\n                    string\r\n                \r\n            \r\n        \r\n\r\n        \r\n            Fields marked with âœ” are included in the default filter, those marked with \r\n            âœ˜ are excluded in the default filter."
     },
     "order": {
       "id": "order",
@@ -1497,6 +1794,16 @@
       ],
       "description": null
     },
+    "sort_questions_featured": {
+      "id": "sort_questions_featured",
+      "type": "string",
+      "enum": [
+        "activity",
+        "votes",
+        "creation"
+      ],
+      "description": null
+    },
     "sort_questions_unanswered": {
       "id": "sort_questions_unanswered",
       "type": "string",
@@ -1561,6 +1868,36 @@
     },
     "sort_tags": {
       "id": "sort_tags",
+      "type": "string",
+      "enum": [
+        "popular",
+        "activity",
+        "name"
+      ],
+      "description": null
+    },
+    "sort_tags_by_tags_info": {
+      "id": "sort_tags_by_tags_info",
+      "type": "string",
+      "enum": [
+        "popular",
+        "activity",
+        "name"
+      ],
+      "description": null
+    },
+    "sort_tags_moderator_only": {
+      "id": "sort_tags_moderator_only",
+      "type": "string",
+      "enum": [
+        "popular",
+        "activity",
+        "name"
+      ],
+      "description": null
+    },
+    "sort_tags_required": {
+      "id": "sort_tags_required",
       "type": "string",
       "enum": [
         "popular",
@@ -1769,6 +2106,26 @@
       ],
       "description": null
     },
+    "sort_users_by_ids_questions_featured": {
+      "id": "sort_users_by_ids_questions_featured",
+      "type": "string",
+      "enum": [
+        "activity",
+        "votes",
+        "creation"
+      ],
+      "description": null
+    },
+    "sort_me_questions_featured": {
+      "id": "sort_me_questions_featured",
+      "type": "string",
+      "enum": [
+        "activity",
+        "votes",
+        "creation"
+      ],
+      "description": null
+    },
     "sort_users_by_ids_questions_no_answers": {
       "id": "sort_users_by_ids_questions_no_answers",
       "type": "string",
@@ -1930,74 +2287,6 @@
         "modified"
       ],
       "description": null
-    },
-    "related_site": {
-      "id": "related_site",
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "site_url": {
-          "type": "string",
-          "unsafe": true
-        },
-        "relation": {
-          "type": {
-            "$ref": "#.related_site_relation"
-          }
-        }
-      },
-      "description": "Discussion\r\n        \r\n    This type represents a site that is related in some way to another site.\r\n\r\n    Examples include chat and meta, and parent sites.\r\n\r\n    Applications should be able to gracefully handle the additon of new related site types."
-    },
-    "response_wrapper": {
-      "id": "response_wrapper",
-      "type": "object",
-      "properties": {
-        "backoff": {
-          "type": "number"
-        },
-        "error_id": {
-          "type": "number"
-        },
-        "error_message": {
-          "type": "string"
-        },
-        "error_name": {
-          "type": "string"
-        },
-        "has_more": {
-          "type": "boolean"
-        },
-        "items": {
-          "type": "array",
-          "items": [
-            {
-              "$ref": "#.the_type_found_in_type"
-            }
-          ]
-        },
-        "page": {
-          "type": "number"
-        },
-        "page_size": {
-          "type": "number"
-        },
-        "quota_max": {
-          "type": "number"
-        },
-        "quota_remaining": {
-          "type": "number"
-        },
-        "total": {
-          "type": "number"
-        },
-        "type": {
-          "type": "string"
-        }
-      },
-      "generic_type": "the_type_found_in_type",
-      "description": "Discussion\r\n        \r\n        All responses in the Stack Exchange API share a common format, so as to make parsing these responses simpler.\r\n\r\n        The error_* fields, while technically elligible for filtering, will not actually be excluded in an\r\n        error case.  This is by design.\r\n\r\n        page and page_size are whatever was passed into the method.\r\n\r\n        If you're looking to just select total, exclude the items field in favor of excluding all\r\n        the properties on the returned type.\r\n\r\n        When building filters, this common wrapper object has no name.  Refer to it with a leading ., so the items\r\n        field would be refered to via .items.\r\n\r\n        The backoff field is only set when the API detects the request took an unusually long time to run.  When it is set\r\n        an application must wait that number of seconds before calling that method again.  Note that for the purposes of throttling and\r\n        backoff, the /me routes are considered the same as their /users/{ids} equivalent.\r\n\r\n        Fields\r\n\r\n        \r\n            âœ” backoff\r\n                \r\n                    number\r\n                \r\n            \r\n            âœ” error_id\r\n                \r\n                    number\r\n                \r\n            \r\n            âœ” error_message\r\n                \r\n                    string\r\n                \r\n            \r\n            âœ” error_name\r\n                \r\n                    string\r\n                \r\n            \r\n            \r\n            âœ” has_more\r\n                \r\n                    boolean\r\n                \r\n            \r\n            âœ” items\r\n                \r\n                    an array of the type found in type\r\n                \r\n            \r\n            âœ˜ page\r\n                \r\n                    number\r\n                \r\n            \r\n            âœ˜ page_size\r\n                \r\n                    number\r\n                \r\n            \r\n            âœ” quota_max\r\n                \r\n                    number\r\n                \r\n            \r\n            âœ” quota_remaining\r\n                \r\n                    number\r\n                \r\n            \r\n            âœ˜ total\r\n                \r\n                    number\r\n                \r\n            \r\n            âœ˜ type\r\n                \r\n                    string\r\n                \r\n            \r\n        \r\n\r\n        \r\n            Fields marked with âœ” are included in the default filter, those marked with \r\n            âœ˜ are excluded in the default filter."
     },
     "badge_rank": {
       "id": "badge_rank",
@@ -2193,6 +2482,16 @@
       ],
       "description": null
     },
+    "related_site_relation": {
+      "id": "related_site_relation",
+      "type": "string",
+      "enum": [
+        "parent",
+        "meta",
+        "chat"
+      ],
+      "description": null
+    },
     "shallow_user_type": {
       "id": "shallow_user_type",
       "type": "string",
@@ -2201,17 +2500,6 @@
         "registered",
         "moderator",
         "does_not_exist"
-      ],
-      "description": null
-    },
-    "related_site_relation": {
-      "id": "related_site_relation",
-      "type": "string",
-      "enum": [
-        "parent",
-        "meta",
-        "chat",
-        "other"
       ],
       "description": null
     }

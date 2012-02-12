@@ -16,7 +16,7 @@ namespace SOAPI2.DocScraper
         {
             Docs docs = PullFromFile();
             //Docs docs = PullFromWeb();
-
+            docs.ParseSource();
             docs.Validate();
             
             var schema = docs.CreateSchema();
@@ -76,7 +76,7 @@ namespace SOAPI2.DocScraper
         {
             
             // have to add this manually - is not linked from doc index
-            docs.Types.Add(new TypeInfo(docs) { Url = "/docs/types/related-site", Type = "related-site", Name = "related_site" });
+            // docs.Types.Add(new TypeInfo(docs) { Url = "/docs/types/related-site", Type = "related-site", Name = "related_site" });
 
             
             docs.Types.Add(new TypeInfo(docs) { Url = "/docs/wrapper", Type = "response-wrapper", Name = "response_wrapper" });
@@ -98,8 +98,13 @@ namespace SOAPI2.DocScraper
                 var client = new WebClient();
                 string filename = "..\\..\\html\\types\\" + typeName + ".htm";
                 string source = client.DownloadString("https://api.stackexchange.com" + type.Url);
+
                 type.Source = source;
+
                 File.WriteAllText(filename, source);
+
+                
+
                 new AutoResetEvent(false).WaitOne(1000);
             }
 
@@ -110,7 +115,7 @@ namespace SOAPI2.DocScraper
         private static void PullTypesFromFile(Docs docs)
         {
             // have to add this manually - is not linked from doc index
-            docs.Types.Add(new TypeInfo(docs) { Url = "/docs/types/related-site", Type = "related-site", Name = "related_site" });
+            //docs.Types.Add(new TypeInfo(docs) { Url = "/docs/types/related-site", Type = "related-site", Name = "related_site" });
             
             docs.Types.Add(new TypeInfo(docs) { Url = "/docs/wrapper", Type = "response-wrapper", Name = "response_wrapper" });
             

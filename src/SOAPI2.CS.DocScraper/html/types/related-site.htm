@@ -6,11 +6,12 @@
 <html lang="en">
 <head> 
 <title> related_site  - Stack Exchange API</title>
-<link rel="stylesheet" href="/Content/apiv2/all.css?v=43e8736b9fef">
+<link rel="stylesheet" href="/Content/apiv2/all.css?v=f4e1ff6867bf">
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 
-    <script type="text/javascript" src="/Content/apiv2/js/jquery-ui-1.8.16.custom.min.js"></script>
-    <script type="text/javascript" src="/Content/apiv2/js/console.js?v=2c1ccd33316c"></script>
+    <script type="text/javascript" src="/Content/apiv2/js/console.js?v=5d011b58ebc5"></script>
+    <script type="text/javascript" src="/Content/apiv2/js/prettify.js"></script>
+    <script type="text/javascript" src="/Content/apiv2/js/type.js"></script>
 
 </head>
 <body>
@@ -54,24 +55,21 @@
     <div id="fields" class="type-fields">
         <h2>Fields</h2>
         
-    <ul>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> name
-<ul>
-<li>string</li>
-</ul>
-</li>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> site_url
-<ul>
-<li>string</li>
-<li>unchanged in <a href="/docs/filters">unsafe filters</a></li>
-</ul>
-</li>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> relation
-<ul>
-<li>one of <code>parent</code>, <code>meta</code>, <code>chat</code>, or <code>other</code></li>
-</ul>
-</li>
-</ul>
+    <table class="type-field-list">
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> name</td>
+<td>string</td>
+</tr>
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> site_url</td>
+<td>string</td>
+<tr><td></td><td>unchanged in <a href="/docs/filters">unsafe filters</a></td></tr>
+</tr>
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> relation</td>
+<td>one of <code>parent</code>, <code>meta</code>, or <code>chat</code></td>
+</tr>
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> api_site_parameter</td>
+<td>string</td>
+</tr>
+</table>
 
 
 
@@ -79,6 +77,54 @@
             Fields marked with <span class='included'>âœ”</span> are included in the default filter, those marked with 
             <span class='excluded'>âœ˜</span> are excluded in the default filter.
         </div>
+    </div>
+
+    <div id="examples" class="type-examples">
+        <h2>Examples</h2>
+
+        
+    
+
+
+
+<div class="example">
+    <h3><span class="left-arrow"></span><span class="example-header">Parent Site</span></h3>
+
+    <div class="result dno">
+        <pre class="prettyprint lang-js">
+<code>{"name":"Example Site","site_url":"http://example.stackexchange.com/","relation":"parent","api_site_parameter":"example"}</code>
+        </pre>
+    </div>
+</div>
+
+    
+
+
+
+<div class="example">
+    <h3><span class="left-arrow"></span><span class="example-header">Meta Site</span></h3>
+
+    <div class="result dno">
+        <pre class="prettyprint lang-js">
+<code>{"name":"Meta Example Site","site_url":"http://meta.example.stackexchange.com/","relation":"meta","api_site_parameter":"mtea.example"}</code>
+        </pre>
+    </div>
+</div>
+
+    
+
+
+
+<div class="example">
+    <h3><span class="left-arrow"></span><span class="example-header">Chat Site</span></h3>
+
+    <div class="result dno">
+        <pre class="prettyprint lang-js">
+<code>{"name":"Meta Example Site","site_url":"http://meta.example.stackexchange.com/","relation":"chat","api_site_parameter":"mtea.example"}</code>
+        </pre>
+    </div>
+</div>
+
     </div>
 
     <div id="methods">
@@ -102,23 +148,33 @@
 <div class="sidebar">
     <div class="module help">
         <ul>
-            <li><a href="/docs">All Documentation</a></li>
             <li><a href="/docs/authentication">Authentication</a></li>
-            <li><a href="/docs/vectors">Batching Requests</a></li>
-            <li><a href="/docs/change-log">Change Log</a></li>
-            <li><a href="/docs/min-max">Complex Queries</a></li>
-            <li><a href="/docs/compression">Compression</a></li>
-            <li><a href="/docs/dates">Dates</a></li>
-            <li><a href="/docs/error-handling">Error Handling</a></li>
-            <li><a href="/docs/filters">Filters</a></li>
             <li><a href="/docs/js-lib">Javascript SDK</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/vectors">Batching Requests</a></li>
+            <li><a href="/docs/min-max">Complex Queries</a></li>
+            <li><a href="/docs/filters">Filters</a></li>
             <li><a href="/docs/paging">Paging</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/dates">Dates</a></li>
+            <li><a href="/docs/numbers">Numbers</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/compression">Compression</a></li>
+            <li><a href="/docs/error-handling">Error Handling</a></li>
             <li><a href="/docs/wrapper">Response Wrapper</a></li>
             <li><a href="/docs/throttle">Rate Limiting</a></li>
             <li><a href="/docs/user-types">Users</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/change-log">Change Log</a></li>
         </ul>
     </div>
 </div>        </div>
+        
+        <div class="bottom"">
+            <div class="bottom-wrapper">
+                
+            </div>
+        </div>
     </div>
 
 <div class="footer">

@@ -6,11 +6,12 @@
 <html lang="en">
 <head> 
 <title> badge  - Stack Exchange API</title>
-<link rel="stylesheet" href="/Content/apiv2/all.css?v=43e8736b9fef">
+<link rel="stylesheet" href="/Content/apiv2/all.css?v=f4e1ff6867bf">
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 
-    <script type="text/javascript" src="/Content/apiv2/js/jquery-ui-1.8.16.custom.min.js"></script>
-    <script type="text/javascript" src="/Content/apiv2/js/console.js?v=2c1ccd33316c"></script>
+    <script type="text/javascript" src="/Content/apiv2/js/console.js?v=5d011b58ebc5"></script>
+    <script type="text/javascript" src="/Content/apiv2/js/prettify.js"></script>
+    <script type="text/javascript" src="/Content/apiv2/js/type.js"></script>
 
 </head>
 <body>
@@ -55,50 +56,34 @@
     <div id="fields" class="type-fields">
         <h2>Fields</h2>
         
-    <ul>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> badge_id
-<ul>
-<li>integer</li>
-</ul>
-</li>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> rank
-<ul>
-<li>one of <code>gold</code>, <code>silver</code>, or <code>bronze</code></li>
-</ul>
-</li>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> name
-<ul>
-<li>string</li>
-</ul>
-</li>
-<li><span class='excluded' title='this field is excluded in the default filter'>âœ˜</span> description
-<ul>
-<li>string</li>
-<li>unchanged in <a href="/docs/filters">unsafe filters</a></li>
-</ul>
-</li>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> award_count
-<ul>
-<li>integer</li>
-</ul>
-</li>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> badge_type
-<ul>
-<li>one of <code>named</code>, or <code>tag_based</code></li>
-</ul>
-</li>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> user
-<ul>
-<li><a href="/docs/types/shallow-user">shallow_user</a></li>
-</ul>
-</li>
-<li><span class='included' title='this field is included in the default filter'>âœ”</span> link
-<ul>
-<li>string</li>
-<li>unchanged in <a href="/docs/filters">unsafe filters</a></li>
-</ul>
-</li>
-</ul>
+    <table class="type-field-list">
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> badge_id</td>
+<td>integer, refers to a <a href="/docs/types/badge">badge</a></td>
+</tr>
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> rank</td>
+<td>one of <code>gold</code>, <code>silver</code>, or <code>bronze</code></td>
+</tr>
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> name</td>
+<td>string</td>
+</tr>
+<tr><td><span class='excluded' title='this field is excluded in the default filter'>âœ˜</span> description</td>
+<td>string</td>
+<tr><td></td><td>unchanged in <a href="/docs/filters">unsafe filters</a></td></tr>
+</tr>
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> award_count</td>
+<td>integer</td>
+</tr>
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> badge_type</td>
+<td>one of <code>named</code>, or <code>tag_based</code></td>
+</tr>
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> user</td>
+<td><a href="/docs/types/shallow-user">shallow_user</a></td>
+</tr>
+<tr><td><span class='included' title='this field is included in the default filter'>âœ”</span> link</td>
+<td>string</td>
+<tr><td></td><td>unchanged in <a href="/docs/filters">unsafe filters</a></td></tr>
+</tr>
+</table>
 
 
 
@@ -106,6 +91,54 @@
             Fields marked with <span class='included'>âœ”</span> are included in the default filter, those marked with 
             <span class='excluded'>âœ˜</span> are excluded in the default filter.
         </div>
+    </div>
+
+    <div id="examples" class="type-examples">
+        <h2>Examples</h2>
+
+        
+    
+
+
+
+<div class="example">
+    <h3><span class="left-arrow"></span><span class="example-header">Named Badge</span></h3>
+
+    <div class="result dno">
+        <pre class="prettyprint lang-js">
+<code>{"badge_id":94,"rank":"silver","name":"Pundit","description":"Left 10 comments with a score of 5 or more","award_count":2000,"badge_type":"named","link":"http://example.stackexchange.com/badges/94/pundit"}</code>
+        </pre>
+    </div>
+</div>
+
+    
+
+
+
+<div class="example">
+    <h3><span class="left-arrow"></span><span class="example-header">Tag Badge</span></h3>
+
+    <div class="result dno">
+        <pre class="prettyprint lang-js">
+<code>{"badge_id":450,"rank":"bronze","name":"xna","description":"Earned 100 upvotes for at least 20 answers in the xna tag","award_count":20,"badge_type":"tag_based","link":"http://example.stackexchange.com/badges/450/xna"}</code>
+        </pre>
+    </div>
+</div>
+
+    
+
+
+
+<div class="example">
+    <h3><span class="left-arrow"></span><span class="example-header">Awarded Badge</span></h3>
+
+    <div class="result dno">
+        <pre class="prettyprint lang-js">
+<code>{"badge_id":94,"rank":"silver","name":"Pundit","description":"Left 10 comments with a score of 5 or more","award_count":2000,"badge_type":"named","user":{"user_id":1,"display_name":"Example User","reputation":9001,"user_type":"registered","profile_image":"http://www.gravatar.com/avatar/a007be5a61f6aa8f3e85ae2fc18dd66e?d=identicon&r=PG","link":"http://example.stackexchange.com/users/1/example-user","accept_rate":100},"link":"http://example.stackexchange.com/badges/94/pundit"}</code>
+        </pre>
+    </div>
+</div>
+
     </div>
 
     <div id="methods">
@@ -123,23 +156,33 @@
 <div class="sidebar">
     <div class="module help">
         <ul>
-            <li><a href="/docs">All Documentation</a></li>
             <li><a href="/docs/authentication">Authentication</a></li>
-            <li><a href="/docs/vectors">Batching Requests</a></li>
-            <li><a href="/docs/change-log">Change Log</a></li>
-            <li><a href="/docs/min-max">Complex Queries</a></li>
-            <li><a href="/docs/compression">Compression</a></li>
-            <li><a href="/docs/dates">Dates</a></li>
-            <li><a href="/docs/error-handling">Error Handling</a></li>
-            <li><a href="/docs/filters">Filters</a></li>
             <li><a href="/docs/js-lib">Javascript SDK</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/vectors">Batching Requests</a></li>
+            <li><a href="/docs/min-max">Complex Queries</a></li>
+            <li><a href="/docs/filters">Filters</a></li>
             <li><a href="/docs/paging">Paging</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/dates">Dates</a></li>
+            <li><a href="/docs/numbers">Numbers</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/compression">Compression</a></li>
+            <li><a href="/docs/error-handling">Error Handling</a></li>
             <li><a href="/docs/wrapper">Response Wrapper</a></li>
             <li><a href="/docs/throttle">Rate Limiting</a></li>
             <li><a href="/docs/user-types">Users</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/change-log">Change Log</a></li>
         </ul>
     </div>
 </div>        </div>
+        
+        <div class="bottom"">
+            <div class="bottom-wrapper">
+                
+            </div>
+        </div>
     </div>
 
 <div class="footer">

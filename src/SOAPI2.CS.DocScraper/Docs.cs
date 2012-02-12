@@ -14,6 +14,23 @@ namespace SOAPI2.DocScraper
     [Serializable]
     public class Docs
     {
+        public void ParseSource()
+        {
+            foreach (var group in this.MethodGroups)
+            {
+                foreach (MethodInfo method in group.Methods)
+                {
+                    method.ParseSource();
+                }
+            }
+
+            // create a dereferenced array as enums will be added to the type list when parsed
+            var types = this.Types.ToArray();
+            foreach (TypeInfo type in types)
+            {
+                type.ParseSource();
+            }
+        }
         public static string MungeMethodName(string methodName)
         {
             methodName = methodName.ToLower();

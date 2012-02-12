@@ -84,13 +84,13 @@ namespace SOAPI2
         #region site specific methods
 
 
-        public ResponseWrapperClass<ErrorClass> GetErrors(string site, int page, int pagesize)
+        public ResponseWrapperClass<ErrorClass> GetErrors( int page, int pagesize)
         {
-            string uriTemplate = AppendApiKey("?site={site}&pagesize={pagesize}&page={page}");
+            string uriTemplate = AppendApiKey("?pagesize={pagesize}&page={page}");
             return Request<ResponseWrapperClass<ErrorClass>>("errors", uriTemplate, "GET",
                                            new Dictionary<string, object>
                                                {
-                                                   {"site", site},
+                                                
                                                    {"page", page},
                                                    {"pagesize", pagesize}
                                                }, TimeSpan.FromMilliseconds(60000), "default");
