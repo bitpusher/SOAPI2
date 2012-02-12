@@ -205,7 +205,6 @@
     <Content Include="parameters and types.txt" />
     <Content Include="sorts.txt" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <None Include="js\schema.json" />
     <None Include="js\smd.json" />

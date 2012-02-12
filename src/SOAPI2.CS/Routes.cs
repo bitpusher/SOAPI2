@@ -108,7 +108,7 @@ namespace SOAPI2
 					{"max",max},
 					{"sort",sort},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 			public ResponseWrapperClass<AnswerClass> AnswersByIds(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortAnswersByIds? sort, string ids)
 			{
@@ -127,7 +127,7 @@ namespace SOAPI2
 					{"sort",sort},
 					{"ids",ids},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 			public ResponseWrapperClass<CommentClass> AnswersByIdsComments(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortAnswersByIdsComments? sort, string ids)
 			{
@@ -146,7 +146,7 @@ namespace SOAPI2
 					{"sort",sort},
 					{"ids",ids},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 		}
 		public _Answers Answers{get; private set;}
@@ -174,7 +174,7 @@ namespace SOAPI2
 					{"sort",sort},
 					{"inname",inname},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 			public ResponseWrapperClass<BadgeClass> BadgesByIds(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortBadgesByIds? sort, string ids)
 			{
@@ -193,7 +193,7 @@ namespace SOAPI2
 					{"sort",sort},
 					{"ids",ids},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 			public ResponseWrapperClass<BadgeClass> BadgesName(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortBadgesName? sort, string inname)
 			{
@@ -212,7 +212,7 @@ namespace SOAPI2
 					{"sort",sort},
 					{"inname",inname},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 			public ResponseWrapperClass<BadgeClass> BadgesRecipients(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate)
 			{
@@ -226,7 +226,7 @@ namespace SOAPI2
 					{"fromdate",fromdate},
 					{"todate",todate},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 			public ResponseWrapperClass<BadgeClass> BadgesByIdsRecipients(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, string ids)
 			{
@@ -241,7 +241,7 @@ namespace SOAPI2
 					{"todate",todate},
 					{"ids",ids},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 			public ResponseWrapperClass<BadgeClass> BadgesTags(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortBadgesTags? sort, string inname)
 			{
@@ -260,7 +260,7 @@ namespace SOAPI2
 					{"sort",sort},
 					{"inname",inname},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 		}
 		public _Badges Badges{get; private set;}
@@ -287,7 +287,7 @@ namespace SOAPI2
 					{"max",max},
 					{"sort",sort},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 			public ResponseWrapperClass<CommentClass> CommentsByIds(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortCommentsByIds? sort, string ids)
 			{
@@ -306,7 +306,7 @@ namespace SOAPI2
 					{"sort",sort},
 					{"ids",ids},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 		}
 		public _Comments Comments{get; private set;}
@@ -346,7 +346,7 @@ namespace SOAPI2
 					{"max",max},
 					{"sort",sort},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 			public ResponseWrapperClass<PostClass> PostsByIds(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortPostsByIds? sort, string ids)
 			{
@@ -365,7 +365,7 @@ namespace SOAPI2
 					{"sort",sort},
 					{"ids",ids},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 			public ResponseWrapperClass<CommentClass> PostsByIdsComments(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortPostsByIdsComments? sort, string ids)
 			{
@@ -384,7 +384,7 @@ namespace SOAPI2
 					{"sort",sort},
 					{"ids",ids},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 			public ResponseWrapperClass<RevisionClass> PostsByIdsRevisions(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, string ids)
 			{
@@ -399,7 +399,7 @@ namespace SOAPI2
 					{"todate",todate},
 					{"ids",ids},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 			public ResponseWrapperClass<SuggestedEditClass> PostsByIdsSuggestedEdits(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortPostsByIdsSuggestedEdits? sort, string ids)
 			{
@@ -418,7 +418,7 @@ namespace SOAPI2
 					{"sort",sort},
 					{"ids",ids},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 		}
 		public _Posts Posts{get; private set;}
@@ -439,7 +439,7 @@ namespace SOAPI2
 					{"page",page},
 					{"pagesize",pagesize},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 		}
 		public _Privileges Privileges{get; private set;}
@@ -467,7 +467,7 @@ namespace SOAPI2
 					{"sort",sort},
 					{"tagged",tagged},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 			public ResponseWrapperClass<QuestionClass> QuestionsByIds(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortQuestionsByIds? sort, string ids)
 			{
@@ -486,7 +486,7 @@ namespace SOAPI2
 					{"sort",sort},
 					{"ids",ids},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 			public ResponseWrapperClass<AnswerClass> QuestionsByIdsAnswers(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortQuestionsByIdsAnswers? sort, string ids)
 			{
@@ -505,7 +505,7 @@ namespace SOAPI2
 					{"sort",sort},
 					{"ids",ids},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 			public ResponseWrapperClass<CommentClass> QuestionsByIdsComments(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortQuestionsByIdsComments? sort, string ids)
 			{
@@ -524,7 +524,7 @@ namespace SOAPI2
 					{"sort",sort},
 					{"ids",ids},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 			public ResponseWrapperClass<QuestionClass> QuestionsByIdsLinked(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortQuestionsByIdsLinked? sort, string ids)
 			{
@@ -543,7 +543,7 @@ namespace SOAPI2
 					{"sort",sort},
 					{"ids",ids},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 			public ResponseWrapperClass<QuestionClass> QuestionsByIdsRelated(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortQuestionsByIdsRelated? sort, string ids)
 			{
@@ -562,7 +562,7 @@ namespace SOAPI2
 					{"sort",sort},
 					{"ids",ids},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 			public ResponseWrapperClass<QuestionTimelineClass> QuestionsByIdsTimeline(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, string ids)
 			{
@@ -577,7 +577,7 @@ namespace SOAPI2
 					{"todate",todate},
 					{"ids",ids},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 			public ResponseWrapperClass<QuestionClass> QuestionsFeatured(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortQuestionsFeatured? sort, string tagged)
 			{
@@ -596,7 +596,7 @@ namespace SOAPI2
 					{"sort",sort},
 					{"tagged",tagged},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 			public ResponseWrapperClass<QuestionClass> QuestionsUnanswered(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortQuestionsUnanswered? sort, string tagged)
 			{
@@ -615,7 +615,7 @@ namespace SOAPI2
 					{"sort",sort},
 					{"tagged",tagged},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 			public ResponseWrapperClass<QuestionClass> QuestionsNoAnswers(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortQuestionsNoAnswers? sort, string tagged)
 			{
@@ -634,7 +634,7 @@ namespace SOAPI2
 					{"sort",sort},
 					{"tagged",tagged},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 		}
 		public _Questions Questions{get; private set;}
@@ -658,7 +658,7 @@ namespace SOAPI2
 					{"todate",todate},
 					{"ids",ids},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 		}
 		public _Revisions Revisions{get; private set;}
@@ -688,7 +688,7 @@ namespace SOAPI2
 					{"nottagged",nottagged},
 					{"intitle",intitle},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 			public ResponseWrapperClass<QuestionClass> Similar(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortSimilar? sort, string tagged, string nottagged, string title)
 			{
@@ -709,7 +709,7 @@ namespace SOAPI2
 					{"nottagged",nottagged},
 					{"title",title},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 		}
 		public _Search Search{get; private set;}
@@ -736,7 +736,7 @@ namespace SOAPI2
 					{"max",max},
 					{"sort",sort},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 			public ResponseWrapperClass<SuggestedEditClass> SuggestedEditsByIds(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortSuggestedEditsByIds? sort, string ids)
 			{
@@ -755,7 +755,7 @@ namespace SOAPI2
 					{"sort",sort},
 					{"ids",ids},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 		}
 		public _Suggested_Edits Suggested_Edits{get; private set;}
@@ -774,7 +774,7 @@ namespace SOAPI2
 				{
 					{"site",site},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 		}
 		public _Info Info{get; private set;}
@@ -802,7 +802,7 @@ namespace SOAPI2
 					{"sort",sort},
 					{"inname",inname},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 			public ResponseWrapperClass<TagClass> TagsByTagsInfo(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortTagsByTagsInfo? sort, string tags)
 			{
@@ -821,7 +821,7 @@ namespace SOAPI2
 					{"sort",sort},
 					{"tags",tags},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 			public ResponseWrapperClass<TagClass> TagsModeratorOnly(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortTagsModeratorOnly? sort, string inname)
 			{
@@ -840,7 +840,7 @@ namespace SOAPI2
 					{"sort",sort},
 					{"inname",inname},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 			public ResponseWrapperClass<TagClass> TagsRequired(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortTagsRequired? sort, string inname)
 			{
@@ -859,7 +859,7 @@ namespace SOAPI2
 					{"sort",sort},
 					{"inname",inname},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 			public ResponseWrapperClass<TagSynonymClass> TagsSynonyms(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortTagsSynonyms? sort)
 			{
@@ -877,7 +877,7 @@ namespace SOAPI2
 					{"max",max},
 					{"sort",sort},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 			public ResponseWrapperClass<QuestionClass> TagsByTagsFaq(string site, int? page, int? pagesize, string tags)
 			{
@@ -890,7 +890,7 @@ namespace SOAPI2
 					{"pagesize",pagesize},
 					{"tags",tags},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 			public ResponseWrapperClass<TagClass> TagsByTagsRelated(string site, int? page, int? pagesize, string tags)
 			{
@@ -903,7 +903,7 @@ namespace SOAPI2
 					{"pagesize",pagesize},
 					{"tags",tags},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 			public ResponseWrapperClass<TagSynonymClass> TagsByTagsSynonyms(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortTagsByTagsSynonyms? sort, string tags)
 			{
@@ -922,7 +922,7 @@ namespace SOAPI2
 					{"sort",sort},
 					{"tags",tags},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 			public ResponseWrapperClass<TagScoreClass> TagsByTagTopAnswerersByPeriod(string site, int? page, int? pagesize, string tag, Period period)
 			{
@@ -936,7 +936,7 @@ namespace SOAPI2
 					{"tag",tag},
 					{"period",period},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 			public ResponseWrapperClass<TagScoreClass> TagsByTagTopAskersByPeriod(string site, int? page, int? pagesize, string tag, Period period)
 			{
@@ -950,7 +950,7 @@ namespace SOAPI2
 					{"tag",tag},
 					{"period",period},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 			public ResponseWrapperClass<TagWikiClass> TagsByTagsWikis(string site, int? page, int? pagesize, string tags)
 			{
@@ -963,7 +963,7 @@ namespace SOAPI2
 					{"pagesize",pagesize},
 					{"tags",tags},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 		}
 		public _Tags Tags{get; private set;}
@@ -991,7 +991,7 @@ namespace SOAPI2
 					{"sort",sort},
 					{"inname",inname},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 			public ResponseWrapperClass<UserClass> UsersByIds(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortUsersByIds? sort, string ids)
 			{
@@ -1010,7 +1010,7 @@ namespace SOAPI2
 					{"sort",sort},
 					{"ids",ids},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 			public ResponseWrapperClass<AnswerClass> UsersByIdsAnswers(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortUsersByIdsAnswers? sort, string ids)
 			{
@@ -1029,7 +1029,7 @@ namespace SOAPI2
 					{"sort",sort},
 					{"ids",ids},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 			public ResponseWrapperClass<BadgeClass> UsersByIdsBadges(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortUsersByIdsBadges? sort, string ids)
 			{
@@ -1048,7 +1048,7 @@ namespace SOAPI2
 					{"sort",sort},
 					{"ids",ids},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 			public ResponseWrapperClass<CommentClass> UsersByIdsComments(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortUsersByIdsComments? sort, string ids)
 			{
@@ -1067,7 +1067,7 @@ namespace SOAPI2
 					{"sort",sort},
 					{"ids",ids},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 			public ResponseWrapperClass<CommentClass> UsersByIdsCommentsToId(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortUsersByIdsCommentsToId? sort, string ids, int toid)
 			{
@@ -1087,7 +1087,7 @@ namespace SOAPI2
 					{"ids",ids},
 					{"toid",toid},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 			public ResponseWrapperClass<QuestionClass> UsersByIdsFavorites(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortUsersByIdsFavorites? sort, string ids)
 			{
@@ -1106,7 +1106,7 @@ namespace SOAPI2
 					{"sort",sort},
 					{"ids",ids},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 			public ResponseWrapperClass<CommentClass> UsersByIdsMentioned(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortUsersByIdsMentioned? sort, string ids)
 			{
@@ -1125,7 +1125,7 @@ namespace SOAPI2
 					{"sort",sort},
 					{"ids",ids},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 			public ResponseWrapperClass<PrivilegeClass> UsersByIdPrivileges(string site, int? page, int? pagesize, int id)
 			{
@@ -1138,7 +1138,7 @@ namespace SOAPI2
 					{"pagesize",pagesize},
 					{"id",id},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 			public ResponseWrapperClass<QuestionClass> UsersByIdsQuestions(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortUsersByIdsQuestions? sort, string ids)
 			{
@@ -1157,7 +1157,7 @@ namespace SOAPI2
 					{"sort",sort},
 					{"ids",ids},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 			public ResponseWrapperClass<QuestionClass> UsersByIdsQuestionsFeatured(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortUsersByIdsQuestionsFeatured? sort, string ids)
 			{
@@ -1176,7 +1176,7 @@ namespace SOAPI2
 					{"sort",sort},
 					{"ids",ids},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 			public ResponseWrapperClass<QuestionClass> UsersByIdsQuestionsNoAnswers(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortUsersByIdsQuestionsNoAnswers? sort, string ids)
 			{
@@ -1195,7 +1195,7 @@ namespace SOAPI2
 					{"sort",sort},
 					{"ids",ids},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 			public ResponseWrapperClass<QuestionClass> UsersByIdsQuestionsUnaccepted(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortUsersByIdsQuestionsUnaccepted? sort, string ids)
 			{
@@ -1214,7 +1214,7 @@ namespace SOAPI2
 					{"sort",sort},
 					{"ids",ids},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 			public ResponseWrapperClass<QuestionClass> UsersByIdsQuestionsUnanswered(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortUsersByIdsQuestionsUnanswered? sort, string ids)
 			{
@@ -1233,7 +1233,7 @@ namespace SOAPI2
 					{"sort",sort},
 					{"ids",ids},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 			public ResponseWrapperClass<ReputationClass> UsersByIdsReputation(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, string ids)
 			{
@@ -1248,7 +1248,7 @@ namespace SOAPI2
 					{"todate",todate},
 					{"ids",ids},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 			public ResponseWrapperClass<SuggestedEditClass> UsersByIdsSuggestedEdits(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortUsersByIdsSuggestedEdits? sort, string ids)
 			{
@@ -1267,7 +1267,7 @@ namespace SOAPI2
 					{"sort",sort},
 					{"ids",ids},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 			public ResponseWrapperClass<TagClass> UsersByIdsTags(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortUsersByIdsTags? sort, string ids)
 			{
@@ -1286,7 +1286,7 @@ namespace SOAPI2
 					{"sort",sort},
 					{"ids",ids},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 			public ResponseWrapperClass<AnswerClass> UsersByIdTagsByTagsTopAnswers(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortUsersByIdTagsByTagsTopAnswers? sort, int id, string tags)
 			{
@@ -1306,7 +1306,7 @@ namespace SOAPI2
 					{"id",id},
 					{"tags",tags},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 			public ResponseWrapperClass<QuestionClass> UsersByIdTagsByTagsTopQuestions(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortUsersByIdTagsByTagsTopQuestions? sort, int id, string tags)
 			{
@@ -1326,7 +1326,7 @@ namespace SOAPI2
 					{"id",id},
 					{"tags",tags},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 			public ResponseWrapperClass<UserTimelineClass> UsersByIdsTimeline(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, string ids)
 			{
@@ -1341,7 +1341,7 @@ namespace SOAPI2
 					{"todate",todate},
 					{"ids",ids},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 			public ResponseWrapperClass<TopTagClass> UsersByIdTopAnswerTags(string site, int? page, int? pagesize, int id)
 			{
@@ -1354,7 +1354,7 @@ namespace SOAPI2
 					{"pagesize",pagesize},
 					{"id",id},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 			public ResponseWrapperClass<TopTagClass> UsersByIdTopQuestionTags(string site, int? page, int? pagesize, int id)
 			{
@@ -1367,7 +1367,7 @@ namespace SOAPI2
 					{"pagesize",pagesize},
 					{"id",id},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 			public ResponseWrapperClass<AnswerClass> UsersModerators(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortUsersModerators? sort)
 			{
@@ -1385,7 +1385,7 @@ namespace SOAPI2
 					{"max",max},
 					{"sort",sort},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 			public ResponseWrapperClass<UserClass> UsersModeratorsElected(string site, int? page, int? pagesize, DateTimeOffset? fromdate, DateTimeOffset? todate, Order? order, object min, object max, SortUsersModeratorsElected? sort)
 			{
@@ -1403,7 +1403,7 @@ namespace SOAPI2
 					{"max",max},
 					{"sort",sort},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 			public ResponseWrapperClass<InboxItemClass> UsersByIdInbox(string site, int? page, int? pagesize, int id)
 			{
@@ -1423,7 +1423,7 @@ namespace SOAPI2
 					{"pagesize",pagesize},
 					{"ids",ids},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 		}
 		public _Users Users{get; private set;}
@@ -1444,7 +1444,7 @@ namespace SOAPI2
 					{"pagesize",pagesize},
 					{"accessTokens",accessTokens},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 			public ResponseWrapperClass<AccessTokenClass> AccessTokens(int? page, int? pagesize, string accessTokens)
 			{
@@ -1456,7 +1456,7 @@ namespace SOAPI2
 					{"pagesize",pagesize},
 					{"accessTokens",accessTokens},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 		}
 		public _Access_Tokens Access_Tokens{get; private set;}
@@ -1477,7 +1477,7 @@ namespace SOAPI2
 					{"pagesize",pagesize},
 					{"accessTokens",accessTokens},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 		}
 		public _Applications Applications{get; private set;}
@@ -1497,7 +1497,7 @@ namespace SOAPI2
 					{"page",page},
 					{"pagesize",pagesize},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 			public void ErrorsById(int id)
 			{
@@ -1507,7 +1507,7 @@ namespace SOAPI2
 				{
 					{"id",id},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 		}
 		public _Errors Errors{get; private set;}
@@ -1529,7 +1529,7 @@ namespace SOAPI2
 					{"base",@base},
 					{"unsafe",@unsafe},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.FORM);
 			}
 			public ResponseWrapperClass<FilterClass> Filters(string filters)
 			{
@@ -1539,7 +1539,7 @@ namespace SOAPI2
 				{
 					{"filters",filters},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 		}
 		public _Filters Filters{get; private set;}
@@ -1576,7 +1576,7 @@ namespace SOAPI2
 					{"page",page},
 					{"pagesize",pagesize},
 				}
-				, TimeSpan.FromMilliseconds(360000), "default");
+				, TimeSpan.FromMilliseconds(360000), "default",ContentType.JSON);
 			}
 		}
 		public _Sites Sites{get; private set;}

@@ -2,7 +2,7 @@
 
 namespace SOAPI2.Tests
 {
-    [TestFixture, Ignore("// #TODO: implement per-method request content type")]
+    [TestFixture]
     public class FiltersFixture : FixtureBase
     {
         const string Apikey = "SFh4Ag1Pid7I4i)VDYjyIw((";
@@ -13,6 +13,15 @@ namespace SOAPI2.Tests
             var client = new SoapiClient(Apikey, AppId);
             var response = client.Filters.FiltersCreate(".total;question.body", null, null, null);
             Assert.Greater(response.Items.Count, 0);
+
+        }
+        [Test]
+        public void CanGetFilters()
+        {
+            var client = new SoapiClient(Apikey, AppId);
+            var response = client.Filters.Filters("!masJQxPJAU");
+            Assert.Greater(response.Items.Count, 0);
+
         }
     }
 }

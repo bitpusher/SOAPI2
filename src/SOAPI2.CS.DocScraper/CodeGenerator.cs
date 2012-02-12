@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Net.Mime;
 using System.Text;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json.Linq;
@@ -382,9 +383,19 @@ namespace SOAPI2.DocScraper
                     var methodObj = kvp.Value;
                     string target = methodObj["target"].Value<string>();
 
-                    var contentType = (string)methodObj["contentType"];
-                    // #TODO: implement per-method request content type
-                    //serviceObj["contentType"] = "application/x-www-form-urlencoded";
+                    string contentType = "";
+                    switch(methodObj["contentType"].Value<string>())
+                    {
+                        case "application/json":
+                            contentType = "ContentType.JSON";
+                            break;
+                        case "application/x-www-form-urlencoded":
+                            contentType = "ContentType.FORM";
+                            break;
+                        default:
+                            throw new Exception("unknown content type");
+                    }
+                    
 
                     var responseContentType = (string)methodObj["responseContentType"];
                     var transport = (string)methodObj["transport"];
@@ -516,7 +527,7 @@ namespace SOAPI2.DocScraper
                         //                { "appKey", appKey}, 
                         //                { "accountOperatorId", accountOperatorId}
                         sb.AppendLine(string.Format("{0}\t\t}}", tabs));
-                        sb.AppendLine(string.Format("{0}\t\t, TimeSpan.FromMilliseconds(360000), \"default\");", tabs));
+                        sb.AppendLine(string.Format("{0}\t\t, TimeSpan.FromMilliseconds(360000), \"default\",{1});", tabs, contentType));
                         //
                         
 

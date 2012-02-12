@@ -64,51 +64,7 @@ namespace SOAPI2
             return AppendParameter(uriTemplate, "key", _apiKey);
         }
 
-        //#region network wide methods
-
-        //public ResponseWrapperClass<SiteClass> GetSites(int page, int pagesize)
-        //{
-        //    string uriTemplate = AppendApiKey("?pagesize={pagesize}&page={page}");
-        //    var response = Request<ResponseWrapperClass<SiteClass>>("sites", uriTemplate, "GET",
-        //                                              new Dictionary<string, object>
-        //                                                  {
-        //                                                      {"page", page},
-        //                                                      {"pagesize", pagesize}
-        //                                                  }, TimeSpan.FromMilliseconds(60000*60), "default");
-            
-        //    return response;
-        //}
-
-        //#endregion
-
-        //#region site specific methods
-
-
-        //public ResponseWrapperClass<ErrorClass> GetErrors( int page, int pagesize)
-        //{
-        //    string uriTemplate = AppendApiKey("?pagesize={pagesize}&page={page}");
-        //    return Request<ResponseWrapperClass<ErrorClass>>("errors", uriTemplate, "GET",
-        //                                   new Dictionary<string, object>
-        //                                       {
-                                                
-        //                                           {"page", page},
-        //                                           {"pagesize", pagesize}
-        //                                       }, TimeSpan.FromMilliseconds(60000), "default");
-        //}
-
-        //public ResponseWrapperClass<InfoClass> GetInfo(string site)
-        //{
-        //    string uriTemplate = AppendApiKey("?site={site}");
-        //    return Request<ResponseWrapperClass<InfoClass>>("info", uriTemplate, "GET",
-        //                                 new Dictionary<string, object>
-        //                                     {
-        //                                         {"site", site}
-        //                                     }, TimeSpan.FromMilliseconds(60000), "default");
-        //}
-        //#endregion
-
  
-        // #TODO: implement logic in JSONCLient to for decompression, automatic or otherwise
         protected override void BeforeIssueRequest(WebRequest request, string url, string target, string uriTemplate,
                                                    string method, Dictionary<string, object> parameters,
                                                    TimeSpan cacheDuration, string throttleScope)

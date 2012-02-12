@@ -18,14 +18,14 @@
       <Item value="var" priority="14" />
       <Item value="row" priority="0" />
       <Item value="if" priority="26" />
-      <Item value="string" priority="12" />
+      <Item value="string" priority="14" />
       <Item value="else" priority="9" />
       <Item value="bool" priority="2" />
       <Item value="false" priority="0" />
       <Item value="td" priority="5" />
-      <Item value="throw" priority="5" />
-      <Item value="new" priority="9" />
-      <Item value="Exception" priority="5" />
+      <Item value="throw" priority="6" />
+      <Item value="new" priority="10" />
+      <Item value="Exception" priority="6" />
       <Item value="true" priority="1" />
       <Item value="null" priority="69" />
       <Item value="return" priority="1" />
@@ -47,11 +47,11 @@
       <Item value="parameters" priority="1" />
       <Item value="Debug`0" priority="0" />
       <Item value="parameterName" priority="0" />
-      <Item value="switch" priority="1" />
-      <Item value="default" priority="1" />
-      <Item value="case" priority="7" />
+      <Item value="switch" priority="2" />
+      <Item value="default" priority="2" />
+      <Item value="case" priority="9" />
       <Item value="parameterType" priority="1" />
-      <Item value="break" priority="6" />
+      <Item value="break" priority="8" />
       <Item value="Dictionary" priority="0" />
       <Item value="Dictionary&lt;string,string&gt;" priority="0" />
       <Item value="returnType" priority="0" />
@@ -236,6 +236,7 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:SOAPI2.SoapiClient+_Filters">
       <Item value="FiltersCreate`0" priority="0" />
+      <Item value="Filters`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:SOAPI2.SoapiClient+_Info">
       <Item value="Info`0" priority="0" />
@@ -288,18 +289,10 @@
   </CompletionStatisticsManager>
   <RecentFiles>
     <RecentFiles>
-      <File id="7F585323-019F-427C-9298-8DBFD343A6B1/f:Model.cs" caret="30771" fromTop="15" />
-      <File id="EE676C02-BC52-4342-8731-60DFA1E058AD/d:js/f:schema.json" caret="33218" fromTop="16" />
-      <File id="10CD016A-5398-4534-9053-B3B968DA918A/f:EventsFixture.cs" caret="0" fromTop="0" />
       <File id="10CD016A-5398-4534-9053-B3B968DA918A/f:ErrorsFixture.cs" caret="302" fromTop="12" />
       <File id="EE676C02-BC52-4342-8731-60DFA1E058AD/f:TypeInfo.cs" caret="9530" fromTop="17" />
-      <File id="7F585323-019F-427C-9298-8DBFD343A6B1/f:packages.config" caret="52" fromTop="2" />
-      <File id="10CD016A-5398-4534-9053-B3B968DA918A/f:packages.config" caret="53" fromTop="2" />
       <File id="10CD016A-5398-4534-9053-B3B968DA918A/f:FixtureBase.cs" caret="202" fromTop="10" />
       <File id="5323B134-40EC-4E21-8F73-04B237AF83C2/f:NuGet.targets/l:C!?dev?CityIndex?SOAPI2?src?.nuget?NuGet.targets" caret="0" fromTop="0" />
-      <File id="7F585323-019F-427C-9298-8DBFD343A6B1/f:Routes.cs" caret="976" fromTop="0" />
-      <File id="EE676C02-BC52-4342-8731-60DFA1E058AD/f:CodeGenerator.cs" caret="17510" fromTop="20" />
-      <File id="10CD016A-5398-4534-9053-B3B968DA918A/f:FiltersFixture.cs" caret="429" fromTop="13" />
       <File id="10CD016A-5398-4534-9053-B3B968DA918A/f:InboxFixture.cs" caret="0" fromTop="0" />
       <File id="10CD016A-5398-4534-9053-B3B968DA918A/f:CommentsFixture.cs" caret="232" fromTop="10" />
       <File id="10CD016A-5398-4534-9053-B3B968DA918A/f:InfoFixture.cs" caret="410" fromTop="15" />
@@ -316,21 +309,17 @@
       <File id="EE676C02-BC52-4342-8731-60DFA1E058AD/f:Docs.cs" caret="653" fromTop="14" />
       <File id="EE676C02-BC52-4342-8731-60DFA1E058AD/f:MethodInfo.cs" caret="3887" fromTop="29" />
       <File id="EE676C02-BC52-4342-8731-60DFA1E058AD/d:js/f:smd.json" caret="64379" fromTop="38" />
+      <File id="EE676C02-BC52-4342-8731-60DFA1E058AD/f:CodeGenerator.cs" caret="25729" fromTop="27" />
+      <File id="d:Miscellaneous Files/f:CityIndex.JsonClient.RequestController.cs/l:C!?dev?CityIndex?SOAPI2?src?_ReSharper.SOAPI2?DecompilerCache?metadata?CityIndex.JsonClient-77ad?CityIndex.JsonClient.RequestController.cs" caret="3018" fromTop="15" />
+      <File id="7F585323-019F-427C-9298-8DBFD343A6B1/f:SoapiClient.cs" caret="2315" fromTop="19" />
+      <File id="7F585323-019F-427C-9298-8DBFD343A6B1/f:Routes.cs" caret="65224" fromTop="19" />
+      <File id="d:Miscellaneous Files/f:RequestController.cs/l:C!?dev?CityIndex?CityIndex.JsonClient?src?JsonClient?RequestController.cs" caret="10355" fromTop="48" />
+      <File id="10CD016A-5398-4534-9053-B3B968DA918A/f:FiltersFixture.cs" caret="655" fromTop="20" />
+      <File id="7F585323-019F-427C-9298-8DBFD343A6B1/f:packages.config" caret="190" fromTop="2" />
+      <File id="EE676C02-BC52-4342-8731-60DFA1E058AD/f:packages.config" caret="0" fromTop="0" />
+      <File id="10CD016A-5398-4534-9053-B3B968DA918A/f:packages.config" caret="304" fromTop="6" />
     </RecentFiles>
     <RecentEdits>
-      <File id="10CD016A-5398-4534-9053-B3B968DA918A/f:UsersFixture.cs" caret="9150" fromTop="18" />
-      <File id="10CD016A-5398-4534-9053-B3B968DA918A/f:UsersFixture.cs" caret="9150" fromTop="18" />
-      <File id="10CD016A-5398-4534-9053-B3B968DA918A/f:UsersFixture.cs" caret="9150" fromTop="18" />
-      <File id="10CD016A-5398-4534-9053-B3B968DA918A/f:UsersFixture.cs" caret="9150" fromTop="18" />
-      <File id="10CD016A-5398-4534-9053-B3B968DA918A/f:UsersFixture.cs" caret="9150" fromTop="18" />
-      <File id="10CD016A-5398-4534-9053-B3B968DA918A/f:UsersFixture.cs" caret="9150" fromTop="18" />
-      <File id="10CD016A-5398-4534-9053-B3B968DA918A/f:UsersFixture.cs" caret="9150" fromTop="18" />
-      <File id="10CD016A-5398-4534-9053-B3B968DA918A/f:UsersFixture.cs" caret="9150" fromTop="18" />
-      <File id="10CD016A-5398-4534-9053-B3B968DA918A/f:UsersFixture.cs" caret="9150" fromTop="18" />
-      <File id="10CD016A-5398-4534-9053-B3B968DA918A/f:UsersFixture.cs" caret="9150" fromTop="19" />
-      <File id="10CD016A-5398-4534-9053-B3B968DA918A/f:UsersFixture.cs" caret="9150" fromTop="18" />
-      <File id="10CD016A-5398-4534-9053-B3B968DA918A/f:UsersFixture.cs" caret="9415" fromTop="18" />
-      <File id="10CD016A-5398-4534-9053-B3B968DA918A/f:UsersFixture.cs" caret="9150" fromTop="18" />
       <File id="10CD016A-5398-4534-9053-B3B968DA918A/f:UsersFixture.cs" caret="7256" fromTop="18" />
       <File id="10CD016A-5398-4534-9053-B3B968DA918A/f:UsersFixture.cs" caret="907" fromTop="17" />
       <File id="10CD016A-5398-4534-9053-B3B968DA918A/f:UsersFixture.cs" caret="1255" fromTop="17" />
@@ -348,6 +337,19 @@
       <File id="10CD016A-5398-4534-9053-B3B968DA918A/f:UsersFixture.cs" caret="5252" fromTop="21" />
       <File id="10CD016A-5398-4534-9053-B3B968DA918A/f:UsersFixture.cs" caret="4889" fromTop="13" />
       <File id="EE676C02-BC52-4342-8731-60DFA1E058AD/f:MethodInfo.cs" caret="3887" fromTop="29" />
+      <File id="EE676C02-BC52-4342-8731-60DFA1E058AD/f:CodeGenerator.cs" caret="18046" fromTop="23" />
+      <File id="EE676C02-BC52-4342-8731-60DFA1E058AD/f:CodeGenerator.cs" caret="17792" fromTop="18" />
+      <File id="EE676C02-BC52-4342-8731-60DFA1E058AD/f:CodeGenerator.cs" caret="17855" fromTop="21" />
+      <File id="EE676C02-BC52-4342-8731-60DFA1E058AD/f:CodeGenerator.cs" caret="67065" fromTop="27" />
+      <File id="EE676C02-BC52-4342-8731-60DFA1E058AD/f:CodeGenerator.cs" caret="25729" fromTop="27" />
+      <File id="10CD016A-5398-4534-9053-B3B968DA918A/f:FiltersFixture.cs" caret="69" fromTop="4" />
+      <File id="7F585323-019F-427C-9298-8DBFD343A6B1/f:SoapiClient.cs" caret="2340" fromTop="22" />
+      <File id="d:Miscellaneous Files/f:RequestController.cs/l:C!?dev?CityIndex?CityIndex.JsonClient?src?JsonClient?RequestController.cs" caret="10184" fromTop="22" />
+      <File id="10CD016A-5398-4534-9053-B3B968DA918A/f:FiltersFixture.cs" caret="784" fromTop="17" />
+      <File id="10CD016A-5398-4534-9053-B3B968DA918A/f:FiltersFixture.cs" caret="775" fromTop="23" />
+      <File id="10CD016A-5398-4534-9053-B3B968DA918A/f:FiltersFixture.cs" caret="706" fromTop="20" />
+      <File id="7F585323-019F-427C-9298-8DBFD343A6B1/f:packages.config" caret="190" fromTop="2" />
+      <File id="10CD016A-5398-4534-9053-B3B968DA918A/f:packages.config" caret="304" fromTop="2" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>

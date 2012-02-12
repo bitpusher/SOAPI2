@@ -33,16 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CityIndex.JsonClient, Version=1.0.0.8, Culture=neutral, PublicKeyToken=3accec43ff318fbb, processorArchitecture=MSIL">
+    <Reference Include="CityIndex.JsonClient, Version=2.0.0.16, Culture=neutral, PublicKeyToken=3accec43ff318fbb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\CityIndex.JsonClient.1.0.0\lib\net35\CityIndex.JsonClient.dll</HintPath>
+      <HintPath>..\packages\CityIndex.JsonClient.2.0.0-bleeding-16\lib\net35\CityIndex.JsonClient.dll</HintPath>
     </Reference>
-    <Reference Include="CityIndex.ReflectiveLoggingAdapter, Version=1.0.0.22, Culture=neutral, PublicKeyToken=5ebd2761864c547e, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\CityIndex.JsonClient.1.0.0\lib\net35\CityIndex.ReflectiveLoggingAdapter.dll</HintPath>
+    <Reference Include="CityIndex.ReflectiveLoggingAdapter, Version=1.0.1.24, Culture=neutral, PublicKeyToken=5ebd2761864c547e, processorArchitecture=MSIL">
+      <HintPath>..\packages\CityIndex.JsonClient.2.0.0-bleeding-16\lib\net35\CityIndex.ReflectiveLoggingAdapter.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=4.0.7.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\CityIndex.JsonClient.1.0.0\lib\net35\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\CityIndex.JsonClient.2.0.0-bleeding-16\lib\net35\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
