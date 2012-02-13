@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Text;
-using CityIndex.ReflectiveLoggingAdapter;
+using Salient.ReflectiveLoggingAdapter;
 
 namespace SOAPI2.Tests
 {

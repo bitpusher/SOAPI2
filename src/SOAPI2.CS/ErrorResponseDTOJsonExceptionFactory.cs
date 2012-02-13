@@ -1,5 +1,5 @@
 ﻿using System;
-using CityIndex.JsonClient;
+using Salient.JsonClient;
 
 namespace SOAPI2
 {

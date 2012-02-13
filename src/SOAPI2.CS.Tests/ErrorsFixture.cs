@@ -1,4 +1,4 @@
-﻿using CityIndex.JsonClient;
+﻿using Salient.JsonClient;
 using Newtonsoft.Json;
 using NUnit.Framework;
 using SOAPI2.Model;

@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Newtonsoft.Json;
-using CityIndex.JsonClient;
+using Salient.JsonClient;
 using SOAPI2.Converters;
 using SOAPI2.Model;
 namespace SOAPI2

@@ -33,15 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CityIndex.JsonClient, Version=2.0.0.16, Culture=neutral, PublicKeyToken=3accec43ff318fbb, processorArchitecture=MSIL">
+    <Reference Include="Newtonsoft.Json, Version=4.0.8.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\CityIndex.JsonClient.2.0.0-bleeding-16\lib\net35\CityIndex.JsonClient.dll</HintPath>
+      <HintPath>..\packages\Salient.JsonClient.2.0.0-bleeding-3\lib\net35\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="CityIndex.ReflectiveLoggingAdapter, Version=1.0.1.24, Culture=neutral, PublicKeyToken=5ebd2761864c547e, processorArchitecture=MSIL">
-      <HintPath>..\packages\CityIndex.JsonClient.2.0.0-bleeding-16\lib\net35\CityIndex.ReflectiveLoggingAdapter.dll</HintPath>
+    <Reference Include="Salient.JsonClient.35">
+      <HintPath>..\packages\Salient.JsonClient.2.0.0-bleeding-3\lib\net35\Salient.JsonClient.35.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=4.0.7.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\CityIndex.JsonClient.2.0.0-bleeding-16\lib\net35\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Salient.ReflectiveLoggingAdapter.35">
+      <HintPath>..\packages\Salient.JsonClient.2.0.0-bleeding-3\lib\net35\Salient.ReflectiveLoggingAdapter.35.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -74,6 +74,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="oauth.htm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />

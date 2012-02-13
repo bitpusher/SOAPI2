@@ -295,7 +295,7 @@ namespace SOAPI2.DocScraper
             sb.AppendLine(string.Format("{0}using {1};", tabs, "System"));
             sb.AppendLine(string.Format("{0}using {1};", tabs, "System.Collections.Generic"));
             sb.AppendLine(string.Format("{0}using {1};", tabs, "Newtonsoft.Json"));
-            sb.AppendLine(string.Format("{0}using {1};", tabs, "CityIndex.JsonClient"));
+            sb.AppendLine(string.Format("{0}using {1};", tabs, "Salient.JsonClient"));
             sb.AppendLine(string.Format("{0}using {1};", tabs, "SOAPI2.Converters"));
             sb.AppendLine(string.Format("{0}using {1};", tabs, "SOAPI2.Model"));
             sb.AppendLine(string.Format("{0}namespace {1}", tabs, "SOAPI2"));
