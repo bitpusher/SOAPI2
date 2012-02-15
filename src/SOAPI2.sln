@@ -1,17 +1,35 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOAPI2.CS", "SOAPI2.CS\SOAPI2.CS.csproj", "{7F585323-019F-427C-9298-8DBFD343A6B1}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOAPI2.CS.DocScraper", "SOAPI2.CS.DocScraper\SOAPI2.CS.DocScraper.csproj", "{EE676C02-BC52-4342-8731-60DFA1E058AD}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOAPI2.CS.Tests", "SOAPI2.CS.Tests\SOAPI2.CS.Tests.csproj", "{10CD016A-5398-4534-9053-B3B968DA918A}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{5323B134-40EC-4E21-8F73-04B237AF83C2}"
 	ProjectSection(SolutionItems) = preProject
 		.nuget\NuGet.exe = .nuget\NuGet.exe
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{773C5A1F-E6DB-40B6-A3F6-E4ED9B2F9388}"
+	ProjectSection(SolutionItems) = preProject
+		build.xml = build.xml
+		..\tools\msbuild\CommonProperties.targets.xml = ..\tools\msbuild\CommonProperties.targets.xml
+		..\tools\msbuild\DropsAndPackaging.targets.xml = ..\tools\msbuild\DropsAndPackaging.targets.xml
+		SOAPI2.nuspec = SOAPI2.nuspec
+		..\tools\msbuild\TestsAndMetrics.targets.xml = ..\tools\msbuild\TestsAndMetrics.targets.xml
+		..\tools\msbuild\Versioning.targets.xml = ..\tools\msbuild\Versioning.targets.xml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "readme", "readme", "{F9197D66-35E7-493D-974D-033E66660D3D}"
+	ProjectSection(SolutionItems) = preProject
+		..\DEV_SETUP.txt = ..\DEV_SETUP.txt
+		..\LICENSE.txt = ..\LICENSE.txt
+		..\NOTICES.txt = ..\NOTICES.txt
+		..\README.markdown = ..\README.markdown
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOAPI2", "SOAPI2\SOAPI2.csproj", "{7F585323-019F-427C-9298-8DBFD343A6B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOAPI2.Tests", "SOAPI2.Tests\SOAPI2.Tests.csproj", "{10CD016A-5398-4534-9053-B3B968DA918A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOAPI2.DocScraper", "SOAPI2.DocScraper\SOAPI2.DocScraper.csproj", "{EE676C02-BC52-4342-8731-60DFA1E058AD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,16 +51,6 @@ Global
 		{7F585323-019F-427C-9298-8DBFD343A6B1}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{7F585323-019F-427C-9298-8DBFD343A6B1}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{7F585323-019F-427C-9298-8DBFD343A6B1}.Release|x86.ActiveCfg = Release|Any CPU
-		{EE676C02-BC52-4342-8731-60DFA1E058AD}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{EE676C02-BC52-4342-8731-60DFA1E058AD}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
-		{EE676C02-BC52-4342-8731-60DFA1E058AD}.Debug|Mixed Platforms.Build.0 = Debug|x86
-		{EE676C02-BC52-4342-8731-60DFA1E058AD}.Debug|x86.ActiveCfg = Debug|x86
-		{EE676C02-BC52-4342-8731-60DFA1E058AD}.Debug|x86.Build.0 = Debug|x86
-		{EE676C02-BC52-4342-8731-60DFA1E058AD}.Release|Any CPU.ActiveCfg = Release|x86
-		{EE676C02-BC52-4342-8731-60DFA1E058AD}.Release|Mixed Platforms.ActiveCfg = Release|x86
-		{EE676C02-BC52-4342-8731-60DFA1E058AD}.Release|Mixed Platforms.Build.0 = Release|x86
-		{EE676C02-BC52-4342-8731-60DFA1E058AD}.Release|x86.ActiveCfg = Release|x86
-		{EE676C02-BC52-4342-8731-60DFA1E058AD}.Release|x86.Build.0 = Release|x86
 		{10CD016A-5398-4534-9053-B3B968DA918A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{10CD016A-5398-4534-9053-B3B968DA918A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{10CD016A-5398-4534-9053-B3B968DA918A}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
@@ -53,6 +61,16 @@ Global
 		{10CD016A-5398-4534-9053-B3B968DA918A}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{10CD016A-5398-4534-9053-B3B968DA918A}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{10CD016A-5398-4534-9053-B3B968DA918A}.Release|x86.ActiveCfg = Release|Any CPU
+		{EE676C02-BC52-4342-8731-60DFA1E058AD}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{EE676C02-BC52-4342-8731-60DFA1E058AD}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{EE676C02-BC52-4342-8731-60DFA1E058AD}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{EE676C02-BC52-4342-8731-60DFA1E058AD}.Debug|x86.ActiveCfg = Debug|x86
+		{EE676C02-BC52-4342-8731-60DFA1E058AD}.Debug|x86.Build.0 = Debug|x86
+		{EE676C02-BC52-4342-8731-60DFA1E058AD}.Release|Any CPU.ActiveCfg = Release|x86
+		{EE676C02-BC52-4342-8731-60DFA1E058AD}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{EE676C02-BC52-4342-8731-60DFA1E058AD}.Release|Mixed Platforms.Build.0 = Release|x86
+		{EE676C02-BC52-4342-8731-60DFA1E058AD}.Release|x86.ActiveCfg = Release|x86
+		{EE676C02-BC52-4342-8731-60DFA1E058AD}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

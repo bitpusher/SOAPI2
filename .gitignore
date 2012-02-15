@@ -6,3 +6,14 @@ src/SOAPI2.CS.Tests/bin/*
 src/SOAPI2.CS.Tests/obj/*
 src/SOAPI2.CS/bin/*
 src/SOAPI2.CS/obj/*
+*ReSharper*
+*.user
+*.suo
+src/SOAPI2.suo
+src/SOAPI2.CS.Tests/obj/*
+dist/*
+reports/*
+src/SOAPI2.Tests/bin/*
+src/SOAPI2.Tests/obj/*
+src/SOAPI2/bin/*
+src/SOAPI2/obj/*

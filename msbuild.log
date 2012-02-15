@@ -1,0 +1,1626 @@
+Build started 2/15/2012 5:45:34 AM.
+Project "C:\dev\CityIndex\SOAPI2\src\build.xml" on node 1 (default targets).
+Building with tools version "4.0".
+Target "UpdateVersion" in file "C:\dev\CityIndex\SOAPI2\tools\msbuild\Versioning.targets.xml" from project "C:\dev\CityIndex\SOAPI2\src\build.xml" (target "Go" depends on it):
+Using "Message" task from assembly "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "Message"
+  Version: 1.0.0-bleeding-0
+Done executing task "Message".
+Using "CreateItem" task from assembly "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "CreateItem"
+Done executing task "CreateItem".
+Task "Message"
+  AssemblyInfos.FullPath='C:\dev\CityIndex\SOAPI2\src\SOAPI2\Properties\AssemblyInfo.cs'
+Done executing task "Message".
+Task "Message"
+  AssemblyInfos.FullPath='C:\dev\CityIndex\SOAPI2\src\SOAPI2.DocScraper\Properties\AssemblyInfo.cs'
+Done executing task "Message".
+Task "Message"
+  AssemblyInfos.FullPath='C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\Properties\AssemblyInfo.cs'
+Done executing task "Message".
+Using "FileUpdate" task from assembly "C:\Program Files (x86)\MSBuild\MSBuildCommunityTasks\MSBuild.Community.Tasks.dll".
+Task "FileUpdate"
+  Updating File "C:\dev\CityIndex\SOAPI2\src\SOAPI2\Properties\AssemblyInfo.cs".
+Done executing task "FileUpdate".
+Task "FileUpdate"
+  Updating File "C:\dev\CityIndex\SOAPI2\src\SOAPI2.DocScraper\Properties\AssemblyInfo.cs".
+Done executing task "FileUpdate".
+Task "FileUpdate"
+  Updating File "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\Properties\AssemblyInfo.cs".
+Done executing task "FileUpdate".
+Task "FileUpdate"
+  Updating File "C:\dev\CityIndex\SOAPI2\src\SOAPI2\Properties\AssemblyInfo.cs".
+Done executing task "FileUpdate".
+Task "FileUpdate"
+  Updating File "C:\dev\CityIndex\SOAPI2\src\SOAPI2.DocScraper\Properties\AssemblyInfo.cs".
+Done executing task "FileUpdate".
+Task "FileUpdate"
+  Updating File "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\Properties\AssemblyInfo.cs".
+Done executing task "FileUpdate".
+Task "Message"
+  Updating NuGet package version
+Done executing task "Message".
+Task "FileUpdate"
+  Updating File "C:\dev\CityIndex\SOAPI2\src\..\src\SOAPI2.nuspec".
+Done executing task "FileUpdate".
+Done building target "UpdateVersion" in project "build.xml".
+Target "Build" in project "C:\dev\CityIndex\SOAPI2\src\build.xml" (target "Go" depends on it):
+Using "MSBuild" task from assembly "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "MSBuild"
+  Global Properties:
+    Configuration=Debug
+    Platform=Any CPU
+    EnableCodeAnalysis=true
+    GenerateDocumentation=true
+Project "C:\dev\CityIndex\SOAPI2\src\build.xml" (1) is building "C:\dev\CityIndex\SOAPI2\src\SOAPI2.sln" (2) on node 1 (Rebuild target(s)).
+Building with tools version "2.0".
+Target "ValidateSolutionConfiguration" in file "C:\dev\CityIndex\SOAPI2\src\SOAPI2.sln.metaproj" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.sln" (entry point):
+Task "Error" skipped, due to false condition; (('$(CurrentSolutionConfigurationContents)' == '') and ('$(SkipInvalidConfigurations)' != 'true')) was evaluated as (('<SolutionConfiguration>
+  <ProjectConfiguration Project="{7F585323-019F-427C-9298-8DBFD343A6B1}" AbsolutePath="C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" BuildProjectInSolution="True">Debug|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{10CD016A-5398-4534-9053-B3B968DA918A}" AbsolutePath="C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" BuildProjectInSolution="True">Debug|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{EE676C02-BC52-4342-8731-60DFA1E058AD}" AbsolutePath="C:\dev\CityIndex\SOAPI2\src\SOAPI2.DocScraper\SOAPI2.DocScraper.csproj" BuildProjectInSolution="False">Debug|x86</ProjectConfiguration>
+</SolutionConfiguration>' == '') and ('' != 'true')).
+Task "Warning" skipped, due to false condition; (('$(CurrentSolutionConfigurationContents)' == '') and ('$(SkipInvalidConfigurations)' == 'true')) was evaluated as (('<SolutionConfiguration>
+  <ProjectConfiguration Project="{7F585323-019F-427C-9298-8DBFD343A6B1}" AbsolutePath="C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" BuildProjectInSolution="True">Debug|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{10CD016A-5398-4534-9053-B3B968DA918A}" AbsolutePath="C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" BuildProjectInSolution="True">Debug|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{EE676C02-BC52-4342-8731-60DFA1E058AD}" AbsolutePath="C:\dev\CityIndex\SOAPI2\src\SOAPI2.DocScraper\SOAPI2.DocScraper.csproj" BuildProjectInSolution="False">Debug|x86</ProjectConfiguration>
+</SolutionConfiguration>' == '') and ('' == 'true')).
+Using "Message" task from assembly "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "Message"
+  Building solution configuration "Debug|Any CPU".
+Done executing task "Message".
+Done building target "ValidateSolutionConfiguration" in project "SOAPI2.sln".
+Target "ValidateToolsVersions" in file "C:\dev\CityIndex\SOAPI2\src\SOAPI2.sln.metaproj" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.sln" (entry point):
+Task "Error" skipped, due to false condition; ('$(MSBuildToolsVersion)' == '2.0' and ('$(ProjectToolsVersion)' != '2.0' and '$(ProjectToolsVersion)' != '')) was evaluated as ('4.0' == '2.0' and ('' != '2.0' and '' != '')).
+Done building target "ValidateToolsVersions" in project "SOAPI2.sln".
+Target "ValidateProjects" in file "C:\dev\CityIndex\SOAPI2\src\SOAPI2.sln.metaproj" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.sln" (entry point):
+Task "Message" skipped, due to false condition; ( ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x86') ) was evaluated as ( ('Debug' == 'Debug') and ('Any CPU' == 'x86') ).
+Task "Message" skipped, due to false condition; ( ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x86') ) was evaluated as ( ('Debug' == 'Release') and ('Any CPU' == 'x86') ).
+Task "Message" skipped, due to false condition; ( ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x86') ) was evaluated as ( ('Debug' == 'Debug') and ('Any CPU' == 'x86') ).
+Task "Message" skipped, due to false condition; ( ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x86') ) was evaluated as ( ('Debug' == 'Release') and ('Any CPU' == 'x86') ).
+Task "Message"
+  The project "SOAPI2.DocScraper" is not selected for building in solution configuration "Debug|Any CPU".
+Done executing task "Message".
+Task "Message" skipped, due to false condition; ( ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') ) was evaluated as ( ('Debug' == 'Release') and ('Any CPU' == 'Any CPU') ).
+Done building target "ValidateProjects" in project "SOAPI2.sln".
+Target "Rebuild" in file "C:\dev\CityIndex\SOAPI2\src\SOAPI2.sln.metaproj" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.sln" (entry point):
+Using "MSBuild" task from assembly "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "MSBuild"
+  Global Properties:
+    BuildingSolutionFile=true
+    CurrentSolutionConfigurationContents=<SolutionConfiguration>
+    <ProjectConfiguration Project="{7F585323-019F-427C-9298-8DBFD343A6B1}" AbsolutePath="C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" BuildProjectInSolution="True">Debug|AnyCPU</ProjectConfiguration>
+    <ProjectConfiguration Project="{10CD016A-5398-4534-9053-B3B968DA918A}" AbsolutePath="C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" BuildProjectInSolution="True">Debug|AnyCPU</ProjectConfiguration>
+    <ProjectConfiguration Project="{EE676C02-BC52-4342-8731-60DFA1E058AD}" AbsolutePath="C:\dev\CityIndex\SOAPI2\src\SOAPI2.DocScraper\SOAPI2.DocScraper.csproj" BuildProjectInSolution="False">Debug|x86</ProjectConfiguration>
+  </SolutionConfiguration>
+    SolutionDir=C:\dev\CityIndex\SOAPI2\src\
+    SolutionExt=.sln
+    SolutionFileName=SOAPI2.sln
+    SolutionName=SOAPI2
+    SolutionPath=C:\dev\CityIndex\SOAPI2\src\SOAPI2.sln
+  Additional Properties for project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj":
+    Configuration=Debug
+    Platform=AnyCPU
+  Additional Properties for project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj":
+    Configuration=Debug
+    Platform=AnyCPU
+Overriding target "GetFrameworkPaths" in project "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" with target "GetFrameworkPaths" from project "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.NETFramework.targets".
+Overriding target "SatelliteDllsProjectOutputGroup" in project "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" with target "SatelliteDllsProjectOutputGroup" from project "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.WinFX.targets".
+Project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.sln" (2) is building "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (3) on node 1 (Rebuild target(s)).
+Building with tools version "4.0".
+Target "_CheckForInvalidConfigurationAndPlatform" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (entry point):
+Task "Error" skipped, due to false condition; ( '$(_InvalidConfigurationError)' == 'true' ) was evaluated as ( '' == 'true' ).
+Task "Warning" skipped, due to false condition; ( '$(_InvalidConfigurationWarning)' == 'true' ) was evaluated as ( '' == 'true' ).
+Task "Message"
+  Configuration=Debug
+Done executing task "Message".
+Task "Message"
+  Platform=AnyCPU
+Done executing task "Message".
+Task "Error" skipped, due to false condition; ('$(OutDir)' != '' and !HasTrailingSlash('$(OutDir)')) was evaluated as ('bin\Debug\' != '' and !HasTrailingSlash('bin\Debug\')).
+Task "Error" skipped, due to false condition; ('$(BaseIntermediateOutputPath)' != '' and !HasTrailingSlash('$(BaseIntermediateOutputPath)')) was evaluated as ('obj\' != '' and !HasTrailingSlash('obj\')).
+Task "Error" skipped, due to false condition; ('$(IntermediateOutputPath)' != '' and !HasTrailingSlash('$(IntermediateOutputPath)')) was evaluated as ('obj\Debug\' != '' and !HasTrailingSlash('obj\Debug\')).
+Done building target "_CheckForInvalidConfigurationAndPlatform" in project "SOAPI2.csproj".
+Target "BeforeRebuild" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "Rebuild" depends on it):
+Done building target "BeforeRebuild" in project "SOAPI2.csproj".
+Target "BeforeClean" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "Clean" depends on it):
+Done building target "BeforeClean" in project "SOAPI2.csproj".
+Target "UnmanagedUnregistration" skipped, due to false condition; ((('$(_AssemblyTimestampBeforeCompile)' != '$(_AssemblyTimestampAfterCompile)' or '$(RegisterForComInterop)' != 'true' or '$(OutputType)' != 'library') or
+                    ('$(_AssemblyTimestampBeforeCompile)' == '')) and
+                   Exists('@(_UnmanagedRegistrationCache)')) was evaluated as ((('' != '' or '' != 'true' or 'Library' != 'library') or
+                    ('' == '')) and
+                   Exists('obj\SOAPI2.csproj.UnmanagedRegistration.cache')).
+Target "CoreClean" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "Clean" depends on it):
+Using "Delete" task from assembly "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "Delete"
+Done executing task "Delete".
+Using "ReadLinesFromFile" task from assembly "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "ReadLinesFromFile"
+Done executing task "ReadLinesFromFile".
+Using "FindUnderPath" task from assembly "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "FindUnderPath"
+  Comparison path is "bin\Debug\".
+Done executing task "FindUnderPath".
+Task "FindUnderPath"
+  Comparison path is "obj\Debug\".
+Done executing task "FindUnderPath".
+Task "Delete"
+  Deleting file "C:\dev\CityIndex\SOAPI2\src\SOAPI2\bin\Debug\oauth.htm".
+  Deleting file "C:\dev\CityIndex\SOAPI2\src\SOAPI2\bin\Debug\SOAPI2.dll".
+  Deleting file "C:\dev\CityIndex\SOAPI2\src\SOAPI2\bin\Debug\SOAPI2.pdb".
+  Deleting file "C:\dev\CityIndex\SOAPI2\src\SOAPI2\bin\Debug\Newtonsoft.Json.dll".
+  Deleting file "C:\dev\CityIndex\SOAPI2\src\SOAPI2\bin\Debug\Salient.JsonClient.35.dll".
+  Deleting file "C:\dev\CityIndex\SOAPI2\src\SOAPI2\bin\Debug\Salient.ReflectiveLoggingAdapter.35.dll".
+  Deleting file "C:\dev\CityIndex\SOAPI2\src\SOAPI2\bin\Debug\Newtonsoft.Json.pdb".
+  Deleting file "C:\dev\CityIndex\SOAPI2\src\SOAPI2\bin\Debug\Newtonsoft.Json.xml".
+  Deleting file "C:\dev\CityIndex\SOAPI2\src\SOAPI2\bin\Debug\Salient.JsonClient.35.pdb".
+  Deleting file "C:\dev\CityIndex\SOAPI2\src\SOAPI2\bin\Debug\Salient.ReflectiveLoggingAdapter.35.pdb".
+  Deleting file "C:\dev\CityIndex\SOAPI2\src\SOAPI2\obj\Debug\ResolveAssemblyReference.cache".
+  Deleting file "C:\dev\CityIndex\SOAPI2\src\SOAPI2\obj\Debug\SOAPI2.OAuthForm.resources".
+  Deleting file "C:\dev\CityIndex\SOAPI2\src\SOAPI2\obj\Debug\ResGen.read.1.tlog".
+  Deleting file "C:\dev\CityIndex\SOAPI2\src\SOAPI2\obj\Debug\ResGen.write.1.tlog".
+  Deleting file "C:\dev\CityIndex\SOAPI2\src\SOAPI2\obj\Debug\SOAPI2.dll".
+  Deleting file "C:\dev\CityIndex\SOAPI2\src\SOAPI2\obj\Debug\SOAPI2.pdb".
+Done executing task "Delete".
+Using "RemoveDuplicates" task from assembly "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "RemoveDuplicates"
+Done executing task "RemoveDuplicates".
+Using "MakeDir" task from assembly "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "MakeDir"
+Done executing task "MakeDir".
+Using "WriteLinesToFile" task from assembly "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "WriteLinesToFile"
+Done executing task "WriteLinesToFile".
+Done building target "CoreClean" in project "SOAPI2.csproj".
+Target "AssignProjectConfiguration" skipped, due to false condition; ('@(ProjectReference)'!='') was evaluated as (''!='').
+Target "_SplitProjectReferencesByFileExistence" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "CleanReferencedProjects" depends on it):
+Task "ResolveNonMSBuildProjectOutput" skipped, due to false condition; ('$(BuildingInsideVisualStudio)'=='true' and '@(ProjectReferenceWithConfiguration)'!='') was evaluated as (''=='true' and ''!='').
+Done building target "_SplitProjectReferencesByFileExistence" in project "SOAPI2.csproj".
+Target "CleanReferencedProjects" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "Clean" depends on it):
+Task "MSBuild" skipped, due to false condition; ('$(BuildingInsideVisualStudio)' != 'true' and '$(BuildProjectReferences)' == 'true' and '@(_MSBuildProjectReferenceExistent)' != '') was evaluated as ('' != 'true' and 'true' == 'true' and '' != '').
+Done building target "CleanReferencedProjects" in project "SOAPI2.csproj".
+Target "CleanPublishFolder" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "Clean" depends on it):
+Task "RemoveDir" skipped, due to false condition; ('$(PublishDir)'=='$(OutputPath)app.publish\' and Exists('$(PublishDir)')) was evaluated as ('bin\Debug\app.publish\'=='bin\Debug\app.publish\' and Exists('bin\Debug\app.publish\')).
+Done building target "CleanPublishFolder" in project "SOAPI2.csproj".
+Target "AfterClean" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "Clean" depends on it):
+Done building target "AfterClean" in project "SOAPI2.csproj".
+Target "EntityClean" skipped, due to false condition; ('@(EntityDeploy)' != '') was evaluated as ('' != '').
+Target "Clean" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "Rebuild" depends on it):
+Done building target "Clean" in project "SOAPI2.csproj".
+Target "CheckPrerequisites" in file "C:\dev\CityIndex\SOAPI2\src\.nuget\nuget.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "RestorePackages" depends on it):
+Task "Error" skipped, due to false condition; (!Exists('$(NuGetExePath)')) was evaluated as (!Exists('C:\dev\CityIndex\SOAPI2\src\.nuget\nuget.exe')).
+Done building target "CheckPrerequisites" in project "SOAPI2.csproj".
+Target "RestorePackages" in file "C:\dev\CityIndex\SOAPI2\src\.nuget\nuget.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "Build" depends on it):
+Using "Exec" task from assembly "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "Exec"
+  "C:\dev\CityIndex\SOAPI2\src\.nuget\nuget.exe" install "C:\dev\CityIndex\SOAPI2\src\SOAPI2\packages.config" -source "" -o "C:\dev\CityIndex\SOAPI2\src\packages"
+  All packages listed in packages.config are already installed.
+Done executing task "Exec".
+Done building target "RestorePackages" in project "SOAPI2.csproj".
+Target "EntityDeploy" skipped, due to false condition; ('@(EntityDeploy)' != '') was evaluated as ('' != '').
+Target "BeforeBuild" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "Build" depends on it):
+Done building target "BeforeBuild" in project "SOAPI2.csproj".
+Target "BuildOnlySettings" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "CoreBuild" depends on it):
+Done building target "BuildOnlySettings" in project "SOAPI2.csproj".
+Target "GetFrameworkPaths" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.NETFramework.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "PrepareForBuild" depends on it):
+Done building target "GetFrameworkPaths" in project "SOAPI2.csproj".
+Target "GetWinFXPath" skipped, due to false condition; (('@(Page)' != '' or '@(ApplicationDefinition)' != '' or '@(Resource)' != '') and ('$(GetWinFXNativePath)' != '' or '$(GetWinFXWoWPath)' != '' )) was evaluated as (('' != '' or '' != '' or '' != '') and ('' != '' or '' != '' )).
+Target "GetReferenceAssemblyPaths" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "PrepareForBuild" depends on it):
+Using "GetReferenceAssemblyPaths" task from assembly "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "GetReferenceAssemblyPaths"
+Done executing task "GetReferenceAssemblyPaths".
+Done building target "GetReferenceAssemblyPaths" in project "SOAPI2.csproj".
+Target "PrepareForBuild" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "CoreBuild" depends on it):
+Using "FindAppConfigFile" task from assembly "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "FindAppConfigFile"
+Done executing task "FindAppConfigFile".
+Task "MakeDir"
+Done executing task "MakeDir".
+Done building target "PrepareForBuild" in project "SOAPI2.csproj".
+Target "PreBuildEvent" skipped, due to false condition; ('$(PreBuildEvent)'!='') was evaluated as (''!='').
+Target "BeforeResolveReferences" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "ResolveReferences" depends on it):
+Done building target "BeforeResolveReferences" in project "SOAPI2.csproj".
+Target "AssignProjectConfiguration" skipped, due to false condition; ('@(ProjectReference)'!='') was evaluated as (''!='').
+Target "AssignProjectConfiguration" skipped, due to false condition; ('@(ProjectReference)'!='') was evaluated as (''!='').
+Target "_SplitProjectReferencesByFileExistence" skipped. Previously built successfully.
+Target "ResolveProjectReferences" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "ResolveReferences" depends on it):
+Task "MSBuild" skipped, due to false condition; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and ('$(BuildingInsideVisualStudio)' == 'true' or '$(BuildProjectReferences)' != 'true') and '@(_MSBuildProjectReferenceExistent)' != '') was evaluated as ('' == 'true' and '' != '' and ('' == 'true' or 'true' != 'true') and '' != '').
+Task "MSBuild" skipped, due to false condition; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and '$(BuildingInsideVisualStudio)' != 'true' and '$(BuildProjectReferences)' == 'true' and '@(_MSBuildProjectReferenceExistent)' != '') was evaluated as ('' == 'true' and '' != '' and '' != 'true' and 'true' == 'true' and '' != '').
+Task "MSBuild" skipped, due to false condition; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and '$(BuildingProject)' == 'true' and '@(_MSBuildProjectReferenceExistent)' != '') was evaluated as ('' == 'true' and '' != '' and 'true' == 'true' and '' != '').
+Task "Warning" skipped, due to false condition; ('@(ProjectReferenceWithConfiguration)' != '' and '@(_MSBuildProjectReferenceNonexistent)' != '') was evaluated as ('' != '' and '' != '').
+Done building target "ResolveProjectReferences" in project "SOAPI2.csproj".
+Target "ResolveNativeReferences" skipped, due to false condition; ('@(NativeReference)'!='') was evaluated as (''!='').
+Target "GetFrameworkPaths" skipped. Previously built successfully.
+Target "GetReferenceAssemblyPaths" skipped. Previously built successfully.
+Target "PrepareForBuild" skipped. Previously built successfully.
+Target "ResolveAssemblyReferences" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "ResolveReferences" depends on it):
+Using "ResolveAssemblyReference" task from assembly "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "ResolveAssemblyReference"
+  TargetFrameworkMoniker:
+      .NETFramework,Version=v3.5
+  TargetFrameworkMonikerDisplayName:
+      .NETFramework v3.5
+  TargetedRuntimeVersion:
+      v2.0.50727
+  Assemblies:
+      Newtonsoft.Json, Version=4.0.8.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL
+          HintPath = '..\packages\Salient.JsonClient.3.1.3\lib\net35\Newtonsoft.Json.dll'
+      Salient.JsonClient.35, Version=3.1.3.10, Culture=neutral, PublicKeyToken=b412daeaa648e3eb, processorArchitecture=MSIL
+          HintPath = '..\packages\Salient.JsonClient.3.1.3\lib\net35\Salient.JsonClient.35.dll'
+          SpecificVersion = 'False'
+      Salient.ReflectiveLoggingAdapter.35, Version=3.0.4.8, Culture=neutral, PublicKeyToken=b9b5972b9f69332b, processorArchitecture=MSIL
+          HintPath = '..\packages\Salient.JsonClient.3.1.3\lib\net35\Salient.ReflectiveLoggingAdapter.35.dll'
+          SpecificVersion = 'False'
+      System
+      System.Drawing
+      System.Windows.Forms
+      System.Xml.Linq
+      System.Data.DataSetExtensions
+      System.Data
+      System.Xml
+      System.Core
+  AssemblyFiles:
+      C:\Windows\Microsoft.NET\Framework\v2.0.50727\mscorlib.dll
+  CandidateAssemblyFiles:
+  TargetFrameworkDirectories:
+      C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\,C:\Windows\Microsoft.NET\Framework\v3.5\,C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.0\,C:\Windows\Microsoft.NET\Framework\v3.0\,C:\Windows\Microsoft.NET\Framework\v2.0.50727\
+  InstalledAssemblyTables:
+  IgnoreInstalledAssemblyTable:
+      False
+  SearchPaths:
+      {CandidateAssemblyFiles}
+      {HintPathFromItem}
+      {TargetFrameworkDirectory}
+      {Registry:Software\Microsoft\.NETFramework,v3.5,AssemblyFoldersEx}
+      {AssemblyFolders}
+      {GAC}
+      {RawFileName}
+      bin\Debug\
+  AllowedAssemblyExtensions:
+      .dll
+      .exe
+  AllowedRelatedFileExtensions:
+      .pdb
+      .xml
+  AppConfigFile:
+      
+  AutoUnify:
+      True
+  CopyLocalDependenciesWhenParentReferenceInGac:
+      True
+  FindDependencies:
+      True
+  TargetProcessorArchitecture:
+      x86
+  StateFile:
+      obj\Debug\ResolveAssemblyReference.cache
+  InstalledAssemblySubsetTables:
+  IgnoreInstalledAssemblySubsetTable:
+      False
+  TargetFrameworkSubsets:
+  FullTargetFrameworkSubsetNames:
+      Full
+  ProfileName:
+      
+  ProfileFullFrameworkFolders:
+      C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\
+      C:\Windows\Microsoft.NET\Framework\v3.5\
+      C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.0\
+      C:\Windows\Microsoft.NET\Framework\v3.0\
+      C:\Windows\Microsoft.NET\Framework\v2.0.50727\
+  LatestTargetFrameworkDirectories:
+  ProfileTablesLocation:
+  Primary reference "mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089".
+      Resolved file path is "C:\Windows\Microsoft.NET\Framework\v2.0.50727\mscorlib.dll".
+      Reference found at search path location "C:\Windows\Microsoft.NET\Framework\v2.0.50727\mscorlib.dll".
+      This reference is not "CopyLocal" because it's a prerequisite file.
+  Primary reference "Newtonsoft.Json, Version=4.0.8.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed".
+      Resolved file path is "C:\dev\CityIndex\SOAPI2\src\packages\Salient.JsonClient.3.1.3\lib\net35\Newtonsoft.Json.dll".
+      Reference found at search path location "{HintPathFromItem}".
+      Found related file "C:\dev\CityIndex\SOAPI2\src\packages\Salient.JsonClient.3.1.3\lib\net35\Newtonsoft.Json.pdb".
+      Found related file "C:\dev\CityIndex\SOAPI2\src\packages\Salient.JsonClient.3.1.3\lib\net35\Newtonsoft.Json.xml".
+  Primary reference "Salient.JsonClient.35, Version=3.1.3.10, Culture=neutral, PublicKeyToken=b412daeaa648e3eb".
+      Resolved file path is "C:\dev\CityIndex\SOAPI2\src\packages\Salient.JsonClient.3.1.3\lib\net35\Salient.JsonClient.35.dll".
+      Reference found at search path location "{HintPathFromItem}".
+      Found related file "C:\dev\CityIndex\SOAPI2\src\packages\Salient.JsonClient.3.1.3\lib\net35\Salient.JsonClient.35.pdb".
+  Primary reference "Salient.ReflectiveLoggingAdapter.35, Version=3.0.4.8, Culture=neutral, PublicKeyToken=b9b5972b9f69332b".
+      Resolved file path is "C:\dev\CityIndex\SOAPI2\src\packages\Salient.JsonClient.3.1.3\lib\net35\Salient.ReflectiveLoggingAdapter.35.dll".
+      Reference found at search path location "{HintPathFromItem}".
+      Found related file "C:\dev\CityIndex\SOAPI2\src\packages\Salient.JsonClient.3.1.3\lib\net35\Salient.ReflectiveLoggingAdapter.35.pdb".
+  Primary reference "System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089".
+      Resolved file path is "C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.dll".
+      Reference found at search path location "{TargetFrameworkDirectory}".
+          For SearchPath "{TargetFrameworkDirectory}".
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\System.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\System.exe", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v3.5\System.dll", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v3.5\System.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.0\System.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.0\System.exe", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v3.0\System.dll", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v3.0\System.exe", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.exe", but it didn't exist.
+      This reference is not "CopyLocal" because it's a prerequisite file.
+  Primary reference "System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+      Resolved file path is "C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Drawing.dll".
+      Reference found at search path location "{TargetFrameworkDirectory}".
+          For SearchPath "{TargetFrameworkDirectory}".
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\System.Drawing.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\System.Drawing.exe", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v3.5\System.Drawing.dll", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v3.5\System.Drawing.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.0\System.Drawing.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.0\System.Drawing.exe", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v3.0\System.Drawing.dll", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v3.0\System.Drawing.exe", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Drawing.exe", but it didn't exist.
+      This reference is not "CopyLocal" because it's a prerequisite file.
+  Primary reference "System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089".
+      Resolved file path is "C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Windows.Forms.dll".
+      Reference found at search path location "{TargetFrameworkDirectory}".
+          For SearchPath "{TargetFrameworkDirectory}".
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\System.Windows.Forms.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\System.Windows.Forms.exe", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v3.5\System.Windows.Forms.dll", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v3.5\System.Windows.Forms.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.0\System.Windows.Forms.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.0\System.Windows.Forms.exe", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v3.0\System.Windows.Forms.dll", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v3.0\System.Windows.Forms.exe", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Windows.Forms.exe", but it didn't exist.
+      This reference is not "CopyLocal" because it's a prerequisite file.
+  Primary reference "System.Xml.Linq, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089".
+      Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\System.Xml.Linq.dll".
+      Reference found at search path location "{TargetFrameworkDirectory}".
+          For SearchPath "{TargetFrameworkDirectory}".
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\System.Xml.Linq.exe", but it didn't exist.
+      This reference is not "CopyLocal" because it's a prerequisite file.
+  Primary reference "System.Data.DataSetExtensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089".
+      Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.DataSetExtensions.dll".
+      Reference found at search path location "{TargetFrameworkDirectory}".
+          For SearchPath "{TargetFrameworkDirectory}".
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.DataSetExtensions.exe", but it didn't exist.
+      This reference is not "CopyLocal" because it's a prerequisite file.
+  Primary reference "System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089".
+      Resolved file path is "C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Data.dll".
+      Reference found at search path location "{TargetFrameworkDirectory}".
+          For SearchPath "{TargetFrameworkDirectory}".
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.exe", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v3.5\System.Data.dll", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v3.5\System.Data.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.0\System.Data.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.0\System.Data.exe", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v3.0\System.Data.dll", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v3.0\System.Data.exe", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Data.exe", but it didn't exist.
+      This reference is not "CopyLocal" because it's a prerequisite file.
+  Primary reference "System.Xml, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089".
+      Resolved file path is "C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Xml.dll".
+      Reference found at search path location "{TargetFrameworkDirectory}".
+          For SearchPath "{TargetFrameworkDirectory}".
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\System.Xml.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\System.Xml.exe", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v3.5\System.Xml.dll", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v3.5\System.Xml.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.0\System.Xml.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.0\System.Xml.exe", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v3.0\System.Xml.dll", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v3.0\System.Xml.exe", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Xml.exe", but it didn't exist.
+      This reference is not "CopyLocal" because it's a prerequisite file.
+  Primary reference "System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089".
+      Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\System.Core.dll".
+      Reference found at search path location "{TargetFrameworkDirectory}".
+          For SearchPath "{TargetFrameworkDirectory}".
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\System.Core.exe", but it didn't exist.
+      This reference is not "CopyLocal" because it's a prerequisite file.
+  Dependency "System.Runtime.Serialization, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089".
+      Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.0\System.Runtime.Serialization.dll".
+      Reference found at search path location "{TargetFrameworkDirectory}".
+          For SearchPath "C:\dev\CityIndex\SOAPI2\src\packages\Salient.JsonClient.3.1.3\lib\net35".
+          Considered "C:\dev\CityIndex\SOAPI2\src\packages\Salient.JsonClient.3.1.3\lib\net35\System.Runtime.Serialization.dll", but it didn't exist.
+          Considered "C:\dev\CityIndex\SOAPI2\src\packages\Salient.JsonClient.3.1.3\lib\net35\System.Runtime.Serialization.exe", but it didn't exist.
+          For SearchPath "{TargetFrameworkDirectory}".
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\System.Runtime.Serialization.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\System.Runtime.Serialization.exe", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v3.5\System.Runtime.Serialization.dll", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v3.5\System.Runtime.Serialization.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.0\System.Runtime.Serialization.exe", but it didn't exist.
+      Required by "Newtonsoft.Json, Version=4.0.8.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL".
+      Required by "Salient.JsonClient.35, Version=3.1.3.10, Culture=neutral, PublicKeyToken=b412daeaa648e3eb, processorArchitecture=MSIL".
+      This reference is not "CopyLocal" because it's in a Frameworks directory.
+Done executing task "ResolveAssemblyReference".
+Done building target "ResolveAssemblyReferences" in project "SOAPI2.csproj".
+Target "ResolveComReferences" skipped, due to false condition; ('@(COMReference)'!='' or '@(COMFileReference)'!='') was evaluated as (''!='' or ''!='').
+Target "AfterResolveReferences" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "ResolveReferences" depends on it):
+Done building target "AfterResolveReferences" in project "SOAPI2.csproj".
+Target "ResolveTestReferences" skipped, due to false condition; ('@(Shadow)'!='') was evaluated as (''!='').
+Target "ResolveReferences" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "CoreBuild" depends on it):
+Done building target "ResolveReferences" in project "SOAPI2.csproj".
+Target "MarkupCompilePass1" skipped, due to false condition; ('@(Page)' != '' or '@(ApplicationDefinition)' != '' ) was evaluated as ('' != '' or '' != '' ).
+Target "AfterMarkupCompilePass1" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.WinFX.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "PrepareResources" depends on it):
+Done building target "AfterMarkupCompilePass1" in project "SOAPI2.csproj".
+Target "MarkupCompilePass2ForMainAssembly" skipped, due to false condition; ('$(_RequireMCPass2ForMainAssembly)' == 'true' ) was evaluated as ('false' == 'true' ).
+Target "FileClassification" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.WinFX.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "PrepareResources" depends on it):
+Task "FileClassifier" skipped, due to false condition; ('@(GeneratedBaml)' != '' or '@(Resource)' != '' or '@(Font)' != '') was evaluated as ('' != '' or '' != '' or '' != '').
+Task "Message" skipped, due to false condition; ('$(MSBuildTargetsVerbose)'=='true') was evaluated as (''=='true').
+Task "Message" skipped, due to false condition; ('$(MSBuildTargetsVerbose)'=='true') was evaluated as (''=='true').
+Done building target "FileClassification" in project "SOAPI2.csproj".
+Target "MainResourcesGeneration" skipped, due to false condition; ('@(MainEmbeddedFiles)' != '') was evaluated as ('' != '').
+Target "AssignWinFXEmbeddedResource" skipped, due to false condition; ('@(WinFXEmbeddedResource)' != '') was evaluated as ('' != '').
+Target "AssignTargetPaths" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "PrepareResourceNames" depends on it):
+Using "AssignTargetPath" task from assembly "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "AssignTargetPath"
+Done executing task "AssignTargetPath".
+Task "AssignTargetPath"
+Done executing task "AssignTargetPath".
+Task "AssignTargetPath"
+Done executing task "AssignTargetPath".
+Task "AssignTargetPath"
+Done executing task "AssignTargetPath".
+Task "AssignTargetPath" skipped, due to false condition; ('@(_DeploymentBaseManifestWithTargetPath)'=='' and '%(None.Extension)'=='.manifest') was evaluated as (''=='' and '.config'=='.manifest').
+Done building target "AssignTargetPaths" in project "SOAPI2.csproj".
+Target "AssignTargetPaths" skipped. Previously built successfully.
+Target "SplitResourcesByCulture" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "PrepareResourceNames" depends on it):
+Task "Warning" skipped, due to false condition; ('@(ResxWithNoCulture)'!='') was evaluated as (''!='').
+Task "Warning" skipped, due to false condition; ('@(ResxWithCulture)'!='') was evaluated as (''!='').
+Task "Warning" skipped, due to false condition; ('@(NonResxWithCulture)'!='') was evaluated as (''!='').
+Task "Warning" skipped, due to false condition; ('@(NonResxWithNoCulture)'!='') was evaluated as (''!='').
+Using "AssignCulture" task from assembly "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "AssignCulture"
+  Culture of "" was assigned to file "OAuthForm.resx".
+Done executing task "AssignCulture".
+Done building target "SplitResourcesByCulture" in project "SOAPI2.csproj".
+Target "CreateManifestResourceNames" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.CSharp.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "PrepareResourceNames" depends on it):
+Using "CreateCSharpManifestResourceName" task from assembly "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "CreateCSharpManifestResourceName"
+  Root namespace is 'SOAPI2'.
+  Resource file 'OAuthForm.resx' depends on 'OAuthForm.cs'.
+  Resource file 'OAuthForm.resx' gets manifest resource name 'SOAPI2.OAuthForm'.
+Done executing task "CreateCSharpManifestResourceName".
+Task "CreateCSharpManifestResourceName" skipped, due to false condition; ('%(EmbeddedResource.ManifestResourceName)' == '' and '%(EmbeddedResource.WithCulture)' == 'true' and '%(EmbeddedResource.Type)' == 'Non-Resx') was evaluated as ('' == '' and 'false' == 'true' and 'Resx' == 'Non-Resx').
+Done building target "CreateManifestResourceNames" in project "SOAPI2.csproj".
+Target "CreateCustomManifestResourceNames" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "PrepareResourceNames" depends on it):
+Done building target "CreateCustomManifestResourceNames" in project "SOAPI2.csproj".
+Target "PrepareResourceNames" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "PrepareResources" depends on it):
+Done building target "PrepareResourceNames" in project "SOAPI2.csproj".
+Target "ResolveAssemblyReferences" skipped. Previously built successfully.
+Target "SplitResourcesByCulture" skipped. Previously built successfully.
+Target "BeforeResGen" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "ResGen" depends on it):
+Done building target "BeforeResGen" in project "SOAPI2.csproj".
+Target "CoreResGen" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "ResGen" depends on it):
+Using "GenerateResource" task from assembly "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "GenerateResource"
+  Additional input "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.CSharp.targets" has been updated since the last build.  Forcing regeneration of all resources.
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\NETFX 4.0 Tools\x64\Tracker.exe @"C:\Users\Sky\AppData\Local\Temp\09b1b52b99b949a7bc1ec864c5e7c09f.tmp"  /c "C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bin\ResGen.exe" /useSourcePath /r:C:\Windows\Microsoft.NET\Framework\v2.0.50727\mscorlib.dll /r:C:\dev\CityIndex\SOAPI2\src\packages\Salient.JsonClient.3.1.3\lib\net35\Newtonsoft.Json.dll /r:C:\dev\CityIndex\SOAPI2\src\packages\Salient.JsonClient.3.1.3\lib\net35\Salient.JsonClient.35.dll /r:C:\dev\CityIndex\SOAPI2\src\packages\Salient.JsonClient.3.1.3\lib\net35\Salient.ReflectiveLoggingAdapter.35.dll /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\System.Core.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.DataSetExtensions.dll" /r:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Data.dll /r:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.dll /r:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Drawing.dll /r:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Windows.Forms.dll /r:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Xml.dll /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\System.Xml.Linq.dll" /compile OAuthForm.resx,obj\Debug\SOAPI2.OAuthForm.resources 
+  Read in 0 resources from "OAuthForm.resx"
+  Writing resource file...  Done.
+Done executing task "GenerateResource".
+Done building target "CoreResGen" in project "SOAPI2.csproj".
+Target "AfterResGen" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "ResGen" depends on it):
+Done building target "AfterResGen" in project "SOAPI2.csproj".
+Target "ResGen" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "PrepareResources" depends on it):
+Done building target "ResGen" in project "SOAPI2.csproj".
+Target "CompileLicxFiles" skipped, due to false condition; ('@(_LicxFile)'!='') was evaluated as (''!='').
+Target "PrepareRdlFiles" in file "C:\Program Files (x86)\MSBuild\Microsoft\VisualStudio\v10.0\ReportingServices\Microsoft.ReportingServices.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "CompileRdlFiles" depends on it):
+Task "CreateItem" skipped, due to false condition; ('%(Extension)'=='.rdlc') was evaluated as ('.resx'=='.rdlc').
+Task "CreateItem" skipped, due to false condition; ('%(Extension)'=='.rdlc') was evaluated as ('.htm'=='.rdlc').
+Done building target "PrepareRdlFiles" in project "SOAPI2.csproj".
+Target "RunRdlCompiler" skipped, due to false condition; ('@(RdlFile)'!='') was evaluated as (''!='').
+Target "CompileRdlFiles" in file "C:\Program Files (x86)\MSBuild\Microsoft\VisualStudio\v10.0\ReportingServices\Microsoft.ReportingServices.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "PrepareResources" depends on it):
+Done building target "CompileRdlFiles" in project "SOAPI2.csproj".
+Target "PrepareResources" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "CoreBuild" depends on it):
+Done building target "PrepareResources" in project "SOAPI2.csproj".
+Target "ResolveKeySource" skipped, due to false condition; ($(SignManifests) == 'true' or $(SignAssembly) == 'true') was evaluated as ( == 'true' or  == 'true').
+Target "ResolveReferences" skipped. Previously built successfully.
+Target "ResolveKeySource" skipped, due to false condition; ($(SignManifests) == 'true' or $(SignAssembly) == 'true') was evaluated as ( == 'true' or  == 'true').
+Target "ResolveComReferences" skipped, due to false condition; ('@(COMReference)'!='' or '@(COMFileReference)'!='') was evaluated as (''!='' or ''!='').
+Target "ResolveNativeReferences" skipped, due to false condition; ('@(NativeReference)'!='') was evaluated as (''!='').
+Target "_SetExternalWin32ManifestProperties" skipped, due to false condition; ('$(GenerateClickOnceManifests)'=='true' or '@(NativeReference)'!='' or '@(ResolvedIsolatedComModules)'!='') was evaluated as (''=='true' or ''!='' or ''!='').
+Target "_SetEmbeddedWin32ManifestProperties" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "SetWin32ManifestProperties" depends on it):
+Using "GetFrameworkPath" task from assembly "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "GetFrameworkPath"
+Done executing task "GetFrameworkPath".
+Done building target "_SetEmbeddedWin32ManifestProperties" in project "SOAPI2.csproj".
+Target "SetWin32ManifestProperties" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "Compile" depends on it):
+Done building target "SetWin32ManifestProperties" in project "SOAPI2.csproj".
+Target "_GenerateCompileInputs" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "Compile" depends on it):
+Task "Warning" skipped, due to false condition; ('@(ManifestResourceWithNoCulture)'!='' and '%(ManifestResourceWithNoCulture.EmittedForCompatibilityOnly)'=='') was evaluated as ('obj\Debug\SOAPI2.OAuthForm.resources'!='' and 'true'=='').
+Task "Warning" skipped, due to false condition; ('@(ManifestNonResxWithNoCultureOnDisk)'!='' and '%(ManifestNonResxWithNoCultureOnDisk.EmittedForCompatibilityOnly)'=='') was evaluated as (''!='' and ''=='').
+Done building target "_GenerateCompileInputs" in project "SOAPI2.csproj".
+Target "GenerateTargetFrameworkMonikerAttribute" skipped, due to false condition; ('$(GenerateTargetFrameworkAttribute)' == 'true') was evaluated as ('' == 'true').
+Target "_SetTargetFrameworkMonikerAttribute" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.CSharp.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "GenerateTargetFrameworkMonikerAttribute" depends on it):
+Done building target "_SetTargetFrameworkMonikerAttribute" in project "SOAPI2.csproj".
+Target "GenerateAdditionalSources" skipped, due to false condition; ('@(AssemblyAttributes)' != '' and '$(GenerateAdditionalSources)' == 'true') was evaluated as ('' != '' and '' == 'true').
+Target "BeforeCompile" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "Compile" depends on it):
+Done building target "BeforeCompile" in project "SOAPI2.csproj".
+Target "_TimeStampBeforeCompile" skipped, due to false condition; ('$(RunPostBuildEvent)'=='OnOutputUpdated' or ('$(RegisterForComInterop)'=='true' and '$(OutputType)'=='library')) was evaluated as (''=='OnOutputUpdated' or (''=='true' and 'Library'=='library')).
+Target "_ComputeNonExistentFileProperty" skipped, due to false condition; (('$(BuildingInsideVisualStudio)' == 'true') and (('$(BuildingProject)' == 'false') or ('$(UseHostCompilerIfAvailable)' == 'true'))) was evaluated as (('' == 'true') and (('true' == 'false') or ('true' == 'true'))).
+Target "CoreCompile" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.CSharp.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "Compile" depends on it):
+Building target "CoreCompile" completely.
+Output file "obj\Debug\SOAPI2.dll" does not exist.
+Using "Csc" task from assembly "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "Csc"
+  C:\Windows\Microsoft.NET\Framework\v4.0.30319\Csc.exe /noconfig /nowarn:1701,1702 /nostdlib+ /errorreport:prompt /warn:4 /define:DEBUG;TRACE /reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\mscorlib.dll /reference:C:\dev\CityIndex\SOAPI2\src\packages\Salient.JsonClient.3.1.3\lib\net35\Newtonsoft.Json.dll /reference:C:\dev\CityIndex\SOAPI2\src\packages\Salient.JsonClient.3.1.3\lib\net35\Salient.JsonClient.35.dll /reference:C:\dev\CityIndex\SOAPI2\src\packages\Salient.JsonClient.3.1.3\lib\net35\Salient.ReflectiveLoggingAdapter.35.dll /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\System.Core.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.DataSetExtensions.dll" /reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Data.dll /reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.dll /reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Drawing.dll /reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Windows.Forms.dll /reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Xml.dll /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\System.Xml.Linq.dll" /debug+ /debug:full /filealign:512 /optimize- /out:obj\Debug\SOAPI2.dll /resource:obj\Debug\SOAPI2.OAuthForm.resources /target:library Converters\UnixDateTimeConverter.cs Converters\UnixDateTimeHelper.cs ErrorResponseDTOJsonExceptionFactory.cs Model.cs OAuthForm.cs OAuthForm.Designer.cs Properties\AssemblyInfo.cs Routes.cs SoapiClient.cs
+  Microsoft (R) Visual C# 2010 Compiler version 4.0.30319.1
+  Copyright (C) Microsoft Corporation. All rights reserved.
+  
+Converters\UnixDateTimeConverter.cs(25,6): warning CS3021: 'SOAPI2.Converters.UnixDateTimeConverter' does not need a CLSCompliant attribute because the assembly does not have a CLSCompliant attribute [C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj]
+Converters\UnixDateTimeConverter.cs(83,6): warning CS3021: 'SOAPI2.Converters.UnixDateTimeOffsetConverter' does not need a CLSCompliant attribute because the assembly does not have a CLSCompliant attribute [C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj]
+Done executing task "Csc".
+Task "CallTarget" skipped, due to false condition; ('$(TargetsTriggeredByCompilation)' != '') was evaluated as ('' != '').
+Done building target "CoreCompile" in project "SOAPI2.csproj".
+Target "_TimeStampAfterCompile" skipped, due to false condition; ('$(RunPostBuildEvent)'=='OnOutputUpdated' or ('$(RegisterForComInterop)'=='true' and '$(OutputType)'=='library')) was evaluated as (''=='OnOutputUpdated' or (''=='true' and 'Library'=='library')).
+Target "AfterCompile" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "Compile" depends on it):
+Done building target "AfterCompile" in project "SOAPI2.csproj".
+Target "PrepareResourcesForSatelliteAssemblies" skipped, due to false condition; ('$(UICulture)' != '') was evaluated as ('' != '').
+Target "MergeLocalizationDirectives" skipped, due to false condition; ('@(GeneratedLocalizationFiles)' !='') was evaluated as ('' !='').
+Target "AfterCompileWinFX" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.WinFX.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "_AfterCompileWinFXInternal" depends on it):
+Done building target "AfterCompileWinFX" in project "SOAPI2.csproj".
+Target "_AfterCompileWinFXInternal" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.WinFX.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "Compile" depends on it):
+Done building target "_AfterCompileWinFXInternal" in project "SOAPI2.csproj".
+Target "Compile" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "CoreBuild" depends on it):
+Done building target "Compile" in project "SOAPI2.csproj".
+Target "UnmanagedUnregistration" skipped, due to false condition; ((('$(_AssemblyTimestampBeforeCompile)' != '$(_AssemblyTimestampAfterCompile)' or '$(RegisterForComInterop)' != 'true' or '$(OutputType)' != 'library') or
+                    ('$(_AssemblyTimestampBeforeCompile)' == '')) and
+                   Exists('@(_UnmanagedRegistrationCache)')) was evaluated as ((('' != '' or '' != 'true' or 'Library' != 'library') or
+                    ('' == '')) and
+                   Exists('obj\SOAPI2.csproj.UnmanagedRegistration.cache')).
+Target "GenerateSerializationAssemblies" skipped, due to false condition; ('$(_SGenGenerateSerializationAssembliesConfig)' == 'On' or ('@(WebReferenceUrl)'!='' and '$(_SGenGenerateSerializationAssembliesConfig)' == 'Auto')) was evaluated as ('Off' == 'On' or (''!='' and 'Off' == 'Auto')).
+Target "_GenerateSatelliteAssemblyInputs" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "CreateSatelliteAssemblies" depends on it):
+Task "Warning" skipped, due to false condition; ('@(ManifestResourceWithCulture)'!='' and '%(ManifestResourceWithCulture.EmittedForCompatibilityOnly)'=='') was evaluated as (''!='' and ''=='').
+Task "Warning" skipped, due to false condition; ('@(ManifestNonResxWithCultureOnDisk)'!='' and '%(ManifestNonResxWithCultureOnDisk.EmittedForCompatibilityOnly)'=='') was evaluated as (''!='' and ''=='').
+Done building target "_GenerateSatelliteAssemblyInputs" in project "SOAPI2.csproj".
+Target "CreateManifestResourceNames" skipped. Previously built successfully.
+Target "ComputeIntermediateSatelliteAssemblies" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "CreateSatelliteAssemblies" depends on it):
+Done building target "ComputeIntermediateSatelliteAssemblies" in project "SOAPI2.csproj".
+Target "GenerateSatelliteAssemblies" skipped, due to false condition; ('@(_SatelliteAssemblyResourceInputs)' != '') was evaluated as ('' != '').
+Target "CreateSatelliteAssemblies" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "CoreBuild" depends on it):
+Done building target "CreateSatelliteAssemblies" in project "SOAPI2.csproj".
+Target "GenerateManifests" skipped, due to false condition; ('$(GenerateClickOnceManifests)'=='true' or '@(NativeReference)'!='' or '@(ResolvedIsolatedComModules)'!='') was evaluated as (''=='true' or ''!='' or ''!='').
+Target "GetTargetPath" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "CoreBuild" depends on it):
+Done building target "GetTargetPath" in project "SOAPI2.csproj".
+Target "ComputeIntermediateSatelliteAssemblies" skipped. Previously built successfully.
+Target "_CopyFilesMarkedCopyLocal" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "CopyFilesToOutputDirectory" depends on it):
+Using "Copy" task from assembly "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "Copy"
+  Copying file from "C:\dev\CityIndex\SOAPI2\src\packages\Salient.JsonClient.3.1.3\lib\net35\Newtonsoft.Json.dll" to "bin\Debug\Newtonsoft.Json.dll".
+  Copying file from "C:\dev\CityIndex\SOAPI2\src\packages\Salient.JsonClient.3.1.3\lib\net35\Salient.JsonClient.35.dll" to "bin\Debug\Salient.JsonClient.35.dll".
+  Copying file from "C:\dev\CityIndex\SOAPI2\src\packages\Salient.JsonClient.3.1.3\lib\net35\Salient.ReflectiveLoggingAdapter.35.dll" to "bin\Debug\Salient.ReflectiveLoggingAdapter.35.dll".
+  Copying file from "C:\dev\CityIndex\SOAPI2\src\packages\Salient.JsonClient.3.1.3\lib\net35\Newtonsoft.Json.pdb" to "bin\Debug\Newtonsoft.Json.pdb".
+  Copying file from "C:\dev\CityIndex\SOAPI2\src\packages\Salient.JsonClient.3.1.3\lib\net35\Newtonsoft.Json.xml" to "bin\Debug\Newtonsoft.Json.xml".
+  Copying file from "C:\dev\CityIndex\SOAPI2\src\packages\Salient.JsonClient.3.1.3\lib\net35\Salient.JsonClient.35.pdb" to "bin\Debug\Salient.JsonClient.35.pdb".
+  Copying file from "C:\dev\CityIndex\SOAPI2\src\packages\Salient.JsonClient.3.1.3\lib\net35\Salient.ReflectiveLoggingAdapter.35.pdb" to "bin\Debug\Salient.ReflectiveLoggingAdapter.35.pdb".
+Done executing task "Copy".
+Done building target "_CopyFilesMarkedCopyLocal" in project "SOAPI2.csproj".
+Target "AssignTargetPaths" skipped. Previously built successfully.
+Target "_SplitProjectReferencesByFileExistence" skipped. Previously built successfully.
+Target "GetCopyToOutputDirectoryItems" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "_CopySourceItemsToOutputDirectory" depends on it):
+Task "MSBuild" skipped, due to false condition; ('@(_MSBuildProjectReferenceExistent)' != '' and '$(_GetChildProjectCopyToOutputDirectoryItems)' == 'true' and '%(_MSBuildProjectReferenceExistent.Private)' != 'false' and '$(UseCommonOutputDirectory)' != 'true') was evaluated as ('' != '' and 'true' == 'true' and '' != 'false' and 'false' != 'true').
+Task "AssignTargetPath"
+Done executing task "AssignTargetPath".
+Done building target "GetCopyToOutputDirectoryItems" in project "SOAPI2.csproj".
+Target "_CopyOutOfDateSourceItemsToOutputDirectory" skipped, due to false condition; ( '@(_SourceItemsToCopyToOutputDirectory)' != '' ) was evaluated as ( '' != '' ).
+Target "_CopyOutOfDateSourceItemsToOutputDirectoryAlways" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "_CopySourceItemsToOutputDirectory" depends on it):
+Task "Copy"
+  Copying file from "C:\dev\CityIndex\SOAPI2\src\SOAPI2\oauth.htm" to "bin\Debug\oauth.htm".
+Done executing task "Copy".
+Done building target "_CopyOutOfDateSourceItemsToOutputDirectoryAlways" in project "SOAPI2.csproj".
+Target "_CopySourceItemsToOutputDirectory" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "CopyFilesToOutputDirectory" depends on it):
+Done building target "_CopySourceItemsToOutputDirectory" in project "SOAPI2.csproj".
+Target "_CopyAppConfigFile" skipped, due to false condition; ( '@(AppConfigWithTargetPath)' != '' ) was evaluated as ( '' != '' ).
+Target "_CopyManifestFiles" skipped, due to false condition; ( '$(_DeploymentCopyApplicationManifest)'=='true' or '$(GenerateClickOnceManifests)'=='true' ) was evaluated as ( ''=='true' or ''=='true' ).
+Target "_CheckForCompileOutputs" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "CopyFilesToOutputDirectory" depends on it):
+Done building target "_CheckForCompileOutputs" in project "SOAPI2.csproj".
+Target "_SGenCheckForOutputs" skipped, due to false condition; ('$(_SGenGenerateSerializationAssembliesConfig)' == 'On' or ('@(WebReferenceUrl)'!='' and '$(_SGenGenerateSerializationAssembliesConfig)' == 'Auto')) was evaluated as ('Off' == 'On' or (''!='' and 'Off' == 'Auto')).
+Target "CopyFilesToOutputDirectory" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "PrepareForRun" depends on it):
+Task "Copy"
+  Copying file from "obj\Debug\SOAPI2.dll" to "bin\Debug\SOAPI2.dll".
+Done executing task "Copy".
+Task "Message"
+  SOAPI2 -> C:\dev\CityIndex\SOAPI2\src\SOAPI2\bin\Debug\SOAPI2.dll
+Done executing task "Message".
+Task "Copy" skipped, due to false condition; ('@(AddModules)' != '') was evaluated as ('' != '').
+Task "Copy" skipped, due to false condition; ('$(_SGenDllCreated)'=='true') was evaluated as ('false'=='true').
+Task "Copy"
+  Copying file from "obj\Debug\SOAPI2.pdb" to "bin\Debug\SOAPI2.pdb".
+Done executing task "Copy".
+Task "Copy" skipped, due to false condition; ('$(_DocumentationFileProduced)'=='true') was evaluated as ('false'=='true').
+Task "Copy" skipped, due to false condition; ('@(IntermediateSatelliteAssembliesWithTargetPath)' != '') was evaluated as ('' != '').
+Task "Copy" skipped, due to false condition; ('@(ReferenceComWrappersToCopyLocal)' != '' or '@(ResolvedIsolatedComModules)' != '' or '@(_DeploymentLooseManifestFile)' != '' or '@(NativeReferenceFile)' != '' ) was evaluated as ('' != '' or '' != '' or '' != '' or '' != '' ).
+Done building target "CopyFilesToOutputDirectory" in project "SOAPI2.csproj".
+Target "RunCodeAnalysis" skipped, due to false condition; ('$(RunCodeAnalysis)'=='true' or '$(RunCodeAnalysisOnce)'=='true') was evaluated as (''=='true' or ''=='true').
+Target "PrepareForRun" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "CoreBuild" depends on it):
+Done building target "PrepareForRun" in project "SOAPI2.csproj".
+Target "UnmanagedRegistration" skipped, due to false condition; ('$(RegisterForComInterop)'=='true' and '$(OutputType)'=='library') was evaluated as (''=='true' and 'Library'=='library').
+Target "_CheckForCompileOutputs" skipped. Previously built successfully.
+Target "_SGenCheckForOutputs" skipped, due to false condition; ('$(_SGenGenerateSerializationAssembliesConfig)' == 'On' or ('@(WebReferenceUrl)'!='' and '$(_SGenGenerateSerializationAssembliesConfig)' == 'Auto')) was evaluated as ('Off' == 'On' or (''!='' and 'Off' == 'Auto')).
+Target "_CleanGetCurrentAndPriorFileWrites" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "IncrementalClean" depends on it):
+Task "ReadLinesFromFile"
+Done executing task "ReadLinesFromFile".
+Using "ConvertToAbsolutePath" task from assembly "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "ConvertToAbsolutePath"
+Done executing task "ConvertToAbsolutePath".
+Task "FindUnderPath"
+  Comparison path is "C:\dev\CityIndex\SOAPI2\src\SOAPI2".
+Done executing task "FindUnderPath".
+Task "FindUnderPath"
+  Comparison path is "bin\Debug\".
+Done executing task "FindUnderPath".
+Task "FindUnderPath"
+  Comparison path is "obj\Debug\".
+Done executing task "FindUnderPath".
+Task "RemoveDuplicates"
+Done executing task "RemoveDuplicates".
+Done building target "_CleanGetCurrentAndPriorFileWrites" in project "SOAPI2.csproj".
+Target "IncrementalClean" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "CoreBuild" depends on it):
+Task "FindUnderPath"
+  Comparison path is "bin\Debug\".
+Done executing task "FindUnderPath".
+Task "FindUnderPath"
+  Comparison path is "obj\Debug\".
+Done executing task "FindUnderPath".
+Task "Delete"
+Done executing task "Delete".
+Task "RemoveDuplicates"
+Done executing task "RemoveDuplicates".
+Task "WriteLinesToFile"
+Done executing task "WriteLinesToFile".
+Done building target "IncrementalClean" in project "SOAPI2.csproj".
+Target "PostBuildEvent" skipped, due to false condition; ('$(PostBuildEvent)' != '' and ('$(RunPostBuildEvent)' != 'OnOutputUpdated' or '$(_AssemblyTimestampBeforeCompile)' != '$(_AssemblyTimestampAfterCompile)')) was evaluated as ('' != '' and ('' != 'OnOutputUpdated' or '' != '')).
+Target "CoreBuild" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "Build" depends on it):
+Done building target "CoreBuild" in project "SOAPI2.csproj".
+Target "AfterBuild" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "Build" depends on it):
+Done building target "AfterBuild" in project "SOAPI2.csproj".
+Target "Build" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "Rebuild" depends on it):
+Done building target "Build" in project "SOAPI2.csproj".
+Target "AfterRebuild" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (target "Rebuild" depends on it):
+Done building target "AfterRebuild" in project "SOAPI2.csproj".
+Target "Rebuild" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (entry point):
+Done building target "Rebuild" in project "SOAPI2.csproj".
+Done Building Project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (Rebuild target(s)).
+
+Overriding target "GetFrameworkPaths" in project "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" with target "GetFrameworkPaths" from project "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.NETFramework.targets".
+Overriding target "SatelliteDllsProjectOutputGroup" in project "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" with target "SatelliteDllsProjectOutputGroup" from project "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.WinFX.targets".
+Project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.sln" (2) is building "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (4) on node 1 (Rebuild target(s)).
+Building with tools version "4.0".
+Target "_CheckForInvalidConfigurationAndPlatform" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (entry point):
+Task "Error" skipped, due to false condition; ( '$(_InvalidConfigurationError)' == 'true' ) was evaluated as ( '' == 'true' ).
+Task "Warning" skipped, due to false condition; ( '$(_InvalidConfigurationWarning)' == 'true' ) was evaluated as ( '' == 'true' ).
+Task "Message"
+  Configuration=Debug
+Done executing task "Message".
+Task "Message"
+  Platform=AnyCPU
+Done executing task "Message".
+Task "Error" skipped, due to false condition; ('$(OutDir)' != '' and !HasTrailingSlash('$(OutDir)')) was evaluated as ('bin\Debug\' != '' and !HasTrailingSlash('bin\Debug\')).
+Task "Error" skipped, due to false condition; ('$(BaseIntermediateOutputPath)' != '' and !HasTrailingSlash('$(BaseIntermediateOutputPath)')) was evaluated as ('obj\' != '' and !HasTrailingSlash('obj\')).
+Task "Error" skipped, due to false condition; ('$(IntermediateOutputPath)' != '' and !HasTrailingSlash('$(IntermediateOutputPath)')) was evaluated as ('obj\Debug\' != '' and !HasTrailingSlash('obj\Debug\')).
+Done building target "_CheckForInvalidConfigurationAndPlatform" in project "SOAPI2.Tests.csproj".
+Target "BeforeRebuild" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "Rebuild" depends on it):
+Done building target "BeforeRebuild" in project "SOAPI2.Tests.csproj".
+Target "BeforeClean" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "Clean" depends on it):
+Done building target "BeforeClean" in project "SOAPI2.Tests.csproj".
+Target "UnmanagedUnregistration" skipped, due to false condition; ((('$(_AssemblyTimestampBeforeCompile)' != '$(_AssemblyTimestampAfterCompile)' or '$(RegisterForComInterop)' != 'true' or '$(OutputType)' != 'library') or
+                    ('$(_AssemblyTimestampBeforeCompile)' == '')) and
+                   Exists('@(_UnmanagedRegistrationCache)')) was evaluated as ((('' != '' or '' != 'true' or 'Library' != 'library') or
+                    ('' == '')) and
+                   Exists('obj\SOAPI2.Tests.csproj.UnmanagedRegistration.cache')).
+Target "CoreClean" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "Clean" depends on it):
+Task "Delete"
+Done executing task "Delete".
+Task "ReadLinesFromFile"
+Done executing task "ReadLinesFromFile".
+Task "FindUnderPath"
+  Comparison path is "bin\Debug\".
+Done executing task "FindUnderPath".
+Task "FindUnderPath"
+  Comparison path is "obj\Debug\".
+Done executing task "FindUnderPath".
+Task "Delete"
+  Deleting file "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\bin\Debug\oauth.htm".
+  Deleting file "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\bin\Debug\SOAPI2.Tests.dll".
+  Deleting file "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\bin\Debug\SOAPI2.Tests.pdb".
+  Deleting file "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\bin\Debug\Newtonsoft.Json.dll".
+  Deleting file "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\bin\Debug\nunit.framework.dll".
+  Deleting file "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\bin\Debug\nunit.mocks.dll".
+  Deleting file "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\bin\Debug\pnunit.framework.dll".
+  Deleting file "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\bin\Debug\Salient.JsonClient.35.dll".
+  Deleting file "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\bin\Debug\Salient.ReflectiveLoggingAdapter.35.dll".
+  Deleting file "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\bin\Debug\SOAPI2.dll".
+  Deleting file "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\bin\Debug\SOAPI2.pdb".
+  Deleting file "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\bin\Debug\Newtonsoft.Json.pdb".
+  Deleting file "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\bin\Debug\Newtonsoft.Json.xml".
+  Deleting file "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\bin\Debug\nunit.framework.xml".
+  Deleting file "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\bin\Debug\Salient.JsonClient.35.pdb".
+  Deleting file "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\bin\Debug\Salient.ReflectiveLoggingAdapter.35.pdb".
+  Deleting file "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\obj\Debug\ResolveAssemblyReference.cache".
+  Deleting file "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\obj\Debug\SOAPI2.Tests.dll".
+  Deleting file "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\obj\Debug\SOAPI2.Tests.pdb".
+Done executing task "Delete".
+Task "RemoveDuplicates"
+Done executing task "RemoveDuplicates".
+Task "MakeDir"
+Done executing task "MakeDir".
+Task "WriteLinesToFile"
+Done executing task "WriteLinesToFile".
+Done building target "CoreClean" in project "SOAPI2.Tests.csproj".
+Target "AssignProjectConfiguration" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "CleanReferencedProjects" depends on it):
+Using "AssignProjectConfiguration" task from assembly "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "AssignProjectConfiguration"
+  Project reference "..\SOAPI2\SOAPI2.csproj" has been assigned the "Debug|AnyCPU" configuration.
+Done executing task "AssignProjectConfiguration".
+Done building target "AssignProjectConfiguration" in project "SOAPI2.Tests.csproj".
+Target "_SplitProjectReferencesByFileExistence" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "CleanReferencedProjects" depends on it):
+Task "ResolveNonMSBuildProjectOutput" skipped, due to false condition; ('$(BuildingInsideVisualStudio)'=='true' and '@(ProjectReferenceWithConfiguration)'!='') was evaluated as (''=='true' and '..\SOAPI2\SOAPI2.csproj'!='').
+Done building target "_SplitProjectReferencesByFileExistence" in project "SOAPI2.Tests.csproj".
+Target "CleanReferencedProjects" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "Clean" depends on it):
+Task "MSBuild"
+  Global Properties:
+    Configuration=Debug
+    Platform=AnyCPU
+Project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (4) is building "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (3:2) on node 1 (Clean target(s)).
+Building with tools version "4.0".
+Target "_CheckForInvalidConfigurationAndPlatform" skipped. Previously built successfully.
+Target "Clean" skipped. Previously built successfully.
+Done Building Project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (Clean target(s)).
+
+Done executing task "MSBuild".
+Done building target "CleanReferencedProjects" in project "SOAPI2.Tests.csproj".
+Target "CleanPublishFolder" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "Clean" depends on it):
+Task "RemoveDir" skipped, due to false condition; ('$(PublishDir)'=='$(OutputPath)app.publish\' and Exists('$(PublishDir)')) was evaluated as ('bin\Debug\app.publish\'=='bin\Debug\app.publish\' and Exists('bin\Debug\app.publish\')).
+Done building target "CleanPublishFolder" in project "SOAPI2.Tests.csproj".
+Target "AfterClean" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "Clean" depends on it):
+Done building target "AfterClean" in project "SOAPI2.Tests.csproj".
+Target "EntityClean" skipped, due to false condition; ('@(EntityDeploy)' != '') was evaluated as ('' != '').
+Target "Clean" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "Rebuild" depends on it):
+Done building target "Clean" in project "SOAPI2.Tests.csproj".
+Target "CheckPrerequisites" in file "C:\dev\CityIndex\SOAPI2\src\.nuget\nuget.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "RestorePackages" depends on it):
+Task "Error" skipped, due to false condition; (!Exists('$(NuGetExePath)')) was evaluated as (!Exists('C:\dev\CityIndex\SOAPI2\src\.nuget\nuget.exe')).
+Done building target "CheckPrerequisites" in project "SOAPI2.Tests.csproj".
+Target "RestorePackages" in file "C:\dev\CityIndex\SOAPI2\src\.nuget\nuget.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "Build" depends on it):
+Task "Exec"
+  "C:\dev\CityIndex\SOAPI2\src\.nuget\nuget.exe" install "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\packages.config" -source "" -o "C:\dev\CityIndex\SOAPI2\src\packages"
+  All packages listed in packages.config are already installed.
+Done executing task "Exec".
+Done building target "RestorePackages" in project "SOAPI2.Tests.csproj".
+Target "EntityDeploy" skipped, due to false condition; ('@(EntityDeploy)' != '') was evaluated as ('' != '').
+Target "BeforeBuild" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "Build" depends on it):
+Done building target "BeforeBuild" in project "SOAPI2.Tests.csproj".
+Target "BuildOnlySettings" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "CoreBuild" depends on it):
+Done building target "BuildOnlySettings" in project "SOAPI2.Tests.csproj".
+Target "GetFrameworkPaths" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.NETFramework.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "PrepareForBuild" depends on it):
+Done building target "GetFrameworkPaths" in project "SOAPI2.Tests.csproj".
+Target "GetWinFXPath" skipped, due to false condition; (('@(Page)' != '' or '@(ApplicationDefinition)' != '' or '@(Resource)' != '') and ('$(GetWinFXNativePath)' != '' or '$(GetWinFXWoWPath)' != '' )) was evaluated as (('' != '' or '' != '' or '' != '') and ('' != '' or '' != '' )).
+Target "GetReferenceAssemblyPaths" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "PrepareForBuild" depends on it):
+Task "GetReferenceAssemblyPaths"
+Done executing task "GetReferenceAssemblyPaths".
+Done building target "GetReferenceAssemblyPaths" in project "SOAPI2.Tests.csproj".
+Target "PrepareForBuild" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "CoreBuild" depends on it):
+Task "FindAppConfigFile"
+Done executing task "FindAppConfigFile".
+Task "MakeDir"
+Done executing task "MakeDir".
+Done building target "PrepareForBuild" in project "SOAPI2.Tests.csproj".
+Target "PreBuildEvent" skipped, due to false condition; ('$(PreBuildEvent)'!='') was evaluated as (''!='').
+Target "BeforeResolveReferences" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "ResolveReferences" depends on it):
+Done building target "BeforeResolveReferences" in project "SOAPI2.Tests.csproj".
+Target "AssignProjectConfiguration" skipped. Previously built successfully.
+Target "AssignProjectConfiguration" skipped. Previously built successfully.
+Target "_SplitProjectReferencesByFileExistence" skipped. Previously built successfully.
+Target "ResolveProjectReferences" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "ResolveReferences" depends on it):
+Task "MSBuild" skipped, due to false condition; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and ('$(BuildingInsideVisualStudio)' == 'true' or '$(BuildProjectReferences)' != 'true') and '@(_MSBuildProjectReferenceExistent)' != '') was evaluated as ('true' == 'true' and '..\SOAPI2\SOAPI2.csproj' != '' and ('' == 'true' or 'true' != 'true') and '..\SOAPI2\SOAPI2.csproj' != '').
+Task "MSBuild"
+  Global Properties:
+    Configuration=Debug
+    Platform=AnyCPU
+Project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (4) is building "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (3:3) on node 1 (default targets).
+Building with tools version "4.0".
+Target "_CheckForInvalidConfigurationAndPlatform" skipped. Previously built successfully.
+Target "Build" skipped. Previously built successfully.
+Done Building Project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (default targets).
+
+Done executing task "MSBuild".
+Task "MSBuild"
+  Global Properties:
+    Configuration=Debug
+    Platform=AnyCPU
+Project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (4) is building "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (3:4) on node 1 (GetNativeManifest target(s)).
+Building with tools version "4.0".
+Target "_CheckForInvalidConfigurationAndPlatform" skipped. Previously built successfully.
+Target "GetNativeManifest" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (entry point):
+Done building target "GetNativeManifest" in project "SOAPI2.csproj".
+Done Building Project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (GetNativeManifest target(s)).
+
+Done executing task "MSBuild".
+Task "Warning" skipped, due to false condition; ('@(ProjectReferenceWithConfiguration)' != '' and '@(_MSBuildProjectReferenceNonexistent)' != '') was evaluated as ('..\SOAPI2\SOAPI2.csproj' != '' and '' != '').
+Done building target "ResolveProjectReferences" in project "SOAPI2.Tests.csproj".
+Target "ResolveNativeReferences" skipped, due to false condition; ('@(NativeReference)'!='') was evaluated as (''!='').
+Target "GetFrameworkPaths" skipped. Previously built successfully.
+Target "GetReferenceAssemblyPaths" skipped. Previously built successfully.
+Target "PrepareForBuild" skipped. Previously built successfully.
+Target "ResolveAssemblyReferences" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "ResolveReferences" depends on it):
+Task "ResolveAssemblyReference"
+  TargetFrameworkMoniker:
+      .NETFramework,Version=v3.5
+  TargetFrameworkMonikerDisplayName:
+      .NETFramework v3.5
+  TargetedRuntimeVersion:
+      v2.0.50727
+  Assemblies:
+      Newtonsoft.Json, Version=4.0.8.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL
+          HintPath = '..\packages\Salient.JsonClient.3.1.3\lib\net35\Newtonsoft.Json.dll'
+      nunit.framework, Version=2.5.10.11092, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL
+          HintPath = '..\packages\NUnit.2.5.10.11092\lib\nunit.framework.dll'
+          SpecificVersion = 'False'
+      nunit.mocks, Version=2.5.10.11092, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL
+          HintPath = '..\packages\NUnit.2.5.10.11092\lib\nunit.mocks.dll'
+          SpecificVersion = 'False'
+      pnunit.framework
+          HintPath = '..\packages\NUnit.2.5.10.11092\lib\pnunit.framework.dll'
+      Salient.JsonClient.35, Version=3.1.3.10, Culture=neutral, PublicKeyToken=b412daeaa648e3eb, processorArchitecture=MSIL
+          HintPath = '..\packages\Salient.JsonClient.3.1.3\lib\net35\Salient.JsonClient.35.dll'
+          SpecificVersion = 'False'
+      Salient.ReflectiveLoggingAdapter.35, Version=3.0.4.8, Culture=neutral, PublicKeyToken=b9b5972b9f69332b, processorArchitecture=MSIL
+          HintPath = '..\packages\Salient.JsonClient.3.1.3\lib\net35\Salient.ReflectiveLoggingAdapter.35.dll'
+          SpecificVersion = 'False'
+      System
+      System.Windows.Forms
+      System.Xml.Linq
+      System.Data.DataSetExtensions
+      System.Data
+      System.Xml
+      System.Core
+  AssemblyFiles:
+      C:\dev\CityIndex\SOAPI2\src\SOAPI2\bin\Debug\SOAPI2.dll
+      C:\Windows\Microsoft.NET\Framework\v2.0.50727\mscorlib.dll
+  CandidateAssemblyFiles:
+  TargetFrameworkDirectories:
+      C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\,C:\Windows\Microsoft.NET\Framework\v3.5\,C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.0\,C:\Windows\Microsoft.NET\Framework\v3.0\,C:\Windows\Microsoft.NET\Framework\v2.0.50727\
+  InstalledAssemblyTables:
+  IgnoreInstalledAssemblyTable:
+      False
+  SearchPaths:
+      {CandidateAssemblyFiles}
+      {HintPathFromItem}
+      {TargetFrameworkDirectory}
+      {Registry:Software\Microsoft\.NETFramework,v3.5,AssemblyFoldersEx}
+      {AssemblyFolders}
+      {GAC}
+      {RawFileName}
+      bin\Debug\
+  AllowedAssemblyExtensions:
+      .dll
+      .exe
+  AllowedRelatedFileExtensions:
+      .pdb
+      .xml
+  AppConfigFile:
+      
+  AutoUnify:
+      True
+  CopyLocalDependenciesWhenParentReferenceInGac:
+      True
+  FindDependencies:
+      True
+  TargetProcessorArchitecture:
+      x86
+  StateFile:
+      obj\Debug\ResolveAssemblyReference.cache
+  InstalledAssemblySubsetTables:
+  IgnoreInstalledAssemblySubsetTable:
+      False
+  TargetFrameworkSubsets:
+  FullTargetFrameworkSubsetNames:
+      Full
+  ProfileName:
+      
+  ProfileFullFrameworkFolders:
+      C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\
+      C:\Windows\Microsoft.NET\Framework\v3.5\
+      C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.0\
+      C:\Windows\Microsoft.NET\Framework\v3.0\
+      C:\Windows\Microsoft.NET\Framework\v2.0.50727\
+  LatestTargetFrameworkDirectories:
+  ProfileTablesLocation:
+  Primary reference "SOAPI2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null".
+      Resolved file path is "C:\dev\CityIndex\SOAPI2\src\SOAPI2\bin\Debug\SOAPI2.dll".
+      Reference found at search path location "C:\dev\CityIndex\SOAPI2\src\SOAPI2\bin\Debug\SOAPI2.dll".
+      Found related file "C:\dev\CityIndex\SOAPI2\src\SOAPI2\bin\Debug\SOAPI2.pdb".
+  Primary reference "mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089".
+      Resolved file path is "C:\Windows\Microsoft.NET\Framework\v2.0.50727\mscorlib.dll".
+      Reference found at search path location "C:\Windows\Microsoft.NET\Framework\v2.0.50727\mscorlib.dll".
+      This reference is not "CopyLocal" because it's a prerequisite file.
+  Primary reference "Newtonsoft.Json, Version=4.0.8.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed".
+      Resolved file path is "C:\dev\CityIndex\SOAPI2\src\packages\Salient.JsonClient.3.1.3\lib\net35\Newtonsoft.Json.dll".
+      Reference found at search path location "{HintPathFromItem}".
+      Found related file "C:\dev\CityIndex\SOAPI2\src\packages\Salient.JsonClient.3.1.3\lib\net35\Newtonsoft.Json.pdb".
+      Found related file "C:\dev\CityIndex\SOAPI2\src\packages\Salient.JsonClient.3.1.3\lib\net35\Newtonsoft.Json.xml".
+  Primary reference "nunit.framework, Version=2.5.10.11092, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77".
+      Resolved file path is "C:\dev\CityIndex\SOAPI2\src\packages\NUnit.2.5.10.11092\lib\nunit.framework.dll".
+      Reference found at search path location "{HintPathFromItem}".
+      Found related file "C:\dev\CityIndex\SOAPI2\src\packages\NUnit.2.5.10.11092\lib\nunit.framework.xml".
+  Primary reference "nunit.mocks, Version=2.5.10.11092, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77".
+      Resolved file path is "C:\dev\CityIndex\SOAPI2\src\packages\NUnit.2.5.10.11092\lib\nunit.mocks.dll".
+      Reference found at search path location "{HintPathFromItem}".
+  Primary reference "pnunit.framework, Version=1.0.4109.34242, Culture=neutral, PublicKeyToken=null".
+      Resolved file path is "C:\dev\CityIndex\SOAPI2\src\packages\NUnit.2.5.10.11092\lib\pnunit.framework.dll".
+      Reference found at search path location "{HintPathFromItem}".
+  Primary reference "Salient.JsonClient.35, Version=3.1.3.10, Culture=neutral, PublicKeyToken=b412daeaa648e3eb".
+      Resolved file path is "C:\dev\CityIndex\SOAPI2\src\packages\Salient.JsonClient.3.1.3\lib\net35\Salient.JsonClient.35.dll".
+      Reference found at search path location "{HintPathFromItem}".
+      Found related file "C:\dev\CityIndex\SOAPI2\src\packages\Salient.JsonClient.3.1.3\lib\net35\Salient.JsonClient.35.pdb".
+  Primary reference "Salient.ReflectiveLoggingAdapter.35, Version=3.0.4.8, Culture=neutral, PublicKeyToken=b9b5972b9f69332b".
+      Resolved file path is "C:\dev\CityIndex\SOAPI2\src\packages\Salient.JsonClient.3.1.3\lib\net35\Salient.ReflectiveLoggingAdapter.35.dll".
+      Reference found at search path location "{HintPathFromItem}".
+      Found related file "C:\dev\CityIndex\SOAPI2\src\packages\Salient.JsonClient.3.1.3\lib\net35\Salient.ReflectiveLoggingAdapter.35.pdb".
+  Primary reference "System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089".
+      Resolved file path is "C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.dll".
+      Reference found at search path location "{TargetFrameworkDirectory}".
+          For SearchPath "{TargetFrameworkDirectory}".
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\System.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\System.exe", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v3.5\System.dll", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v3.5\System.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.0\System.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.0\System.exe", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v3.0\System.dll", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v3.0\System.exe", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.exe", but it didn't exist.
+      This reference is not "CopyLocal" because it's a prerequisite file.
+  Primary reference "System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089".
+      Resolved file path is "C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Windows.Forms.dll".
+      Reference found at search path location "{TargetFrameworkDirectory}".
+          For SearchPath "{TargetFrameworkDirectory}".
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\System.Windows.Forms.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\System.Windows.Forms.exe", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v3.5\System.Windows.Forms.dll", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v3.5\System.Windows.Forms.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.0\System.Windows.Forms.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.0\System.Windows.Forms.exe", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v3.0\System.Windows.Forms.dll", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v3.0\System.Windows.Forms.exe", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Windows.Forms.exe", but it didn't exist.
+      This reference is not "CopyLocal" because it's a prerequisite file.
+  Primary reference "System.Xml.Linq, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089".
+      Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\System.Xml.Linq.dll".
+      Reference found at search path location "{TargetFrameworkDirectory}".
+          For SearchPath "{TargetFrameworkDirectory}".
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\System.Xml.Linq.exe", but it didn't exist.
+      This reference is not "CopyLocal" because it's a prerequisite file.
+  Primary reference "System.Data.DataSetExtensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089".
+      Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.DataSetExtensions.dll".
+      Reference found at search path location "{TargetFrameworkDirectory}".
+          For SearchPath "{TargetFrameworkDirectory}".
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.DataSetExtensions.exe", but it didn't exist.
+      This reference is not "CopyLocal" because it's a prerequisite file.
+  Primary reference "System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089".
+      Resolved file path is "C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Data.dll".
+      Reference found at search path location "{TargetFrameworkDirectory}".
+          For SearchPath "{TargetFrameworkDirectory}".
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.exe", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v3.5\System.Data.dll", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v3.5\System.Data.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.0\System.Data.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.0\System.Data.exe", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v3.0\System.Data.dll", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v3.0\System.Data.exe", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Data.exe", but it didn't exist.
+      This reference is not "CopyLocal" because it's a prerequisite file.
+  Primary reference "System.Xml, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089".
+      Resolved file path is "C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Xml.dll".
+      Reference found at search path location "{TargetFrameworkDirectory}".
+          For SearchPath "{TargetFrameworkDirectory}".
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\System.Xml.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\System.Xml.exe", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v3.5\System.Xml.dll", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v3.5\System.Xml.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.0\System.Xml.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.0\System.Xml.exe", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v3.0\System.Xml.dll", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v3.0\System.Xml.exe", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Xml.exe", but it didn't exist.
+      This reference is not "CopyLocal" because it's a prerequisite file.
+  Primary reference "System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089".
+      Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\System.Core.dll".
+      Reference found at search path location "{TargetFrameworkDirectory}".
+          For SearchPath "{TargetFrameworkDirectory}".
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\System.Core.exe", but it didn't exist.
+      This reference is not "CopyLocal" because it's a prerequisite file.
+  Dependency "System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+      Resolved file path is "C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Drawing.dll".
+      Reference found at search path location "{TargetFrameworkDirectory}".
+          For SearchPath "C:\dev\CityIndex\SOAPI2\src\SOAPI2\bin\Debug".
+          Considered "C:\dev\CityIndex\SOAPI2\src\SOAPI2\bin\Debug\System.Drawing.dll", but it didn't exist.
+          Considered "C:\dev\CityIndex\SOAPI2\src\SOAPI2\bin\Debug\System.Drawing.exe", but it didn't exist.
+          For SearchPath "{TargetFrameworkDirectory}".
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\System.Drawing.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\System.Drawing.exe", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v3.5\System.Drawing.dll", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v3.5\System.Drawing.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.0\System.Drawing.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.0\System.Drawing.exe", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v3.0\System.Drawing.dll", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v3.0\System.Drawing.exe", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Drawing.exe", but it didn't exist.
+      Required by "C:\dev\CityIndex\SOAPI2\src\SOAPI2\bin\Debug\SOAPI2.dll".
+      This reference is not "CopyLocal" because it's a prerequisite file.
+  Dependency "System.Runtime.Serialization, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089".
+      Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.0\System.Runtime.Serialization.dll".
+      Reference found at search path location "{TargetFrameworkDirectory}".
+          For SearchPath "C:\dev\CityIndex\SOAPI2\src\packages\Salient.JsonClient.3.1.3\lib\net35".
+          Considered "C:\dev\CityIndex\SOAPI2\src\packages\Salient.JsonClient.3.1.3\lib\net35\System.Runtime.Serialization.dll", but it didn't exist.
+          Considered "C:\dev\CityIndex\SOAPI2\src\packages\Salient.JsonClient.3.1.3\lib\net35\System.Runtime.Serialization.exe", but it didn't exist.
+          For SearchPath "{TargetFrameworkDirectory}".
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\System.Runtime.Serialization.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\System.Runtime.Serialization.exe", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v3.5\System.Runtime.Serialization.dll", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v3.5\System.Runtime.Serialization.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.0\System.Runtime.Serialization.exe", but it didn't exist.
+      Required by "Newtonsoft.Json, Version=4.0.8.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL".
+      Required by "Salient.JsonClient.35, Version=3.1.3.10, Culture=neutral, PublicKeyToken=b412daeaa648e3eb, processorArchitecture=MSIL".
+      Required by "C:\dev\CityIndex\SOAPI2\src\SOAPI2\bin\Debug\SOAPI2.dll".
+      This reference is not "CopyLocal" because it's in a Frameworks directory.
+  Dependency "nunit.core.interfaces, Version=2.5.10.11092, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77".
+      Could not resolve this reference. Could not locate the assembly "nunit.core.interfaces, Version=2.5.10.11092, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77". Check to make sure the assembly exists on disk. If this reference is required by your code, you may get compilation errors.
+          For SearchPath "C:\dev\CityIndex\SOAPI2\src\packages\NUnit.2.5.10.11092\lib".
+          Considered "C:\dev\CityIndex\SOAPI2\src\packages\NUnit.2.5.10.11092\lib\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\dev\CityIndex\SOAPI2\src\packages\NUnit.2.5.10.11092\lib\nunit.core.interfaces.exe", but it didn't exist.
+          For SearchPath "{TargetFrameworkDirectory}".
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v3.5\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v3.5\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.0\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.0\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v3.0\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v3.0\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v2.0.50727\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\Framework\v2.0.50727\nunit.core.interfaces.exe", but it didn't exist.
+          For SearchPath "{Registry:Software\Microsoft\.NETFramework,v3.5,AssemblyFoldersEx}".
+          Considered "C:\Program Files (x86)\NUnit 2.5.9\bin\net-2.0\framework\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\NUnit 2.5.9\bin\net-2.0\framework\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\PROGRAM FILES (X86)\DEVEXPRESS 2010.1\IDETOOLS\System\RefactorCommonLib\Bin\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\PROGRAM FILES (X86)\DEVEXPRESS 2010.1\IDETOOLS\System\RefactorCommonLib\Bin\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\PROGRAM FILES (X86)\DEVEXPRESS 2010.1\IDETOOLS\System\DXCore\Bin\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\PROGRAM FILES (X86)\DEVEXPRESS 2010.1\IDETOOLS\System\DXCore\Bin\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\PROGRAM FILES (X86)\DEVEXPRESS 2010.1\IDETOOLS\System\CodeRushCommonLib\Bin\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\PROGRAM FILES (X86)\DEVEXPRESS 2010.1\IDETOOLS\System\CodeRushCommonLib\Bin\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\WPF Toolkit\v3.5.50211.1\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\WPF Toolkit\v3.5.50211.1\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\WPF Toolkit\v3.5.50211.1\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\WPF Toolkit\v3.5.50211.1\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE\ReferenceAssemblies\v2.0\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE\ReferenceAssemblies\v2.0\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Program Files\Reference Assemblies\Microsoft\VSTO40\v9.0\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Program Files\Reference Assemblies\Microsoft\VSTO40\v9.0\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Program Files\Reference Assemblies\Microsoft\VSTO40\v10.0\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Program Files\Reference Assemblies\Microsoft\VSTO40\v10.0\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\VSTA\v9.0\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\VSTA\v9.0\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Program Files\Reference Assemblies\Microsoft\VSTA30\v9.0\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Program Files\Reference Assemblies\Microsoft\VSTA30\v9.0\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Program Files\Reference Assemblies\Microsoft\VSTA30\v10.0\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Program Files\Reference Assemblies\Microsoft\VSTA30\v10.0\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft Visual Studio 10.0\Visual Studio Tools for Office\PIA\Office14\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft Visual Studio 10.0\Visual Studio Tools for Office\PIA\Office14\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft Visual Studio 10.0\Visual Studio Tools for Office\PIA\Office12\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft Visual Studio 10.0\Visual Studio Tools for Office\PIA\Office12\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft Visual Studio 10.0\Visual Studio Tools for Office\PIA\Common\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft Visual Studio 10.0\Visual Studio Tools for Office\PIA\Common\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE\Extensions\Microsoft\SharePoint\PublicAssemblies\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE\Extensions\Microsoft\SharePoint\PublicAssemblies\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\VBPowerPacks\v10.0\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\VBPowerPacks\v10.0\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE\ReferenceAssemblies\v2.0\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE\ReferenceAssemblies\v2.0\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\T4 Toolbox\Bin\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\T4 Toolbox\Bin\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft Synchronization Services\ADO.NET\v1.0\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft Synchronization Services\ADO.NET\v1.0\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft SDKs\Microsoft Sync Framework\v1.0\Runtime\ADO.NET\V2.0\x64\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft SDKs\Microsoft Sync Framework\v1.0\Runtime\ADO.NET\V2.0\x64\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\SQLite.NET\bin\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\SQLite.NET\bin\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft SQL Server Compact Edition\v3.5\Desktop\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft SQL Server Compact Edition\v3.5\Desktop\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft Visual Studio 10.0\ReportViewer\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft Visual Studio 10.0\ReportViewer\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft Visual Studio 9.0\ReportViewer\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft Visual Studio 9.0\ReportViewer\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\PROGRAM FILES (X86)\DEVEXPRESS 2010.1\IDETOOLS\System\RefactorCommonLib\Bin\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\PROGRAM FILES (X86)\DEVEXPRESS 2010.1\IDETOOLS\System\RefactorCommonLib\Bin\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft Visual Studio 9.0\Common7\IDE\PublicAssemblies\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft Visual Studio 9.0\Common7\IDE\PublicAssemblies\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\Common Files\Microsoft Shared\MSEnv\PublicAssemblies\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Common Files\Microsoft Shared\MSEnv\PublicAssemblies\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft.NET\Primary Interop Assemblies\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft.NET\Primary Interop Assemblies\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\MySQL\MySQL Connector Net 6.2.3\Assemblies\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\MySQL\MySQL Connector Net 6.2.3\Assemblies\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\FSharp\2.0\Runtime\v2.0\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\FSharp\2.0\Runtime\v2.0\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft SDKs\Microsoft Sync Framework\v1.0\Runtime\x86\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft SDKs\Microsoft Sync Framework\v1.0\Runtime\x86\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft SDKs\Expression\Blend 3\Prototyping\Libraries\WPF\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft SDKs\Expression\Blend 3\Prototyping\Libraries\WPF\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft Expression\Blend 4\Microsoft.Windows.Design.Interaction\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft Expression\Blend 4\Microsoft.Windows.Design.Interaction\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft Expression\Blend 4\Microsoft.Windows.Design.Extensibility\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft Expression\Blend 4\Microsoft.Windows.Design.Extensibility\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft SDKs\Expression\Blend 3\Interactivity\Libraries\WPF\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft SDKs\Expression\Blend 3\Interactivity\Libraries\WPF\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\PROGRAM FILES (X86)\DEVEXPRESS 2010.1\IDETOOLS\System\DXCore\Bin\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\PROGRAM FILES (X86)\DEVEXPRESS 2010.1\IDETOOLS\System\DXCore\Bin\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\PROGRAM FILES (X86)\DEVEXPRESS 2010.1\IDETOOLS\System\CodeRushCommonLib\Bin\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\PROGRAM FILES (X86)\DEVEXPRESS 2010.1\IDETOOLS\System\CodeRushCommonLib\Bin\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET MVC 2\Assemblies\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET MVC 2\Assemblies\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\NUnit 2.5.9\bin\net-2.0\framework\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\NUnit 2.5.9\bin\net-2.0\framework\nunit.core.interfaces.exe", but it didn't exist.
+          For SearchPath "{AssemblyFolders}".
+          Considered "C:\Program Files (x86)\WPF Toolkit\v3.5.50211.1\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\WPF Toolkit\v3.5.50211.1\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\GtkSharp\2.12\lib\Mono.Posix\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\GtkSharp\2.12\lib\Mono.Posix\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.0\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.0\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\PROGRAM FILES (X86)\DEVEXPRESS 2010.1\IDETOOLS\System\DXCore\Bin\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\PROGRAM FILES (X86)\DEVEXPRESS 2010.1\IDETOOLS\System\DXCore\Bin\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft.NET\ADOMD.NET\100\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft.NET\ADOMD.NET\100\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft SQL Server\100\SDK\Assemblies\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft SQL Server\100\SDK\Assemblies\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft SQL Server\100\DTS\Tasks\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft SQL Server\100\DTS\Tasks\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\DirectX for Managed Code\1.0.2904.0\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\DirectX for Managed Code\1.0.2904.0\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\DirectX for Managed Code\1.0.2911.0\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\DirectX for Managed Code\1.0.2911.0\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft SQL Server\100\SDK\Assemblies\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft SQL Server\100\SDK\Assemblies\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Program Files\SciTech\NetMemProfiler3\Redist\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Program Files\SciTech\NetMemProfiler3\Redist\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\WPF Toolkit\v3.5.50211.1\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\WPF Toolkit\v3.5.50211.1\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft SQL Server\100\DTS\ForEachEnumerators\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft SQL Server\100\DTS\ForEachEnumerators\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\Windows Installer XML v3.5\SDK\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Windows Installer XML v3.5\SDK\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\GtkSharp\2.12\lib\gtk-sharp-2.0\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\GtkSharp\2.12\lib\gtk-sharp-2.0\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Program Files\IIS\Microsoft Web Farm Framework\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Program Files\IIS\Microsoft Web Farm Framework\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft SQL Server\100\DTS\PipelineComponents\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft SQL Server\100\DTS\PipelineComponents\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\DirectX for Managed Code\1.0.2902.0\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\DirectX for Managed Code\1.0.2902.0\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\GtkSharp\2.12\lib\Mono.Cairo\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\GtkSharp\2.12\lib\Mono.Cairo\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\DirectX for Managed Code\1.0.2906.0\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\DirectX for Managed Code\1.0.2906.0\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\DirectX for Managed Code\1.0.2903.0\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\DirectX for Managed Code\1.0.2903.0\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\DirectX for Managed Code\1.0.2910.0\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\DirectX for Managed Code\1.0.2910.0\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\DirectX for Managed Code\1.0.2908.0\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\DirectX for Managed Code\1.0.2908.0\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\DirectX for Managed Code\1.0.2905.0\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\DirectX for Managed Code\1.0.2905.0\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Program Files\IIS\Microsoft Web Deploy V2\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Program Files\IIS\Microsoft Web Deploy V2\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\DirectX for Managed Code\1.0.2909.0\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\DirectX for Managed Code\1.0.2909.0\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft SQL Server\100\SDK\Assemblies\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft SQL Server\100\SDK\Assemblies\nunit.core.interfaces.exe", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\DirectX for Managed Code\1.0.2907.0\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "C:\Windows\Microsoft.NET\DirectX for Managed Code\1.0.2907.0\nunit.core.interfaces.exe", but it didn't exist.
+          For SearchPath "{GAC}".
+          Considered "nunit.core.interfaces, Version=2.5.10.11092, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77", which was not found in the GAC.
+          For SearchPath "bin\Debug\".
+          Considered "bin\Debug\nunit.core.interfaces.dll", but it didn't exist.
+          Considered "bin\Debug\nunit.core.interfaces.exe", but it didn't exist.
+      Required by "pnunit.framework".
+Done executing task "ResolveAssemblyReference".
+Done building target "ResolveAssemblyReferences" in project "SOAPI2.Tests.csproj".
+Target "ResolveComReferences" skipped, due to false condition; ('@(COMReference)'!='' or '@(COMFileReference)'!='') was evaluated as (''!='' or ''!='').
+Target "AfterResolveReferences" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "ResolveReferences" depends on it):
+Done building target "AfterResolveReferences" in project "SOAPI2.Tests.csproj".
+Target "ResolveTestReferences" skipped, due to false condition; ('@(Shadow)'!='') was evaluated as (''!='').
+Target "ResolveReferences" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "CoreBuild" depends on it):
+Done building target "ResolveReferences" in project "SOAPI2.Tests.csproj".
+Target "MarkupCompilePass1" skipped, due to false condition; ('@(Page)' != '' or '@(ApplicationDefinition)' != '' ) was evaluated as ('' != '' or '' != '' ).
+Target "AfterMarkupCompilePass1" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.WinFX.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "PrepareResources" depends on it):
+Done building target "AfterMarkupCompilePass1" in project "SOAPI2.Tests.csproj".
+Target "MarkupCompilePass2ForMainAssembly" skipped, due to false condition; ('$(_RequireMCPass2ForMainAssembly)' == 'true' ) was evaluated as ('false' == 'true' ).
+Target "FileClassification" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.WinFX.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "PrepareResources" depends on it):
+Task "FileClassifier" skipped, due to false condition; ('@(GeneratedBaml)' != '' or '@(Resource)' != '' or '@(Font)' != '') was evaluated as ('' != '' or '' != '' or '' != '').
+Task "Message" skipped, due to false condition; ('$(MSBuildTargetsVerbose)'=='true') was evaluated as (''=='true').
+Task "Message" skipped, due to false condition; ('$(MSBuildTargetsVerbose)'=='true') was evaluated as (''=='true').
+Done building target "FileClassification" in project "SOAPI2.Tests.csproj".
+Target "MainResourcesGeneration" skipped, due to false condition; ('@(MainEmbeddedFiles)' != '') was evaluated as ('' != '').
+Target "AssignWinFXEmbeddedResource" skipped, due to false condition; ('@(WinFXEmbeddedResource)' != '') was evaluated as ('' != '').
+Target "AssignTargetPaths" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "PrepareResourceNames" depends on it):
+Task "AssignTargetPath"
+Done executing task "AssignTargetPath".
+Task "AssignTargetPath"
+Done executing task "AssignTargetPath".
+Task "AssignTargetPath"
+Done executing task "AssignTargetPath".
+Task "AssignTargetPath"
+Done executing task "AssignTargetPath".
+Task "AssignTargetPath" skipped, due to false condition; ('@(_DeploymentBaseManifestWithTargetPath)'=='' and '%(None.Extension)'=='.manifest') was evaluated as (''=='' and '.config'=='.manifest').
+Done building target "AssignTargetPaths" in project "SOAPI2.Tests.csproj".
+Target "AssignTargetPaths" skipped. Previously built successfully.
+Target "SplitResourcesByCulture" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "PrepareResourceNames" depends on it):
+Task "Warning" skipped, due to false condition; ('@(ResxWithNoCulture)'!='') was evaluated as (''!='').
+Task "Warning" skipped, due to false condition; ('@(ResxWithCulture)'!='') was evaluated as (''!='').
+Task "Warning" skipped, due to false condition; ('@(NonResxWithCulture)'!='') was evaluated as (''!='').
+Task "Warning" skipped, due to false condition; ('@(NonResxWithNoCulture)'!='') was evaluated as (''!='').
+Task "AssignCulture"
+Done executing task "AssignCulture".
+Done building target "SplitResourcesByCulture" in project "SOAPI2.Tests.csproj".
+Target "CreateManifestResourceNames" skipped, due to false condition; ('@(EmbeddedResource)' != '') was evaluated as ('' != '').
+Target "CreateCustomManifestResourceNames" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "PrepareResourceNames" depends on it):
+Done building target "CreateCustomManifestResourceNames" in project "SOAPI2.Tests.csproj".
+Target "PrepareResourceNames" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "PrepareResources" depends on it):
+Done building target "PrepareResourceNames" in project "SOAPI2.Tests.csproj".
+Target "ResolveAssemblyReferences" skipped. Previously built successfully.
+Target "SplitResourcesByCulture" skipped. Previously built successfully.
+Target "BeforeResGen" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "ResGen" depends on it):
+Done building target "BeforeResGen" in project "SOAPI2.Tests.csproj".
+Target "CoreResGen" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "ResGen" depends on it):
+Task "GenerateResource" skipped, due to false condition; ('%(EmbeddedResource.Type)' == 'Resx' and '%(EmbeddedResource.GenerateResource)' != 'false') was evaluated as ('' == 'Resx' and '' != 'false').
+Done building target "CoreResGen" in project "SOAPI2.Tests.csproj".
+Target "AfterResGen" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "ResGen" depends on it):
+Done building target "AfterResGen" in project "SOAPI2.Tests.csproj".
+Target "ResGen" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "PrepareResources" depends on it):
+Done building target "ResGen" in project "SOAPI2.Tests.csproj".
+Target "CompileLicxFiles" skipped, due to false condition; ('@(_LicxFile)'!='') was evaluated as (''!='').
+Target "PrepareRdlFiles" in file "C:\Program Files (x86)\MSBuild\Microsoft\VisualStudio\v10.0\ReportingServices\Microsoft.ReportingServices.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "CompileRdlFiles" depends on it):
+Task "CreateItem" skipped, due to false condition; ('%(Extension)'=='.rdlc') was evaluated as (''=='.rdlc').
+Done building target "PrepareRdlFiles" in project "SOAPI2.Tests.csproj".
+Target "RunRdlCompiler" skipped, due to false condition; ('@(RdlFile)'!='') was evaluated as (''!='').
+Target "CompileRdlFiles" in file "C:\Program Files (x86)\MSBuild\Microsoft\VisualStudio\v10.0\ReportingServices\Microsoft.ReportingServices.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "PrepareResources" depends on it):
+Done building target "CompileRdlFiles" in project "SOAPI2.Tests.csproj".
+Target "PrepareResources" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "CoreBuild" depends on it):
+Done building target "PrepareResources" in project "SOAPI2.Tests.csproj".
+Target "ResolveKeySource" skipped, due to false condition; ($(SignManifests) == 'true' or $(SignAssembly) == 'true') was evaluated as ( == 'true' or  == 'true').
+Target "ResolveReferences" skipped. Previously built successfully.
+Target "ResolveKeySource" skipped, due to false condition; ($(SignManifests) == 'true' or $(SignAssembly) == 'true') was evaluated as ( == 'true' or  == 'true').
+Target "ResolveComReferences" skipped, due to false condition; ('@(COMReference)'!='' or '@(COMFileReference)'!='') was evaluated as (''!='' or ''!='').
+Target "ResolveNativeReferences" skipped, due to false condition; ('@(NativeReference)'!='') was evaluated as (''!='').
+Target "_SetExternalWin32ManifestProperties" skipped, due to false condition; ('$(GenerateClickOnceManifests)'=='true' or '@(NativeReference)'!='' or '@(ResolvedIsolatedComModules)'!='') was evaluated as (''=='true' or ''!='' or ''!='').
+Target "_SetEmbeddedWin32ManifestProperties" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "SetWin32ManifestProperties" depends on it):
+Task "GetFrameworkPath"
+Done executing task "GetFrameworkPath".
+Done building target "_SetEmbeddedWin32ManifestProperties" in project "SOAPI2.Tests.csproj".
+Target "SetWin32ManifestProperties" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "Compile" depends on it):
+Done building target "SetWin32ManifestProperties" in project "SOAPI2.Tests.csproj".
+Target "_GenerateCompileInputs" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "Compile" depends on it):
+Task "Warning" skipped, due to false condition; ('@(ManifestResourceWithNoCulture)'!='' and '%(ManifestResourceWithNoCulture.EmittedForCompatibilityOnly)'=='') was evaluated as (''!='' and ''=='').
+Task "Warning" skipped, due to false condition; ('@(ManifestNonResxWithNoCultureOnDisk)'!='' and '%(ManifestNonResxWithNoCultureOnDisk.EmittedForCompatibilityOnly)'=='') was evaluated as (''!='' and ''=='').
+Done building target "_GenerateCompileInputs" in project "SOAPI2.Tests.csproj".
+Target "GenerateTargetFrameworkMonikerAttribute" skipped, due to false condition; ('$(GenerateTargetFrameworkAttribute)' == 'true') was evaluated as ('' == 'true').
+Target "_SetTargetFrameworkMonikerAttribute" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.CSharp.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "GenerateTargetFrameworkMonikerAttribute" depends on it):
+Done building target "_SetTargetFrameworkMonikerAttribute" in project "SOAPI2.Tests.csproj".
+Target "GenerateAdditionalSources" skipped, due to false condition; ('@(AssemblyAttributes)' != '' and '$(GenerateAdditionalSources)' == 'true') was evaluated as ('' != '' and '' == 'true').
+Target "BeforeCompile" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "Compile" depends on it):
+Done building target "BeforeCompile" in project "SOAPI2.Tests.csproj".
+Target "_TimeStampBeforeCompile" skipped, due to false condition; ('$(RunPostBuildEvent)'=='OnOutputUpdated' or ('$(RegisterForComInterop)'=='true' and '$(OutputType)'=='library')) was evaluated as (''=='OnOutputUpdated' or (''=='true' and 'Library'=='library')).
+Target "_ComputeNonExistentFileProperty" skipped, due to false condition; (('$(BuildingInsideVisualStudio)' == 'true') and (('$(BuildingProject)' == 'false') or ('$(UseHostCompilerIfAvailable)' == 'true'))) was evaluated as (('' == 'true') and (('true' == 'false') or ('true' == 'true'))).
+Target "CoreCompile" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.CSharp.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "Compile" depends on it):
+Building target "CoreCompile" completely.
+Output file "obj\Debug\SOAPI2.Tests.dll" does not exist.
+Task "Csc"
+  C:\Windows\Microsoft.NET\Framework\v4.0.30319\Csc.exe /noconfig /nowarn:1701,1702 /nostdlib+ /errorreport:prompt /warn:4 /define:DEBUG;TRACE /reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\mscorlib.dll /reference:C:\dev\CityIndex\SOAPI2\src\packages\Salient.JsonClient.3.1.3\lib\net35\Newtonsoft.Json.dll /reference:C:\dev\CityIndex\SOAPI2\src\packages\NUnit.2.5.10.11092\lib\nunit.framework.dll /reference:C:\dev\CityIndex\SOAPI2\src\packages\NUnit.2.5.10.11092\lib\nunit.mocks.dll /reference:C:\dev\CityIndex\SOAPI2\src\packages\NUnit.2.5.10.11092\lib\pnunit.framework.dll /reference:C:\dev\CityIndex\SOAPI2\src\packages\Salient.JsonClient.3.1.3\lib\net35\Salient.JsonClient.35.dll /reference:C:\dev\CityIndex\SOAPI2\src\packages\Salient.JsonClient.3.1.3\lib\net35\Salient.ReflectiveLoggingAdapter.35.dll /reference:C:\dev\CityIndex\SOAPI2\src\SOAPI2\bin\Debug\SOAPI2.dll /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\System.Core.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.DataSetExtensions.dll" /reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Data.dll /reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.dll /reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Windows.Forms.dll /reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Xml.dll /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\System.Xml.Linq.dll" /debug+ /debug:full /filealign:512 /optimize- /out:obj\Debug\SOAPI2.Tests.dll /target:library AccessTokensFixture.cs AnswersFixture.cs ApplicationsFixture.cs BadgesFixture.cs CommentsFixture.cs ErrorsFixture.cs EventsFixture.cs FiltersFixture.cs FixtureBase.cs InboxFixture.cs InfoFixture.cs MeFixture.cs OAuthFixture.cs PostsFixture.cs PrivilegesFixture.cs QuestionsFixture.cs RevisionsFixture.cs SearchFixture.cs SitesFixture.cs Properties\AssemblyInfo.cs SuggestedEditsFixture.cs TagsFixture.cs UsersFixture.cs VariousFixture.cs
+  Microsoft (R) Visual C# 2010 Compiler version 4.0.30319.1
+  Copyright (C) Microsoft Corporation. All rights reserved.
+  
+Done executing task "Csc".
+Task "CallTarget" skipped, due to false condition; ('$(TargetsTriggeredByCompilation)' != '') was evaluated as ('' != '').
+Done building target "CoreCompile" in project "SOAPI2.Tests.csproj".
+Target "_TimeStampAfterCompile" skipped, due to false condition; ('$(RunPostBuildEvent)'=='OnOutputUpdated' or ('$(RegisterForComInterop)'=='true' and '$(OutputType)'=='library')) was evaluated as (''=='OnOutputUpdated' or (''=='true' and 'Library'=='library')).
+Target "AfterCompile" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "Compile" depends on it):
+Done building target "AfterCompile" in project "SOAPI2.Tests.csproj".
+Target "PrepareResourcesForSatelliteAssemblies" skipped, due to false condition; ('$(UICulture)' != '') was evaluated as ('' != '').
+Target "MergeLocalizationDirectives" skipped, due to false condition; ('@(GeneratedLocalizationFiles)' !='') was evaluated as ('' !='').
+Target "AfterCompileWinFX" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.WinFX.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "_AfterCompileWinFXInternal" depends on it):
+Done building target "AfterCompileWinFX" in project "SOAPI2.Tests.csproj".
+Target "_AfterCompileWinFXInternal" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.WinFX.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "Compile" depends on it):
+Done building target "_AfterCompileWinFXInternal" in project "SOAPI2.Tests.csproj".
+Target "Compile" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "CoreBuild" depends on it):
+Done building target "Compile" in project "SOAPI2.Tests.csproj".
+Target "UnmanagedUnregistration" skipped, due to false condition; ((('$(_AssemblyTimestampBeforeCompile)' != '$(_AssemblyTimestampAfterCompile)' or '$(RegisterForComInterop)' != 'true' or '$(OutputType)' != 'library') or
+                    ('$(_AssemblyTimestampBeforeCompile)' == '')) and
+                   Exists('@(_UnmanagedRegistrationCache)')) was evaluated as ((('' != '' or '' != 'true' or 'Library' != 'library') or
+                    ('' == '')) and
+                   Exists('obj\SOAPI2.Tests.csproj.UnmanagedRegistration.cache')).
+Target "GenerateSerializationAssemblies" skipped, due to false condition; ('$(_SGenGenerateSerializationAssembliesConfig)' == 'On' or ('@(WebReferenceUrl)'!='' and '$(_SGenGenerateSerializationAssembliesConfig)' == 'Auto')) was evaluated as ('Off' == 'On' or (''!='' and 'Off' == 'Auto')).
+Target "_GenerateSatelliteAssemblyInputs" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "CreateSatelliteAssemblies" depends on it):
+Task "Warning" skipped, due to false condition; ('@(ManifestResourceWithCulture)'!='' and '%(ManifestResourceWithCulture.EmittedForCompatibilityOnly)'=='') was evaluated as (''!='' and ''=='').
+Task "Warning" skipped, due to false condition; ('@(ManifestNonResxWithCultureOnDisk)'!='' and '%(ManifestNonResxWithCultureOnDisk.EmittedForCompatibilityOnly)'=='') was evaluated as (''!='' and ''=='').
+Done building target "_GenerateSatelliteAssemblyInputs" in project "SOAPI2.Tests.csproj".
+Target "ComputeIntermediateSatelliteAssemblies" skipped, due to false condition; (@(EmbeddedResource->'%(WithCulture)') != '') was evaluated as ( != '').
+Target "GenerateSatelliteAssemblies" skipped, due to false condition; ('@(_SatelliteAssemblyResourceInputs)' != '') was evaluated as ('' != '').
+Target "CreateSatelliteAssemblies" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "CoreBuild" depends on it):
+Done building target "CreateSatelliteAssemblies" in project "SOAPI2.Tests.csproj".
+Target "GenerateManifests" skipped, due to false condition; ('$(GenerateClickOnceManifests)'=='true' or '@(NativeReference)'!='' or '@(ResolvedIsolatedComModules)'!='') was evaluated as (''=='true' or ''!='' or ''!='').
+Target "GetTargetPath" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "CoreBuild" depends on it):
+Done building target "GetTargetPath" in project "SOAPI2.Tests.csproj".
+Target "ComputeIntermediateSatelliteAssemblies" skipped, due to false condition; (@(EmbeddedResource->'%(WithCulture)') != '') was evaluated as ( != '').
+Target "_CopyFilesMarkedCopyLocal" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "CopyFilesToOutputDirectory" depends on it):
+Task "Copy"
+  Copying file from "C:\dev\CityIndex\SOAPI2\src\packages\Salient.JsonClient.3.1.3\lib\net35\Newtonsoft.Json.dll" to "bin\Debug\Newtonsoft.Json.dll".
+  Copying file from "C:\dev\CityIndex\SOAPI2\src\packages\NUnit.2.5.10.11092\lib\nunit.framework.dll" to "bin\Debug\nunit.framework.dll".
+  Copying file from "C:\dev\CityIndex\SOAPI2\src\packages\NUnit.2.5.10.11092\lib\nunit.mocks.dll" to "bin\Debug\nunit.mocks.dll".
+  Copying file from "C:\dev\CityIndex\SOAPI2\src\packages\NUnit.2.5.10.11092\lib\pnunit.framework.dll" to "bin\Debug\pnunit.framework.dll".
+  Copying file from "C:\dev\CityIndex\SOAPI2\src\packages\Salient.JsonClient.3.1.3\lib\net35\Salient.JsonClient.35.dll" to "bin\Debug\Salient.JsonClient.35.dll".
+  Copying file from "C:\dev\CityIndex\SOAPI2\src\packages\Salient.JsonClient.3.1.3\lib\net35\Salient.ReflectiveLoggingAdapter.35.dll" to "bin\Debug\Salient.ReflectiveLoggingAdapter.35.dll".
+  Copying file from "C:\dev\CityIndex\SOAPI2\src\SOAPI2\bin\Debug\SOAPI2.dll" to "bin\Debug\SOAPI2.dll".
+  Copying file from "C:\dev\CityIndex\SOAPI2\src\SOAPI2\bin\Debug\SOAPI2.pdb" to "bin\Debug\SOAPI2.pdb".
+  Copying file from "C:\dev\CityIndex\SOAPI2\src\packages\Salient.JsonClient.3.1.3\lib\net35\Newtonsoft.Json.pdb" to "bin\Debug\Newtonsoft.Json.pdb".
+  Copying file from "C:\dev\CityIndex\SOAPI2\src\packages\Salient.JsonClient.3.1.3\lib\net35\Newtonsoft.Json.xml" to "bin\Debug\Newtonsoft.Json.xml".
+  Copying file from "C:\dev\CityIndex\SOAPI2\src\packages\NUnit.2.5.10.11092\lib\nunit.framework.xml" to "bin\Debug\nunit.framework.xml".
+  Copying file from "C:\dev\CityIndex\SOAPI2\src\packages\Salient.JsonClient.3.1.3\lib\net35\Salient.JsonClient.35.pdb" to "bin\Debug\Salient.JsonClient.35.pdb".
+  Copying file from "C:\dev\CityIndex\SOAPI2\src\packages\Salient.JsonClient.3.1.3\lib\net35\Salient.ReflectiveLoggingAdapter.35.pdb" to "bin\Debug\Salient.ReflectiveLoggingAdapter.35.pdb".
+Done executing task "Copy".
+Done building target "_CopyFilesMarkedCopyLocal" in project "SOAPI2.Tests.csproj".
+Target "AssignTargetPaths" skipped. Previously built successfully.
+Target "_SplitProjectReferencesByFileExistence" skipped. Previously built successfully.
+Target "GetCopyToOutputDirectoryItems" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "_CopySourceItemsToOutputDirectory" depends on it):
+Task "MSBuild"
+  Global Properties:
+    Configuration=Debug
+    Platform=AnyCPU
+Project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (4) is building "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (3:5) on node 1 (GetCopyToOutputDirectoryItems target(s)).
+Building with tools version "4.0".
+Target "_CheckForInvalidConfigurationAndPlatform" skipped. Previously built successfully.
+Target "GetCopyToOutputDirectoryItems" skipped. Previously built successfully.
+Done Building Project "C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (GetCopyToOutputDirectoryItems target(s)).
+
+Done executing task "MSBuild".
+Task "AssignTargetPath"
+Done executing task "AssignTargetPath".
+Done building target "GetCopyToOutputDirectoryItems" in project "SOAPI2.Tests.csproj".
+Target "_CopyOutOfDateSourceItemsToOutputDirectory" skipped, due to false condition; ( '@(_SourceItemsToCopyToOutputDirectory)' != '' ) was evaluated as ( '' != '' ).
+Target "_CopyOutOfDateSourceItemsToOutputDirectoryAlways" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "_CopySourceItemsToOutputDirectory" depends on it):
+Task "Copy"
+  Copying file from "C:\dev\CityIndex\SOAPI2\src\SOAPI2\oauth.htm" to "bin\Debug\oauth.htm".
+Done executing task "Copy".
+Done building target "_CopyOutOfDateSourceItemsToOutputDirectoryAlways" in project "SOAPI2.Tests.csproj".
+Target "_CopySourceItemsToOutputDirectory" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "CopyFilesToOutputDirectory" depends on it):
+Done building target "_CopySourceItemsToOutputDirectory" in project "SOAPI2.Tests.csproj".
+Target "_CopyAppConfigFile" skipped, due to false condition; ( '@(AppConfigWithTargetPath)' != '' ) was evaluated as ( '' != '' ).
+Target "_CopyManifestFiles" skipped, due to false condition; ( '$(_DeploymentCopyApplicationManifest)'=='true' or '$(GenerateClickOnceManifests)'=='true' ) was evaluated as ( ''=='true' or ''=='true' ).
+Target "_CheckForCompileOutputs" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "CopyFilesToOutputDirectory" depends on it):
+Done building target "_CheckForCompileOutputs" in project "SOAPI2.Tests.csproj".
+Target "_SGenCheckForOutputs" skipped, due to false condition; ('$(_SGenGenerateSerializationAssembliesConfig)' == 'On' or ('@(WebReferenceUrl)'!='' and '$(_SGenGenerateSerializationAssembliesConfig)' == 'Auto')) was evaluated as ('Off' == 'On' or (''!='' and 'Off' == 'Auto')).
+Target "CopyFilesToOutputDirectory" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "PrepareForRun" depends on it):
+Task "Copy"
+  Copying file from "obj\Debug\SOAPI2.Tests.dll" to "bin\Debug\SOAPI2.Tests.dll".
+Done executing task "Copy".
+Task "Message"
+  SOAPI2.Tests -> C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\bin\Debug\SOAPI2.Tests.dll
+Done executing task "Message".
+Task "Copy" skipped, due to false condition; ('@(AddModules)' != '') was evaluated as ('' != '').
+Task "Copy" skipped, due to false condition; ('$(_SGenDllCreated)'=='true') was evaluated as ('false'=='true').
+Task "Copy"
+  Copying file from "obj\Debug\SOAPI2.Tests.pdb" to "bin\Debug\SOAPI2.Tests.pdb".
+Done executing task "Copy".
+Task "Copy" skipped, due to false condition; ('$(_DocumentationFileProduced)'=='true') was evaluated as ('false'=='true').
+Task "Copy" skipped, due to false condition; ('@(IntermediateSatelliteAssembliesWithTargetPath)' != '') was evaluated as ('' != '').
+Task "Copy" skipped, due to false condition; ('@(ReferenceComWrappersToCopyLocal)' != '' or '@(ResolvedIsolatedComModules)' != '' or '@(_DeploymentLooseManifestFile)' != '' or '@(NativeReferenceFile)' != '' ) was evaluated as ('' != '' or '' != '' or '' != '' or '' != '' ).
+Done building target "CopyFilesToOutputDirectory" in project "SOAPI2.Tests.csproj".
+Target "RunCodeAnalysis" skipped, due to false condition; ('$(RunCodeAnalysis)'=='true' or '$(RunCodeAnalysisOnce)'=='true') was evaluated as (''=='true' or ''=='true').
+Target "PrepareForRun" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "CoreBuild" depends on it):
+Done building target "PrepareForRun" in project "SOAPI2.Tests.csproj".
+Target "UnmanagedRegistration" skipped, due to false condition; ('$(RegisterForComInterop)'=='true' and '$(OutputType)'=='library') was evaluated as (''=='true' and 'Library'=='library').
+Target "_CheckForCompileOutputs" skipped. Previously built successfully.
+Target "_SGenCheckForOutputs" skipped, due to false condition; ('$(_SGenGenerateSerializationAssembliesConfig)' == 'On' or ('@(WebReferenceUrl)'!='' and '$(_SGenGenerateSerializationAssembliesConfig)' == 'Auto')) was evaluated as ('Off' == 'On' or (''!='' and 'Off' == 'Auto')).
+Target "_CleanGetCurrentAndPriorFileWrites" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "IncrementalClean" depends on it):
+Task "ReadLinesFromFile"
+Done executing task "ReadLinesFromFile".
+Task "ConvertToAbsolutePath"
+Done executing task "ConvertToAbsolutePath".
+Task "FindUnderPath"
+  Comparison path is "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests".
+Done executing task "FindUnderPath".
+Task "FindUnderPath"
+  Comparison path is "bin\Debug\".
+Done executing task "FindUnderPath".
+Task "FindUnderPath"
+  Comparison path is "obj\Debug\".
+Done executing task "FindUnderPath".
+Task "RemoveDuplicates"
+Done executing task "RemoveDuplicates".
+Done building target "_CleanGetCurrentAndPriorFileWrites" in project "SOAPI2.Tests.csproj".
+Target "IncrementalClean" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "CoreBuild" depends on it):
+Task "FindUnderPath"
+  Comparison path is "bin\Debug\".
+Done executing task "FindUnderPath".
+Task "FindUnderPath"
+  Comparison path is "obj\Debug\".
+Done executing task "FindUnderPath".
+Task "Delete"
+Done executing task "Delete".
+Task "RemoveDuplicates"
+Done executing task "RemoveDuplicates".
+Task "WriteLinesToFile"
+Done executing task "WriteLinesToFile".
+Done building target "IncrementalClean" in project "SOAPI2.Tests.csproj".
+Target "PostBuildEvent" skipped, due to false condition; ('$(PostBuildEvent)' != '' and ('$(RunPostBuildEvent)' != 'OnOutputUpdated' or '$(_AssemblyTimestampBeforeCompile)' != '$(_AssemblyTimestampAfterCompile)')) was evaluated as ('' != '' and ('' != 'OnOutputUpdated' or '' != '')).
+Target "CoreBuild" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "Build" depends on it):
+Done building target "CoreBuild" in project "SOAPI2.Tests.csproj".
+Target "AfterBuild" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "Build" depends on it):
+Done building target "AfterBuild" in project "SOAPI2.Tests.csproj".
+Target "Build" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "Rebuild" depends on it):
+Done building target "Build" in project "SOAPI2.Tests.csproj".
+Target "AfterRebuild" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (target "Rebuild" depends on it):
+Done building target "AfterRebuild" in project "SOAPI2.Tests.csproj".
+Target "Rebuild" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (entry point):
+Done building target "Rebuild" in project "SOAPI2.Tests.csproj".
+Done Building Project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.Tests\SOAPI2.Tests.csproj" (Rebuild target(s)).
+
+Done executing task "MSBuild".
+Done building target "Rebuild" in project "SOAPI2.sln".
+Done Building Project "C:\dev\CityIndex\SOAPI2\src\SOAPI2.sln" (Rebuild target(s)).
+
+Done executing task "MSBuild".
+Done building target "Build" in project "build.xml".
+Target "CreateReportDirectories" in file "C:\dev\CityIndex\SOAPI2\tools\msbuild\TestsAndMetrics.targets.xml" from project "C:\dev\CityIndex\SOAPI2\src\build.xml" (target "RunTests" depends on it):
+Task "Message"
+  Making the report directories at 'C:\dev\CityIndex\SOAPI2\src\..\reports'.
+Done executing task "Message".
+Using "RemoveDir" task from assembly "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "RemoveDir"
+  Removing directory "C:\dev\CityIndex\SOAPI2\src\..\reports".
+Done executing task "RemoveDir".
+Task "MakeDir"
+  Creating directory "C:\dev\CityIndex\SOAPI2\src\..\reports".
+Done executing task "MakeDir".
+Done building target "CreateReportDirectories" in project "build.xml".
+Target "RunTests" in file "C:\dev\CityIndex\SOAPI2\tools\msbuild\TestsAndMetrics.targets.xml" from project "C:\dev\CityIndex\SOAPI2\src\build.xml" (target "Go" depends on it):
+Using "NUnit" task from assembly "C:\Program Files (x86)\MSBuild\MSBuildCommunityTasks\MSBuild.Community.Tasks.dll".
+Task "NUnit"
+  C:\dev\CityIndex\SOAPI2\src\..\tools\nunit-runner\nunit-console-x86.exe /nologo /noshadow C:\dev\CityIndex\SOAPI2\src\..\src\SOAPI2.Tests\bin\Debug\SOAPI2.Tests.dll /config=Debug /exclude=DependsOnExternalResource /xml=NUnitResults.xml /err=NUnitResults-errors.xml 
+  The "NUnit" task is using "nunit-console-x86.exe" from "C:\dev\CityIndex\SOAPI2\src\..\tools\nunit-runner\nunit-console-x86.exe".
+  ProcessModel: Default    DomainUsage: Single
+  Execution Runtime: Default
+  Excluded categories: DependsOnExternalResource
+  .................N.....N..........................................N.....N.........
+  Tests run: 74, Errors: 0, Failures: 0, Inconclusive: 0, Time: 27.046547 seconds
+    Not run: 4, Invalid: 0, Ignored: 4, Skipped: 0
+  
+  Tests Not Run:
+  1) Ignored : SOAPI2.Tests.AccessTokensFixture
+     requires authentication
+  2) Ignored : SOAPI2.Tests.ApplicationsFixture
+     requires authentication
+  3) Ignored : SOAPI2.Tests.EventsFixture
+     requires authentication
+  4) Ignored : SOAPI2.Tests.InboxFixture
+     requires authentication
+  5) Ignored : SOAPI2.Tests.MeFixture
+     requires authentication
+  6) Ignored : SOAPI2.Tests.OAuthFixture.Test
+  7) Ignored : SOAPI2.Tests.PostsFixture.CanGetPostsByIdsSuggestedEdits
+     need a post id with suggested edits
+  8) Ignored : SOAPI2.Tests.UsersFixture.CanGetUsersByIdsQuestionsFeatured
+     apparently featured questions are transient
+  9) Ignored : SOAPI2.Tests.UsersFixture.CanGetUsersByIdsSuggestedEdits
+     need more input data
+  
+Done executing task "NUnit".
+Done building target "RunTests" in project "build.xml".
+Target "CreateDropDirectories" in file "C:\dev\CityIndex\SOAPI2\tools\msbuild\DropsAndPackaging.targets.xml" from project "C:\dev\CityIndex\SOAPI2\src\build.xml" (target "Package" depends on it):
+Task "Message"
+  Making the drop directories at 'C:\dev\CityIndex\SOAPI2\src\..\dist'.
+Done executing task "Message".
+Task "RemoveDir"
+  Removing directory "C:\dev\CityIndex\SOAPI2\src\..\dist".
+C:\dev\CityIndex\SOAPI2\tools\msbuild\DropsAndPackaging.targets.xml(25,5): warning MSB3231: Unable to remove directory "C:\dev\CityIndex\SOAPI2\src\..\dist". The directory is not empty.\r [C:\dev\CityIndex\SOAPI2\src\build.xml]
+C:\dev\CityIndex\SOAPI2\tools\msbuild\DropsAndPackaging.targets.xml(25,5): warning MSB3231:  [C:\dev\CityIndex\SOAPI2\src\build.xml]
+  The previous error was converted to a warning because the task was called with ContinueOnError=true.
+  Build continuing because "ContinueOnError" on the task "RemoveDir" is set to "true".
+Done executing task "RemoveDir" -- FAILED.
+Task "MakeDir" skipped, due to false condition; (!Exists('$(DropDirectory)')) was evaluated as (!Exists('C:\dev\CityIndex\SOAPI2\src\..\dist')).
+Task "MakeDir" skipped, due to false condition; (!Exists('$(DropLibDirectory)')) was evaluated as (!Exists('C:\dev\CityIndex\SOAPI2\src\..\dist\lib')).
+Task "MakeDir"
+  Creating directory "C:\dev\CityIndex\SOAPI2\src\..\dist\content".
+Done executing task "MakeDir".
+Task "MakeDir"
+  Creating directory "C:\dev\CityIndex\SOAPI2\src\..\dist\tools".
+Done executing task "MakeDir".
+Done building target "CreateDropDirectories" in project "build.xml".
+Target "CopyMSBuildOutputToDropDirectory" in file "C:\dev\CityIndex\SOAPI2\tools\msbuild\DropsAndPackaging.targets.xml" from project "C:\dev\CityIndex\SOAPI2\src\build.xml" (target "Package" depends on it):
+Task "Message"
+  Copying Debug dlls output to C:\dev\CityIndex\SOAPI2\src\..\dist\lib
+Done executing task "Message".
+Task "Copy"
+  Creating directory "C:\dev\CityIndex\SOAPI2\src\..\dist\lib\SOAPI2.Tests\bin\Debug".
+  Copying file from "C:\dev\CityIndex\SOAPI2\src\..\src\SOAPI2.Tests\bin\Debug\Newtonsoft.Json.dll" to "C:\dev\CityIndex\SOAPI2\src\..\dist\lib\SOAPI2.Tests\bin\Debug\Newtonsoft.Json.dll".
+  Copying file from "C:\dev\CityIndex\SOAPI2\src\..\src\SOAPI2.Tests\bin\Debug\Newtonsoft.Json.pdb" to "C:\dev\CityIndex\SOAPI2\src\..\dist\lib\SOAPI2.Tests\bin\Debug\Newtonsoft.Json.pdb".
+  Copying file from "C:\dev\CityIndex\SOAPI2\src\..\src\SOAPI2.Tests\bin\Debug\Newtonsoft.Json.xml" to "C:\dev\CityIndex\SOAPI2\src\..\dist\lib\SOAPI2.Tests\bin\Debug\Newtonsoft.Json.xml".
+  Copying file from "C:\dev\CityIndex\SOAPI2\src\..\src\SOAPI2.Tests\bin\Debug\nunit.framework.dll" to "C:\dev\CityIndex\SOAPI2\src\..\dist\lib\SOAPI2.Tests\bin\Debug\nunit.framework.dll".
+  Copying file from "C:\dev\CityIndex\SOAPI2\src\..\src\SOAPI2.Tests\bin\Debug\nunit.framework.xml" to "C:\dev\CityIndex\SOAPI2\src\..\dist\lib\SOAPI2.Tests\bin\Debug\nunit.framework.xml".
+  Copying file from "C:\dev\CityIndex\SOAPI2\src\..\src\SOAPI2.Tests\bin\Debug\nunit.mocks.dll" to "C:\dev\CityIndex\SOAPI2\src\..\dist\lib\SOAPI2.Tests\bin\Debug\nunit.mocks.dll".
+  Copying file from "C:\dev\CityIndex\SOAPI2\src\..\src\SOAPI2.Tests\bin\Debug\oauth.htm" to "C:\dev\CityIndex\SOAPI2\src\..\dist\lib\SOAPI2.Tests\bin\Debug\oauth.htm".
+  Copying file from "C:\dev\CityIndex\SOAPI2\src\..\src\SOAPI2.Tests\bin\Debug\pnunit.framework.dll" to "C:\dev\CityIndex\SOAPI2\src\..\dist\lib\SOAPI2.Tests\bin\Debug\pnunit.framework.dll".
+  Copying file from "C:\dev\CityIndex\SOAPI2\src\..\src\SOAPI2.Tests\bin\Debug\Salient.JsonClient.35.dll" to "C:\dev\CityIndex\SOAPI2\src\..\dist\lib\SOAPI2.Tests\bin\Debug\Salient.JsonClient.35.dll".
+  Copying file from "C:\dev\CityIndex\SOAPI2\src\..\src\SOAPI2.Tests\bin\Debug\Salient.JsonClient.35.pdb" to "C:\dev\CityIndex\SOAPI2\src\..\dist\lib\SOAPI2.Tests\bin\Debug\Salient.JsonClient.35.pdb".
+  Copying file from "C:\dev\CityIndex\SOAPI2\src\..\src\SOAPI2.Tests\bin\Debug\Salient.ReflectiveLoggingAdapter.35.dll" to "C:\dev\CityIndex\SOAPI2\src\..\dist\lib\SOAPI2.Tests\bin\Debug\Salient.ReflectiveLoggingAdapter.35.dll".
+  Copying file from "C:\dev\CityIndex\SOAPI2\src\..\src\SOAPI2.Tests\bin\Debug\Salient.ReflectiveLoggingAdapter.35.pdb" to "C:\dev\CityIndex\SOAPI2\src\..\dist\lib\SOAPI2.Tests\bin\Debug\Salient.ReflectiveLoggingAdapter.35.pdb".
+  Copying file from "C:\dev\CityIndex\SOAPI2\src\..\src\SOAPI2.Tests\bin\Debug\SOAPI2.dll" to "C:\dev\CityIndex\SOAPI2\src\..\dist\lib\SOAPI2.Tests\bin\Debug\SOAPI2.dll".
+  Copying file from "C:\dev\CityIndex\SOAPI2\src\..\src\SOAPI2.Tests\bin\Debug\SOAPI2.pdb" to "C:\dev\CityIndex\SOAPI2\src\..\dist\lib\SOAPI2.Tests\bin\Debug\SOAPI2.pdb".
+  Copying file from "C:\dev\CityIndex\SOAPI2\src\..\src\SOAPI2.Tests\bin\Debug\SOAPI2.Tests.dll" to "C:\dev\CityIndex\SOAPI2\src\..\dist\lib\SOAPI2.Tests\bin\Debug\SOAPI2.Tests.dll".
+  Copying file from "C:\dev\CityIndex\SOAPI2\src\..\src\SOAPI2.Tests\bin\Debug\SOAPI2.Tests.pdb" to "C:\dev\CityIndex\SOAPI2\src\..\dist\lib\SOAPI2.Tests\bin\Debug\SOAPI2.Tests.pdb".
+  Creating directory "C:\dev\CityIndex\SOAPI2\src\..\dist\lib\SOAPI2\bin\Debug".
+  Copying file from "C:\dev\CityIndex\SOAPI2\src\..\src\SOAPI2\bin\Debug\Newtonsoft.Json.dll" to "C:\dev\CityIndex\SOAPI2\src\..\dist\lib\SOAPI2\bin\Debug\Newtonsoft.Json.dll".
+  Copying file from "C:\dev\CityIndex\SOAPI2\src\..\src\SOAPI2\bin\Debug\Newtonsoft.Json.pdb" to "C:\dev\CityIndex\SOAPI2\src\..\dist\lib\SOAPI2\bin\Debug\Newtonsoft.Json.pdb".
+  Copying file from "C:\dev\CityIndex\SOAPI2\src\..\src\SOAPI2\bin\Debug\Newtonsoft.Json.xml" to "C:\dev\CityIndex\SOAPI2\src\..\dist\lib\SOAPI2\bin\Debug\Newtonsoft.Json.xml".
+  Copying file from "C:\dev\CityIndex\SOAPI2\src\..\src\SOAPI2\bin\Debug\oauth.htm" to "C:\dev\CityIndex\SOAPI2\src\..\dist\lib\SOAPI2\bin\Debug\oauth.htm".
+  Copying file from "C:\dev\CityIndex\SOAPI2\src\..\src\SOAPI2\bin\Debug\Salient.JsonClient.35.dll" to "C:\dev\CityIndex\SOAPI2\src\..\dist\lib\SOAPI2\bin\Debug\Salient.JsonClient.35.dll".
+  Copying file from "C:\dev\CityIndex\SOAPI2\src\..\src\SOAPI2\bin\Debug\Salient.JsonClient.35.pdb" to "C:\dev\CityIndex\SOAPI2\src\..\dist\lib\SOAPI2\bin\Debug\Salient.JsonClient.35.pdb".
+  Copying file from "C:\dev\CityIndex\SOAPI2\src\..\src\SOAPI2\bin\Debug\Salient.ReflectiveLoggingAdapter.35.dll" to "C:\dev\CityIndex\SOAPI2\src\..\dist\lib\SOAPI2\bin\Debug\Salient.ReflectiveLoggingAdapter.35.dll".
+  Copying file from "C:\dev\CityIndex\SOAPI2\src\..\src\SOAPI2\bin\Debug\Salient.ReflectiveLoggingAdapter.35.pdb" to "C:\dev\CityIndex\SOAPI2\src\..\dist\lib\SOAPI2\bin\Debug\Salient.ReflectiveLoggingAdapter.35.pdb".
+  Copying file from "C:\dev\CityIndex\SOAPI2\src\..\src\SOAPI2\bin\Debug\SOAPI2.dll" to "C:\dev\CityIndex\SOAPI2\src\..\dist\lib\SOAPI2\bin\Debug\SOAPI2.dll".
+  Copying file from "C:\dev\CityIndex\SOAPI2\src\..\src\SOAPI2\bin\Debug\SOAPI2.pdb" to "C:\dev\CityIndex\SOAPI2\src\..\dist\lib\SOAPI2\bin\Debug\SOAPI2.pdb".
+Done executing task "Copy".
+Done building target "CopyMSBuildOutputToDropDirectory" in project "build.xml".
+Target "CopyLicenseToAllDirectories" in file "C:\dev\CityIndex\SOAPI2\tools\msbuild\DropsAndPackaging.targets.xml" from project "C:\dev\CityIndex\SOAPI2\src\build.xml" (target "Package" depends on it):
+Task "Message"
+  Copying the License to all drop directories
+Done executing task "Message".
+Task "Copy"
+  Copying file from "C:\dev\CityIndex\SOAPI2\src\..\LICENSE.txt" to "C:\dev\CityIndex\SOAPI2\src\..\dist\LICENSE.txt".
+Done executing task "Copy".
+Done building target "CopyLicenseToAllDirectories" in project "build.xml".
+Target "CopyReportsToDropFolder" in file "C:\dev\CityIndex\SOAPI2\tools\msbuild\DropsAndPackaging.targets.xml" from project "C:\dev\CityIndex\SOAPI2\src\build.xml" (target "Package" depends on it):
+Task "Message"
+  Copying the Reports to drop directories
+Done executing task "Message".
+Task "Copy"
+Done executing task "Copy".
+Done building target "CopyReportsToDropFolder" in project "build.xml".
+Target "Package" in file "C:\dev\CityIndex\SOAPI2\tools\msbuild\DropsAndPackaging.targets.xml" from project "C:\dev\CityIndex\SOAPI2\src\build.xml" (target "Go" depends on it):
+Task "Message"
+  Packaging with NuGet
+Done executing task "Message".
+Task "Copy"
+  Copying file from "C:\dev\CityIndex\SOAPI2\src\..\src\SOAPI2.nuspec" to "C:\dev\CityIndex\SOAPI2\src\..\dist\SOAPI2.nuspec".
+Done executing task "Copy".
+Task "Exec"
+  "C:\Program Files (x86)\nuget\nuget.exe" pack C:\dev\CityIndex\SOAPI2\src\..\dist\SOAPI2.nuspec
+  Attempting to build package from 'SOAPI2.nuspec'.
+  Successfully created package 'C:\dev\CityIndex\SOAPI2\dist\SOAPI2.1.0.0-bleeding-0.nupkg'.
+Done executing task "Exec".
+Done building target "Package" in project "build.xml".
+Target "Go" in project "C:\dev\CityIndex\SOAPI2\src\build.xml" (entry point):
+Done building target "Go" in project "build.xml".
+Done Building Project "C:\dev\CityIndex\SOAPI2\src\build.xml" (default targets).
+
+
+Build succeeded.
+
+"C:\dev\CityIndex\SOAPI2\src\build.xml" (default target) (1) ->
+"C:\dev\CityIndex\SOAPI2\src\SOAPI2.sln" (Rebuild target) (2) ->
+"C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj" (Rebuild target) (3) ->
+(CoreCompile target) -> 
+  Converters\UnixDateTimeConverter.cs(25,6): warning CS3021: 'SOAPI2.Converters.UnixDateTimeConverter' does not need a CLSCompliant attribute because the assembly does not have a CLSCompliant attribute [C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj]
+  Converters\UnixDateTimeConverter.cs(83,6): warning CS3021: 'SOAPI2.Converters.UnixDateTimeOffsetConverter' does not need a CLSCompliant attribute because the assembly does not have a CLSCompliant attribute [C:\dev\CityIndex\SOAPI2\src\SOAPI2\SOAPI2.csproj]
+
+
+"C:\dev\CityIndex\SOAPI2\src\build.xml" (default target) (1) ->
+(CreateDropDirectories target) -> 
+  C:\dev\CityIndex\SOAPI2\tools\msbuild\DropsAndPackaging.targets.xml(25,5): warning MSB3231: Unable to remove directory "C:\dev\CityIndex\SOAPI2\src\..\dist". The directory is not empty.\r [C:\dev\CityIndex\SOAPI2\src\build.xml]
+C:\dev\CityIndex\SOAPI2\tools\msbuild\DropsAndPackaging.targets.xml(25,5): warning MSB3231:  [C:\dev\CityIndex\SOAPI2\src\build.xml]
+
+    3 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:30.93

@@ -28,8 +28,9 @@
                 ReplacementText="AssemblyFileVersion(&quot;$(Major).$(Minor).$(Patch).$(Build)&quot;)"/>
 
     <Message Text="Updating NuGet package version"/>
-    <FileUpdate Files="$(SrcDirectory)\CityIndex.ReflectiveLoggingAdapter.nuspec"
+    <FileUpdate Files="$(SrcDirectory)\SOAPI2.nuspec"
                 Regex="&lt;version&gt;(.*?)&lt;/version&gt;"
                 ReplacementText="&lt;version&gt;$(Major).$(Minor).$(Patch)$(PreRelease)&lt;/version&gt;" />
+             
   </Target>
 </Project>

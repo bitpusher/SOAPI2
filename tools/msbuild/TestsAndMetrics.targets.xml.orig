@@ -4,6 +4,7 @@
     <ReportsDirectory>$(RootDirectory)\reports</ReportsDirectory>
     <SimianEXE>$(RootDirectory)\tools\simian-2.3.31\bin\simian-2.3.31.exe</SimianEXE>
   </PropertyGroup>
+<<<<<<< HEAD
 
   <!-- Runs unit tests -->
   <Target Name="RunTests" DependsOnTargets="CreateReportDirectories">
@@ -17,6 +18,21 @@
          ToolPath="$(RootDirectory)\tools\nunit-runner\"
          ProjectConfiguration="$(Configuration)"
          Assemblies="@(TestAssemblies)" />
+=======
+  
+  <!-- Runs unit tests -->
+  <Target Name="RunTests" DependsOnTargets="CreateReportDirectories">
+
+	<NUnit DisableShadowCopy="True"
+		   Force32Bit="true"
+		   WorkingDirectory="$(ReportsDirectory)"
+		   OutputXmlFile="NUnitResults.xml" 
+		   ErrorOutputFile="NUnitResults-errors.xml"
+		   ExcludeCategory="DependsOnExternalResource"
+		   ToolPath="$(RootDirectory)\tools\nunit-runner\"
+		   ProjectConfiguration="$(Configuration)"
+		   Assemblies="@(TestAssemblies)" />
+>>>>>>> origin/HEAD
   </Target>
 
   <Target Name="CreateReportDirectories">
