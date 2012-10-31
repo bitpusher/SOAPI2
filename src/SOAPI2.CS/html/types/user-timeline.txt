@@ -1,0 +1,325 @@
+
+
+
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head> 
+<title> user_timeline  - Stack Exchange API</title>
+<link rel="stylesheet" href="https://api-v2cdn.sstatic.net/all.css?v=a7e08e89c0d7">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="https://api-v2cdn.sstatic.net/js/console.js?v=f34ed6079683"></script>
+    <script type="text/javascript" src="https://api-v2cdn.sstatic.net/js/prettify.js?v=c1fd13ec35f7"></script>
+    <script type="text/javascript" src="https://api-v2cdn.sstatic.net/js/type.js?v=a69685db234d"></script>
+
+</head>
+<body>
+    <div class="intro">
+        <div class="wrapper">
+            <a href="/" class="logo">Stack Exchange</a>
+        
+            <div class="nav">
+                <ul>
+                    <li><a href="/docs">Documentation</a></li>
+                </ul>
+            </div>
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+    <div class="content">
+        <div class="wrapper">
+            <div class="mainbar">
+            
+
+
+
+
+<div class="subheader">
+    <h1>Type  user_timeline </h1>
+</div>
+
+<h2>Discussion</h2>
+<div class="indented">
+    
+    <p>This type describes public actions a <a href="/docs/types/user">User</a> has taken.</p>
+
+</div>
+
+<h2>Fields</h2>
+<div class="indented">
+    
+    
+<div class="method">
+    <div class="method-name">
+        <span class="included" title="this field is included in the default filter"></span> badge_id 
+    </div>
+    <div class="method-description">
+        integer, refers to a <a href="/docs/types/badge">badge</a>
+        
+        <br /><a href="/docs/absent-fields">may be absent</a>
+    </div>
+    <br style="clear: both;" />
+</div>
+<div class="method">
+    <div class="method-name">
+        <span class="included" title="this field is included in the default filter"></span> comment_id 
+    </div>
+    <div class="method-description">
+        integer, refers to a <a href="/docs/types/comment">comment</a>
+        
+        <br /><a href="/docs/absent-fields">may be absent</a>
+    </div>
+    <br style="clear: both;" />
+</div>
+<div class="method">
+    <div class="method-name">
+        <span class="included" title="this field is included in the default filter"></span> creation_date 
+    </div>
+    <div class="method-description">
+        <a href="/docs/dates">date</a>
+        
+        
+    </div>
+    <br style="clear: both;" />
+</div>
+<div class="method">
+    <div class="method-name">
+        <span class="included" title="this field is included in the default filter"></span> detail 
+    </div>
+    <div class="method-description">
+        string
+        <br />unchanged in <a href="/docs/filters">unsafe filters</a>
+        <br /><a href="/docs/absent-fields">may be absent</a>
+    </div>
+    <br style="clear: both;" />
+</div>
+<div class="method">
+    <div class="method-name">
+        <span class="excluded" title="this field is excluded in the default filter"></span> link 
+    </div>
+    <div class="method-description">
+        string
+        <br />unchanged in <a href="/docs/filters">unsafe filters</a>
+        
+    </div>
+    <br style="clear: both;" />
+</div>
+<div class="method">
+    <div class="method-name">
+        <span class="included" title="this field is included in the default filter"></span> post_id 
+    </div>
+    <div class="method-description">
+        integer, refers to a <a href="/docs/types/post">post</a>
+        
+        <br /><a href="/docs/absent-fields">may be absent</a>
+    </div>
+    <br style="clear: both;" />
+</div>
+<div class="method">
+    <div class="method-name">
+        <span class="included" title="this field is included in the default filter"></span> post_type 
+    </div>
+    <div class="method-description">
+        one of <code>question</code>, or <code>answer</code>
+        
+        
+    </div>
+    <br style="clear: both;" />
+</div>
+<div class="method">
+    <div class="method-name">
+        <span class="included" title="this field is included in the default filter"></span> suggested_edit_id 
+    </div>
+    <div class="method-description">
+        integer, refers to a <a href="/docs/types/suggested-edit">suggested_edit</a>
+        
+        <br /><a href="/docs/absent-fields">may be absent</a>
+    </div>
+    <br style="clear: both;" />
+</div>
+<div class="method">
+    <div class="method-name">
+        <span class="included" title="this field is included in the default filter"></span> timeline_type 
+    </div>
+    <div class="method-description">
+        one of <code>commented</code>, <code>asked</code>, <code>answered</code>, <code>badge</code>, <code>revision</code>, <code>accepted</code>, <code>reviewed</code>, or <code>suggested</code>
+        
+        
+    </div>
+    <br style="clear: both;" />
+</div>
+<div class="method">
+    <div class="method-name">
+        <span class="included" title="this field is included in the default filter"></span> title 
+    </div>
+    <div class="method-description">
+        string
+        
+        <br /><a href="/docs/absent-fields">may be absent</a>
+    </div>
+    <br style="clear: both;" />
+</div>
+<div class="method">
+    <div class="method-name">
+        <span class="included" title="this field is included in the default filter"></span> user_id 
+    </div>
+    <div class="method-description">
+        integer, refers to a <a href="/docs/types/user">user</a>
+        
+        
+    </div>
+    <br style="clear: both;" />
+</div>
+
+</div>
+
+<div class="indented">
+    <p>
+        Fields marked with <span class="included"></span> are included in the default filter, those marked with 
+        <span class="excluded"></span> are excluded in the default filter.
+    </p>
+</div>
+
+<h2>Examples</h2>
+<div class="indented">
+    
+    
+
+<div class="example">
+    <h3><span class="right-arrow">&#9658;</span> <span class="example-header">Accepted An Answer</span></h3>
+
+    <div class="result dno">
+        <pre class="prettyprint lang-js"><code>{"creation_date":1350913743,"post_type":"answer","timeline_type":"accepted","user_id":1,"post_id":2,"title":"Question Title","link":"http://example.stackexchange.com/questions/1/question-title/2#2"}</code></pre>
+    </div>
+</div>
+
+     
+
+<div class="example">
+    <h3><span class="right-arrow">&#9658;</span> <span class="example-header">Posted An Answer</span></h3>
+
+    <div class="result dno">
+        <pre class="prettyprint lang-js"><code>{"creation_date":1350913743,"post_type":"answer","timeline_type":"answered","user_id":1,"post_id":2,"title":"Question Title","link":"http://example.stackexchange.com/questions/1/question-title/2#2"}</code></pre>
+    </div>
+</div>
+
+     
+
+<div class="example">
+    <h3><span class="right-arrow">&#9658;</span> <span class="example-header">Asked A Question</span></h3>
+
+    <div class="result dno">
+        <pre class="prettyprint lang-js"><code>{"creation_date":1350913743,"post_type":"question","timeline_type":"asked","user_id":1,"post_id":1,"title":"Question Title","link":"http://example.stackexchange.com/questions/1/question-title"}</code></pre>
+    </div>
+</div>
+
+     
+
+<div class="example">
+    <h3><span class="right-arrow">&#9658;</span> <span class="example-header">Earned A Badge</span></h3>
+
+    <div class="result dno">
+        <pre class="prettyprint lang-js"><code>{"creation_date":1350913743,"post_type":"question","timeline_type":"badge","user_id":1,"post_id":1,"badge_id":1,"title":"Question Title","detail":"Badge Name","link":"http://example.stackexchange.com/questions/1/question-title"}</code></pre>
+    </div>
+</div>
+
+     
+
+<div class="example">
+    <h3><span class="right-arrow">&#9658;</span> <span class="example-header">Posted A Comment</span></h3>
+
+    <div class="result dno">
+        <pre class="prettyprint lang-js"><code>{"creation_date":1350913743,"post_type":"question","timeline_type":"commented","user_id":1,"post_id":1,"comment_id":1,"title":"Question Title","detail":"Comment Body","link":"http://example.stackexchange.com/questions/1/question-title#comment1_1"}</code></pre>
+    </div>
+</div>
+
+     
+
+<div class="example">
+    <h3><span class="right-arrow">&#9658;</span> <span class="example-header">Reviewed A Suggested Edit</span></h3>
+
+    <div class="result dno">
+        <pre class="prettyprint lang-js"><code>{"creation_date":1350913743,"post_type":"question","timeline_type":"reviewed","user_id":1,"post_id":1,"suggested_edit_id":1,"title":"Question Title","detail":"Suggested Edit Comment","link":"http://example.stackexchange.com/suggested-edit/1"}</code></pre>
+    </div>
+</div>
+
+     
+
+<div class="example">
+    <h3><span class="right-arrow">&#9658;</span> <span class="example-header">Edited A Post</span></h3>
+
+    <div class="result dno">
+        <pre class="prettyprint lang-js"><code>{"creation_date":1350913743,"post_type":"question","timeline_type":"revision","user_id":1,"post_id":1,"title":"Question Title","detail":"Edit Comment","link":"http://example.stackexchange.com/questions/1/question-title"}</code></pre>
+    </div>
+</div>
+
+     
+
+<div class="example">
+    <h3><span class="right-arrow">&#9658;</span> <span class="example-header">Suggested An Edit</span></h3>
+
+    <div class="result dno">
+        <pre class="prettyprint lang-js"><code>{"creation_date":1350913743,"post_type":"question","timeline_type":"suggested","user_id":1,"post_id":1,"suggested_edit_id":1,"title":"Question Title","detail":"pending","link":"http://example.stackexchange.com/suggested-edit/1"}</code></pre>
+    </div>
+</div>
+
+</div>
+
+<h2>Methods That Return This Type</h2>
+<div class="indented">
+    
+    <a href='/docs/timeline-on-users'>users/{ids}/timeline</a> <br><a href='/docs/me-timeline'>me/timeline</a> 
+
+</div>
+            </div>
+            
+
+<div class="sidebar">
+    <div class="module help">
+        <ul>
+            <li><a href="/docs/authentication">Authentication</a></li>
+            <li><a href="/docs/js-lib">Javascript SDK</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/vectors">Batching Requests</a></li>
+            <li><a href="/docs/min-max">Complex Queries</a></li>
+            <li><a href="/docs/filters">Filters</a></li>
+            <li><a href="/docs/paging">Paging</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/dates">Dates</a></li>
+            <li><a href="/docs/numbers">Numbers</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/compression">Compression</a></li>
+            <li><a href="/docs/error-handling">Error Handling</a></li>
+            <li><a href="/docs/wrapper">Response Wrapper</a></li>
+            <li><a href="/docs/throttle">Rate Limiting</a></li>
+            <li><a href="/docs/user-types">Users</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/write">Write</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/change-log">Change Log</a></li>
+            <li class="list-separator"></li>
+            <li><a href="http://stackexchange.com/legal/api-terms-of-use">Terms Of Use</a></li>
+        </ul>
+    </div>
+</div>
+            <br style="clear: both;" />
+        </div>
+        
+        <div class="bottom"">
+            <div class="bottom-wrapper">
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+    <div class="wrapper">
+        <p class="footer-links"><a href="http://stackexchange.com/about">about</a> <a href="http://blog.stackexchange.com">blog</a> <a href="http://stackexchange.com/legal/api-terms-of-use">terms of use</a> <a href="mailto:team+api@stackexchange.com">contact us</a> <a href="http://stackapps.com/">feedback always welcome</a></p>
+        <p style="margin-bottom: 0;">site design / logo &copy; 2012 stack exchange, inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a></p>
+    </div>
+    <br style="clear: both;" />
+</div>
+</body>
+</html>

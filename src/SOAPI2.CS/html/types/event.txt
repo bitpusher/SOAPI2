@@ -1,0 +1,233 @@
+
+
+
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head> 
+<title> event  - Stack Exchange API</title>
+<link rel="stylesheet" href="https://api-v2cdn.sstatic.net/all.css?v=a7e08e89c0d7">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="https://api-v2cdn.sstatic.net/js/console.js?v=f34ed6079683"></script>
+    <script type="text/javascript" src="https://api-v2cdn.sstatic.net/js/prettify.js?v=c1fd13ec35f7"></script>
+    <script type="text/javascript" src="https://api-v2cdn.sstatic.net/js/type.js?v=a69685db234d"></script>
+
+</head>
+<body>
+    <div class="intro">
+        <div class="wrapper">
+            <a href="/" class="logo">Stack Exchange</a>
+        
+            <div class="nav">
+                <ul>
+                    <li><a href="/docs">Documentation</a></li>
+                </ul>
+            </div>
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+    <div class="content">
+        <div class="wrapper">
+            <div class="mainbar">
+            
+
+
+
+
+<div class="subheader">
+    <h1>Type  event </h1>
+</div>
+
+<h2>Discussion</h2>
+<div class="indented">
+    
+    <p>This type describes an event that has recently occurred on a Stack Exchange site.</p>
+
+    <p>A minimal ammount of information is present in these events for scaling purposes.  It is expected
+    that most applications will make follow up calls to the API to "flesh out" the event objects for their
+    own purposes.</p>
+
+</div>
+
+<h2>Fields</h2>
+<div class="indented">
+    
+    
+<div class="method">
+    <div class="method-name">
+        <span class="included" title="this field is included in the default filter"></span> creation_date 
+    </div>
+    <div class="method-description">
+        <a href="/docs/dates">date</a>
+        
+        
+    </div>
+    <br style="clear: both;" />
+</div>
+<div class="method">
+    <div class="method-name">
+        <span class="included" title="this field is included in the default filter"></span> event_id 
+    </div>
+    <div class="method-description">
+        the id of the object (answer, comment, question, or user) the event describes
+        
+        
+    </div>
+    <br style="clear: both;" />
+</div>
+<div class="method">
+    <div class="method-name">
+        <span class="included" title="this field is included in the default filter"></span> event_type 
+    </div>
+    <div class="method-description">
+        one of <code>question_posted</code>, <code>answer_posted</code>, <code>comment_posted</code>, <code>post_edited</code>, or <code>user_created</code>
+        
+        
+    </div>
+    <br style="clear: both;" />
+</div>
+<div class="method">
+    <div class="method-name">
+        <span class="excluded" title="this field is excluded in the default filter"></span> excerpt 
+    </div>
+    <div class="method-description">
+        string
+        <br />unchanged in <a href="/docs/filters">unsafe filters</a>
+        
+    </div>
+    <br style="clear: both;" />
+</div>
+<div class="method">
+    <div class="method-name">
+        <span class="excluded" title="this field is excluded in the default filter"></span> link 
+    </div>
+    <div class="method-description">
+        string
+        <br />unchanged in <a href="/docs/filters">unsafe filters</a>
+        
+    </div>
+    <br style="clear: both;" />
+</div>
+
+</div>
+
+<div class="indented">
+    <p>
+        Fields marked with <span class="included"></span> are included in the default filter, those marked with 
+        <span class="excluded"></span> are excluded in the default filter.
+    </p>
+</div>
+
+<h2>Examples</h2>
+<div class="indented">
+    
+    
+
+<div class="example">
+    <h3><span class="right-arrow">&#9658;</span> <span class="example-header">Comment Posted</span></h3>
+
+    <div class="result dno">
+        <pre class="prettyprint lang-js"><code>{"event_type":"comment_posted","event_id":1,"creation_date":1350906815,"link":"http://example.stackexchange.com/questions/1/example-title#comment1_1","excerpt":"part of the example comment"}</code></pre>
+    </div>
+</div>
+
+     
+
+<div class="example">
+    <h3><span class="right-arrow">&#9658;</span> <span class="example-header">Answer Post</span></h3>
+
+    <div class="result dno">
+        <pre class="prettyprint lang-js"><code>{"event_type":"answer_posted","event_id":1,"creation_date":1350906815,"link":"http://example.stackexchange.com/questions/1/example-title/1#1","excerpt":"part of the example answer"}</code></pre>
+    </div>
+</div>
+
+     
+
+<div class="example">
+    <h3><span class="right-arrow">&#9658;</span> <span class="example-header">Post Edited</span></h3>
+
+    <div class="result dno">
+        <pre class="prettyprint lang-js"><code>{"event_type":"post_edited","event_id":1,"creation_date":1350906815,"link":"http://example.stackexchange.com/questions/1/example-title","excerpt":"part of the example post"}</code></pre>
+    </div>
+</div>
+
+    
+
+<div class="example">
+    <h3><span class="right-arrow">&#9658;</span> <span class="example-header">Question Post</span></h3>
+
+    <div class="result dno">
+        <pre class="prettyprint lang-js"><code>{"event_type":"question_posted","event_id":1,"creation_date":1350906815,"link":"http://example.stackexchange.com/questions/1/example-title/1","excerpt":"part of the example question"}</code></pre>
+    </div>
+</div>
+
+    
+
+<div class="example">
+    <h3><span class="right-arrow">&#9658;</span> <span class="example-header">User Created</span></h3>
+
+    <div class="result dno">
+        <pre class="prettyprint lang-js"><code>{"event_type":"user_created","event_id":1,"creation_date":1350906815,"link":"http://example.stackexchange.com/users/1/example-user-name","excerpt":"Example User Name"}</code></pre>
+    </div>
+</div>
+
+</div>
+
+<h2>Methods That Return This Type</h2>
+<div class="indented">
+    
+    <a href='/docs/events'>events</a> 
+
+</div>
+            </div>
+            
+
+<div class="sidebar">
+    <div class="module help">
+        <ul>
+            <li><a href="/docs/authentication">Authentication</a></li>
+            <li><a href="/docs/js-lib">Javascript SDK</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/vectors">Batching Requests</a></li>
+            <li><a href="/docs/min-max">Complex Queries</a></li>
+            <li><a href="/docs/filters">Filters</a></li>
+            <li><a href="/docs/paging">Paging</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/dates">Dates</a></li>
+            <li><a href="/docs/numbers">Numbers</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/compression">Compression</a></li>
+            <li><a href="/docs/error-handling">Error Handling</a></li>
+            <li><a href="/docs/wrapper">Response Wrapper</a></li>
+            <li><a href="/docs/throttle">Rate Limiting</a></li>
+            <li><a href="/docs/user-types">Users</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/write">Write</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/change-log">Change Log</a></li>
+            <li class="list-separator"></li>
+            <li><a href="http://stackexchange.com/legal/api-terms-of-use">Terms Of Use</a></li>
+        </ul>
+    </div>
+</div>
+            <br style="clear: both;" />
+        </div>
+        
+        <div class="bottom"">
+            <div class="bottom-wrapper">
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+    <div class="wrapper">
+        <p class="footer-links"><a href="http://stackexchange.com/about">about</a> <a href="http://blog.stackexchange.com">blog</a> <a href="http://stackexchange.com/legal/api-terms-of-use">terms of use</a> <a href="mailto:team+api@stackexchange.com">contact us</a> <a href="http://stackapps.com/">feedback always welcome</a></p>
+        <p style="margin-bottom: 0;">site design / logo &copy; 2012 stack exchange, inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a></p>
+    </div>
+    <br style="clear: both;" />
+</div>
+</body>
+</html>

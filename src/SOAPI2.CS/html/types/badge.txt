@@ -1,0 +1,247 @@
+
+
+
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head> 
+<title> badge  - Stack Exchange API</title>
+<link rel="stylesheet" href="https://api-v2cdn.sstatic.net/all.css?v=a7e08e89c0d7">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="https://api-v2cdn.sstatic.net/js/console.js?v=f34ed6079683"></script>
+    <script type="text/javascript" src="https://api-v2cdn.sstatic.net/js/prettify.js?v=c1fd13ec35f7"></script>
+    <script type="text/javascript" src="https://api-v2cdn.sstatic.net/js/type.js?v=a69685db234d"></script>
+
+</head>
+<body>
+    <div class="intro">
+        <div class="wrapper">
+            <a href="/" class="logo">Stack Exchange</a>
+        
+            <div class="nav">
+                <ul>
+                    <li><a href="/docs">Documentation</a></li>
+                </ul>
+            </div>
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+    <div class="content">
+        <div class="wrapper">
+            <div class="mainbar">
+            
+
+
+
+
+<div class="subheader">
+    <h1>Type  badge </h1>
+</div>
+
+<h2>Discussion</h2>
+<div class="indented">
+    
+    <p>This type represents a badge on a Stack Exchange site.</p>
+
+    <p>Some badges, like Autobiographer, are held in common across all Stack Exchange sites.  Others, like most tag badges, vary
+    on a site by site basis.</p>
+
+    <p>Remember that ids are <i>never</i> guaranteed to be the same between sites, even if a badge exists on both sites.</p>
+
+</div>
+
+<h2>Fields</h2>
+<div class="indented">
+    
+    
+<div class="method">
+    <div class="method-name">
+        <span class="included" title="this field is included in the default filter"></span> award_count 
+    </div>
+    <div class="method-description">
+        integer
+        
+        
+    </div>
+    <br style="clear: both;" />
+</div>
+<div class="method">
+    <div class="method-name">
+        <span class="included" title="this field is included in the default filter"></span> badge_id 
+    </div>
+    <div class="method-description">
+        integer, refers to a <a href="/docs/types/badge">badge</a>
+        
+        
+    </div>
+    <br style="clear: both;" />
+</div>
+<div class="method">
+    <div class="method-name">
+        <span class="included" title="this field is included in the default filter"></span> badge_type 
+    </div>
+    <div class="method-description">
+        one of <code>named</code>, or <code>tag_based</code>
+        
+        
+    </div>
+    <br style="clear: both;" />
+</div>
+<div class="method">
+    <div class="method-name">
+        <span class="excluded" title="this field is excluded in the default filter"></span> description 
+    </div>
+    <div class="method-description">
+        string
+        <br />unchanged in <a href="/docs/filters">unsafe filters</a>
+        
+    </div>
+    <br style="clear: both;" />
+</div>
+<div class="method">
+    <div class="method-name">
+        <span class="included" title="this field is included in the default filter"></span> link 
+    </div>
+    <div class="method-description">
+        string
+        <br />unchanged in <a href="/docs/filters">unsafe filters</a>
+        
+    </div>
+    <br style="clear: both;" />
+</div>
+<div class="method">
+    <div class="method-name">
+        <span class="included" title="this field is included in the default filter"></span> name 
+    </div>
+    <div class="method-description">
+        string
+        
+        
+    </div>
+    <br style="clear: both;" />
+</div>
+<div class="method">
+    <div class="method-name">
+        <span class="included" title="this field is included in the default filter"></span> rank 
+    </div>
+    <div class="method-description">
+        one of <code>gold</code>, <code>silver</code>, or <code>bronze</code>
+        
+        
+    </div>
+    <br style="clear: both;" />
+</div>
+<div class="method">
+    <div class="method-name">
+        <span class="included" title="this field is included in the default filter"></span> user 
+    </div>
+    <div class="method-description">
+        <a href="/docs/types/shallow-user">shallow_user</a>
+        
+        <br /><a href="/docs/absent-fields">may be absent</a>
+    </div>
+    <br style="clear: both;" />
+</div>
+
+</div>
+
+<div class="indented">
+    <p>
+        Fields marked with <span class="included"></span> are included in the default filter, those marked with 
+        <span class="excluded"></span> are excluded in the default filter.
+    </p>
+</div>
+
+<h2>Examples</h2>
+<div class="indented">
+    
+    
+
+<div class="example">
+    <h3><span class="right-arrow">&#9658;</span> <span class="example-header">Named Badge</span></h3>
+
+    <div class="result dno">
+        <pre class="prettyprint lang-js"><code>{"badge_id":94,"rank":"silver","name":"Pundit","description":"Left 10 comments with a score of 5 or more","award_count":2000,"badge_type":"named","link":"http://example.stackexchange.com/badges/94/pundit"}</code></pre>
+    </div>
+</div>
+
+    
+
+<div class="example">
+    <h3><span class="right-arrow">&#9658;</span> <span class="example-header">Tag Badge</span></h3>
+
+    <div class="result dno">
+        <pre class="prettyprint lang-js"><code>{"badge_id":450,"rank":"bronze","name":"xna","description":"Earned 100 upvotes for at least 20 answers in the xna tag","award_count":20,"badge_type":"tag_based","link":"http://example.stackexchange.com/badges/450/xna"}</code></pre>
+    </div>
+</div>
+
+    
+
+<div class="example">
+    <h3><span class="right-arrow">&#9658;</span> <span class="example-header">Awarded Badge</span></h3>
+
+    <div class="result dno">
+        <pre class="prettyprint lang-js"><code>{"badge_id":94,"rank":"silver","name":"Pundit","description":"Left 10 comments with a score of 5 or more","award_count":2000,"badge_type":"named","user":{"user_id":1,"display_name":"Example User","reputation":9001,"user_type":"registered","profile_image":"http://www.gravatar.com/avatar/a007be5a61f6aa8f3e85ae2fc18dd66e?d=identicon&r=PG","link":"http://example.stackexchange.com/users/1/example-user","accept_rate":100},"link":"http://example.stackexchange.com/badges/94/pundit"}</code></pre>
+    </div>
+</div>
+
+</div>
+
+<h2>Methods That Return This Type</h2>
+<div class="indented">
+    
+    <a href='/docs/badges'>badges</a> <br><a href='/docs/badges-by-name'>badges/name</a> <br><a href='/docs/badges-by-tag'>badges/tags</a> <br><a href='/docs/badges-by-ids'>badges/{ids}</a> <br><a href='/docs/badge-recipients'>badges/recipients</a> <br><a href='/docs/badge-recipients-by-ids'>badges/{ids}/recipients</a> <br><a href='/docs/badges-on-users'>users/{ids}/badges</a> <br><a href='/docs/me-badges'>me/badges</a> 
+
+</div>
+            </div>
+            
+
+<div class="sidebar">
+    <div class="module help">
+        <ul>
+            <li><a href="/docs/authentication">Authentication</a></li>
+            <li><a href="/docs/js-lib">Javascript SDK</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/vectors">Batching Requests</a></li>
+            <li><a href="/docs/min-max">Complex Queries</a></li>
+            <li><a href="/docs/filters">Filters</a></li>
+            <li><a href="/docs/paging">Paging</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/dates">Dates</a></li>
+            <li><a href="/docs/numbers">Numbers</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/compression">Compression</a></li>
+            <li><a href="/docs/error-handling">Error Handling</a></li>
+            <li><a href="/docs/wrapper">Response Wrapper</a></li>
+            <li><a href="/docs/throttle">Rate Limiting</a></li>
+            <li><a href="/docs/user-types">Users</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/write">Write</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/change-log">Change Log</a></li>
+            <li class="list-separator"></li>
+            <li><a href="http://stackexchange.com/legal/api-terms-of-use">Terms Of Use</a></li>
+        </ul>
+    </div>
+</div>
+            <br style="clear: both;" />
+        </div>
+        
+        <div class="bottom"">
+            <div class="bottom-wrapper">
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+    <div class="wrapper">
+        <p class="footer-links"><a href="http://stackexchange.com/about">about</a> <a href="http://blog.stackexchange.com">blog</a> <a href="http://stackexchange.com/legal/api-terms-of-use">terms of use</a> <a href="mailto:team+api@stackexchange.com">contact us</a> <a href="http://stackapps.com/">feedback always welcome</a></p>
+        <p style="margin-bottom: 0;">site design / logo &copy; 2012 stack exchange, inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a></p>
+    </div>
+    <br style="clear: both;" />
+</div>
+</body>
+</html>

@@ -1,0 +1,343 @@
+
+
+
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head> 
+<title> answer  - Stack Exchange API</title>
+<link rel="stylesheet" href="https://api-v2cdn.sstatic.net/all.css?v=a7e08e89c0d7">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="https://api-v2cdn.sstatic.net/js/console.js?v=f34ed6079683"></script>
+    <script type="text/javascript" src="https://api-v2cdn.sstatic.net/js/prettify.js?v=c1fd13ec35f7"></script>
+    <script type="text/javascript" src="https://api-v2cdn.sstatic.net/js/type.js?v=a69685db234d"></script>
+
+</head>
+<body>
+    <div class="intro">
+        <div class="wrapper">
+            <a href="/" class="logo">Stack Exchange</a>
+        
+            <div class="nav">
+                <ul>
+                    <li><a href="/docs">Documentation</a></li>
+                </ul>
+            </div>
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+    <div class="content">
+        <div class="wrapper">
+            <div class="mainbar">
+            
+
+
+
+
+<div class="subheader">
+    <h1>Type  answer </h1>
+</div>
+
+<h2>Discussion</h2>
+<div class="indented">
+    
+    <p>This type represents an answer to a question on one of the Stack Exchange sites, such as this famous <a href="http://stackoverflow.com/questions/1732348/regex-match-open-tags-except-xhtml-self-contained-tags/1732454#1732454">answer</a> of <a href="http://stackoverflow.com/users/18936/bobince">bobince's</a>.</p>
+
+    <p>As on the question page, it is possible to fetch the comments on an answer as part of a call; though this is not done by default.</p>
+
+</div>
+
+<h2>Fields</h2>
+<div class="indented">
+    
+    
+<div class="method">
+    <div class="method-name">
+        <span class="included" title="this field is included in the default filter"></span> answer_id 
+    </div>
+    <div class="method-description">
+        integer, refers to an <a href="/docs/types/answer">answer</a>
+        
+        
+    </div>
+    <br style="clear: both;" />
+</div>
+<div class="method">
+    <div class="method-name">
+        <span class="excluded" title="this field is excluded in the default filter"></span> body 
+    </div>
+    <div class="method-description">
+        string
+        <br />unchanged in <a href="/docs/filters">unsafe filters</a>
+        
+    </div>
+    <br style="clear: both;" />
+</div>
+<div class="method">
+    <div class="method-name">
+        <span class="excluded" title="this field is excluded in the default filter"></span> comments 
+    </div>
+    <div class="method-description">
+        an array of <a href="/docs/types/comment">comments</a>
+        
+        <br /><a href="/docs/absent-fields">may be absent</a>
+    </div>
+    <br style="clear: both;" />
+</div>
+<div class="method">
+    <div class="method-name">
+        <span class="included" title="this field is included in the default filter"></span> community_owned_date 
+    </div>
+    <div class="method-description">
+        <a href="/docs/dates">date</a>
+        
+        <br /><a href="/docs/absent-fields">may be absent</a>
+    </div>
+    <br style="clear: both;" />
+</div>
+<div class="method">
+    <div class="method-name">
+        <span class="included" title="this field is included in the default filter"></span> creation_date 
+    </div>
+    <div class="method-description">
+        <a href="/docs/dates">date</a>
+        
+        
+    </div>
+    <br style="clear: both;" />
+</div>
+<div class="method">
+    <div class="method-name">
+        <span class="excluded" title="this field is excluded in the default filter"></span> down_vote_count 
+    </div>
+    <div class="method-description">
+        integer
+        
+        
+    </div>
+    <br style="clear: both;" />
+</div>
+<div class="method">
+    <div class="method-name">
+        <span class="included" title="this field is included in the default filter"></span> is_accepted 
+    </div>
+    <div class="method-description">
+        boolean
+        
+        
+    </div>
+    <br style="clear: both;" />
+</div>
+<div class="method">
+    <div class="method-name">
+        <span class="included" title="this field is included in the default filter"></span> last_activity_date 
+    </div>
+    <div class="method-description">
+        <a href="/docs/dates">date</a>
+        
+        
+    </div>
+    <br style="clear: both;" />
+</div>
+<div class="method">
+    <div class="method-name">
+        <span class="included" title="this field is included in the default filter"></span> last_edit_date 
+    </div>
+    <div class="method-description">
+        <a href="/docs/dates">date</a>
+        
+        <br /><a href="/docs/absent-fields">may be absent</a>
+    </div>
+    <br style="clear: both;" />
+</div>
+<div class="method">
+    <div class="method-name">
+        <span class="excluded" title="this field is excluded in the default filter"></span> link 
+    </div>
+    <div class="method-description">
+        string
+        <br />unchanged in <a href="/docs/filters">unsafe filters</a>
+        
+    </div>
+    <br style="clear: both;" />
+</div>
+<div class="method">
+    <div class="method-name">
+        <span class="included" title="this field is included in the default filter"></span> locked_date 
+    </div>
+    <div class="method-description">
+        <a href="/docs/dates">date</a>
+        
+        <br /><a href="/docs/absent-fields">may be absent</a>
+    </div>
+    <br style="clear: both;" />
+</div>
+<div class="method">
+    <div class="method-name">
+        <span class="included" title="this field is included in the default filter"></span> owner 
+    </div>
+    <div class="method-description">
+        <a href="/docs/types/shallow-user">shallow_user</a>
+        
+        <br /><a href="/docs/absent-fields">may be absent</a>
+    </div>
+    <br style="clear: both;" />
+</div>
+<div class="method">
+    <div class="method-name">
+        <span class="included" title="this field is included in the default filter"></span> question_id 
+    </div>
+    <div class="method-description">
+        integer, refers to a <a href="/docs/types/question">question</a>
+        
+        
+    </div>
+    <br style="clear: both;" />
+</div>
+<div class="method">
+    <div class="method-name">
+        <span class="included" title="this field is included in the default filter"></span> score 
+    </div>
+    <div class="method-description">
+        integer
+        
+        
+    </div>
+    <br style="clear: both;" />
+</div>
+<div class="method">
+    <div class="method-name">
+        <span class="excluded" title="this field is excluded in the default filter"></span> tags <span class="min-version" title="introduced in version 2.1">2.1</span>
+    </div>
+    <div class="method-description">
+        an array of strings
+        
+        
+    </div>
+    <br style="clear: both;" />
+</div>
+<div class="method">
+    <div class="method-name">
+        <span class="excluded" title="this field is excluded in the default filter"></span> title 
+    </div>
+    <div class="method-description">
+        string
+        
+        
+    </div>
+    <br style="clear: both;" />
+</div>
+<div class="method">
+    <div class="method-name">
+        <span class="excluded" title="this field is excluded in the default filter"></span> up_vote_count 
+    </div>
+    <div class="method-description">
+        integer
+        
+        
+    </div>
+    <br style="clear: both;" />
+</div>
+
+</div>
+
+<div class="indented">
+    <p>
+        Fields marked with <span class="included"></span> are included in the default filter, those marked with 
+        <span class="excluded"></span> are excluded in the default filter.
+    </p>
+</div>
+
+<h2>Examples</h2>
+<div class="indented">
+    
+    
+
+<div class="example">
+    <h3><span class="right-arrow">&#9658;</span> <span class="example-header">Normal Answer</span></h3>
+
+    <div class="result dno">
+        <pre class="prettyprint lang-js"><code>{"question_id":1234,"answer_id":5678,"creation_date":1350827335,"last_edit_date":1350895735,"last_activity_date":1350870535,"score":1,"is_accepted":false,"body":"An example post body","owner":{"user_id":1,"display_name":"Example User","reputation":9001,"user_type":"registered","profile_image":"http://www.gravatar.com/avatar/a007be5a61f6aa8f3e85ae2fc18dd66e?d=identicon&r=PG","link":"http://example.stackexchange.com/users/1/example-user","accept_rate":55},"title":"An example post title","up_vote_count":3,"down_vote_count":2,"link":"http://example.stackexchange.com/questions/1234/an-example-post-title/5678#5678"}</code></pre>
+    </div>
+</div>
+
+    
+
+<div class="example">
+    <h3><span class="right-arrow">&#9658;</span> <span class="example-header">Locked Answer</span></h3>
+
+    <div class="result dno">
+        <pre class="prettyprint lang-js"><code>{"question_id":1234,"answer_id":5678,"locked_date":1350892135,"creation_date":1350827335,"last_activity_date":1350870535,"score":1,"is_accepted":false,"body":"An example post body","owner":{"user_id":1,"display_name":"Example User","reputation":9001,"user_type":"registered","profile_image":"http://www.gravatar.com/avatar/a007be5a61f6aa8f3e85ae2fc18dd66e?d=identicon&r=PG","link":"http://example.stackexchange.com/users/1/example-user","accept_rate":55},"title":"An example post title","up_vote_count":3,"down_vote_count":2,"link":"http://example.stackexchange.com/questions/1234/an-example-post-title/5678#5678"}</code></pre>
+    </div>
+</div>
+    
+    
+
+<div class="example">
+    <h3><span class="right-arrow">&#9658;</span> <span class="example-header">Community Owned Answer</span></h3>
+
+    <div class="result dno">
+        <pre class="prettyprint lang-js"><code>{"question_id":1234,"answer_id":5678,"creation_date":1350827335,"last_activity_date":1350870535,"score":1,"is_accepted":false,"body":"An example post body","owner":{"user_id":1,"display_name":"Example User","reputation":9001,"user_type":"registered","profile_image":"http://www.gravatar.com/avatar/a007be5a61f6aa8f3e85ae2fc18dd66e?d=identicon&r=PG","link":"http://example.stackexchange.com/users/1/example-user","accept_rate":55},"title":"An example post title","up_vote_count":3,"down_vote_count":2,"link":"http://example.stackexchange.com/questions/1234/an-example-post-title/5678#5678"}</code></pre>
+    </div>
+</div>
+
+</div>
+
+<h2>Methods That Return This Type</h2>
+<div class="indented">
+    
+    <a href='/docs/answers'>answers</a> <br><a href='/docs/answers-by-ids'>answers/{ids}</a> <br><a href='/docs/answers-on-questions'>questions/{ids}/answers</a> <br><a href='/docs/answers-on-users'>users/{ids}/answers</a> <br><a href='/docs/top-user-answers-in-tags'>users/{id}/tags/{tags}/top-answers</a> <br><a href='/docs/me-answers'>me/answers</a> <br><a href='/docs/me-tags-top-answers'>me/tags/{tags}/top-answers</a> 
+
+</div>
+            </div>
+            
+
+<div class="sidebar">
+    <div class="module help">
+        <ul>
+            <li><a href="/docs/authentication">Authentication</a></li>
+            <li><a href="/docs/js-lib">Javascript SDK</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/vectors">Batching Requests</a></li>
+            <li><a href="/docs/min-max">Complex Queries</a></li>
+            <li><a href="/docs/filters">Filters</a></li>
+            <li><a href="/docs/paging">Paging</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/dates">Dates</a></li>
+            <li><a href="/docs/numbers">Numbers</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/compression">Compression</a></li>
+            <li><a href="/docs/error-handling">Error Handling</a></li>
+            <li><a href="/docs/wrapper">Response Wrapper</a></li>
+            <li><a href="/docs/throttle">Rate Limiting</a></li>
+            <li><a href="/docs/user-types">Users</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/write">Write</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/change-log">Change Log</a></li>
+            <li class="list-separator"></li>
+            <li><a href="http://stackexchange.com/legal/api-terms-of-use">Terms Of Use</a></li>
+        </ul>
+    </div>
+</div>
+            <br style="clear: both;" />
+        </div>
+        
+        <div class="bottom"">
+            <div class="bottom-wrapper">
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+    <div class="wrapper">
+        <p class="footer-links"><a href="http://stackexchange.com/about">about</a> <a href="http://blog.stackexchange.com">blog</a> <a href="http://stackexchange.com/legal/api-terms-of-use">terms of use</a> <a href="mailto:team+api@stackexchange.com">contact us</a> <a href="http://stackapps.com/">feedback always welcome</a></p>
+        <p style="margin-bottom: 0;">site design / logo &copy; 2012 stack exchange, inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a></p>
+    </div>
+    <br style="clear: both;" />
+</div>
+</body>
+</html>

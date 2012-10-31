@@ -1,0 +1,243 @@
+
+
+
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head> 
+<title> tag  - Stack Exchange API</title>
+<link rel="stylesheet" href="https://api-v2cdn.sstatic.net/all.css?v=a7e08e89c0d7">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="https://api-v2cdn.sstatic.net/js/console.js?v=f34ed6079683"></script>
+    <script type="text/javascript" src="https://api-v2cdn.sstatic.net/js/prettify.js?v=c1fd13ec35f7"></script>
+    <script type="text/javascript" src="https://api-v2cdn.sstatic.net/js/type.js?v=a69685db234d"></script>
+
+</head>
+<body>
+    <div class="intro">
+        <div class="wrapper">
+            <a href="/" class="logo">Stack Exchange</a>
+        
+            <div class="nav">
+                <ul>
+                    <li><a href="/docs">Documentation</a></li>
+                </ul>
+            </div>
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+    <div class="content">
+        <div class="wrapper">
+            <div class="mainbar">
+            
+
+
+
+
+<div class="subheader">
+    <h1>Type  tag </h1>
+</div>
+
+<h2>Discussion</h2>
+<div class="indented">
+    
+    <p>This type represents a tag on a Stack Exchange site.</p>
+
+    <p>Applications should be prepared for the destruction of tags, though this tends to be a rare event.</p>
+
+</div>
+
+<h2>Fields</h2>
+<div class="indented">
+    
+    
+<div class="method">
+    <div class="method-name">
+        <span class="included" title="this field is included in the default filter"></span> count 
+    </div>
+    <div class="method-description">
+        integer
+        
+        
+    </div>
+    <br style="clear: both;" />
+</div>
+<div class="method">
+    <div class="method-name">
+        <span class="included" title="this field is included in the default filter"></span> has_synonyms 
+    </div>
+    <div class="method-description">
+        boolean
+        
+        
+    </div>
+    <br style="clear: both;" />
+</div>
+<div class="method">
+    <div class="method-name">
+        <span class="included" title="this field is included in the default filter"></span> is_moderator_only 
+    </div>
+    <div class="method-description">
+        boolean
+        
+        
+    </div>
+    <br style="clear: both;" />
+</div>
+<div class="method">
+    <div class="method-name">
+        <span class="included" title="this field is included in the default filter"></span> is_required 
+    </div>
+    <div class="method-description">
+        boolean
+        
+        
+    </div>
+    <br style="clear: both;" />
+</div>
+<div class="method">
+    <div class="method-name">
+        <span class="excluded" title="this field is excluded in the default filter"></span> last_activity_date 
+    </div>
+    <div class="method-description">
+        <a href="/docs/dates">date</a>
+        
+        <br /><a href="/docs/absent-fields">may be absent</a>
+    </div>
+    <br style="clear: both;" />
+</div>
+<div class="method">
+    <div class="method-name">
+        <span class="included" title="this field is included in the default filter"></span> name 
+    </div>
+    <div class="method-description">
+        string
+        
+        
+    </div>
+    <br style="clear: both;" />
+</div>
+<div class="method">
+    <div class="method-name">
+        <span class="included" title="this field is included in the default filter"></span> user_id 
+    </div>
+    <div class="method-description">
+        integer, refers to a <a href="/docs/types/user">user</a>
+        
+        <br /><a href="/docs/absent-fields">may be absent</a>
+    </div>
+    <br style="clear: both;" />
+</div>
+
+</div>
+
+<div class="indented">
+    <p>
+        Fields marked with <span class="included"></span> are included in the default filter, those marked with 
+        <span class="excluded"></span> are excluded in the default filter.
+    </p>
+</div>
+
+<h2>Examples</h2>
+<div class="indented">
+    
+    
+
+<div class="example">
+    <h3><span class="right-arrow">&#9658;</span> <span class="example-header">Typical</span></h3>
+
+    <div class="result dno">
+        <pre class="prettyprint lang-js"><code>{"name":"c#","count":100,"is_required":false,"is_moderator_only":false,"has_synonyms":false,"last_activity_date":1350913739}</code></pre>
+    </div>
+</div>
+
+    
+
+<div class="example">
+    <h3><span class="right-arrow">&#9658;</span> <span class="example-header">User Tag</span></h3>
+
+    <div class="result dno">
+        <pre class="prettyprint lang-js"><code>{"name":"c#","count":100,"is_required":false,"is_moderator_only":false,"user_id":1,"has_synonyms":false,"last_activity_date":1350913739}</code></pre>
+    </div>
+</div>
+
+    
+
+<div class="example">
+    <h3><span class="right-arrow">&#9658;</span> <span class="example-header">Required</span></h3>
+
+    <div class="result dno">
+        <pre class="prettyprint lang-js"><code>{"name":"discussion","count":100,"is_required":true,"is_moderator_only":false,"has_synonyms":false,"last_activity_date":1350913739}</code></pre>
+    </div>
+</div>
+
+    
+
+<div class="example">
+    <h3><span class="right-arrow">&#9658;</span> <span class="example-header">Moderator Only</span></h3>
+
+    <div class="result dno">
+        <pre class="prettyprint lang-js"><code>{"name":"status-completed","count":100,"is_required":true,"is_moderator_only":true,"has_synonyms":false,"last_activity_date":1350913739}</code></pre>
+    </div>
+</div>
+
+</div>
+
+<h2>Methods That Return This Type</h2>
+<div class="indented">
+    
+    <a href='/docs/tags'>tags</a> <br><a href='/docs/tags-by-name'>tags/{tags}/info</a> <br><a href='/docs/required-tags'>tags/required</a> <br><a href='/docs/moderator-only-tags'>tags/moderator-only</a> <br><a href='/docs/related-tags'>tags/{tags}/related</a> <br><a href='/docs/tags-on-users'>users/{ids}/tags</a> <br><a href='/docs/me-tags'>me/tags</a> 
+
+</div>
+            </div>
+            
+
+<div class="sidebar">
+    <div class="module help">
+        <ul>
+            <li><a href="/docs/authentication">Authentication</a></li>
+            <li><a href="/docs/js-lib">Javascript SDK</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/vectors">Batching Requests</a></li>
+            <li><a href="/docs/min-max">Complex Queries</a></li>
+            <li><a href="/docs/filters">Filters</a></li>
+            <li><a href="/docs/paging">Paging</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/dates">Dates</a></li>
+            <li><a href="/docs/numbers">Numbers</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/compression">Compression</a></li>
+            <li><a href="/docs/error-handling">Error Handling</a></li>
+            <li><a href="/docs/wrapper">Response Wrapper</a></li>
+            <li><a href="/docs/throttle">Rate Limiting</a></li>
+            <li><a href="/docs/user-types">Users</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/write">Write</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/change-log">Change Log</a></li>
+            <li class="list-separator"></li>
+            <li><a href="http://stackexchange.com/legal/api-terms-of-use">Terms Of Use</a></li>
+        </ul>
+    </div>
+</div>
+            <br style="clear: both;" />
+        </div>
+        
+        <div class="bottom"">
+            <div class="bottom-wrapper">
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+    <div class="wrapper">
+        <p class="footer-links"><a href="http://stackexchange.com/about">about</a> <a href="http://blog.stackexchange.com">blog</a> <a href="http://stackexchange.com/legal/api-terms-of-use">terms of use</a> <a href="mailto:team+api@stackexchange.com">contact us</a> <a href="http://stackapps.com/">feedback always welcome</a></p>
+        <p style="margin-bottom: 0;">site design / logo &copy; 2012 stack exchange, inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a></p>
+    </div>
+    <br style="clear: both;" />
+</div>
+</body>
+</html>

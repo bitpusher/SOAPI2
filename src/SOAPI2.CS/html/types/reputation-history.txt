@@ -1,0 +1,185 @@
+
+
+
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head> 
+<title> reputation_history  - Stack Exchange API</title>
+<link rel="stylesheet" href="https://api-v2cdn.sstatic.net/all.css?v=a7e08e89c0d7">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="https://api-v2cdn.sstatic.net/js/console.js?v=f34ed6079683"></script>
+    <script type="text/javascript" src="https://api-v2cdn.sstatic.net/js/prettify.js?v=c1fd13ec35f7"></script>
+    <script type="text/javascript" src="https://api-v2cdn.sstatic.net/js/type.js?v=a69685db234d"></script>
+
+</head>
+<body>
+    <div class="intro">
+        <div class="wrapper">
+            <a href="/" class="logo">Stack Exchange</a>
+        
+            <div class="nav">
+                <ul>
+                    <li><a href="/docs">Documentation</a></li>
+                </ul>
+            </div>
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+    <div class="content">
+        <div class="wrapper">
+            <div class="mainbar">
+            
+
+
+
+
+<div class="subheader">
+    <h1>Type  reputation_history </h1>
+</div>
+
+<h2>Discussion</h2>
+<div class="indented">
+    
+    <p>This type describes the events that make up a user's reputation history.</p>
+
+    <p>Certain reputation events are private (and types may be reclassified as policy changes), so totaling a user's reputation history may not match their reported reputation
+    unless you have access to their entire reputation history.</p>
+
+    <p>Note that new event types may be added at any time, and existing ones may become defunct.</p>
+
+</div>
+
+<h2>Fields</h2>
+<div class="indented">
+    
+    
+<div class="method">
+    <div class="method-name">
+        <span class="included" title="this field is included in the default filter"></span> creation_date 
+    </div>
+    <div class="method-description">
+        <a href="/docs/dates">date</a>
+        
+        
+    </div>
+    <br style="clear: both;" />
+</div>
+<div class="method">
+    <div class="method-name">
+        <span class="included" title="this field is included in the default filter"></span> post_id 
+    </div>
+    <div class="method-description">
+        integer, refers to a <a href="/docs/types/post">post</a>
+        
+        <br /><a href="/docs/absent-fields">may be absent</a>
+    </div>
+    <br style="clear: both;" />
+</div>
+<div class="method">
+    <div class="method-name">
+        <span class="included" title="this field is included in the default filter"></span> reputation_change 
+    </div>
+    <div class="method-description">
+        integer
+        
+        
+    </div>
+    <br style="clear: both;" />
+</div>
+<div class="method">
+    <div class="method-name">
+        <span class="included" title="this field is included in the default filter"></span> reputation_history_type 
+    </div>
+    <div class="method-description">
+        one of <code>asker_accepts_answer</code>, <code>asker_unaccept_answer</code>, <code>answer_accepted</code>, <code>answer_unaccepted</code>, <code>voter_downvotes</code>, <code>voter_undownvotes</code>, <code>post_downvoted</code>, <code>post_undownvoted</code>, <code>post_upvoted</code>, <code>post_unupvoted</code>, <code>suggested_edit_approval_received</code>, <code>post_flagged_as_spam</code>, <code>post_flagged_as_offensive</code>, <code>bounty_given</code>, <code>bounty_earned</code>, <code>bounty_cancelled</code>, <code>post_deleted</code>, <code>post_undeleted</code>, <code>association_bonus</code>, <code>arbitrary_reputation_change</code>, <code>vote_fraud_reversal</code>, <code>post_migrated</code>, or <code>user_deleted</code>
+        
+        
+    </div>
+    <br style="clear: both;" />
+</div>
+<div class="method">
+    <div class="method-name">
+        <span class="included" title="this field is included in the default filter"></span> user_id 
+    </div>
+    <div class="method-description">
+        integer, refers to a <a href="/docs/types/user">user</a>
+        
+        
+    </div>
+    <br style="clear: both;" />
+</div>
+
+</div>
+
+<div class="indented">
+    <p>
+        Fields marked with <span class="included"></span> are included in the default filter, those marked with 
+        <span class="excluded"></span> are excluded in the default filter.
+    </p>
+</div>
+
+<h2>Examples</h2>
+<div class="indented">
+    
+
+</div>
+
+<h2>Methods That Return This Type</h2>
+<div class="indented">
+    
+    <a href='/docs/reputation-history'>users/{ids}/reputation-history</a> <span class='min-version' title='introduced in version 2.1'>2.1</span><br><a href='/docs/full-reputation-history'>users/{id}/reputation-history/full</a> <span class='min-version' title='introduced in version 2.1'>2.1</span><br><a href='/docs/me-reputation-history'>me/reputation-history</a> <span class='min-version' title='introduced in version 2.1'>2.1</span><br><a href='/docs/me-full-reputation-history'>me/reputation-history/full</a> <span class='min-version' title='introduced in version 2.1'>2.1</span>
+
+</div>
+            </div>
+            
+
+<div class="sidebar">
+    <div class="module help">
+        <ul>
+            <li><a href="/docs/authentication">Authentication</a></li>
+            <li><a href="/docs/js-lib">Javascript SDK</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/vectors">Batching Requests</a></li>
+            <li><a href="/docs/min-max">Complex Queries</a></li>
+            <li><a href="/docs/filters">Filters</a></li>
+            <li><a href="/docs/paging">Paging</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/dates">Dates</a></li>
+            <li><a href="/docs/numbers">Numbers</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/compression">Compression</a></li>
+            <li><a href="/docs/error-handling">Error Handling</a></li>
+            <li><a href="/docs/wrapper">Response Wrapper</a></li>
+            <li><a href="/docs/throttle">Rate Limiting</a></li>
+            <li><a href="/docs/user-types">Users</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/write">Write</a></li>
+            <li class="list-separator"></li>
+            <li><a href="/docs/change-log">Change Log</a></li>
+            <li class="list-separator"></li>
+            <li><a href="http://stackexchange.com/legal/api-terms-of-use">Terms Of Use</a></li>
+        </ul>
+    </div>
+</div>
+            <br style="clear: both;" />
+        </div>
+        
+        <div class="bottom"">
+            <div class="bottom-wrapper">
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+    <div class="wrapper">
+        <p class="footer-links"><a href="http://stackexchange.com/about">about</a> <a href="http://blog.stackexchange.com">blog</a> <a href="http://stackexchange.com/legal/api-terms-of-use">terms of use</a> <a href="mailto:team+api@stackexchange.com">contact us</a> <a href="http://stackapps.com/">feedback always welcome</a></p>
+        <p style="margin-bottom: 0;">site design / logo &copy; 2012 stack exchange, inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a></p>
+    </div>
+    <br style="clear: both;" />
+</div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+c:\dev\SOAPI2.CS\Generator2\bin\Debug\Generator2.exe
+c:\dev\SOAPI2.CS\Generator2\bin\Debug\Generator2.pdb
+c:\dev\SOAPI2.CS\Generator2\obj\x86\Debug\Generator2.exe
+c:\dev\SOAPI2.CS\Generator2\obj\x86\Debug\Generator2.pdb
+c:\dev\SOAPI2.CS\Generator2\bin\Debug\Generator2.exe.config
+c:\dev\SOAPI2.CS\Generator2\bin\Debug\CsQuery.dll
+c:\dev\SOAPI2.CS\Generator2\bin\Debug\Newtonsoft.Json.dll
+c:\dev\SOAPI2.CS\Generator2\bin\Debug\CsQuery.xml
+c:\dev\SOAPI2.CS\Generator2\bin\Debug\Newtonsoft.Json.xml
+c:\dev\SOAPI2.CS\Generator2\obj\x86\Debug\Generator2.csprojResolveAssemblyReference.cache

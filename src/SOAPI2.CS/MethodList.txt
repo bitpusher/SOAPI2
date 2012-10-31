@@ -1,0 +1,174 @@
+﻿{
+    "local": {
+        "Answers": {
+            "answers": {},
+            "answers-by-ids": {},
+            "comments-on-answers": {}
+        },
+        "Badges": {
+            "badges": {},
+            "badges-by-ids": {},
+            "badges-by-name": {},
+            "badge-recipients": {},
+            "badge-recipients-by-ids": {},
+            "badges-by-tag": {}
+        },
+        "Comments": {
+            "comments": {},
+            "comments-by-ids": {},
+            "delete-comment": {},
+            "edit-comment": {}
+        },
+        "Events": {
+            "events": {}
+        },
+        "Info": {
+            "info": {}
+        },
+        "Posts": {
+            "posts": {},
+            "posts-by-ids": {},
+            "comments-on-posts": {},
+            "create-comment": {},
+            "revisions-by-ids": {},
+            "posts-on-suggested-edits": {}
+        },
+        "Privileges": {
+            "privileges": {}
+        },
+        "Questions": {
+            "questions": {},
+            "questions-by-ids": {},
+            "answers-on-questions": {},
+            "comments-on-questions": {},
+            "linked-questions": {},
+            "related-questions": {},
+            "questions-timeline": {},
+            "featured-questions": {},
+            "unanswered-questions": {},
+            "no-answer-questions": {}
+        },
+        "Revisions": {
+            "revisions-by-guids": {}
+        },
+        "Search": {
+            "search": {},
+            "advanced-search": {},
+            "similar": {}
+        },
+        "Suggested Edits": {
+            "suggested-edits": {},
+            "suggested-edits-by-ids": {}
+        },
+        "Tags": {
+            "tags": {},
+            "tags-by-name": {},
+            "moderator-only-tags": {},
+            "required-tags": {},
+            "tag-synonyms": {},
+            "faqs-by-tags": {},
+            "related-tags": {},
+            "synonyms-by-tags": {},
+            "top-answerers-on-tags": {},
+            "top-askers-on-tags": {},
+            "wikis-by-tags": {}
+        },
+        "Users": {
+            "users": {},
+            "users-by-ids": {},
+            "answers-on-users": {},
+            "badges-on-users": {},
+            "comments-on-users": {},
+            "comments-by-users-to-user": {},
+            "favorites-on-users": {},
+            "mentions-on-users": {},
+            "merge-history": {},
+            "user-notifications": {},
+            "user-unread-notifications": {},
+            "privileges-on-users": {},
+            "questions-on-users": {},
+            "featured-questions-on-users": {},
+            "no-answer-questions-on-users": {},
+            "unaccepted-questions-on-users": {},
+            "unanswered-questions-on-users": {},
+            "reputation-on-users": {},
+            "reputation-history": {},
+            "full-reputation-history": {},
+            "suggested-edits-on-users": {},
+            "tags-on-users": {},
+            "top-user-answers-in-tags": {},
+            "top-user-questions-in-tags": {},
+            "timeline-on-users": {},
+            "top-answer-tags-on-users": {},
+            "top-question-tags-on-users": {},
+            "write-permissions": {},
+            "moderators": {},
+            "elected-moderators": {},
+            "user-inbox": {},
+            "user-unread-inbox": {}
+        },
+        "Me": {
+            "me": {},
+            "me-answers": {},
+            "me-badges": {},
+            "me-comments": {},
+            "me-comments-to": {},
+            "me-favorites": {},
+            "me-mentioned": {},
+            "me-merge-history": {},
+            "me-notifications": {},
+            "me-unread-notifications": {},
+            "me-privileges": {},
+            "me-questions": {},
+            "me-featured-questions": {},
+            "me-no-answer-questions": {},
+            "me-unaccepted-questions": {},
+            "me-unanswered-questions": {},
+            "me-reputation": {},
+            "me-reputation-history": {},
+            "me-full-reputation-history": {},
+            "me-suggested-edits": {},
+            "me-tags": {},
+            "me-tags-top-answers": {},
+            "me-tags-top-questions": {},
+            "me-timeline": {},
+            "me-top-answer-tags": {},
+            "me-top-question-tags": {},
+            "me-write-permissions": {},
+            "me-inbox": {},
+            "me-unread-inbox": {}
+        }
+    },
+    "global": {
+        "Access Tokens": {
+            "invalidate-access-tokens": {},
+            "read-access-tokens": {}
+        },
+        "Applications": {
+            "application-de-authenticate": {}
+        },
+        "Errors": {
+            "errors": {},
+            "simulate-error": {}
+        },
+        "Filters": {
+            "create-filter": {},
+            "read-filter": {}
+        },
+        "Inbox": {
+            "inbox": {},
+            "inbox-unread": {}
+        },
+        "Notifications": {
+            "notifications": {},
+            "unread-notifications": {}
+        },
+        "Sites": {
+            "sites": {}
+        },
+        "Users": {
+            "associated-users": {},
+            "me-associated-users": {}
+        }
+    }
+}

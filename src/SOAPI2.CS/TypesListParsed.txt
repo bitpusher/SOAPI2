@@ -1,0 +1,2381 @@
+{
+  "answer": {
+    "parsed": true,
+    "id": "answer",
+    "description": "This type represents an answer to a question on one of the Stack Exchange sites, such as this famous answer of bobince's.\r\n\r\n    As on the question page, it is possible to fetch the comments on an answer as part of a call; though this is not done by default.",
+    "properties": {
+      "answer_id": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer, refers to an answer",
+        "required": true,
+        "type": "integer"
+      },
+      "body": {
+        "isIncludedInDefaultFilter": false,
+        "decscription": "string\r\n        unchanged in unsafe filters",
+        "unchangedInUnsafeFilters": true,
+        "required": true,
+        "type": "string"
+      },
+      "comments": {
+        "isIncludedInDefaultFilter": false,
+        "decscription": "an array of comments\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "array",
+        "values": [
+          {
+            "$ref": "/comment"
+          }
+        ]
+      },
+      "community_owned_date": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "date\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "date"
+      },
+      "creation_date": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "date",
+        "required": true,
+        "type": "date"
+      },
+      "down_vote_count": {
+        "isIncludedInDefaultFilter": false,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      },
+      "is_accepted": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "boolean",
+        "required": true,
+        "type": "boolean"
+      },
+      "last_activity_date": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "date",
+        "required": true,
+        "type": "date"
+      },
+      "last_edit_date": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "date\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "date"
+      },
+      "link": {
+        "isIncludedInDefaultFilter": false,
+        "decscription": "string\r\n        unchanged in unsafe filters",
+        "unchangedInUnsafeFilters": true,
+        "required": true,
+        "type": "string"
+      },
+      "locked_date": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "date\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "date"
+      },
+      "owner": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "shallow_user\r\n        \r\n        may be absent",
+        "required": false,
+        "type": {
+          "$ref": "/shallow-user"
+        }
+      },
+      "question_id": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer, refers to a question",
+        "required": true,
+        "type": "integer"
+      },
+      "score": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      },
+      "tags": {
+        "isIncludedInDefaultFilter": false,
+        "decscription": "an array of strings",
+        "required": true,
+        "type": "array",
+        "values": [
+          "string"
+        ]
+      },
+      "title": {
+        "isIncludedInDefaultFilter": false,
+        "decscription": "string",
+        "required": true,
+        "type": "string"
+      },
+      "up_vote_count": {
+        "isIncludedInDefaultFilter": false,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      }
+    }
+  },
+  "comment": {
+    "parsed": true,
+    "id": "comment",
+    "description": "All Questions and Answers on a Stack Exchange site can be commented on, and this type represents those comments.\r\n\r\n    Comments can also be optionally directed at users, when this is the case the reply_to_user property is set (if it is requested in the current filter).",
+    "properties": {
+      "body": {
+        "isIncludedInDefaultFilter": false,
+        "decscription": "string\r\n        unchanged in unsafe filters",
+        "unchangedInUnsafeFilters": true,
+        "required": true,
+        "type": "string"
+      },
+      "body_markdown": {
+        "isIncludedInDefaultFilter": false,
+        "decscription": "string",
+        "required": true,
+        "type": "string"
+      },
+      "comment_id": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer, refers to a comment",
+        "required": true,
+        "type": "integer"
+      },
+      "creation_date": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "date",
+        "required": true,
+        "type": "date"
+      },
+      "edited": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "boolean",
+        "required": true,
+        "type": "boolean"
+      },
+      "link": {
+        "isIncludedInDefaultFilter": false,
+        "decscription": "string\r\n        unchanged in unsafe filters",
+        "unchangedInUnsafeFilters": true,
+        "required": true,
+        "type": "string"
+      },
+      "owner": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "shallow_user\r\n        \r\n        may be absent",
+        "required": false,
+        "type": {
+          "$ref": "/shallow-user"
+        }
+      },
+      "post_id": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer, refers to a post",
+        "required": true,
+        "type": "integer"
+      },
+      "post_type": {
+        "isIncludedInDefaultFilter": false,
+        "decscription": "one of question, or answer",
+        "required": true,
+        "type": "string",
+        "enum": [
+          "question",
+          "answer"
+        ]
+      },
+      "reply_to_user": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "shallow_user\r\n        \r\n        may be absent",
+        "required": false,
+        "type": {
+          "$ref": "/shallow-user"
+        }
+      },
+      "score": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      }
+    }
+  },
+  "badge": {
+    "parsed": true,
+    "id": "badge",
+    "description": "This type represents a badge on a Stack Exchange site.\r\n\r\n    Some badges, like Autobiographer, are held in common across all Stack Exchange sites.  Others, like most tag badges, vary\r\n    on a site by site basis.\r\n\r\n    Remember that ids are never guaranteed to be the same between sites, even if a badge exists on both sites.",
+    "properties": {
+      "award_count": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      },
+      "badge_id": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer, refers to a badge",
+        "required": true,
+        "type": "integer"
+      },
+      "badge_type": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "one of named, or tag_based",
+        "required": true,
+        "type": "string",
+        "enum": [
+          "named",
+          "tag_based"
+        ]
+      },
+      "description": {
+        "isIncludedInDefaultFilter": false,
+        "decscription": "string\r\n        unchanged in unsafe filters",
+        "unchangedInUnsafeFilters": true,
+        "required": true,
+        "type": "string"
+      },
+      "link": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "string\r\n        unchanged in unsafe filters",
+        "unchangedInUnsafeFilters": true,
+        "required": true,
+        "type": "string"
+      },
+      "name": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "string",
+        "required": true,
+        "type": "string"
+      },
+      "rank": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "one of gold, silver, or bronze",
+        "required": true,
+        "type": "string",
+        "enum": [
+          "gold",
+          "silver",
+          "bronze"
+        ]
+      },
+      "user": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "shallow_user\r\n        \r\n        may be absent",
+        "required": false,
+        "type": {
+          "$ref": "/shallow-user"
+        }
+      }
+    }
+  },
+  "event": {
+    "parsed": true,
+    "id": "event",
+    "description": "This type describes an event that has recently occurred on a Stack Exchange site.\r\n\r\n    A minimal ammount of information is present in these events for scaling purposes.  It is expected\r\n    that most applications will make follow up calls to the API to \"flesh out\" the event objects for their\r\n    own purposes.",
+    "properties": {
+      "creation_date": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "date",
+        "required": true,
+        "type": "date"
+      },
+      "event_id": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "the id of the object (answer, comment, question, or user) the event describes",
+        "required": true,
+        "type": "integer"
+      },
+      "event_type": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "one of question_posted, answer_posted, comment_posted, post_edited, or user_created",
+        "required": true,
+        "type": "string",
+        "enum": [
+          "question_posted",
+          "answer_posted",
+          "comment_posted",
+          "post_edited",
+          "user_created"
+        ]
+      },
+      "excerpt": {
+        "isIncludedInDefaultFilter": false,
+        "decscription": "string\r\n        unchanged in unsafe filters",
+        "unchangedInUnsafeFilters": true,
+        "required": true,
+        "type": "string"
+      },
+      "link": {
+        "isIncludedInDefaultFilter": false,
+        "decscription": "string\r\n        unchanged in unsafe filters",
+        "unchangedInUnsafeFilters": true,
+        "required": true,
+        "type": "string"
+      }
+    }
+  },
+  "info": {
+    "parsed": true,
+    "id": "info",
+    "description": "This type describes a site in the Stack Exchange network.",
+    "properties": {
+      "answers_per_minute": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "decimal",
+        "required": true,
+        "type": "decimal"
+      },
+      "api_revision": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "string",
+        "required": true,
+        "type": "string"
+      },
+      "badges_per_minute": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "decimal",
+        "required": true,
+        "type": "decimal"
+      },
+      "new_active_users": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      },
+      "questions_per_minute": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "decimal",
+        "required": true,
+        "type": "decimal"
+      },
+      "site": {
+        "isIncludedInDefaultFilter": false,
+        "decscription": "site",
+        "required": true,
+        "type": {
+          "$ref": "/site"
+        }
+      },
+      "total_accepted": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      },
+      "total_answers": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      },
+      "total_badges": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      },
+      "total_comments": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      },
+      "total_questions": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      },
+      "total_unanswered": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      },
+      "total_users": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      },
+      "total_votes": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      }
+    }
+  },
+  "post": {
+    "parsed": true,
+    "id": "post",
+    "description": "This type represents the intersection of the Question and Answer types.\r\n\r\n    It's used in cases where it would be beneficial to mix questions and answers in a response.",
+    "properties": {
+      "body": {
+        "isIncludedInDefaultFilter": false,
+        "decscription": "string\r\n        unchanged in unsafe filters",
+        "unchangedInUnsafeFilters": true,
+        "required": true,
+        "type": "string"
+      },
+      "comments": {
+        "isIncludedInDefaultFilter": false,
+        "decscription": "an array of comments\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "array",
+        "values": [
+          {
+            "$ref": "/comment"
+          }
+        ]
+      },
+      "creation_date": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "date",
+        "required": true,
+        "type": "date"
+      },
+      "down_vote_count": {
+        "isIncludedInDefaultFilter": false,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      },
+      "last_activity_date": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "date",
+        "required": true,
+        "type": "date"
+      },
+      "last_edit_date": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "date\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "date"
+      },
+      "link": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "string",
+        "required": true,
+        "type": "string"
+      },
+      "owner": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "shallow_user\r\n        \r\n        may be absent",
+        "required": false,
+        "type": {
+          "$ref": "/shallow-user"
+        }
+      },
+      "post_id": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer, refers to a post",
+        "required": true,
+        "type": "integer"
+      },
+      "post_type": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "one of question, or answer",
+        "required": true,
+        "type": "string",
+        "enum": [
+          "question",
+          "answer"
+        ]
+      },
+      "score": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      },
+      "up_vote_count": {
+        "isIncludedInDefaultFilter": false,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      }
+    }
+  },
+  "revision": {
+    "parsed": true,
+    "id": "revision",
+    "description": "This type represents that state of a Post at some point in its history.\r\n\r\n    Note that under some circumstances multiple edits can result in only a single revision.",
+    "properties": {
+      "body": {
+        "isIncludedInDefaultFilter": false,
+        "decscription": "string\r\n        unchanged in unsafe filters\r\n        may be absent",
+        "unchangedInUnsafeFilters": true,
+        "required": false,
+        "type": "string"
+      },
+      "comment": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "string",
+        "required": true,
+        "type": "string"
+      },
+      "creation_date": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "date",
+        "required": true,
+        "type": "date"
+      },
+      "is_rollback": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "boolean",
+        "required": true,
+        "type": "boolean"
+      },
+      "last_body": {
+        "isIncludedInDefaultFilter": false,
+        "decscription": "string\r\n        unchanged in unsafe filters\r\n        may be absent",
+        "unchangedInUnsafeFilters": true,
+        "required": false,
+        "type": "string"
+      },
+      "last_tags": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "an array of strings\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "array",
+        "values": [
+          "string"
+        ]
+      },
+      "last_title": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "string\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "string"
+      },
+      "post_id": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer, refers to a post",
+        "required": true,
+        "type": "integer"
+      },
+      "post_type": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "one of question, or answer",
+        "required": true,
+        "type": "string",
+        "enum": [
+          "question",
+          "answer"
+        ]
+      },
+      "revision_guid": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "string",
+        "required": true,
+        "type": "string"
+      },
+      "revision_number": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      },
+      "revision_type": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "one of single_user, or vote_based",
+        "required": true,
+        "type": "string",
+        "enum": [
+          "single_user",
+          "vote_based"
+        ]
+      },
+      "set_community_wiki": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "boolean",
+        "required": true,
+        "type": "boolean"
+      },
+      "tags": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "an array of strings\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "array",
+        "values": [
+          "string"
+        ]
+      },
+      "title": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "string\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "string"
+      },
+      "user": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "shallow_user",
+        "required": true,
+        "type": {
+          "$ref": "/shallow-user"
+        }
+      }
+    }
+  },
+  "suggested-edit": {
+    "parsed": true,
+    "id": "suggested-edit",
+    "description": "This type represents a suggested edit on a Stack Exchange site.",
+    "properties": {
+      "approval_date": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "date\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "date"
+      },
+      "body": {
+        "isIncludedInDefaultFilter": false,
+        "decscription": "string\r\n        unchanged in unsafe filters\r\n        may be absent",
+        "unchangedInUnsafeFilters": true,
+        "required": false,
+        "type": "string"
+      },
+      "comment": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "string",
+        "required": true,
+        "type": "string"
+      },
+      "creation_date": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "date",
+        "required": true,
+        "type": "date"
+      },
+      "post_id": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer, refers to a post",
+        "required": true,
+        "type": "integer"
+      },
+      "post_type": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "one of question, or answer",
+        "required": true,
+        "type": "string",
+        "enum": [
+          "question",
+          "answer"
+        ]
+      },
+      "proposing_user": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "shallow_user\r\n        \r\n        may be absent",
+        "required": false,
+        "type": {
+          "$ref": "/shallow-user"
+        }
+      },
+      "rejection_date": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "date\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "date"
+      },
+      "suggested_edit_id": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer, refers to a suggested_edit",
+        "required": true,
+        "type": "integer"
+      },
+      "tags": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "an array of strings\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "array",
+        "values": [
+          "string"
+        ]
+      },
+      "title": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "string\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "string"
+      }
+    }
+  },
+  "privilege": {
+    "parsed": true,
+    "id": "privilege",
+    "description": "Represents a privilege a user may have on a Stack Exchange site.\r\n\r\n    Applications should be aware of, and be able to deal with, the possibility of new privileges being introduced and old ones being removed.",
+    "properties": {
+      "description": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "string\r\n        unchanged in unsafe filters",
+        "unchangedInUnsafeFilters": true,
+        "required": true,
+        "type": "string"
+      },
+      "reputation": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      },
+      "short_description": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "string\r\n        unchanged in unsafe filters",
+        "unchangedInUnsafeFilters": true,
+        "required": true,
+        "type": "string"
+      }
+    }
+  },
+  "question": {
+    "parsed": true,
+    "id": "question",
+    "description": "This type represents a question on one of the Stack Exchange sites, such as this famous RegEx question.\r\n\r\n    This type is heavily inspired by the question page itself, and can optionally return comments and answers accordingly.",
+    "properties": {
+      "accepted_answer_id": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "integer"
+      },
+      "answer_count": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      },
+      "answers": {
+        "isIncludedInDefaultFilter": false,
+        "decscription": "an array of answers\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "array",
+        "values": [
+          {
+            "$ref": "/answer"
+          }
+        ]
+      },
+      "body": {
+        "isIncludedInDefaultFilter": false,
+        "decscription": "string\r\n        unchanged in unsafe filters",
+        "unchangedInUnsafeFilters": true,
+        "required": true,
+        "type": "string"
+      },
+      "bounty_amount": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "integer"
+      },
+      "bounty_closes_date": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "date\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "date"
+      },
+      "close_vote_count": {
+        "isIncludedInDefaultFilter": false,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      },
+      "closed_date": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "date\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "date"
+      },
+      "closed_reason": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "string\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "string"
+      },
+      "comments": {
+        "isIncludedInDefaultFilter": false,
+        "decscription": "an array of comments\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "array",
+        "values": [
+          {
+            "$ref": "/comment"
+          }
+        ]
+      },
+      "community_owned_date": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "date\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "date"
+      },
+      "creation_date": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "date",
+        "required": true,
+        "type": "date"
+      },
+      "delete_vote_count": {
+        "isIncludedInDefaultFilter": false,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      },
+      "down_vote_count": {
+        "isIncludedInDefaultFilter": false,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      },
+      "favorite_count": {
+        "isIncludedInDefaultFilter": false,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      },
+      "is_answered": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "boolean",
+        "required": true,
+        "type": "boolean"
+      },
+      "last_activity_date": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "date",
+        "required": true,
+        "type": "date"
+      },
+      "last_edit_date": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "date\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "date"
+      },
+      "link": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "string\r\n        unchanged in unsafe filters",
+        "unchangedInUnsafeFilters": true,
+        "required": true,
+        "type": "string"
+      },
+      "locked_date": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "date\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "date"
+      },
+      "migrated_from": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "migration_info\r\n        \r\n        may be absent",
+        "required": false,
+        "type": {
+          "$ref": "/migration-info"
+        }
+      },
+      "migrated_to": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "migration_info\r\n        \r\n        may be absent",
+        "required": false,
+        "type": {
+          "$ref": "/migration-info"
+        }
+      },
+      "notice": {
+        "isIncludedInDefaultFilter": false,
+        "decscription": "notice",
+        "required": true,
+        "type": {
+          "$ref": "/notice"
+        }
+      },
+      "owner": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "shallow_user\r\n        \r\n        may be absent",
+        "required": false,
+        "type": {
+          "$ref": "/shallow-user"
+        }
+      },
+      "protected_date": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "date\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "date"
+      },
+      "question_id": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer, refers to a question",
+        "required": true,
+        "type": "integer"
+      },
+      "reopen_vote_count": {
+        "isIncludedInDefaultFilter": false,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      },
+      "score": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      },
+      "tags": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "an array of strings",
+        "required": true,
+        "type": "array",
+        "values": [
+          "string"
+        ]
+      },
+      "title": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "string",
+        "required": true,
+        "type": "string"
+      },
+      "up_vote_count": {
+        "isIncludedInDefaultFilter": false,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      },
+      "view_count": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      }
+    }
+  },
+  "question-timeline": {
+    "parsed": true,
+    "id": "question-timeline",
+    "description": "This type represents events in the history of a Question.",
+    "properties": {
+      "comment_id": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer, refers to a comment\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "integer"
+      },
+      "creation_date": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "date",
+        "required": true,
+        "type": "date"
+      },
+      "down_vote_count": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "integer"
+      },
+      "owner": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "shallow_user\r\n        \r\n        may be absent",
+        "required": false,
+        "type": {
+          "$ref": "/shallow-user"
+        }
+      },
+      "post_id": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer, refers to a post\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "integer"
+      },
+      "question_id": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer, refers to a question",
+        "required": true,
+        "type": "integer"
+      },
+      "revision_guid": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "string\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "string"
+      },
+      "timeline_type": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "one of question, answer, comment, unaccepted_answer, accepted_answer, vote_aggregate, revision, or post_state_changed",
+        "required": true,
+        "type": "string",
+        "enum": [
+          "question",
+          "answer",
+          "comment",
+          "unaccepted_answer",
+          "accepted_answer",
+          "vote_aggregate",
+          "revision",
+          "post_state_changed"
+        ]
+      },
+      "up_vote_count": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "integer"
+      },
+      "user": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "shallow_user\r\n        \r\n        may be absent",
+        "required": false,
+        "type": {
+          "$ref": "/shallow-user"
+        }
+      }
+    }
+  },
+  "tag": {
+    "parsed": true,
+    "id": "tag",
+    "description": "This type represents a tag on a Stack Exchange site.\r\n\r\n    Applications should be prepared for the destruction of tags, though this tends to be a rare event.",
+    "properties": {
+      "count": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      },
+      "has_synonyms": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "boolean",
+        "required": true,
+        "type": "boolean"
+      },
+      "is_moderator_only": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "boolean",
+        "required": true,
+        "type": "boolean"
+      },
+      "is_required": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "boolean",
+        "required": true,
+        "type": "boolean"
+      },
+      "last_activity_date": {
+        "isIncludedInDefaultFilter": false,
+        "decscription": "date\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "date"
+      },
+      "name": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "string",
+        "required": true,
+        "type": "string"
+      },
+      "user_id": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer, refers to a user\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "integer"
+      }
+    }
+  },
+  "tag-synonym": {
+    "parsed": true,
+    "id": "tag-synonym",
+    "description": "This type represents a mapping from one tag to another, as part of a Stack Exchange sites tag synonym list.\r\n\r\n    Note that even if a tag has been designated a synonym of another tag, that tag may still appear on some older questions in the system.\r\n\r\n    Applications should be able to gracefully handle both the introduction of synonyms and their removal.",
+    "properties": {
+      "applied_count": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      },
+      "creation_date": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "date",
+        "required": true,
+        "type": "date"
+      },
+      "from_tag": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "string",
+        "required": true,
+        "type": "string"
+      },
+      "last_applied_date": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "date\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "date"
+      },
+      "to_tag": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "string",
+        "required": true,
+        "type": "string"
+      }
+    }
+  },
+  "tag-score": {
+    "parsed": true,
+    "id": "tag-score",
+    "description": "This type represents a user's statistics within a tag.\r\n\r\n    Note that this data is often heavily cached or normalized, and thus methods return it may lag significantly behind\r\n    other methods returning similar data.",
+    "properties": {
+      "post_count": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      },
+      "score": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      },
+      "user": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "shallow_user",
+        "required": true,
+        "type": {
+          "$ref": "/shallow-user"
+        }
+      }
+    }
+  },
+  "tag-wiki": {
+    "parsed": true,
+    "id": "tag-wiki",
+    "description": "This type represents the community edited wiki for a given Tag.\r\n\r\n    Note that not all tags have a wiki.",
+    "properties": {
+      "body": {
+        "isIncludedInDefaultFilter": false,
+        "decscription": "string\r\n        unchanged in unsafe filters\r\n        may be absent",
+        "unchangedInUnsafeFilters": true,
+        "required": false,
+        "type": "string"
+      },
+      "body_last_edit_date": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "date\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "date"
+      },
+      "excerpt": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "string\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "string"
+      },
+      "excerpt_last_edit_date": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "date\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "date"
+      },
+      "last_body_editor": {
+        "isIncludedInDefaultFilter": false,
+        "decscription": "shallow_user\r\n        \r\n        may be absent",
+        "required": false,
+        "type": {
+          "$ref": "/shallow-user"
+        }
+      },
+      "last_excerpt_editor": {
+        "isIncludedInDefaultFilter": false,
+        "decscription": "shallow_user\r\n        \r\n        may be absent",
+        "required": false,
+        "type": {
+          "$ref": "/shallow-user"
+        }
+      },
+      "tag_name": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "string",
+        "required": true,
+        "type": "string"
+      }
+    }
+  },
+  "user": {
+    "parsed": true,
+    "id": "user",
+    "description": "This type describes a user on a Stack Exchange site.\r\n\r\n    There are a number of different user types returned by the Stack Exchange API, depending on the method.  Others include shallow_user and network_user.",
+    "properties": {
+      "about_me": {
+        "isIncludedInDefaultFilter": false,
+        "decscription": "string\r\n        unchanged in unsafe filters\r\n        may be absent",
+        "unchangedInUnsafeFilters": true,
+        "required": false,
+        "type": "string"
+      },
+      "accept_rate": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "integer"
+      },
+      "account_id": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      },
+      "age": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "integer"
+      },
+      "answer_count": {
+        "isIncludedInDefaultFilter": false,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      },
+      "badge_counts": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "badge_count",
+        "required": true,
+        "type": {
+          "$ref": "/badge-count"
+        }
+      },
+      "creation_date": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "date",
+        "required": true,
+        "type": "date"
+      },
+      "display_name": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "string",
+        "required": true,
+        "type": "string"
+      },
+      "down_vote_count": {
+        "isIncludedInDefaultFilter": false,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      },
+      "is_employee": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "boolean",
+        "required": true,
+        "type": "boolean"
+      },
+      "last_access_date": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "date",
+        "required": true,
+        "type": "date"
+      },
+      "last_modified_date": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "date\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "date"
+      },
+      "link": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "string\r\n        unchanged in unsafe filters",
+        "unchangedInUnsafeFilters": true,
+        "required": true,
+        "type": "string"
+      },
+      "location": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "string\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "string"
+      },
+      "profile_image": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "string\r\n        unchanged in unsafe filters",
+        "unchangedInUnsafeFilters": true,
+        "required": true,
+        "type": "string"
+      },
+      "question_count": {
+        "isIncludedInDefaultFilter": false,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      },
+      "reputation": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      },
+      "reputation_change_day": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      },
+      "reputation_change_month": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      },
+      "reputation_change_quarter": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      },
+      "reputation_change_week": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      },
+      "reputation_change_year": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      },
+      "timed_penalty_date": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "date\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "date"
+      },
+      "up_vote_count": {
+        "isIncludedInDefaultFilter": false,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      },
+      "user_id": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer, refers to a user",
+        "required": true,
+        "type": "integer"
+      },
+      "user_type": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "one of unregistered, registered, moderator, or does_not_exist",
+        "required": true,
+        "type": "string",
+        "enum": [
+          "unregistered",
+          "registered",
+          "moderator",
+          "does_not_exist"
+        ]
+      },
+      "view_count": {
+        "isIncludedInDefaultFilter": false,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      },
+      "website_url": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "string\r\n        unchanged in unsafe filters\r\n        may be absent",
+        "unchangedInUnsafeFilters": true,
+        "required": false,
+        "type": "string"
+      }
+    }
+  },
+  "account-merge": {
+    "parsed": true,
+    "id": "account-merge",
+    "description": "This type describes a network level merger of two accounts.  Note that ids in old_account_id are no longer valid.",
+    "properties": {
+      "merge_date": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "date",
+        "required": true,
+        "type": "date"
+      },
+      "new_account_id": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      },
+      "old_account_id": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      }
+    }
+  },
+  "notification": {
+    "parsed": true,
+    "id": "notification",
+    "description": "This type represents an item in a user's Notification Tab.\r\n\r\n    Be aware that the types of items returned by this method are subject to change at any time.  In particular, new types may be introduced\r\n    without warning.  Applications should deal with these changes gracefully.\r\n\r\n    Applications should not publish a user's notification tab without their explicit consent, as while most item types are public in nature there are a few\r\n    which are (and should remain) private.",
+    "properties": {
+      "body": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "string\r\n        unchanged in unsafe filters",
+        "unchangedInUnsafeFilters": true,
+        "required": true,
+        "type": "string"
+      },
+      "creation_date": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "date",
+        "required": true,
+        "type": "date"
+      },
+      "is_unread": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "boolean",
+        "required": true,
+        "type": "boolean"
+      },
+      "notification_type": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "one of generic, profile_activity, bounty_expired, bounty_expires_in_one_day, badge_earned, bounty_expires_in_three_days, reputation_bonus, accounts_associated, new_privilege, post_migrated, moderator_message, registration_reminder, edit_suggested, or substantive_edit",
+        "required": true,
+        "type": "string",
+        "enum": [
+          "generic",
+          "profile_activity",
+          "bounty_expired",
+          "bounty_expires_in_one_day",
+          "badge_earned",
+          "bounty_expires_in_three_days",
+          "reputation_bonus",
+          "accounts_associated",
+          "new_privilege",
+          "post_migrated",
+          "moderator_message",
+          "registration_reminder",
+          "edit_suggested",
+          "substantive_edit"
+        ]
+      },
+      "post_id": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer, refers to a post\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "integer"
+      },
+      "site": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "site",
+        "required": true,
+        "type": {
+          "$ref": "/site"
+        }
+      }
+    }
+  },
+  "reputation": {
+    "parsed": true,
+    "id": "reputation",
+    "description": "This type represents a change in reputation for a User.\r\n\r\n    All methods that return this data will scrub it to a degree, to increase the difficulty of correlating reputation changes\r\n    with down voting.",
+    "properties": {
+      "link": {
+        "isIncludedInDefaultFilter": false,
+        "decscription": "string\r\n        unchanged in unsafe filters",
+        "unchangedInUnsafeFilters": true,
+        "required": true,
+        "type": "string"
+      },
+      "on_date": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "date",
+        "required": true,
+        "type": "date"
+      },
+      "post_id": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer, refers to a post",
+        "required": true,
+        "type": "integer"
+      },
+      "post_type": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "one of question, or answer",
+        "required": true,
+        "type": "string",
+        "enum": [
+          "question",
+          "answer"
+        ]
+      },
+      "reputation_change": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      },
+      "title": {
+        "isIncludedInDefaultFilter": false,
+        "decscription": "string",
+        "required": true,
+        "type": "string"
+      },
+      "user_id": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer, refers to a user",
+        "required": true,
+        "type": "integer"
+      },
+      "vote_type": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "one of accepts, up_votes, down_votes, bounties_offered, bounties_won, spam, or suggested_edits",
+        "required": true,
+        "type": "string",
+        "enum": [
+          "accepts",
+          "up_votes",
+          "down_votes",
+          "bounties_offered",
+          "bounties_won",
+          "spam",
+          "suggested_edits"
+        ]
+      }
+    }
+  },
+  "reputation-history": {
+    "parsed": true,
+    "id": "reputation-history",
+    "description": "This type describes the events that make up a user's reputation history.\r\n\r\n    Certain reputation events are private (and types may be reclassified as policy changes), so totaling a user's reputation history may not match their reported reputation\r\n    unless you have access to their entire reputation history.\r\n\r\n    Note that new event types may be added at any time, and existing ones may become defunct.",
+    "properties": {
+      "creation_date": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "date",
+        "required": true,
+        "type": "date"
+      },
+      "post_id": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer, refers to a post\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "integer"
+      },
+      "reputation_change": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      },
+      "reputation_history_type": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "one of asker_accepts_answer, asker_unaccept_answer, answer_accepted, answer_unaccepted, voter_downvotes, voter_undownvotes, post_downvoted, post_undownvoted, post_upvoted, post_unupvoted, suggested_edit_approval_received, post_flagged_as_spam, post_flagged_as_offensive, bounty_given, bounty_earned, bounty_cancelled, post_deleted, post_undeleted, association_bonus, arbitrary_reputation_change, vote_fraud_reversal, post_migrated, or user_deleted",
+        "required": true,
+        "type": "string",
+        "enum": [
+          "asker_accepts_answer",
+          "asker_unaccept_answer",
+          "answer_accepted",
+          "answer_unaccepted",
+          "voter_downvotes",
+          "voter_undownvotes",
+          "post_downvoted",
+          "post_undownvoted",
+          "post_upvoted",
+          "post_unupvoted",
+          "suggested_edit_approval_received",
+          "post_flagged_as_spam",
+          "post_flagged_as_offensive",
+          "bounty_given",
+          "bounty_earned",
+          "bounty_cancelled",
+          "post_deleted",
+          "post_undeleted",
+          "association_bonus",
+          "arbitrary_reputation_change",
+          "vote_fraud_reversal",
+          "post_migrated",
+          "user_deleted"
+        ]
+      },
+      "user_id": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer, refers to a user",
+        "required": true,
+        "type": "integer"
+      }
+    }
+  },
+  "user-timeline": {
+    "parsed": true,
+    "id": "user-timeline",
+    "description": "This type describes public actions a User has taken.",
+    "properties": {
+      "badge_id": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer, refers to a badge\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "integer"
+      },
+      "comment_id": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer, refers to a comment\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "integer"
+      },
+      "creation_date": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "date",
+        "required": true,
+        "type": "date"
+      },
+      "detail": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "string\r\n        unchanged in unsafe filters\r\n        may be absent",
+        "unchangedInUnsafeFilters": true,
+        "required": false,
+        "type": "string"
+      },
+      "link": {
+        "isIncludedInDefaultFilter": false,
+        "decscription": "string\r\n        unchanged in unsafe filters",
+        "unchangedInUnsafeFilters": true,
+        "required": true,
+        "type": "string"
+      },
+      "post_id": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer, refers to a post\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "integer"
+      },
+      "post_type": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "one of question, or answer",
+        "required": true,
+        "type": "string",
+        "enum": [
+          "question",
+          "answer"
+        ]
+      },
+      "suggested_edit_id": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer, refers to a suggested_edit\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "integer"
+      },
+      "timeline_type": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "one of commented, asked, answered, badge, revision, accepted, reviewed, or suggested",
+        "required": true,
+        "type": "string",
+        "enum": [
+          "commented",
+          "asked",
+          "answered",
+          "badge",
+          "revision",
+          "accepted",
+          "reviewed",
+          "suggested"
+        ]
+      },
+      "title": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "string\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "string"
+      },
+      "user_id": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer, refers to a user",
+        "required": true,
+        "type": "integer"
+      }
+    }
+  },
+  "top-tag": {
+    "parsed": true,
+    "id": "top-tag",
+    "description": "This type describes a user's score and activity in a given Tag.",
+    "properties": {
+      "answer_count": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      },
+      "answer_score": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      },
+      "question_count": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      },
+      "question_score": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      },
+      "tag_name": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "string\r\n        unchanged in unsafe filters",
+        "unchangedInUnsafeFilters": true,
+        "required": true,
+        "type": "string"
+      },
+      "user_id": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer, refers to a user",
+        "required": true,
+        "type": "integer"
+      }
+    }
+  },
+  "write-permission": {
+    "parsed": true,
+    "id": "write-permission",
+    "description": "This type describes a user's ability to perform a certain write operation against a type via the Stack Exchange API.",
+    "properties": {
+      "can_add": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "boolean",
+        "required": true,
+        "type": "boolean"
+      },
+      "can_delete": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "boolean",
+        "required": true,
+        "type": "boolean"
+      },
+      "can_edit": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "boolean",
+        "required": true,
+        "type": "boolean"
+      },
+      "max_daily_actions": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      },
+      "min_seconds_between_actions": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      },
+      "object_type": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "string",
+        "required": true,
+        "type": "string"
+      },
+      "user_id": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer, refers to a user",
+        "required": true,
+        "type": "integer"
+      }
+    }
+  },
+  "inbox-item": {
+    "parsed": true,
+    "id": "inbox-item",
+    "description": "This type represents an item in a user's Global Inbox.\r\n\r\n    Be aware that the types of items returned by this method are subject to change at any time.  In particular, new types may be introduced\r\n    without warning.  Applications should deal with these changes gracefully.\r\n\r\n    Applications should not publish a user's inbox without their explicit consent, as while most item types are public in nature there are a few\r\n    which are (and should remain) private.",
+    "properties": {
+      "answer_id": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer, refers to an answer\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "integer"
+      },
+      "body": {
+        "isIncludedInDefaultFilter": false,
+        "decscription": "string\r\n        unchanged in unsafe filters",
+        "unchangedInUnsafeFilters": true,
+        "required": true,
+        "type": "string"
+      },
+      "comment_id": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer, refers to a comment\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "integer"
+      },
+      "creation_date": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "date",
+        "required": true,
+        "type": "date"
+      },
+      "is_unread": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "boolean",
+        "required": true,
+        "type": "boolean"
+      },
+      "item_type": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "one of comment, chat_message, new_answer, careers_message, careers_invitations, meta_question, post_notice, or moderator_message",
+        "required": true,
+        "type": "string",
+        "enum": [
+          "comment",
+          "chat_message",
+          "new_answer",
+          "careers_message",
+          "careers_invitations",
+          "meta_question",
+          "post_notice",
+          "moderator_message"
+        ]
+      },
+      "link": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "string\r\n        unchanged in unsafe filters",
+        "unchangedInUnsafeFilters": true,
+        "required": true,
+        "type": "string"
+      },
+      "question_id": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer, refers to a question\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "integer"
+      },
+      "site": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "site\r\n        \r\n        may be absent",
+        "required": false,
+        "type": {
+          "$ref": "/site"
+        }
+      },
+      "title": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "string",
+        "required": true,
+        "type": "string"
+      }
+    }
+  },
+  "access-token": {
+    "parsed": true,
+    "id": "access-token",
+    "description": "This type describes an access_token that was created as part of an OAuth flow.",
+    "properties": {
+      "access_token": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "string",
+        "required": true,
+        "type": "string"
+      },
+      "account_id": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      },
+      "expires_on_date": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "date\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "date"
+      },
+      "scope": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "an array of strings\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "array",
+        "values": [
+          "string"
+        ]
+      }
+    }
+  },
+  "error": {
+    "parsed": true,
+    "id": "error",
+    "description": "This type is used to describe the errors that can be returned by the Stack Exchange API.\r\n\r\n    It is not expected that many applications will concern themselves with this type.  It is made available\r\n    for development and testing purposes.",
+    "properties": {
+      "description": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "string",
+        "required": true,
+        "type": "string"
+      },
+      "error_id": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer, refers to an error",
+        "required": true,
+        "type": "integer"
+      },
+      "error_name": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "string",
+        "required": true,
+        "type": "string"
+      }
+    }
+  },
+  "filter": {
+    "parsed": true,
+    "id": "filter",
+    "description": "This type describes a filter on the Stack Exchange API.\r\n\r\n    When passing a filter to methods in the API, it should be referred to by name alone.",
+    "properties": {
+      "filter": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "string",
+        "required": true,
+        "type": "string"
+      },
+      "filter_type": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "one of safe, unsafe, or invalid",
+        "required": true,
+        "type": "string",
+        "enum": [
+          "safe",
+          "unsafe",
+          "invalid"
+        ]
+      },
+      "included_fields": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "an array of strings",
+        "required": true,
+        "type": "array",
+        "values": [
+          "string"
+        ]
+      }
+    }
+  },
+  "site": {
+    "parsed": true,
+    "id": "site",
+    "description": "This type represents a site in the Stack Exchange network.",
+    "properties": {
+      "aliases": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "an array of strings\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "array",
+        "values": [
+          "string"
+        ]
+      },
+      "api_site_parameter": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "string",
+        "required": true,
+        "type": "string"
+      },
+      "audience": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "string",
+        "required": true,
+        "type": "string"
+      },
+      "closed_beta_date": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "date\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "date"
+      },
+      "favicon_url": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "string",
+        "required": true,
+        "type": "string"
+      },
+      "high_resolution_icon_url": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "string\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "string"
+      },
+      "icon_url": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "string",
+        "required": true,
+        "type": "string"
+      },
+      "launch_date": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "date",
+        "required": true,
+        "type": "date"
+      },
+      "logo_url": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "string",
+        "required": true,
+        "type": "string"
+      },
+      "markdown_extensions": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "an array of 'MathJax', 'Prettify', 'Balsamiq' or 'jTab' strings, but new options may be added.\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "array",
+        "values": [
+          "string"
+        ]
+      },
+      "name": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "string",
+        "required": true,
+        "type": "string"
+      },
+      "open_beta_date": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "date\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "date"
+      },
+      "related_sites": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "an array of related_sites\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "array",
+        "values": [
+          {
+            "$ref": "/related-site"
+          }
+        ]
+      },
+      "site_state": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "one of normal, closed_beta, open_beta, or linked_meta",
+        "required": true,
+        "type": "string",
+        "enum": [
+          "normal",
+          "closed_beta",
+          "open_beta",
+          "linked_meta"
+        ]
+      },
+      "site_type": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "one of main_site or meta_site, but new options may be added.",
+        "required": true,
+        "type": "string",
+        "enum": [
+          "main_site",
+          "meta_site"
+        ]
+      },
+      "site_url": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "string",
+        "required": true,
+        "type": "string"
+      },
+      "styling": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "styling",
+        "required": true,
+        "type": {
+          "$ref": "/styling"
+        }
+      },
+      "twitter_account": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "string\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "string"
+      }
+    }
+  },
+  "network-user": {
+    "parsed": true,
+    "id": "network-user",
+    "description": "This type represents a user, however it is greatly reduced when compared to the full User type to \r\n    reduce the amount of work that needs to be done to fetch it from multiple sites in the network.",
+    "properties": {
+      "account_id": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      },
+      "answer_count": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      },
+      "badge_counts": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "badge_count",
+        "required": true,
+        "type": {
+          "$ref": "/badge-count"
+        }
+      },
+      "creation_date": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "date",
+        "required": true,
+        "type": "date"
+      },
+      "last_access_date": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "date",
+        "required": true,
+        "type": "date"
+      },
+      "question_count": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      },
+      "reputation": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      },
+      "site_name": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "string",
+        "required": true,
+        "type": "string"
+      },
+      "site_url": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "string",
+        "required": true,
+        "type": "string"
+      },
+      "user_id": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer, refers to a user",
+        "required": true,
+        "type": "integer"
+      },
+      "user_type": {
+        "isIncludedInDefaultFilter": false,
+        "decscription": "one of unregistered, registered, moderator, or does_not_exist",
+        "required": true,
+        "type": "string",
+        "enum": [
+          "unregistered",
+          "registered",
+          "moderator",
+          "does_not_exist"
+        ]
+      }
+    }
+  },
+  "shallow-user": {
+    "parsed": true,
+    "id": "shallow-user",
+    "description": "This type represents a user, but omits many of the fields found on the full User type.\r\n\r\n    This type is mostly analogous to the \"user card\" found on many pages (like the question page) on a Stack Exchange site.",
+    "properties": {
+      "accept_rate": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "integer"
+      },
+      "display_name": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "string\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "string"
+      },
+      "link": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "string\r\n        unchanged in unsafe filters\r\n        may be absent",
+        "unchangedInUnsafeFilters": true,
+        "required": false,
+        "type": "string"
+      },
+      "profile_image": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "string\r\n        unchanged in unsafe filters\r\n        may be absent",
+        "unchangedInUnsafeFilters": true,
+        "required": false,
+        "type": "string"
+      },
+      "reputation": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "integer"
+      },
+      "user_id": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer, refers to a user\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "integer"
+      },
+      "user_type": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "one of unregistered, registered, moderator, or does_not_exist",
+        "required": true,
+        "type": "string",
+        "enum": [
+          "unregistered",
+          "registered",
+          "moderator",
+          "does_not_exist"
+        ]
+      }
+    }
+  },
+  "migration-info": {
+    "parsed": true,
+    "id": "migration-info",
+    "description": "This type represents a question's migration to or from a different site in the Stack Exchange network.",
+    "properties": {
+      "on_date": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "date",
+        "required": true,
+        "type": "date"
+      },
+      "other_site": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "site",
+        "required": true,
+        "type": {
+          "$ref": "/site"
+        }
+      },
+      "question_id": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer, refers to a question",
+        "required": true,
+        "type": "integer"
+      }
+    }
+  },
+  "notice": {
+    "parsed": true,
+    "id": "notice",
+    "description": "Represents a notice on a post.",
+    "properties": {
+      "body": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "string\r\n        unchanged in unsafe filters",
+        "unchangedInUnsafeFilters": true,
+        "required": true,
+        "type": "string"
+      },
+      "creation_date": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "date",
+        "required": true,
+        "type": "date"
+      },
+      "owner_user_id": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      }
+    }
+  },
+  "badge-count": {
+    "parsed": true,
+    "id": "badge-count",
+    "description": "This type represents the total Badges, segregated by rank, a user has earned.",
+    "properties": {
+      "bronze": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      },
+      "gold": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      },
+      "silver": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "integer",
+        "required": true,
+        "type": "integer"
+      }
+    }
+  },
+  "related-site": {
+    "parsed": true,
+    "id": "related-site",
+    "description": "This type represents a site that is related in some way to another site.\r\n\r\n    Examples include chat and meta, and parent sites.\r\n\r\n    Applications should be able to gracefully handle the additon of new related site types.",
+    "properties": {
+      "api_site_parameter": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "string\r\n        \r\n        may be absent",
+        "required": false,
+        "type": "string"
+      },
+      "name": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "string",
+        "required": true,
+        "type": "string"
+      },
+      "relation": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "one of parent, meta, or chat, but new options may be added.",
+        "required": true,
+        "type": "string",
+        "enum": [
+          "parent",
+          "meta",
+          "chat"
+        ]
+      },
+      "site_url": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "string\r\n        unchanged in unsafe filters",
+        "unchangedInUnsafeFilters": true,
+        "required": true,
+        "type": "string"
+      }
+    }
+  },
+  "styling": {
+    "parsed": true,
+    "id": "styling",
+    "description": "This type represents some stylings of a site in the Stack Exchange network.\r\n\r\n    These stylings are meant to allow developers to subtly vary the presentation of resources in their applications\r\n    so as to indicate to users the original source site.\r\n\r\n    Applications should be able to gracefully handle these styles changes, though they can safely assume that these\r\n    style changes are infrequent.\r\n\r\n    Note that colors can be returned either as six or three digit hex triplets.",
+    "properties": {
+      "link_color": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "string",
+        "required": true,
+        "type": "string"
+      },
+      "tag_background_color": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "string",
+        "required": true,
+        "type": "string"
+      },
+      "tag_foreground_color": {
+        "isIncludedInDefaultFilter": true,
+        "decscription": "string",
+        "required": true,
+        "type": "string"
+      }
+    }
+  }
+}

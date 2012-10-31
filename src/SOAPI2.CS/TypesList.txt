@@ -1,0 +1,89 @@
+{
+  "answer": {
+    "parsed": false
+  },
+  "comment": {
+    "parsed": false
+  },
+  "badge": {
+    "parsed": false
+  },
+  "event": {
+    "parsed": false
+  },
+  "info": {
+    "parsed": false
+  },
+  "post": {
+    "parsed": false
+  },
+  "revision": {
+    "parsed": false
+  },
+  "suggested-edit": {
+    "parsed": false
+  },
+  "privilege": {
+    "parsed": false
+  },
+  "question": {
+    "parsed": false
+  },
+  "question-timeline": {
+    "parsed": false
+  },
+  "tag": {
+    "parsed": false
+  },
+  "tag-synonym": {
+    "parsed": false
+  },
+  "tag-score": {
+    "parsed": false
+  },
+  "tag-wiki": {
+    "parsed": false
+  },
+  "user": {
+    "parsed": false
+  },
+  "account-merge": {
+    "parsed": false
+  },
+  "notification": {
+    "parsed": false
+  },
+  "reputation": {
+    "parsed": false
+  },
+  "reputation-history": {
+    "parsed": false
+  },
+  "user-timeline": {
+    "parsed": false
+  },
+  "top-tag": {
+    "parsed": false
+  },
+  "write-permission": {
+    "parsed": false
+  },
+  "inbox-item": {
+    "parsed": false
+  },
+  "access-token": {
+    "parsed": false
+  },
+  "error": {
+    "parsed": false
+  },
+  "filter": {
+    "parsed": false
+  },
+  "site": {
+    "parsed": false
+  },
+  "network-user": {
+    "parsed": false
+  }
+}

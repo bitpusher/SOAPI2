@@ -1,0 +1,1012 @@
+{
+  "Local": [
+    {
+      "Name": "Answers",
+      "Global": false,
+      "Methods": [
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/answers",
+          "UriTemplate": "/answers",
+          "Name": "Answers",
+          "DocPath": "..\\..\\html\\methods\\local\\Answers.txt",
+          "ShortDescription": "Get all answers on the site."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/answers-by-ids",
+          "UriTemplate": "/answers/{ids}",
+          "Name": "AnswersByIds",
+          "DocPath": "..\\..\\html\\methods\\local\\AnswersByIds.txt",
+          "ShortDescription": "Get answers identified by a set of ids."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/comments-on-answers",
+          "UriTemplate": "/answers/{ids}/comments",
+          "Name": "CommentsOnAnswers",
+          "DocPath": "..\\..\\html\\methods\\local\\CommentsOnAnswers.txt",
+          "ShortDescription": "Get comments on the answers identified by a set of ids."
+        }
+      ]
+    },
+    {
+      "Name": "Badges",
+      "Global": false,
+      "Methods": [
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/badges",
+          "UriTemplate": "/badges",
+          "Name": "Badges",
+          "DocPath": "..\\..\\html\\methods\\local\\Badges.txt",
+          "ShortDescription": "Get all badges on the site, in alphabetical order."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/badges-by-ids",
+          "UriTemplate": "/badges/{ids}",
+          "Name": "BadgesByIds",
+          "DocPath": "..\\..\\html\\methods\\local\\BadgesByIds.txt",
+          "ShortDescription": "Get the badges identified by ids."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/badges-by-name",
+          "UriTemplate": "/badges/name",
+          "Name": "BadgesByName",
+          "DocPath": "..\\..\\html\\methods\\local\\BadgesByName.txt",
+          "ShortDescription": "Get all non-tagged-based badges in alphabetical order."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/badge-recipients",
+          "UriTemplate": "/badges/recipients",
+          "Name": "BadgeRecipients",
+          "DocPath": "..\\..\\html\\methods\\local\\BadgeRecipients.txt",
+          "ShortDescription": "Get badges recently awarded on the site."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/badge-recipients-by-ids",
+          "UriTemplate": "/badges/{ids}/recipients",
+          "Name": "BadgeRecipientsByIds",
+          "DocPath": "..\\..\\html\\methods\\local\\BadgeRecipientsByIds.txt",
+          "ShortDescription": "Get the recent recipients of the given badges."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/badges-by-tag",
+          "UriTemplate": "/badges/tags",
+          "Name": "BadgesByTag",
+          "DocPath": "..\\..\\html\\methods\\local\\BadgesByTag.txt",
+          "ShortDescription": "Get all tagged-based badges in alphabetical order."
+        }
+      ]
+    },
+    {
+      "Name": "Comments",
+      "Global": false,
+      "Methods": [
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/comments",
+          "UriTemplate": "/comments",
+          "Name": "Comments",
+          "DocPath": "..\\..\\html\\methods\\local\\Comments.txt",
+          "ShortDescription": "Get all comments on the site."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/comments-by-ids",
+          "UriTemplate": "/comments/{ids}",
+          "Name": "CommentsByIds",
+          "DocPath": "..\\..\\html\\methods\\local\\CommentsByIds.txt",
+          "ShortDescription": "Get comments identified by a set of ids."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/delete-comment",
+          "UriTemplate": "/comments/{id}/delete",
+          "Name": "DeleteComment",
+          "DocPath": "..\\..\\html\\methods\\local\\DeleteComment.txt",
+          "ShortDescription": "Delete a comment identified by it's id."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/edit-comment",
+          "UriTemplate": "/comments/{id}/edit",
+          "Name": "EditComment",
+          "DocPath": "..\\..\\html\\methods\\local\\EditComment.txt",
+          "ShortDescription": "Edit a comment identified by it's id."
+        }
+      ]
+    },
+    {
+      "Name": "Events",
+      "Global": false,
+      "Methods": [
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/events",
+          "UriTemplate": "/events",
+          "Name": "Events",
+          "DocPath": "..\\..\\html\\methods\\local\\Events.txt",
+          "ShortDescription": "Get recent events that have occurred on the site. Effectively a stream of new users and content."
+        }
+      ]
+    },
+    {
+      "Name": "Info",
+      "Global": false,
+      "Methods": [
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/info",
+          "UriTemplate": "/info",
+          "Name": "Info",
+          "DocPath": "..\\..\\html\\methods\\local\\Info.txt",
+          "ShortDescription": "Get information about the entire site."
+        }
+      ]
+    },
+    {
+      "Name": "Posts",
+      "Global": false,
+      "Methods": [
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/posts",
+          "UriTemplate": "/posts",
+          "Name": "Posts",
+          "DocPath": "..\\..\\html\\methods\\local\\Posts.txt",
+          "ShortDescription": "Get all posts (questions and answers) in the system."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/posts-by-ids",
+          "UriTemplate": "/posts/{ids}",
+          "Name": "PostsByIds",
+          "DocPath": "..\\..\\html\\methods\\local\\PostsByIds.txt",
+          "ShortDescription": "Get all posts identified by a set of ids.  Useful for when the type of post (question or answer) is not known."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/comments-on-posts",
+          "UriTemplate": "/posts/{ids}/comments",
+          "Name": "CommentsOnPosts",
+          "DocPath": "..\\..\\html\\methods\\local\\CommentsOnPosts.txt",
+          "ShortDescription": "Get comments on the posts (question or answer) identified by a set of ids."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/create-comment",
+          "UriTemplate": "/posts/{id}/comments/add",
+          "Name": "CreateComment",
+          "DocPath": "..\\..\\html\\methods\\local\\CreateComment.txt",
+          "ShortDescription": "Create a new comment on the post identified by id."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/revisions-by-ids",
+          "UriTemplate": "/posts/{ids}/revisions",
+          "Name": "RevisionsByIds",
+          "DocPath": "..\\..\\html\\methods\\local\\RevisionsByIds.txt",
+          "ShortDescription": "Get revisions on the set of posts in ids."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/posts-on-suggested-edits",
+          "UriTemplate": "/posts/{ids}/suggested-edits",
+          "Name": "PostsOnSuggestedEdits",
+          "DocPath": "..\\..\\html\\methods\\local\\PostsOnSuggestedEdits.txt",
+          "ShortDescription": "Get suggested edits on the set of posts in ids."
+        }
+      ]
+    },
+    {
+      "Name": "Privileges",
+      "Global": false,
+      "Methods": [
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/privileges",
+          "UriTemplate": "/privileges",
+          "Name": "Privileges",
+          "DocPath": "..\\..\\html\\methods\\local\\Privileges.txt",
+          "ShortDescription": "Get all the privileges available on the site."
+        }
+      ]
+    },
+    {
+      "Name": "Questions",
+      "Global": false,
+      "Methods": [
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/questions",
+          "UriTemplate": "/questions",
+          "Name": "Questions",
+          "DocPath": "..\\..\\html\\methods\\local\\Questions.txt",
+          "ShortDescription": "Get all questions on the site."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/questions-by-ids",
+          "UriTemplate": "/questions/{ids}",
+          "Name": "QuestionsByIds",
+          "DocPath": "..\\..\\html\\methods\\local\\QuestionsByIds.txt",
+          "ShortDescription": "Get the questions identified by a set of ids."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/answers-on-questions",
+          "UriTemplate": "/questions/{ids}/answers",
+          "Name": "AnswersOnQuestions",
+          "DocPath": "..\\..\\html\\methods\\local\\AnswersOnQuestions.txt",
+          "ShortDescription": "Get the answers to the questions identified by a set of ids."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/comments-on-questions",
+          "UriTemplate": "/questions/{ids}/comments",
+          "Name": "CommentsOnQuestions",
+          "DocPath": "..\\..\\html\\methods\\local\\CommentsOnQuestions.txt",
+          "ShortDescription": "Get the comments on the questions identified by a set of ids."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/linked-questions",
+          "UriTemplate": "/questions/{ids}/linked",
+          "Name": "LinkedQuestions",
+          "DocPath": "..\\..\\html\\methods\\local\\LinkedQuestions.txt",
+          "ShortDescription": "Get the questions that link to the questions identified by a set of ids."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/related-questions",
+          "UriTemplate": "/questions/{ids}/related",
+          "Name": "RelatedQuestions",
+          "DocPath": "..\\..\\html\\methods\\local\\RelatedQuestions.txt",
+          "ShortDescription": "Get the questions that are related to the questions identified by a set of ids."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/questions-timeline",
+          "UriTemplate": "/questions/{ids}/timeline",
+          "Name": "QuestionsTimeline",
+          "DocPath": "..\\..\\html\\methods\\local\\QuestionsTimeline.txt",
+          "ShortDescription": "Get the timelines of the questions identified by a set of ids."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/featured-questions",
+          "UriTemplate": "/questions/featured",
+          "Name": "FeaturedQuestions",
+          "DocPath": "..\\..\\html\\methods\\local\\FeaturedQuestions.txt",
+          "ShortDescription": "Get all questions on the site with active bounties."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/unanswered-questions",
+          "UriTemplate": "/questions/unanswered",
+          "Name": "UnansweredQuestions",
+          "DocPath": "..\\..\\html\\methods\\local\\UnansweredQuestions.txt",
+          "ShortDescription": "Get all questions the site considers unanswered."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/no-answer-questions",
+          "UriTemplate": "/questions/no-answers",
+          "Name": "NoAnswerQuestions",
+          "DocPath": "..\\..\\html\\methods\\local\\NoAnswerQuestions.txt",
+          "ShortDescription": "Get all questions on the site with  answers."
+        }
+      ]
+    },
+    {
+      "Name": "Revisions",
+      "Global": false,
+      "Methods": [
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/revisions-by-guids",
+          "UriTemplate": "/revisions/{ids}",
+          "Name": "RevisionsByGuids",
+          "DocPath": "..\\..\\html\\methods\\local\\RevisionsByGuids.txt",
+          "ShortDescription": "Get all revisions identified by a set of ids."
+        }
+      ]
+    },
+    {
+      "Name": "Search",
+      "Global": false,
+      "Methods": [
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/search",
+          "UriTemplate": "/search",
+          "Name": "Search",
+          "DocPath": "..\\..\\html\\methods\\local\\Search.txt",
+          "ShortDescription": "Search the site for questions meeting certain criteria."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/advanced-search",
+          "UriTemplate": "/search/advanced",
+          "Name": "AdvancedSearch",
+          "DocPath": "..\\..\\html\\methods\\local\\AdvancedSearch.txt",
+          "ShortDescription": "Search the site for questions using most of the on-site search options."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/similar",
+          "UriTemplate": "/similar",
+          "Name": "Similar",
+          "DocPath": "..\\..\\html\\methods\\local\\Similar.txt",
+          "ShortDescription": "Search the site based on similarity to a title."
+        }
+      ]
+    },
+    {
+      "Name": "Suggested Edits",
+      "Global": false,
+      "Methods": [
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/suggested-edits",
+          "UriTemplate": "/suggested-edits",
+          "Name": "SuggestedEdits",
+          "DocPath": "..\\..\\html\\methods\\local\\SuggestedEdits.txt",
+          "ShortDescription": "Get all the suggested edits on the site."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/suggested-edits-by-ids",
+          "UriTemplate": "/suggested-edits/{ids}",
+          "Name": "SuggestedEditsByIds",
+          "DocPath": "..\\..\\html\\methods\\local\\SuggestedEditsByIds.txt",
+          "ShortDescription": "Get the suggested edits identified by a set of ids."
+        }
+      ]
+    },
+    {
+      "Name": "Tags",
+      "Global": false,
+      "Methods": [
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/tags",
+          "UriTemplate": "/tags",
+          "Name": "Tags",
+          "DocPath": "..\\..\\html\\methods\\local\\Tags.txt",
+          "ShortDescription": "Get the tags on the site."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/tags-by-name",
+          "UriTemplate": "/tags/{tags}/info",
+          "Name": "TagsByName",
+          "DocPath": "..\\..\\html\\methods\\local\\TagsByName.txt",
+          "ShortDescription": "Get tags on the site by their names."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/moderator-only-tags",
+          "UriTemplate": "/tags/moderator-only",
+          "Name": "ModeratorOnlyTags",
+          "DocPath": "..\\..\\html\\methods\\local\\ModeratorOnlyTags.txt",
+          "ShortDescription": "Get the tags on the site that only moderators can use."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/required-tags",
+          "UriTemplate": "/tags/required",
+          "Name": "RequiredTags",
+          "DocPath": "..\\..\\html\\methods\\local\\RequiredTags.txt",
+          "ShortDescription": "Get the tags on the site that fulfill required tag constraints."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/tag-synonyms",
+          "UriTemplate": "/tags/synonyms",
+          "Name": "TagSynonyms",
+          "DocPath": "..\\..\\html\\methods\\local\\TagSynonyms.txt",
+          "ShortDescription": "Get all the tag synonyms on the site."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/faqs-by-tags",
+          "UriTemplate": "/tags/{tags}/faq",
+          "Name": "FaqsByTags",
+          "DocPath": "..\\..\\html\\methods\\local\\FaqsByTags.txt",
+          "ShortDescription": "Get frequently asked questions in a set of tags."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/related-tags",
+          "UriTemplate": "/tags/{tags}/related",
+          "Name": "RelatedTags",
+          "DocPath": "..\\..\\html\\methods\\local\\RelatedTags.txt",
+          "ShortDescription": "Get related tags, based on common tag pairings."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/synonyms-by-tags",
+          "UriTemplate": "/tags/{tags}/synonyms",
+          "Name": "SynonymsByTags",
+          "DocPath": "..\\..\\html\\methods\\local\\SynonymsByTags.txt",
+          "ShortDescription": "Get the synonyms for a specific set of tags."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/top-answerers-on-tags",
+          "UriTemplate": "/tags/{tag}/top-answerers/{period}",
+          "Name": "TopAnswerersOnTags",
+          "DocPath": "..\\..\\html\\methods\\local\\TopAnswerersOnTags.txt",
+          "ShortDescription": "Get the top answer posters in a specific tag, either in the last month or for all time."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/top-askers-on-tags",
+          "UriTemplate": "/tags/{tag}/top-askers/{period}",
+          "Name": "TopAskersOnTags",
+          "DocPath": "..\\..\\html\\methods\\local\\TopAskersOnTags.txt",
+          "ShortDescription": "Get the top question askers in a specific tag, either in the last month or for all time."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/wikis-by-tags",
+          "UriTemplate": "/tags/{tags}/wikis",
+          "Name": "WikisByTags",
+          "DocPath": "..\\..\\html\\methods\\local\\WikisByTags.txt",
+          "ShortDescription": "Get the wiki entries for a set of tags."
+        }
+      ]
+    },
+    {
+      "Name": "Users",
+      "Global": false,
+      "Methods": [
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/users",
+          "UriTemplate": "/users",
+          "Name": "Users",
+          "DocPath": "..\\..\\html\\methods\\local\\Users.txt",
+          "ShortDescription": "Get all users on the site."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/users-by-ids",
+          "UriTemplate": "/users/{ids}",
+          "Name": "UsersByIds",
+          "DocPath": "..\\..\\html\\methods\\local\\UsersByIds.txt",
+          "ShortDescription": "Get the users identified by a set of ids."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/answers-on-users",
+          "UriTemplate": "/users/{ids}/answers",
+          "Name": "AnswersOnUsers",
+          "DocPath": "..\\..\\html\\methods\\local\\AnswersOnUsers.txt",
+          "ShortDescription": "Get the answers posted by the users identified by a set of ids."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/badges-on-users",
+          "UriTemplate": "/users/{ids}/badges",
+          "Name": "BadgesOnUsers",
+          "DocPath": "..\\..\\html\\methods\\local\\BadgesOnUsers.txt",
+          "ShortDescription": "Get the badges earned by the users identified by a set of ids."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/comments-on-users",
+          "UriTemplate": "/users/{ids}/comments",
+          "Name": "CommentsOnUsers",
+          "DocPath": "..\\..\\html\\methods\\local\\CommentsOnUsers.txt",
+          "ShortDescription": "Get the comments posted by the users identified by a set of ids."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/comments-by-users-to-user",
+          "UriTemplate": "/users/{ids}/comments/{toid}",
+          "Name": "CommentsByUsersToUser",
+          "DocPath": "..\\..\\html\\methods\\local\\CommentsByUsersToUser.txt",
+          "ShortDescription": "Get the comments posted by a set of users in reply to another user."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/favorites-on-users",
+          "UriTemplate": "/users/{ids}/favorites",
+          "Name": "FavoritesOnUsers",
+          "DocPath": "..\\..\\html\\methods\\local\\FavoritesOnUsers.txt",
+          "ShortDescription": "Get the questions favorited by users identified by a set of ids."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/mentions-on-users",
+          "UriTemplate": "/users/{ids}/mentioned",
+          "Name": "MentionsOnUsers",
+          "DocPath": "..\\..\\html\\methods\\local\\MentionsOnUsers.txt",
+          "ShortDescription": "Get the comments that mention one of the users identified by a set of ids."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/merge-history",
+          "UriTemplate": "/users/{ids}/merges",
+          "Name": "MergeHistory",
+          "DocPath": "..\\..\\html\\methods\\local\\MergeHistory.txt",
+          "ShortDescription": "Get the merges a user's accounts has undergone."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/user-notifications",
+          "UriTemplate": "/users/{id}/notifications",
+          "Name": "UserNotifications",
+          "DocPath": "..\\..\\html\\methods\\local\\UserNotifications.txt",
+          "ShortDescription": "Get a user's notifications."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/user-unread-notifications",
+          "UriTemplate": "/users/{id}/notifications/unread",
+          "Name": "UserUnreadNotifications",
+          "DocPath": "..\\..\\html\\methods\\local\\UserUnreadNotifications.txt",
+          "ShortDescription": "Get a user's unread notifications."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/privileges-on-users",
+          "UriTemplate": "/users/{id}/privileges",
+          "Name": "PrivilegesOnUsers",
+          "DocPath": "..\\..\\html\\methods\\local\\PrivilegesOnUsers.txt",
+          "ShortDescription": "Get the privileges the given user has on the site."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/questions-on-users",
+          "UriTemplate": "/users/{ids}/questions",
+          "Name": "QuestionsOnUsers",
+          "DocPath": "..\\..\\html\\methods\\local\\QuestionsOnUsers.txt",
+          "ShortDescription": "Get the questions asked by the users identified by a set of ids."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/featured-questions-on-users",
+          "UriTemplate": "/users/{ids}/questions/featured",
+          "Name": "FeaturedQuestionsOnUsers",
+          "DocPath": "..\\..\\html\\methods\\local\\FeaturedQuestionsOnUsers.txt",
+          "ShortDescription": "Get the questions on which a set of users, have active bounties."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/no-answer-questions-on-users",
+          "UriTemplate": "/users/{ids}/questions/no-answers",
+          "Name": "NoAnswerQuestionsOnUsers",
+          "DocPath": "..\\..\\html\\methods\\local\\NoAnswerQuestionsOnUsers.txt",
+          "ShortDescription": "Get the questions asked by a set of users, which have  answers."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/unaccepted-questions-on-users",
+          "UriTemplate": "/users/{ids}/questions/unaccepted",
+          "Name": "UnacceptedQuestionsOnUsers",
+          "DocPath": "..\\..\\html\\methods\\local\\UnacceptedQuestionsOnUsers.txt",
+          "ShortDescription": "Get the questions asked by a set of users, which have at least one answer but no accepted answer."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/unanswered-questions-on-users",
+          "UriTemplate": "/users/{ids}/questions/unanswered",
+          "Name": "UnansweredQuestionsOnUsers",
+          "DocPath": "..\\..\\html\\methods\\local\\UnansweredQuestionsOnUsers.txt",
+          "ShortDescription": "Get the questions asked by a set of users, which are not considered to be adequately answered."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/reputation-on-users",
+          "UriTemplate": "/users/{ids}/reputation",
+          "Name": "ReputationOnUsers",
+          "DocPath": "..\\..\\html\\methods\\local\\ReputationOnUsers.txt",
+          "ShortDescription": "Get a subset of the reputation changes experienced by the users identified by a set of ids."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/reputation-history",
+          "UriTemplate": "/users/{ids}/reputation-history",
+          "Name": "ReputationHistory",
+          "DocPath": "..\\..\\html\\methods\\local\\ReputationHistory.txt",
+          "ShortDescription": "Get a history of a user's reputation, excluding private events."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/full-reputation-history",
+          "UriTemplate": "/users/{ids}/reputation-history/full",
+          "Name": "FullReputationHistory",
+          "DocPath": "..\\..\\html\\methods\\local\\FullReputationHistory.txt",
+          "ShortDescription": "Get a full history of a user's reputation."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/suggested-edits-on-users",
+          "UriTemplate": "/users/{ids}/suggested-edits",
+          "Name": "SuggestedEditsOnUsers",
+          "DocPath": "..\\..\\html\\methods\\local\\SuggestedEditsOnUsers.txt",
+          "ShortDescription": "Get the suggested edits provided by users identified by a set of ids."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/tags-on-users",
+          "UriTemplate": "/users/{ids}/tags",
+          "Name": "TagsOnUsers",
+          "DocPath": "..\\..\\html\\methods\\local\\TagsOnUsers.txt",
+          "ShortDescription": "Get the tags that the users (identified by a set of ids) have been active in."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/top-user-answers-in-tags",
+          "UriTemplate": "/users/{id}/tags/{tags}/top-answers",
+          "Name": "TopUserAnswersInTags",
+          "DocPath": "..\\..\\html\\methods\\local\\TopUserAnswersInTags.txt",
+          "ShortDescription": "Get the top answers a user has posted on questions with a set of tags."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/top-user-questions-in-tags",
+          "UriTemplate": "/users/{id}/tags/{tags}/top-questions",
+          "Name": "TopUserQuestionsInTags",
+          "DocPath": "..\\..\\html\\methods\\local\\TopUserQuestionsInTags.txt",
+          "ShortDescription": "Get the top questions a user has posted with a set of tags."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/timeline-on-users",
+          "UriTemplate": "/users/{ids}/timeline",
+          "Name": "TimelineOnUsers",
+          "DocPath": "..\\..\\html\\methods\\local\\TimelineOnUsers.txt",
+          "ShortDescription": "Get a subset of the actions of that have been taken by the users identified by a set of ids."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/top-answer-tags-on-users",
+          "UriTemplate": "/users/{id}/top-answer-tags",
+          "Name": "TopAnswerTagsOnUsers",
+          "DocPath": "..\\..\\html\\methods\\local\\TopAnswerTagsOnUsers.txt",
+          "ShortDescription": "Get the top tags (by score) a single user has posted answers in."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/top-question-tags-on-users",
+          "UriTemplate": "/users/{id}/top-question-tags",
+          "Name": "TopQuestionTagsOnUsers",
+          "DocPath": "..\\..\\html\\methods\\local\\TopQuestionTagsOnUsers.txt",
+          "ShortDescription": "Get the top tags (by score) a single user has asked questions in."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/write-permissions",
+          "UriTemplate": "/users/{ids}/write-permissions",
+          "Name": "WritePermissions",
+          "DocPath": "..\\..\\html\\methods\\local\\WritePermissions.txt",
+          "ShortDescription": "Get the write access a user has via the API."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/moderators",
+          "UriTemplate": "/users/moderators",
+          "Name": "Moderators",
+          "DocPath": "..\\..\\html\\methods\\local\\Moderators.txt",
+          "ShortDescription": "Get the users who have moderation powers on the site."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/elected-moderators",
+          "UriTemplate": "/users/moderators/elected",
+          "Name": "ElectedModerators",
+          "DocPath": "..\\..\\html\\methods\\local\\ElectedModerators.txt",
+          "ShortDescription": "Get the users who are active moderators who have also won a moderator election."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/user-inbox",
+          "UriTemplate": "/users/{id}/inbox",
+          "Name": "UserInbox",
+          "DocPath": "..\\..\\html\\methods\\local\\UserInbox.txt",
+          "ShortDescription": "Get a user's inbox."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/user-unread-inbox",
+          "UriTemplate": "/users/{id}/inbox/unread",
+          "Name": "UserUnreadInbox",
+          "DocPath": "..\\..\\html\\methods\\local\\UserUnreadInbox.txt",
+          "ShortDescription": "Get the unread items in a user's inbox."
+        }
+      ]
+    },
+    {
+      "Name": "Me",
+      "Global": false,
+      "Methods": [
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/me",
+          "UriTemplate": "/me",
+          "Name": "Me",
+          "DocPath": "..\\..\\html\\methods\\local\\Me.txt",
+          "ShortDescription": "Get the users identified by a set of ids."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/me-answers",
+          "UriTemplate": "/me/answers",
+          "Name": "MeAnswers",
+          "DocPath": "..\\..\\html\\methods\\local\\MeAnswers.txt",
+          "ShortDescription": "Get the answers posted by the users identified by a set of ids."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/me-badges",
+          "UriTemplate": "/me/badges",
+          "Name": "MeBadges",
+          "DocPath": "..\\..\\html\\methods\\local\\MeBadges.txt",
+          "ShortDescription": "Get the badges earned by the users identified by a set of ids."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/me-comments",
+          "UriTemplate": "/me/comments",
+          "Name": "MeComments",
+          "DocPath": "..\\..\\html\\methods\\local\\MeComments.txt",
+          "ShortDescription": "Get the comments posted by the users identified by a set of ids."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/me-comments-to",
+          "UriTemplate": "/me/comments/{toid}",
+          "Name": "MeCommentsTo",
+          "DocPath": "..\\..\\html\\methods\\local\\MeCommentsTo.txt",
+          "ShortDescription": "Get the comments posted by a set of users in reply to another user."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/me-favorites",
+          "UriTemplate": "/me/favorites",
+          "Name": "MeFavorites",
+          "DocPath": "..\\..\\html\\methods\\local\\MeFavorites.txt",
+          "ShortDescription": "Get the questions favorited by users identified by a set of ids."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/me-mentioned",
+          "UriTemplate": "/me/mentioned",
+          "Name": "MeMentioned",
+          "DocPath": "..\\..\\html\\methods\\local\\MeMentioned.txt",
+          "ShortDescription": "Get the comments that mention one of the users identified by a set of ids."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/me-merge-history",
+          "UriTemplate": "/me/merges",
+          "Name": "MeMergeHistory",
+          "DocPath": "..\\..\\html\\methods\\local\\MeMergeHistory.txt",
+          "ShortDescription": "Get the merges a user's accounts has undergone."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/me-notifications",
+          "UriTemplate": "/me/notifications",
+          "Name": "MeNotifications",
+          "DocPath": "..\\..\\html\\methods\\local\\MeNotifications.txt",
+          "ShortDescription": "Get a user's notifications."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/me-unread-notifications",
+          "UriTemplate": "/me/notifications/unread",
+          "Name": "MeUnreadNotifications",
+          "DocPath": "..\\..\\html\\methods\\local\\MeUnreadNotifications.txt",
+          "ShortDescription": "Get a user's unread notifications."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/me-privileges",
+          "UriTemplate": "/me/privileges",
+          "Name": "MePrivileges",
+          "DocPath": "..\\..\\html\\methods\\local\\MePrivileges.txt",
+          "ShortDescription": "Get the privileges the given user has on the site."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/me-questions",
+          "UriTemplate": "/me/questions",
+          "Name": "MeQuestions",
+          "DocPath": "..\\..\\html\\methods\\local\\MeQuestions.txt",
+          "ShortDescription": "Get the questions asked by the users identified by a set of ids."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/me-featured-questions",
+          "UriTemplate": "/me/questions/featured",
+          "Name": "MeFeaturedQuestions",
+          "DocPath": "..\\..\\html\\methods\\local\\MeFeaturedQuestions.txt",
+          "ShortDescription": "Get the questions on which a set of users, have active bounties."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/me-no-answer-questions",
+          "UriTemplate": "/me/questions/no-answers",
+          "Name": "MeNoAnswerQuestions",
+          "DocPath": "..\\..\\html\\methods\\local\\MeNoAnswerQuestions.txt",
+          "ShortDescription": "Get the questions asked by a set of users, which have  answers."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/me-unaccepted-questions",
+          "UriTemplate": "/me/questions/unaccepted",
+          "Name": "MeUnacceptedQuestions",
+          "DocPath": "..\\..\\html\\methods\\local\\MeUnacceptedQuestions.txt",
+          "ShortDescription": "Get the questions asked by a set of users, which have at least one answer but no accepted answer."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/me-unanswered-questions",
+          "UriTemplate": "/me/questions/unanswered",
+          "Name": "MeUnansweredQuestions",
+          "DocPath": "..\\..\\html\\methods\\local\\MeUnansweredQuestions.txt",
+          "ShortDescription": "Get the questions asked by a set of users, which are not considered to be adequately answered."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/me-reputation",
+          "UriTemplate": "/me/reputation",
+          "Name": "MeReputation",
+          "DocPath": "..\\..\\html\\methods\\local\\MeReputation.txt",
+          "ShortDescription": "Get a subset of the reputation changes experienced by the users identified by a set of ids."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/me-reputation-history",
+          "UriTemplate": "/me/reputation-history",
+          "Name": "MeReputationHistory",
+          "DocPath": "..\\..\\html\\methods\\local\\MeReputationHistory.txt",
+          "ShortDescription": "Get a history of a user's reputation, excluding private events."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/me-full-reputation-history",
+          "UriTemplate": "/me/reputation-history/full",
+          "Name": "MeFullReputationHistory",
+          "DocPath": "..\\..\\html\\methods\\local\\MeFullReputationHistory.txt",
+          "ShortDescription": "Get a full history of a user's reputation."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/me-suggested-edits",
+          "UriTemplate": "/me/suggested-edits",
+          "Name": "MeSuggestedEdits",
+          "DocPath": "..\\..\\html\\methods\\local\\MeSuggestedEdits.txt",
+          "ShortDescription": "Get the suggested edits provided by users identified by a set of ids."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/me-tags",
+          "UriTemplate": "/me/tags",
+          "Name": "MeTags",
+          "DocPath": "..\\..\\html\\methods\\local\\MeTags.txt",
+          "ShortDescription": "Get the tags that the users (identified by a set of ids) have been active in."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/me-tags-top-answers",
+          "UriTemplate": "/me/tags/{tags}/top-answers",
+          "Name": "MeTagsTopAnswers",
+          "DocPath": "..\\..\\html\\methods\\local\\MeTagsTopAnswers.txt",
+          "ShortDescription": "Get the top answers a user has posted on questions with a set of tags."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/me-tags-top-questions",
+          "UriTemplate": "/me/tags/{tags}/top-questions",
+          "Name": "MeTagsTopQuestions",
+          "DocPath": "..\\..\\html\\methods\\local\\MeTagsTopQuestions.txt",
+          "ShortDescription": "Get the top questions a user has posted with a set of tags."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/me-timeline",
+          "UriTemplate": "/me/timeline",
+          "Name": "MeTimeline",
+          "DocPath": "..\\..\\html\\methods\\local\\MeTimeline.txt",
+          "ShortDescription": "Get a subset of the actions of that have been taken by the users identified by a set of ids."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/me-top-answer-tags",
+          "UriTemplate": "/me/top-answer-tags",
+          "Name": "MeTopAnswerTags",
+          "DocPath": "..\\..\\html\\methods\\local\\MeTopAnswerTags.txt",
+          "ShortDescription": "Get the top tags (by score) a single user has posted answers in."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/me-top-question-tags",
+          "UriTemplate": "/me/top-question-tags",
+          "Name": "MeTopQuestionTags",
+          "DocPath": "..\\..\\html\\methods\\local\\MeTopQuestionTags.txt",
+          "ShortDescription": "Get the top tags (by score) a single user has asked questions in."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/me-write-permissions",
+          "UriTemplate": "/me/write-permissions",
+          "Name": "MeWritePermissions",
+          "DocPath": "..\\..\\html\\methods\\local\\MeWritePermissions.txt",
+          "ShortDescription": "Get the write access a user has via the API."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/me-inbox",
+          "UriTemplate": "/me/inbox",
+          "Name": "MeInbox",
+          "DocPath": "..\\..\\html\\methods\\local\\MeInbox.txt",
+          "ShortDescription": "Get a user's inbox."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/me-unread-inbox",
+          "UriTemplate": "/me/inbox/unread",
+          "Name": "MeUnreadInbox",
+          "DocPath": "..\\..\\html\\methods\\local\\MeUnreadInbox.txt",
+          "ShortDescription": "Get the unread items in a user's inbox."
+        }
+      ]
+    }
+  ],
+  "Global": [
+    {
+      "Name": "Access Tokens",
+      "Global": true,
+      "Methods": [
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/invalidate-access-tokens",
+          "UriTemplate": "/access-tokens/{accessTokens}/invalidate",
+          "Name": "InvalidateAccessTokens",
+          "DocPath": "..\\..\\html\\methods\\global\\InvalidateAccessTokens.txt",
+          "ShortDescription": "Allows an application to dispose of  when it is done with them."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/read-access-tokens",
+          "UriTemplate": "/access-tokens/{accessTokens}",
+          "Name": "ReadAccessTokens",
+          "DocPath": "..\\..\\html\\methods\\global\\ReadAccessTokens.txt",
+          "ShortDescription": "Allows an application to inspect  it has, useful for debugging."
+        }
+      ]
+    },
+    {
+      "Name": "Applications",
+      "Global": true,
+      "Methods": [
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/application-de-authenticate",
+          "UriTemplate": "/apps/{accessTokens}/de-authenticate",
+          "Name": "ApplicationDeAuthenticate",
+          "DocPath": "..\\..\\html\\methods\\global\\ApplicationDeAuthenticate.txt",
+          "ShortDescription": "Allows an application to de-authorize itself for a set of users."
+        }
+      ]
+    },
+    {
+      "Name": "Errors",
+      "Global": true,
+      "Methods": [
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/errors",
+          "UriTemplate": "/errors",
+          "Name": "Errors",
+          "DocPath": "..\\..\\html\\methods\\global\\Errors.txt",
+          "ShortDescription": "Get descriptions of all the errors that the API could return."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/simulate-error",
+          "UriTemplate": "/errors/{id}",
+          "Name": "SimulateError",
+          "DocPath": "..\\..\\html\\methods\\global\\SimulateError.txt",
+          "ShortDescription": "Simulate an API error for testing purposes."
+        }
+      ]
+    },
+    {
+      "Name": "Filters",
+      "Global": true,
+      "Methods": [
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/create-filter",
+          "UriTemplate": "/filters/create",
+          "Name": "CreateFilter",
+          "DocPath": "..\\..\\html\\methods\\global\\CreateFilter.txt",
+          "ShortDescription": "Create a new ."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/read-filter",
+          "UriTemplate": "/filters/{filters}",
+          "Name": "ReadFilter",
+          "DocPath": "..\\..\\html\\methods\\global\\ReadFilter.txt",
+          "ShortDescription": "Decode a set of filters, useful for debugging purposes."
+        }
+      ]
+    },
+    {
+      "Name": "Inbox",
+      "Global": true,
+      "Methods": [
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/inbox",
+          "UriTemplate": "/inbox",
+          "Name": "Inbox",
+          "DocPath": "..\\..\\html\\methods\\global\\Inbox.txt",
+          "ShortDescription": "Get a user's inbox, outside of the context of a site."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/inbox-unread",
+          "UriTemplate": "/inbox/unread",
+          "Name": "InboxUnread",
+          "DocPath": "..\\..\\html\\methods\\global\\InboxUnread.txt",
+          "ShortDescription": "Get the unread items in a user's inbox, outside of the context of a site."
+        }
+      ]
+    },
+    {
+      "Name": "Notifications",
+      "Global": true,
+      "Methods": [
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/notifications",
+          "UriTemplate": "/notifications",
+          "Name": "Notifications",
+          "DocPath": "..\\..\\html\\methods\\global\\Notifications.txt",
+          "ShortDescription": "Get a user's notifications, outside of the context of a site."
+        },
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/unread-notifications",
+          "UriTemplate": "/notifications/unread",
+          "Name": "UnreadNotifications",
+          "DocPath": "..\\..\\html\\methods\\global\\UnreadNotifications.txt",
+          "ShortDescription": "Get a user's unread notifications, outside of the context of a site."
+        }
+      ]
+    },
+    {
+      "Name": "Sites",
+      "Global": true,
+      "Methods": [
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/sites",
+          "UriTemplate": "/sites",
+          "Name": "Sites",
+          "DocPath": "..\\..\\html\\methods\\global\\Sites.txt",
+          "ShortDescription": "Get all the sites in the Stack Exchange network."
+        }
+      ]
+    },
+    {
+      "Name": "Users",
+      "Global": true,
+      "Methods": [
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/associated-users",
+          "UriTemplate": "/users/{ids}/associated",
+          "Name": "AssociatedUsers",
+          "DocPath": "..\\..\\html\\methods\\global\\AssociatedUsers.txt",
+          "ShortDescription": "Get a user's associated accounts."
+        }
+      ]
+    },
+    {
+      "Name": "Me",
+      "Global": true,
+      "Methods": [
+        {
+          "DocUrl": "https://api.stackexchange.com/docs/me-associated-users",
+          "UriTemplate": "/me/associated",
+          "Name": "MeAssociatedUsers",
+          "DocPath": "..\\..\\html\\methods\\global\\MeAssociatedUsers.txt",
+          "ShortDescription": "Get a user's associated accounts."
+        }
+      ]
+    }
+  ]
+}
