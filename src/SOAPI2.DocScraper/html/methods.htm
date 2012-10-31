@@ -6,13 +6,13 @@
 <html lang="en">
 <head> 
 <title>Stack Exchange API</title>
-<link rel="stylesheet" href="/Content/apiv2/all.css?v=f4e1ff6867bf">
+<link rel="stylesheet" href="https://api-v2cdn.sstatic.net/all.css?v=a7e08e89c0d7">
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 
 </head>
 <body>
     <div class="intro">
-	    <div class="wrapper">
+        <div class="wrapper">
             <a href="/" class="logo">Stack Exchange</a>
         
             <div class="nav">
@@ -20,7 +20,8 @@
                     <li><a href="/docs" class="youarehere">Documentation</a></li>
                 </ul>
             </div>
-	    </div>
+        </div>
+        <br style="clear: both;" />
     </div>
 
     <div class="content">
@@ -29,7 +30,8 @@
             
 
 
-<div class="content-section">
+<h2>Stack Exchange API v2.0</h2>
+<div class="indented">
     <p>This is the documentation for the v2.0 <b>read-only</b> (with optional <a href="/docs/authentication">authentication</a>) Stack Exchange API.  If you have additional questions, or believe
     you have encountered a bug, don't hesitate to post a question on <a href="http://stackapps.com">Stack Apps</a>.</p>
 
@@ -37,7 +39,10 @@
 </div>
 
 <h2>General</h2>
-<div class="content-section">
+<div class="indented">
+    <p>Applications should be registered on <a href="http://stackapps.com/apps/oauth/register">Stack Apps</a> to get a request key.  
+    Request keys grant more requests per day, and are necessary for using access_tokens created via <a href="/docs/authentication">authentication</a>.</p>
+
     <p>All API responses are <a href="http://en.wikipedia.org/wiki/JSON">JSON</a>, we do support <a href="http://en.wikipedia.org/wiki/JSONP">JSONP</a> with the <code>callback</code> query parameter.
     Every response in the API is returned in a common <a href="/docs/wrapper">"wrapper" object</a>, for easier and more consistent parsing.</p>
 
@@ -73,214 +78,1156 @@
     <a name="docs"></a>
     <div id="tabs">
 
+
         <a class="youarehere" href="/docs?tab=category#docs" title="group by concept">by category</a>
         <a class="" href="/docs?tab=type#docs" title="group by type">by type</a>
     </div>
 </div>
 
 
+
+
 <h2>Per-Site Methods</h2>
-<div class="content-section">
-    <p>Each of these methods operates on a single site at a time, identified <code>site</code> parameter.  This parameter can be the full domain name (ie. "stackoverflow.com"),
+<div class="indented">
+    <p>Each of these methods operates on a single site at a time, identified by the <code>site</code> parameter.  This parameter can be the full domain name (ie. "stackoverflow.com"),
     or a short form identified by <code>api_site_parameter</code> on the <a href="/docs/types/site">site object</a>.</p>
+
+    <h3>Answers</h3>
+    <div class="indented">
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/answers">/answers</a>
+        </div>
+        <div class="method-description">
+            Get all answers on the site.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/answers-by-ids">/answers/{ids}</a>
+        </div>
+        <div class="method-description">
+            Get answers identified by a set of ids.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/comments-on-answers">/answers/{ids}/comments</a>
+        </div>
+        <div class="method-description">
+            Get comments on the answers identified by a set of ids.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+    </div>
+
+    <h3>Badges</h3>
+    <div class="indented">
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/badges">/badges</a>
+        </div>
+        <div class="method-description">
+            Get all badges on the site, in alphabetical order.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/badges-by-ids">/badges/{ids}</a>
+        </div>
+        <div class="method-description">
+            Get the badges identified by ids.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/badges-by-name">/badges/name</a>
+        </div>
+        <div class="method-description">
+            Get all non-tagged-based badges in alphabetical order.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/badge-recipients">/badges/recipients</a>
+        </div>
+        <div class="method-description">
+            Get badges recently awarded on the site.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/badge-recipients-by-ids">/badges/{ids}/recipients</a>
+        </div>
+        <div class="method-description">
+            Get the recent recipients of the given badges.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/badges-by-tag">/badges/tags</a>
+        </div>
+        <div class="method-description">
+            Get all tagged-based badges in alphabetical order.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+    </div>
+
+    <h3>Comments</h3>
+    <div class="indented">
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/comments">/comments</a>
+        </div>
+        <div class="method-description">
+            Get all comments on the site.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/comments-by-ids">/comments/{ids}</a>
+        </div>
+        <div class="method-description">
+            Get comments identified by a set of ids.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/delete-comment">/comments/{id}/delete</a>
+        </div>
+        <div class="method-description">
+            Delete a comment identified by it's id.
+                <span class="need-auth" title="this method requires an access_token">auth required</span>
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/edit-comment">/comments/{id}/edit</a>
+        </div>
+        <div class="method-description">
+            Edit a comment identified by it's id.
+                <span class="need-auth" title="this method requires an access_token">auth required</span>
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+    </div>
+
+    <h3>Events</h3>
+    <div class="indented">
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/events">/events</a>
+        </div>
+        <div class="method-description">
+            Get recent events that have occurred on the site. Effectively a stream of new users and content.
+                <span class="need-auth" title="this method requires an access_token">auth required</span>
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+    </div>
+
+    <h3>Info</h3>
+    <div class="indented">
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/info">/info</a>
+        </div>
+        <div class="method-description">
+            Get information about the entire site.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+    </div>
+
+    <h3>Posts</h3>
+    <div class="indented">
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/posts">/posts</a>
+        </div>
+        <div class="method-description">
+            Get all posts (questions and answers) in the system.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/posts-by-ids">/posts/{ids}</a>
+        </div>
+        <div class="method-description">
+            Get all posts identified by a set of ids.  Useful for when the type of post (question or answer) is not known.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/comments-on-posts">/posts/{ids}/comments</a>
+        </div>
+        <div class="method-description">
+            Get comments on the posts (question or answer) identified by a set of ids.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/create-comment">/posts/{id}/comments/add</a>
+        </div>
+        <div class="method-description">
+            Create a new comment on the post identified by id.
+                <span class="need-auth" title="this method requires an access_token">auth required</span>
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/revisions-by-ids">/posts/{ids}/revisions</a>
+        </div>
+        <div class="method-description">
+            Get revisions on the set of posts in ids.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/posts-on-suggested-edits">/posts/{ids}/suggested-edits</a>
+        </div>
+        <div class="method-description">
+            Get suggested edits on the set of posts in ids.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+    </div>
+
+    <h3>Privileges</h3>
+    <div class="indented">
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/privileges">/privileges</a>
+        </div>
+        <div class="method-description">
+            Get all the privileges available on the site.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+    </div>
+
+    <h3>Questions</h3>
+    <div class="indented">
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/questions">/questions</a>
+        </div>
+        <div class="method-description">
+            Get all questions on the site.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/questions-by-ids">/questions/{ids}</a>
+        </div>
+        <div class="method-description">
+            Get the questions identified by a set of ids.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/answers-on-questions">/questions/{ids}/answers</a>
+        </div>
+        <div class="method-description">
+            Get the answers to the questions identified by a set of ids.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/comments-on-questions">/questions/{ids}/comments</a>
+        </div>
+        <div class="method-description">
+            Get the comments on the questions identified by a set of ids.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/linked-questions">/questions/{ids}/linked</a>
+        </div>
+        <div class="method-description">
+            Get the questions that link to the questions identified by a set of ids.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/related-questions">/questions/{ids}/related</a>
+        </div>
+        <div class="method-description">
+            Get the questions that are related to the questions identified by a set of ids.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/questions-timeline">/questions/{ids}/timeline</a>
+        </div>
+        <div class="method-description">
+            Get the timelines of the questions identified by a set of ids.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/featured-questions">/questions/featured</a>
+        </div>
+        <div class="method-description">
+            Get all questions on the site with active bounties.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/unanswered-questions">/questions/unanswered</a>
+        </div>
+        <div class="method-description">
+            Get all questions the site considers unanswered.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/no-answer-questions">/questions/no-answers</a>
+        </div>
+        <div class="method-description">
+            Get all questions on the site with <b>no</b> answers.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+    </div>
+
+    <h3>Revisions</h3>
+    <div class="indented">
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/revisions-by-guids">/revisions/{ids}</a>
+        </div>
+        <div class="method-description">
+            Get all revisions identified by a set of ids.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+    </div>
+
+    <h3>Search</h3>
+    <div class="indented">
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/search">/search</a>
+        </div>
+        <div class="method-description">
+            Search the site for questions meeting certain criteria.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/advanced-search">/search/advanced</a>
+        </div>
+        <div class="method-description">
+            Search the site for questions using most of the on-site search options.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/similar">/similar</a>
+        </div>
+        <div class="method-description">
+            Search the site based on similarity to a title.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+    </div>
+
+    <h3>Suggested Edits</h3>
+    <div class="indented">
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/suggested-edits">/suggested-edits</a>
+        </div>
+        <div class="method-description">
+            Get all the suggested edits on the site.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/suggested-edits-by-ids">/suggested-edits/{ids}</a>
+        </div>
+        <div class="method-description">
+            Get the suggested edits identified by a set of ids.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+    </div>
+
+    <h3>Tags</h3>
+    <div class="indented">
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/tags">/tags</a>
+        </div>
+        <div class="method-description">
+            Get the tags on the site.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/tags-by-name">/tags/{tags}/info</a>
+        </div>
+        <div class="method-description">
+            Get tags on the site by their names.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/moderator-only-tags">/tags/moderator-only</a>
+        </div>
+        <div class="method-description">
+            Get the tags on the site that only moderators can use.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/required-tags">/tags/required</a>
+        </div>
+        <div class="method-description">
+            Get the tags on the site that fulfill required tag constraints.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/tag-synonyms">/tags/synonyms</a>
+        </div>
+        <div class="method-description">
+            Get all the tag synonyms on the site.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/faqs-by-tags">/tags/{tags}/faq</a>
+        </div>
+        <div class="method-description">
+            Get frequently asked questions in a set of tags.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/related-tags">/tags/{tags}/related</a>
+        </div>
+        <div class="method-description">
+            Get related tags, based on common tag pairings.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/synonyms-by-tags">/tags/{tags}/synonyms</a>
+        </div>
+        <div class="method-description">
+            Get the synonyms for a specific set of tags.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/top-answerers-on-tags">/tags/{tag}/top-answerers/{period}</a>
+        </div>
+        <div class="method-description">
+            Get the top answer posters in a specific tag, either in the last month or for all time.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/top-askers-on-tags">/tags/{tag}/top-askers/{period}</a>
+        </div>
+        <div class="method-description">
+            Get the top question askers in a specific tag, either in the last month or for all time.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/wikis-by-tags">/tags/{tags}/wikis</a>
+        </div>
+        <div class="method-description">
+            Get the wiki entries for a set of tags.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+    </div>
+
+    <h3>Users</h3>
+    <div class="indented">
+        <p>All user methods that take an <code>{ids}</code> parameter have a <code>/me</code> equivalent method that takes an <code>access_token</code> instead.
+        These methods are provided for developer convenience, with the exception of plain <a href="/docs/me">/me</a>, which is actually necessary for discovering
+        which user <a href="/docs/authentication">authenticated</a> to an application.</p>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/users">/users</a>
+        </div>
+        <div class="method-description">
+            Get all users on the site.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/users-by-ids">/users/{ids}</a>
+                <div class="indented">
+                    <a class="me-method" href="/docs/me" title="/me equivalent of /users/{ids}">/me</a>
+                </div>
+        </div>
+        <div class="method-description">
+            Get the users identified by a set of ids.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/answers-on-users">/users/{ids}/answers</a>
+                <div class="indented">
+                    <a class="me-method" href="/docs/me-answers" title="/me equivalent of /users/{ids}/answers">/me/answers</a>
+                </div>
+        </div>
+        <div class="method-description">
+            Get the answers posted by the users identified by a set of ids.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/badges-on-users">/users/{ids}/badges</a>
+                <div class="indented">
+                    <a class="me-method" href="/docs/me-badges" title="/me equivalent of /users/{ids}/badges">/me/badges</a>
+                </div>
+        </div>
+        <div class="method-description">
+            Get the badges earned by the users identified by a set of ids.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/comments-on-users">/users/{ids}/comments</a>
+                <div class="indented">
+                    <a class="me-method" href="/docs/me-comments" title="/me equivalent of /users/{ids}/comments">/me/comments</a>
+                </div>
+        </div>
+        <div class="method-description">
+            Get the comments posted by the users identified by a set of ids.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/comments-by-users-to-user">/users/{ids}/comments/{toid}</a>
+                <div class="indented">
+                    <a class="me-method" href="/docs/me-comments-to" title="/me equivalent of /users/{ids}/comments/{toid}">/me/comments/{toid}</a>
+                </div>
+        </div>
+        <div class="method-description">
+            Get the comments posted by a set of users in reply to another user.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/favorites-on-users">/users/{ids}/favorites</a>
+                <div class="indented">
+                    <a class="me-method" href="/docs/me-favorites" title="/me equivalent of /users/{ids}/favorites">/me/favorites</a>
+                </div>
+        </div>
+        <div class="method-description">
+            Get the questions favorited by users identified by a set of ids.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/mentions-on-users">/users/{ids}/mentioned</a>
+                <div class="indented">
+                    <a class="me-method" href="/docs/me-mentioned" title="/me equivalent of /users/{ids}/mentioned">/me/mentioned</a>
+                </div>
+        </div>
+        <div class="method-description">
+            Get the comments that mention one of the users identified by a set of ids.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/merge-history">/users/{ids}/merges</a>
+                <div class="indented">
+                    <a class="me-method" href="/docs/me-merge-history" title="/me equivalent of /users/{ids}/merges">/me/merges</a>
+                </div>
+        </div>
+        <div class="method-description">
+            Get the merges a user's accounts has undergone.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/user-notifications">/users/{id}/notifications</a>
+                <div class="indented">
+                    <a class="me-method" href="/docs/me-notifications" title="/me equivalent of /users/{id}/notifications">/me/notifications</a>
+                </div>
+        </div>
+        <div class="method-description">
+            Get a user's notifications.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/user-unread-notifications">/users/{id}/notifications/unread</a>
+                <div class="indented">
+                    <a class="me-method" href="/docs/me-unread-notifications" title="/me equivalent of /users/{id}/notifications/unread">/me/notifications/unread</a>
+                </div>
+        </div>
+        <div class="method-description">
+            Get a user's unread notifications.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/privileges-on-users">/users/{id}/privileges</a>
+                <div class="indented">
+                    <a class="me-method" href="/docs/me-privileges" title="/me equivalent of /users/{id}/privileges">/me/privileges</a>
+                </div>
+        </div>
+        <div class="method-description">
+            Get the privileges the given user has on the site.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/questions-on-users">/users/{ids}/questions</a>
+                <div class="indented">
+                    <a class="me-method" href="/docs/me-questions" title="/me equivalent of /users/{ids}/questions">/me/questions</a>
+                </div>
+        </div>
+        <div class="method-description">
+            Get the questions asked by the users identified by a set of ids.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/featured-questions-on-users">/users/{ids}/questions/featured</a>
+                <div class="indented">
+                    <a class="me-method" href="/docs/me-featured-questions" title="/me equivalent of /users/{ids}/questions/featured">/me/questions/featured</a>
+                </div>
+        </div>
+        <div class="method-description">
+            Get the questions on which a set of users, have active bounties.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/no-answer-questions-on-users">/users/{ids}/questions/no-answers</a>
+                <div class="indented">
+                    <a class="me-method" href="/docs/me-no-answer-questions" title="/me equivalent of /users/{ids}/questions/no-answers">/me/questions/no-answers</a>
+                </div>
+        </div>
+        <div class="method-description">
+            Get the questions asked by a set of users, which have <b>no</b> answers.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/unaccepted-questions-on-users">/users/{ids}/questions/unaccepted</a>
+                <div class="indented">
+                    <a class="me-method" href="/docs/me-unaccepted-questions" title="/me equivalent of /users/{ids}/questions/unaccepted">/me/questions/unaccepted</a>
+                </div>
+        </div>
+        <div class="method-description">
+            Get the questions asked by a set of users, which have at least one answer but no accepted answer.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/unanswered-questions-on-users">/users/{ids}/questions/unanswered</a>
+                <div class="indented">
+                    <a class="me-method" href="/docs/me-unanswered-questions" title="/me equivalent of /users/{ids}/questions/unanswered">/me/questions/unanswered</a>
+                </div>
+        </div>
+        <div class="method-description">
+            Get the questions asked by a set of users, which are not considered to be adequately answered.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/reputation-on-users">/users/{ids}/reputation</a>
+                <div class="indented">
+                    <a class="me-method" href="/docs/me-reputation" title="/me equivalent of /users/{ids}/reputation">/me/reputation</a>
+                </div>
+        </div>
+        <div class="method-description">
+            Get a subset of the reputation changes experienced by the users identified by a set of ids.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/reputation-history">/users/{ids}/reputation-history</a>
+                <div class="indented">
+                    <a class="me-method" href="/docs/me-reputation-history" title="/me equivalent of /users/{ids}/reputation-history">/me/reputation-history</a>
+                </div>
+        </div>
+        <div class="method-description">
+            Get a history of a user's reputation, excluding private events.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/full-reputation-history">/users/{ids}/reputation-history/full</a>
+                <div class="indented">
+                    <a class="me-method" href="/docs/me-full-reputation-history" title="/me equivalent of /users/{ids}/reputation-history/full">/me/reputation-history/full</a>
+                </div>
+        </div>
+        <div class="method-description">
+            Get a full history of a user's reputation.
+                <span class="need-auth" title="this method requires an access_token">auth required</span>
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/suggested-edits-on-users">/users/{ids}/suggested-edits</a>
+                <div class="indented">
+                    <a class="me-method" href="/docs/me-suggested-edits" title="/me equivalent of /users/{ids}/suggested-edits">/me/suggested-edits</a>
+                </div>
+        </div>
+        <div class="method-description">
+            Get the suggested edits provided by users identified by a set of ids.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/tags-on-users">/users/{ids}/tags</a>
+                <div class="indented">
+                    <a class="me-method" href="/docs/me-tags" title="/me equivalent of /users/{ids}/tags">/me/tags</a>
+                </div>
+        </div>
+        <div class="method-description">
+            Get the tags that the users (identified by a set of ids) have been active in.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/top-user-answers-in-tags">/users/{id}/tags/{tags}/top-answers</a>
+                <div class="indented">
+                    <a class="me-method" href="/docs/me-tags-top-answers" title="/me equivalent of /users/{id}/tags/{tags}/top-answers">/me/tags/{tags}/top-answers</a>
+                </div>
+        </div>
+        <div class="method-description">
+            Get the top answers a user has posted on questions with a set of tags.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/top-user-questions-in-tags">/users/{id}/tags/{tags}/top-questions</a>
+                <div class="indented">
+                    <a class="me-method" href="/docs/me-tags-top-questions" title="/me equivalent of /users/{id}/tags/{tags}/top-questions">/me/tags/{tags}/top-questions</a>
+                </div>
+        </div>
+        <div class="method-description">
+            Get the top questions a user has posted with a set of tags.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/timeline-on-users">/users/{ids}/timeline</a>
+                <div class="indented">
+                    <a class="me-method" href="/docs/me-timeline" title="/me equivalent of /users/{ids}/timeline">/me/timeline</a>
+                </div>
+        </div>
+        <div class="method-description">
+            Get a subset of the actions of that have been taken by the users identified by a set of ids.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/top-answer-tags-on-users">/users/{id}/top-answer-tags</a>
+                <div class="indented">
+                    <a class="me-method" href="/docs/me-top-answer-tags" title="/me equivalent of /users/{id}/top-answer-tags">/me/top-answer-tags</a>
+                </div>
+        </div>
+        <div class="method-description">
+            Get the top tags (by score) a single user has posted answers in.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/top-question-tags-on-users">/users/{id}/top-question-tags</a>
+                <div class="indented">
+                    <a class="me-method" href="/docs/me-top-question-tags" title="/me equivalent of /users/{id}/top-question-tags">/me/top-question-tags</a>
+                </div>
+        </div>
+        <div class="method-description">
+            Get the top tags (by score) a single user has asked questions in.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/write-permissions">/users/{ids}/write-permissions</a>
+                <div class="indented">
+                    <a class="me-method" href="/docs/me-write-permissions" title="/me equivalent of /users/{ids}/write-permissions">/me/write-permissions</a>
+                </div>
+        </div>
+        <div class="method-description">
+            Get the write access a user has via the API.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/moderators">/users/moderators</a>
+        </div>
+        <div class="method-description">
+            Get the users who have moderation powers on the site.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/elected-moderators">/users/moderators/elected</a>
+        </div>
+        <div class="method-description">
+            Get the users who are active moderators who have also won a moderator election.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/user-inbox">/users/{id}/inbox</a>
+                <div class="indented">
+                    <a class="me-method" href="/docs/me-inbox" title="/me equivalent of /users/{id}/inbox">/me/inbox</a>
+                </div>
+        </div>
+        <div class="method-description">
+            Get a user's inbox.
+                <span class="need-auth" title="this method requires an access_token">auth required</span>
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/user-unread-inbox">/users/{id}/inbox/unread</a>
+                <div class="indented">
+                    <a class="me-method" href="/docs/me-unread-inbox" title="/me equivalent of /users/{id}/inbox/unread">/me/inbox/unread</a>
+                </div>
+        </div>
+        <div class="method-description">
+            Get the unread items in a user's inbox.
+                <span class="need-auth" title="this method requires an access_token">auth required</span>
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+    </div>
 </div>
-
-<h3>Answers</h3>
-
-<ul>
-    <li><a href="/docs/answers">/answers</a> &ndash; Get all answers on the site.</li>
-    <li><a href="/docs/answers-by-ids">/answers/{ids}</a> &ndash; Get answers identified by a set of ids.</li>
-    <li><a href="/docs/comments-on-answers">/answers/{ids}/comments</a> &ndash; Get comments on the answers identified by a set of ids.</li>
-</ul>
-
-<h3>Badges</h3>
-
-<ul>
-    <li><a href="/docs/badges">/badges</a>  &ndash; Get all badges on the site, in alphabetical order.</li>
-    <li><a href="/docs/badges-by-ids">/badges/{ids}</a>  &ndash; Get the badges identified by ids.</li>
-    <li><a href="/docs/badges-by-name">/badges/name</a> &ndash; Get all non-tagged-based badges in alphabetical order.</li>
-    <li><a href="/docs/badge-recipients">/badges/recipients</a> &ndash; Get badges recently awarded on the site.</li>
-    <li><a href="/docs/badge-recipients-by-ids">/badges/{ids}/recipients</a> &ndash; Get the recent recipients of the given badges.</li>
-    <li><a href="/docs/badges-by-tag">/badges/tags</a> &ndash; Get all tagged-based badges in alphabetical order.</li>
-</ul>
-
-<h3>Comments</h3>
-
-<ul>
-    <li><a href="/docs/comments">/comments</a> &ndash; Get all comments on the site.</li>
-    <li><a href="/docs/comments-by-ids">/comments/{ids}</a> &ndash; Get comments identified by a set of ids.</li>
-</ul>
-
-<h3>Events</h3>
-
-<ul>
-    <li><a href="/docs/events">/events</a> &ndash; Get recent events that have occurred on the site.  Effectively a stream of new users and content. <span class="need-auth" title="this method requires an access_token">authentication required</span></li>
-</ul>
-
-<h3>Posts</h3>
-
-<ul>
-    <li><a href="/docs/posts">/posts</a> &ndash; Get all posts (questions and answers) in the system.</li>
-    <li><a href="/docs/posts-by-ids">/posts/{ids}</a> &ndash; Get all posts identified by a set of ids.  Useful for when the type of post (question or answer) is not known.</li>
-    <li><a href="/docs/comments-on-posts">/posts/{ids}/comments</a> &ndash; Get comments on the posts (question or answer) identified by a set of ids.</li>
-    <li><a href="/docs/revisions-by-ids">/posts/{ids}/revisions</a> &ndash; Get revisions on the set of posts in ids.</li>
-    <li><a href="/docs/posts-on-suggested-edits">/posts/{ids}/suggested-edits</a> &ndash; Get suggested edits on the set of posts in ids.</li>
-</ul>
-
-<h3>Privileges</h3>
-    
-<ul>
-    <li><a href="/docs/privileges">/privileges</a> &ndash; Get all the privileges available on the site.</li>
-</ul>
-
-<h3>Questions</h3>
-
-<ul>
-    <li><a href="/docs/questions">/questions</a> &ndash; Get all questions on the site.</li>
-    <li><a href="/docs/questions-by-ids">/questions/{ids}</a> &ndash; Get the questions identified by a set of ids.</li>
-    <li><a href="/docs/answers-on-questions">/questions/{ids}/answers</a> &ndash; Get the answers to the questions identified by a set of ids.</li>
-    <li><a href="/docs/comments-on-questions">/questions/{ids}/comments</a> &ndash; Get the comments on the questions identified by a set of ids.</li>
-    <li><a href="/docs/linked-questions">/questions/{ids}/linked</a> &ndash; Get the questions that link to the questions identified by a set of ids.</li>
-    <li><a href="/docs/related-questions">/questions/{ids}/related</a> &ndash; Get the questions that are related to the questions identified by a set of ids.</li>
-    <li><a href="/docs/questions-timeline">/questions/{ids}/timeline</a> &ndash; Get the timelines of the questions identified by a set of ids.</li>
-    <li><a href="/docs/featured-questions">/questions/featured</a> &ndash; Get all questions on the site with active bounties.</li>
-    <li><a href="/docs/unanswered-questions">/questions/unanswered</a> &ndash; Get all questions the site considers unanswered.</li>
-    <li><a href="/docs/no-answer-questions">/questions/no-answers</a> &ndash; Get all questions on the site with <b>no</b> answers.</li>
-</ul>
-
-<h3>Revisions</h3>
-
-<ul>
-    <li><a href="/docs/revisions-by-guids">/revisions/{ids}</a> &ndash; Get all revisions identified by a set of ids.</li>
-</ul>
-
-<h3>Search</h3>
-
-<ul>
-    <li><a href="/docs/search">/search</a> &ndash; Search the site for questions meeting certain criteria.</li>
-    <li><a href="/docs/similar">/similar</a> &ndash; Search the site based on similarity to a title.</li>
-</ul>
-
-<h3>Suggested Edits</h3>
-
-<ul>
-    <li><a href="/docs/suggested-edits">/suggested-edits</a> &ndash; Get all the suggested edits on the site.</li>
-    <li><a href="/docs/suggested-edits-by-ids">/suggested-edits/{ids}</a> &ndash; Get the suggested edits identified by a set of ids.</li>
-</ul>
-
-<h3>Info</h3>
-<ul>
-    <li><a href="/docs/info">/info</a> &ndash; Get information about the entire site.</li>
-</ul>
-
-<h3>Tags</h3>
-
-<ul>
-    <li><a href="/docs/tags">/tags</a> &ndash; Get the tags on the site.</li>
-    <li><a href="/docs/tags-by-name">/tags/{tags}/info</a> &ndash; Get tags on the site by their names.</li>
-    <li><a href="/docs/moderator-only-tags">/tags/moderator-only</a> &ndash; Get the tags on the site that only moderators can use.</li>
-    <li><a href="/docs/required-tags">/tags/required</a> &ndash; Get the tags on the site that fulfill required tag constraints.</li>
-    <li><a href="/docs/tag-synonyms">/tags/synonyms</a> &ndash; Get all the tag synonyms on the site.</li>
-    <li><a href="/docs/faqs-by-tags">/tags/{tags}/faq</a> &ndash; Get frequently asked questions in a set of tags.</li>
-    <li><a href="/docs/related-tags">/tags/{tags}/related</a> &ndash; Get related tags, based on common tag pairings.</li>
-    <li><a href="/docs/synonyms-by-tags">/tags/{tags}/synonyms</a> &ndash; Get the synonyms for a specific set of tags.</li>
-    <li><a href="/docs/top-answerers-on-tags">/tags/{tag}/top-answerers/{period}</a> &ndash; Get the top answer posters in a specific tag, either in the last month or for all time.</li>
-    <li><a href="/docs/top-askers-on-tags">/tags/{tag}/top-askers/{period}</a> &ndash; Get the top question askers in a specific tag, either in the last month or for all time.</li>
-    <li><a href="/docs/wikis-by-tags">/tags/{tags}/wikis</a> &ndash; Get the wiki entries for a set of tags.</li>
-</ul>
-
-<h3>Users</h3>
-
-<div class="content-section">
-    <p>All user methods that take an <code>{ids}</code> parameter have a <code>/me</code> equivalent method that takes an <code>access_token</code> instead.
-    These methods are provided for developer convenience, with the exception of plain <a href="/docs/me">/me</a>, which is actually necessary for discovering
-    which user <a href="/docs/authentication">authenticated</a> to an application.</p>
-</div>
-
-<ul>
-    <li><a href="/docs/users">/users</a> &ndash; Get all users on the site.</li>
-    <li><a href="/docs/users-by-ids">/users/{ids}</a> or <a href="/docs/me">/me</a> &ndash; Get the users identified by a set of ids.</li>
-    <li><a href="/docs/answers-on-users">/users/{ids}/answers</a> or <a href="/docs/me-answers">/me/answers</a> &ndash; Get the answers posted by the users identified by a set of ids.</li>
-    <li><a href="/docs/badges-on-users">/users/{ids}/badges</a> or <a href="/docs/me-badges">/me/badges</a> &ndash; Get the badges earned by the users identified by a set of ids.</li>
-    <li><a href="/docs/comments-on-users">/users/{ids}/comments</a> or <a href="/docs/me-comments">/me/comments</a> &ndash; Get the comments posted by the users identified by a set of ids.</li>
-    <li><a href="/docs/comments-by-users-to-user">/users/{ids}/comments/{toid}</a> or <a href="/docs/me-comments-to">/me/comments/{toid}</a> &ndash; Get the comments posted by a set of users in reply to another user.</li>
-    <li><a href="/docs/favorites-on-users">/users/{ids}/favorites</a> or <a href="/docs/me-favorites">/me/favorites</a> &ndash; Get the questions favorited by users identified by a set of ids.</li>
-    <li><a href="/docs/mentions-on-users">/users/{ids}/mentioned</a> or <a href="/docs/me-mentioned">/me/mentioned</a> &ndash; Get the comments that mention one of the users identified by a set of ids.</li>
-    <li><a href="/docs/privileges-on-users">/users/{id}/privileges</a> or <a href="/docs/me-privileges">/me/privileges</a> &ndash; Get the privileges the given user has on the site.</li>
-    <li><a href="/docs/questions-on-users">/users/{ids}/questions</a> or <a href="/docs/me-questions">/me/questions</a> &ndash; Get the questions asked by the users identified by a set of ids.</li>
-    <li><a href="/docs/featured-questions-on-users">/users/{ids}/questions/featured</a> or <a href="/docs/me-featured-questions">/me/questions/featured</a> &ndash; Get the questions on which a set of users, have active bounties.</li>
-    <li><a href="/docs/no-answer-questions-on-users">/users/{ids}/questions/no-answers</a> or <a href="/docs/me-no-answer-questions">/me/questions/no-answers</a> &ndash; Get the questions asked by a set of users, which have <b>no</b> answers.</li>
-    <li><a href="/docs/unaccepted-questions-on-users">/users/{ids}/questions/unaccepted</a> or <a href="/docs/me-unaccepted-questions">/me/questions/unaccepted</a> &ndash; Get the questions asked by a set of users, which have at least one answer but no accepted answer.</li>
-    <li><a href="/docs/unanswered-questions-on-users">/users/{ids}/questions/unanswered</a> or <a href="/docs/me-unanswered-questions">/me/questions/unanswered</a> &ndash; Get the questions asked by a set of users, which are not considered to be adequately answered.</li>
-    <li><a href="/docs/reputation-on-users">/users/{ids}/reputation</a> or <a href="/docs/me-reputation">/me/reputation</a> &ndash; Get a subset of the reputation changes experienced by the users identified by a set of ids.</li>
-    <li><a href="/docs/suggested-edits-on-users">/users/{ids}/suggested-edits</a> or <a href="/docs/me-suggested-edits">/me/suggested-edits</a> &ndash; Get the suggested edits provided by this user.</li>
-    <li><a href="/docs/tags-on-users">/users/{ids}/tags</a> or <a href="/docs/me-tags">/me/tags</a> &ndash; Get the tags that the users (identified by a set of ids) have been active in.</li>
-    <li><a href="/docs/top-user-answers-in-tags">/users/{id}/tags/{tags}/top-answers</a> or <a href="/docs/me-tags-top-answers">/me/tags/{tags}/top-answers</a> &ndash; get the top answers a user has posted on questions with a set of tags.</li>
-    <li><a href="/docs/top-user-questions-in-tags">/users/{id}/tags/{tags}/top-questions</a> or <a href="/docs/me-tags-top-questions">/me/tags/{tags}/top-questions</a> &ndash; get the top questions a user has posted on questions with a set of tags.</li>
-    <li><a href="/docs/timeline-on-users">/users/{ids}/timeline</a> or <a href="/docs/me-timeline">/me/timeline</a> &ndash; Get a subset of the actions of that have been taken by the users identified by a set of ids.</li>
-    <li><a href="/docs/top-answer-tags-on-users">/users/{id}/top-answer-tags</a> or <a href="/docs/me-top-answer-tags">/me/top-answer-tags</a> &ndash; Get the top tags (by score) a single user has posted answers in.</li>
-    <li><a href="/docs/top-question-tags-on-users">/users/{id}/top-question-tags</a> or <a href="/docs/me-top-question-tags">/me/top-question-tags</a> &ndash; Get the top tags (by score) a single user has asked questions in.</li>
-    <li><a href="/docs/moderators">/users/moderators</a> &ndash; Get the users who have moderation powers on the site.</li>
-    <li><a href="/docs/elected-moderators">/users/moderators/elected</a> &ndash; Get the users who have been elected moderators on the site.</li>
-    <li><a href="/docs/user-inbox">/users/{id}/inbox</a> or <a href="/docs/me-inbox">/me/inbox</a> &ndash; Get a user's inbox. <span class="need-auth" title="this method requires an access_token, with the read_inbox scope">authentication required</span></li>
-    <li><a href="/docs/user-unread-inbox">/users/{id}/inbox/unread</a> or <a href="/docs/me-unread-inbox">/me/inbox/unread</a> &ndash; Get the unread items in a user's inbox.  <span class="need-auth" title="this method requires an access_token, with the read_inbox scope">authentication required</span></li>
-</ul>
 
 <h2>Network Methods</h2>
-
-<div class="content-section">
+<div class="indented">
     <p>These methods return data across the entire Stack Exchange network of sites.  Accordingly, you do not pass a site parameter to them.</p>
+
+    <h3>Access Tokens</h3>
+    <div class="indented">
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/invalidate-access-tokens">/access-tokens/{accessTokens}/invalidate</a>
+        </div>
+        <div class="method-description">
+            Allows an application to dispose of <code>access_tokens</code> when it is done with them.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/read-access-tokens">/access-tokens/{accessTokens}</a>
+        </div>
+        <div class="method-description">
+            Allows an application to inspect <code>access_tokens</code> it has, useful for debugging.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+    </div>
+
+    <h3>Applications</h3>
+    <div class="indented">
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/application-de-authenticate">/apps/{accessTokens}/de-authenticate</a>
+        </div>
+        <div class="method-description">
+            Allows an application to de-authorize itself for a set of users.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+    </div>
+
+    <h3>Errors</h3>
+    <div class="indented">
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/errors">/errors</a>
+        </div>
+        <div class="method-description">
+            Get descriptions of all the errors that the API could return.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/simulate-error">/errors/{id}</a>
+        </div>
+        <div class="method-description">
+            Simulate an API error for testing purposes.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+    </div>
+
+    <h3>Filters</h3>
+    <div class="indented">
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/create-filter">/filters/create</a>
+        </div>
+        <div class="method-description">
+            Create a new <a href="/docs/filters">filter</a>.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/read-filter">/filters/{filters}</a>
+        </div>
+        <div class="method-description">
+            Decode a set of filters, useful for debugging purposes.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+    </div>
+
+    <h3>Inbox</h3>
+    <div class="indented">
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/inbox">/inbox</a>
+        </div>
+        <div class="method-description">
+            Get a user's inbox, outside of the context of a site.
+                <span class="need-auth" title="this method requires an access_token">auth required</span>
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/inbox-unread">/inbox/unread</a>
+        </div>
+        <div class="method-description">
+            Get the unread items in a user's inbox, outside of the context of a site.
+                <span class="need-auth" title="this method requires an access_token">auth required</span>
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+    </div>
+
+    <h3>Notifications</h3>
+    <div class="indented">
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/notifications">/notifications</a>
+        </div>
+        <div class="method-description">
+            Get a user's notifications, outside of the context of a site.
+                <span class="need-auth" title="this method requires an access_token">auth required</span>
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/unread-notifications">/notifications/unread</a>
+        </div>
+        <div class="method-description">
+            Get a user's unread notifications, outside of the context of a site.
+                <span class="need-auth" title="this method requires an access_token">auth required</span>
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+    </div>
+
+    <h3>Sites</h3>
+    <div class="indented">
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/sites">/sites</a>
+        </div>
+        <div class="method-description">
+            Get all the sites in the Stack Exchange network.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+    </div>
+
+    <h3>Users</h3>
+    <div class="indented">
+            <div class="method">
+        <div class="method-name">
+            <a href="/docs/associated-users">/users/{ids}/associated</a>
+                <div class="indented">
+                    <a class="me-method" href="/docs/me-associated-users" title="/me equivalent of /users/{ids}/associated">/me/associated</a>
+                </div>
+        </div>
+        <div class="method-description">
+            Get a user's associated accounts.
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+    </div>
 </div>
-
-<h3>Access Tokens</h3>
-
-<ul>
-    <li><a href="/docs/invalidate-access-tokens">/access-tokens/{accessTokens}/invalidate</a> &ndash; Allows an application to dispose of <code>access_tokens</code> when it is done with them.</li>
-    <li><a href="/docs/read-access-tokens">/access-tokens/{accessTokens}</a> &ndash; Allows an application to inspect <code>access_tokens</code> it has, useful for debugging.</li>
-</ul>
-
-<h3>Applications</h3>
-
-<ul>
-    <li><a href="/docs/application-de-authenticate">/apps/{accessTokens}/de-authenticate</a> &ndash; Allows an application to de-authorize itself for a set of users.</li>
-</ul>
-
-<h3>Errors</h3>
-
-<ul>
-    <li><a href="/docs/errors">/errors</a> &ndash; Get descriptions of all the errors that the API could return.</li>
-    <li><a href="/docs/simulate-error">/errors/{id}</a> &ndash; Simulate an API error for testing purposes.</li>
-</ul>
-
-<h3>Filters</h3>
-
-<ul>
-    <li><a href="/docs/create-filter">/filters/create</a> &ndash; Create a new <a href="/docs/filters">filter</a>.</li>
-    <li><a href="/docs/read-filter">/filters/{filters}</a> &ndash; Decode a set of filters, useful for debugging purposes.</li>
-</ul>
-
-<h3>Inbox</h3>
-
-<ul>
-    <li><a href="/docs/inbox">/inbox</a> &ndash; Get a user's inbox, outside of the context of a site. <span class="need-auth" title="this method requires an access_token, with the read_inbox scope">authentication required</span></li>
-    <li><a href="/docs/inbox-unread">/inbox/unread</a> &ndash; Get the unread items in a user's inbox, outside of the context of a site. <span class="need-auth" title="this method requires an access_token, with the read_inbox scope">authentication required</span></li>
-</ul>
-
-<h3>Sites</h3>
-
-<ul>
-    <li><a href="/docs/sites">/sites</a> &ndash; Get all the sites in the Stack Exchange network.</li>
-</ul>
-
-<h3>Users</h3>
-
-<ul>
-    <li><a href="/docs/associated-users">/users/{id}/associated</a> or <a href="/docs/me-associated-users">/me/associated</a> &ndash; Get a user's associated accounts.</li>
-</ul>
-
             </div>
-
-
+            
 
 <div class="sidebar">
     <div class="module help">
@@ -302,10 +1249,16 @@
             <li><a href="/docs/throttle">Rate Limiting</a></li>
             <li><a href="/docs/user-types">Users</a></li>
             <li class="list-separator"></li>
+            <li><a href="/docs/write">Write</a></li>
+            <li class="list-separator"></li>
             <li><a href="/docs/change-log">Change Log</a></li>
+            <li class="list-separator"></li>
+            <li><a href="http://stackexchange.com/legal/api-terms-of-use">Terms Of Use</a></li>
         </ul>
     </div>
-</div>        </div>
+</div>
+            <br style="clear: both;" />
+        </div>
         
         <div class="bottom"">
             <div class="bottom-wrapper">
@@ -314,11 +1267,12 @@
         </div>
     </div>
 
-<div class="footer">
-	<div class="wrapper">
-		 <p class="footer-links"><a href="http://stackexchange.com/about">about</a> <a href="http://blog.stackexchange.com">blog</a> <a href="http://stackexchange.com/legal">legal</a> <a href="mailto:team+api@stackexchange.com">contact us</a> <a href="http://stackapps.com/">feedback always welcome</a></p>
-
-            <p style="margin-bottom: 0;">site design / logo &copy; 2012 stack exchange, inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a></p>
+    <div class="footer">
+    <div class="wrapper">
+        <p class="footer-links"><a href="http://stackexchange.com/about">about</a> <a href="http://blog.stackexchange.com">blog</a> <a href="http://stackexchange.com/legal/api-terms-of-use">terms of use</a> <a href="mailto:team+api@stackexchange.com">contact us</a> <a href="http://stackapps.com/">feedback always welcome</a></p>
+        <p style="margin-bottom: 0;">site design / logo &copy; 2012 stack exchange, inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a></p>
     </div>
-</div></body>
+    <br style="clear: both;" />
+</div>
+</body>
 </html>

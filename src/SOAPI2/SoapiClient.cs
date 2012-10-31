@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using System.Net;
 using System.Reflection;
-using Salient.JsonClient;
+ 
 using SOAPI2.Model;
+using Salient.ReliableHttpClient;
 
 
 namespace SOAPI2
 {
 
-    public partial class SoapiClient : Client
+    public partial class SoapiClient : ClientBase
     {
 
         // https://stackexchange.com/oauth/dialog?client_id=24&scope=no_expiry,read_inbox&redirect_uri=https://stackexchange.com/oauth/login_success
@@ -65,11 +66,11 @@ namespace SOAPI2
         }
 
  
-        protected override void BeforeIssueRequest(WebRequest request, string url, string target, string uriTemplate,
-                                                   string method, Dictionary<string, object> parameters,
-                                                   TimeSpan cacheDuration, string throttleScope)
-        {
-            ((HttpWebRequest)request).AutomaticDecompression = DecompressionMethods.GZip;
-        }
+        //protected override void BeforeIssueRequest(WebRequest request, string url, string target, string uriTemplate,
+        //                                           string method, Dictionary<string, object> parameters,
+        //                                           TimeSpan cacheDuration, string throttleScope)
+        //{
+        //    ((HttpWebRequest)request).AutomaticDecompression = DecompressionMethods.GZip;
+        //}
     }
 }

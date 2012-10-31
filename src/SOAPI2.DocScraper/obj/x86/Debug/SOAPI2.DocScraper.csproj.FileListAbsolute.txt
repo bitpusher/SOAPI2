@@ -1,0 +1,15 @@
+C:\dev\SOAPI2\src\SOAPI2.DocScraper\bin\Debug\SOAPI2.CS.DocScraper.exe
+C:\dev\SOAPI2\src\SOAPI2.DocScraper\bin\Debug\SOAPI2.CS.DocScraper.pdb
+C:\dev\SOAPI2\src\SOAPI2.DocScraper\bin\Debug\HtmlAgilityPack.dll
+C:\dev\SOAPI2\src\SOAPI2.DocScraper\bin\Debug\Newtonsoft.Json.dll
+C:\dev\SOAPI2\src\SOAPI2.DocScraper\bin\Debug\Salient.JsonClient.35.dll
+C:\dev\SOAPI2\src\SOAPI2.DocScraper\bin\Debug\Salient.ReflectiveLoggingAdapter.35.dll
+C:\dev\SOAPI2\src\SOAPI2.DocScraper\bin\Debug\HtmlAgilityPack.pdb
+C:\dev\SOAPI2\src\SOAPI2.DocScraper\bin\Debug\HtmlAgilityPack.xml
+C:\dev\SOAPI2\src\SOAPI2.DocScraper\bin\Debug\Newtonsoft.Json.pdb
+C:\dev\SOAPI2\src\SOAPI2.DocScraper\bin\Debug\Newtonsoft.Json.xml
+C:\dev\SOAPI2\src\SOAPI2.DocScraper\bin\Debug\Salient.JsonClient.35.pdb
+C:\dev\SOAPI2\src\SOAPI2.DocScraper\bin\Debug\Salient.ReflectiveLoggingAdapter.35.pdb
+C:\dev\SOAPI2\src\SOAPI2.DocScraper\obj\x86\Debug\SOAPI2.DocScraper.csprojResolveAssemblyReference.cache
+C:\dev\SOAPI2\src\SOAPI2.DocScraper\obj\x86\Debug\SOAPI2.CS.DocScraper.exe
+C:\dev\SOAPI2\src\SOAPI2.DocScraper\obj\x86\Debug\SOAPI2.CS.DocScraper.pdb

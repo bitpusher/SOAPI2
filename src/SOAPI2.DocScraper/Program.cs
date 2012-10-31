@@ -14,8 +14,8 @@ namespace SOAPI2.DocScraper
         
         private static void Main(string[] args)
         {
-            Docs docs = PullFromFile();
-            //Docs docs = PullFromWeb();
+            //Docs docs = PullFromFile();
+            Docs docs = PullFromWeb();
             docs.ParseSource();
             docs.Validate();
             
